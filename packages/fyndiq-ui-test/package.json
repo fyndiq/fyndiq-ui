@@ -1,0 +1,20 @@
+{
+  "name": "fyndiq-ui-test",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
+  "dependencies": {
+    "fyndiq-component-button": "*",
+    "fyndiq-component-price": "*"
+  },
+  "devDependencies": {
+    "@kadira/react-storybook-addon-info": "^3.4.0",
+    "@kadira/storybook": "^2.21.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}
