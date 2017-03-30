@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import Button from 'fyndiq-component-button'
-import Price from 'fyndiq-component-price'
+import { Price, OldPrice, CurrentPrice } from 'fyndiq-component-price'
 import Welcome from './Welcome'
 
 storiesOf('Welcome', module)
@@ -22,6 +22,14 @@ storiesOf('Button', module)
   ))
 
 storiesOf('Price', module)
-  .addWithInfo('with text', () => (
-    <Price>50Kr</Price>
+  .addWithInfo('default', () => (
+    <Price>
+      <CurrentPrice>149Kr</CurrentPrice>
+      <OldPrice>200Kr</OldPrice>
+    </Price>
+  ))
+  .addWithInfo('Without old price', () => (
+    <Price>
+      <CurrentPrice>149Kr</CurrentPrice>
+    </Price>
   ))

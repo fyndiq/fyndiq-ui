@@ -1,14 +1,5 @@
-import React from 'react';
-import styles from '../styles.less';
+import Price from './price'
+import CurrentPrice from './currentPrice'
+import OldPrice from './oldPrice'
 
-const Price = ({ children }) => (
-  <span className={styles.span}>
-    {children}
-  </span>
-);
-
-Price.propTypes = {
-  children: React.PropTypes.string.isRequired,
-};
-
-export default Price;
+export { Price, CurrentPrice, OldPrice }
