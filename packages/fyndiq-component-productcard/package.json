@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "dependencies": {
     "fyndiq-styles-colors": "0.0.1",
-    "fyndiq-component-price": "0.0.1"
+    "fyndiq-component-price": "0.0.1",
+    "fyndiq-component-stars": "0.0.1"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0"
