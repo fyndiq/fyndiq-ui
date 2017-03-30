@@ -1,19 +1,17 @@
 @import "~fyndiq-styles-colors/colors.less";
 
-@color: #FFD600;
-
 .star {
   display: inline-block;
   margin-right: .3em;
-  height: 3em;
-  width: 3em;
-  fill: transparent;
-  stroke: @color;
-  stroke-width: .2em;
-  stroke-linejoin: round;
+  height: 1em;
+  width: 1em;
+  fill: @lightergrey;
+  stroke: @lightergrey;
+  stroke-width: .1em;
 }
 
 .starActive {
   composes: star;
-  fill: @color;
+  fill: @yellow;
+  stroke: @yellow;
 }

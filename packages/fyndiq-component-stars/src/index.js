@@ -5,8 +5,14 @@ import styles from '../styles.less'
 class Stars extends React.Component {
   static propTypes = {
     rating: React.PropTypes.number,
-    onClick: React.PropTypes.func,
+    onChange: React.PropTypes.func,
     interactive: React.PropTypes.bool,
+    size: React.PropTypes.string,
+    votes: React.PropTypes.number,
+  }
+
+  static defaultProps = {
+    onChange: noop => noop,
   }
 
   constructor(props) {
@@ -19,7 +25,7 @@ class Stars extends React.Component {
 
   onMouseLeave() {
     if (!this.props.interactive) return
-    
+
     this.setState({ hoverRating: undefined })
   }
 
@@ -30,7 +36,7 @@ class Stars extends React.Component {
   }
 
   render() {
-    const { onClick, rating } = this.props
+    const { onChange, rating, interactive, size, votes } = this.props
     const starNodes = []
 
     // Overwrite rating if there's a current hoverRating
@@ -42,22 +48,30 @@ class Stars extends React.Component {
           key={id}
           rating={id}
           active={id <= liveRating}
-          onClick={() => onClick(id)}
+          onClick={() => onChange(id)}
           onHover={() => this.changeHoverRating(id)}
         />
       )
     }
 
     return (
-      <div>
+      <div className={styles.wrapper}>
         <div
-          className={styles.stars}
+          className={`
+            ${styles.stars}
+            ${interactive ? styles.interactive : ''}
+            ${size ? styles[size]: ''}
+          `}
           onMouseLeave={() => this.onMouseLeave()}
           data-test="STARS"
         >
           {starNodes}
         </div>
-      </div>
+        {votes ? <span className={styles.reviews}>
+          ({votes} reviews)
+        </span> : '' }
+
+    </div>
     )
   }
 }
