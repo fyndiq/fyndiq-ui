@@ -1,6 +1,6 @@
 import React from 'react'
 import { Price, CurrentPrice, OldPrice } from 'fyndiq-component-price'
-import { Stars } from 'fyndiq-component-stars'
+import Stars from 'fyndiq-component-stars'
 import styles from '../styles.less'
 
 const Productcard = ({ price, title, url, oldprice, rating }) => (
