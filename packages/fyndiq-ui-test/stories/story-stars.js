@@ -6,8 +6,11 @@ storiesOf('Stars', module)
   .addWithInfo('default', () => (
     <Stars rating={4} />
   ))
+  .addWithInfo('half rated', () => (
+    <Stars rating={4.5} size="l" />
+  ))
   .addWithInfo('show number of ratings', () => (
-    <Stars rating={4} votes={34} />
+    <Stars rating={4} reviews={34} />
   ))
   .addWithInfo('interactive', () => (
     <Stars
