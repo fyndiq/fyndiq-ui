@@ -2,16 +2,12 @@ import React from 'react'
 import colors from 'fyndiq-styles-colors'
 import styles from '../styles.less'
 
-const colorClasses = {
-  primary: 'primary',
-  cancel: 'cancel',
-}
-
-const Button = ({ children, onClick, type, horizontal }) => (
+const Button = ({ children, onClick, type, size, horizontal }) => (
   <button
     className={`
       ${styles.button}
-      ${type ? styles[colorClasses[type]] : ''}
+      ${type ? styles[type] : ''}
+      ${size ? styles[size]: ''}
       ${horizontal ? styles.horizontal : ''}
     `}
     onClick={onClick}
@@ -23,8 +19,9 @@ const Button = ({ children, onClick, type, horizontal }) => (
 Button.propTypes = {
   children: React.PropTypes.string.isRequired,
   onClick: React.PropTypes.func,
-  horizontal: React.PropTypes.bool,
   type: React.PropTypes.string,
+  size: React.PropTypes.string,
+  horizontal: React.PropTypes.bool,
 }
 
 export default Button;
