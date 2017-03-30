@@ -16,8 +16,7 @@
     "babel-preset-stage-0": "^6.22.0",
     "file-loader": "^0.10.1",
     "lerna": "2.0.0-beta.38",
-    "react": "^15.4.2",
-    "url-loader": "^0.5.8"
+    "react": "^15.4.2"
   },
   "dependencies": {
     "css-loader": "^0.27.3",

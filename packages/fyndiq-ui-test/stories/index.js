@@ -4,6 +4,7 @@ import Button from 'fyndiq-component-button'
 import { Price, OldPrice, CurrentPrice } from 'fyndiq-component-price'
 import Dropdown from 'fyndiq-component-dropdown'
 import Welcome from './Welcome'
+import styles from './styles.less'
 
 storiesOf('Welcome', module)
   .addWithInfo('to Storybook', () => (
