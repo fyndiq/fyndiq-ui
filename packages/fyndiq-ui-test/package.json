@@ -8,6 +8,7 @@
     "fyndiq-component-price": "*",
     "fyndiq-component-productcard": "*",
     "fyndiq-component-checkbox": "*",
+    "fyndiq-component-stars": "*",
     "fyndiq-component-dropdown": "*"
   },
   "devDependencies": {
