@@ -3,10 +3,10 @@ import infoAddon from '@kadira/react-storybook-addon-info'
 
 function loadStories() {
   require('../stories')
-  require('../stories/story-productcard')
   require('../stories/story-dropdown')
   require('../stories/story-checkbox')
   require('../stories/story-stars')
+  require('../stories/story-productcard')
 }
 
 setAddon(infoAddon)

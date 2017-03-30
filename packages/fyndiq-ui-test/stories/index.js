@@ -34,8 +34,14 @@ storiesOf('Price', module)
       <OldPrice>200Kr</OldPrice>
     </Price>
   ))
-  .addWithInfo('Without old price', () => (
+  .addWithInfo('without old price', () => (
     <Price>
+      <CurrentPrice>149Kr</CurrentPrice>
+    </Price>
+  ))
+  .addWithInfo('old price on top', () => (
+    <Price>
+      <OldPrice>200Kr</OldPrice>
       <CurrentPrice>149Kr</CurrentPrice>
     </Price>
   ))
