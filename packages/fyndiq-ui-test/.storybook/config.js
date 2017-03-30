@@ -3,6 +3,7 @@ import infoAddon from '@kadira/react-storybook-addon-info'
 
 function loadStories() {
   require('../stories')
+  require('../stories/story-dropdown')
 }
 
 setAddon(infoAddon)

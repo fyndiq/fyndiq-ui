@@ -1,7 +1,8 @@
-import React from 'react';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
+import React from 'react'
+import { storiesOf, action, linkTo } from '@kadira/storybook'
 import Button from 'fyndiq-component-button'
 import { Price, OldPrice, CurrentPrice } from 'fyndiq-component-price'
+import Dropdown from 'fyndiq-component-dropdown'
 import Welcome from './Welcome'
 
 storiesOf('Welcome', module)
@@ -15,9 +16,9 @@ storiesOf('Button', module)
   ))
   .addWithInfo('color themes', () => (
     <div>
-      <Button onClick={action('clicked')}>Normal</Button>
-      <Button type="primary" onClick={action('clicked')}>Submit</Button>
-      <Button type="cancel" onClick={action('clicked')}>Cancel</Button>
+      <Button horizontal onClick={action('clicked')}>Normal</Button>
+      <Button horizontal onClick={action('clicked')} type="primary">Submit</Button>
+      <Button horizontal onClick={action('clicked')} type="cancel">Cancel</Button>
     </div>
   ))
 

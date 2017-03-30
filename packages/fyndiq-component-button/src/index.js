@@ -7,9 +7,13 @@ const colorClasses = {
   cancel: 'cancel',
 }
 
-const Button = ({ children, onClick, type }) => (
+const Button = ({ children, onClick, type, horizontal }) => (
   <button
-    className={`${styles.button} ${type ? styles[colorClasses[type]] : ''}`}
+    className={`
+      ${styles.button}
+      ${type ? styles[colorClasses[type]] : ''}
+      ${horizontal ? styles.horizontal : ''}
+    `}
     onClick={onClick}
   >
     {children}
@@ -19,6 +23,7 @@ const Button = ({ children, onClick, type }) => (
 Button.propTypes = {
   children: React.PropTypes.string.isRequired,
   onClick: React.PropTypes.func,
+  horizontal: React.PropTypes.bool,
   type: React.PropTypes.string,
 }
 
