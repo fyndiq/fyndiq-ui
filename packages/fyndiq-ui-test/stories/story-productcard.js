@@ -3,6 +3,12 @@ import { storiesOf, action, linkTo } from '@kadira/storybook'
 import Productcard from 'fyndiq-component-productcard'
 
 storiesOf('Product card', module)
+
+  .addDecorator((story) => (
+    <div style={{backgroundColor: 'pink', padding: '1em'}}>
+      {story()}
+    </div>
+  ))
   .addWithInfo('Regular card', () => (
     <Productcard title="Vita Konstläder Sneakers - Ombloggade Street skor" price="149 kr" url="https://cdn.fyndiq.se/product/d1/de/26/2a08917d54bf6726e70441b86d86400d9e/original.png">
     </Productcard>
