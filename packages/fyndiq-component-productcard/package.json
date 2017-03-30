@@ -1,0 +1,13 @@
+{
+  "name": "fyndiq-component-productcard",
+  "version": "0.0.1",
+  "author": "Simon Olsson <simon.olsson@fyndiq.com>",
+  "main": "lib/index.js",
+  "dependencies": {
+    "fyndiq-styles-colors": "0.0.1",
+    "fyndiq-component-price": "0.0.1"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0"
+  }
+}

@@ -5,7 +5,8 @@
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "dependencies": {
     "fyndiq-component-button": "*",
-    "fyndiq-component-price": "*"
+    "fyndiq-component-price": "*",
+    "fyndiq-component-productcard": "*"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.4.0",
