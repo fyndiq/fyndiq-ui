@@ -5,6 +5,8 @@ import styles from './styles.less'
 function loadStories() {
   require('../stories')
   require('../stories/story-productcard')
+  require('../stories/story-dropdown')
+  require('../stories/story-checkbox')
 }
 
 setAddon(infoAddon)

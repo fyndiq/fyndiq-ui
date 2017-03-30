@@ -6,7 +6,9 @@
   "dependencies": {
     "fyndiq-component-button": "*",
     "fyndiq-component-price": "*",
-    "fyndiq-component-productcard": "*"
+    "fyndiq-component-productcard": "*",
+    "fyndiq-component-checkbox": "*",
+    "fyndiq-component-dropdown": "*"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.4.0",

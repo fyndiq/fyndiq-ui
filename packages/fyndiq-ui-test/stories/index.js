@@ -1,7 +1,8 @@
-import React from 'react';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
+import React from 'react'
+import { storiesOf, action, linkTo } from '@kadira/storybook'
 import Button from 'fyndiq-component-button'
 import { Price, OldPrice, CurrentPrice } from 'fyndiq-component-price'
+import Dropdown from 'fyndiq-component-dropdown'
 import Welcome from './Welcome'
 
 storiesOf('Welcome', module)
@@ -15,9 +16,20 @@ storiesOf('Button', module)
   ))
   .addWithInfo('color themes', () => (
     <div>
-      <Button onClick={action('clicked')}>Normal</Button>
-      <Button type="primary" onClick={action('clicked')}>Submit</Button>
-      <Button type="cancel" onClick={action('clicked')}>Cancel</Button>
+      <Button horizontal onClick={action('clicked')}>Normal</Button>
+      <Button horizontal onClick={action('clicked')} type="primary">Submit</Button>
+      <Button horizontal onClick={action('clicked')} type="cancel">Cancel</Button>
+      <Button horizontal onClick={action('clicked')} type="blue">Blue</Button>
+      <Button horizontal onClick={action('clicked')} type="inverted">Inverted</Button>
+    </div>
+  ))
+  .addWithInfo('different sizes', () => (
+    <div>
+      <Button horizontal onClick={action('clicked')} size="xs">x-small</Button>
+      <Button horizontal onClick={action('clicked')} size="s">small</Button>
+      <Button horizontal onClick={action('clicked')}>normal</Button>
+      <Button horizontal onClick={action('clicked')} size="l">large</Button>
+      <Button horizontal onClick={action('clicked')} size="xl">x-large</Button>
     </div>
   ))
 
