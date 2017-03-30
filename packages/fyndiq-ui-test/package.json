@@ -6,6 +6,7 @@
   "dependencies": {
     "fyndiq-component-button": "*",
     "fyndiq-component-price": "*",
+    "fyndiq-component-checkbox": "*",
     "fyndiq-component-dropdown": "*"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf, action, linkTo } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 import Dropdown from 'fyndiq-component-dropdown'
 import Button from 'fyndiq-component-button'
 
