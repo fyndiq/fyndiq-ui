@@ -6,6 +6,7 @@ function loadStories() {
   require('../stories/story-productcard')
   require('../stories/story-dropdown')
   require('../stories/story-checkbox')
+  require('../stories/story-stars')
 }
 
 setAddon(infoAddon)

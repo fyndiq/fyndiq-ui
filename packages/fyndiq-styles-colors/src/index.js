@@ -11,6 +11,7 @@ export default {
 
   blue: "#8AB7E3",
   green: "#70B65A",
+  yellow: '#FFD600',
 
   bordercolor: "#DADADA",
 }
