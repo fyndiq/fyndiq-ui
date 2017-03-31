@@ -7,7 +7,7 @@ const Productcard = ({ price, title, url, oldprice, rating }) => (
   <div className={ styles.card }>
     <img className={ styles.image} src={ url }/>
     <Price>
-      <OldPrice>{ oldprice }</OldPrice>
+      {OldPrice ? <OldPrice>{ oldprice }</OldPrice> : '' }
       <CurrentPrice>{ price }</CurrentPrice>
     </Price>
     <h3 className={ styles.title }>{ title }</h3>
