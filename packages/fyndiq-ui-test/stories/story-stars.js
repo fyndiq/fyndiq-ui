@@ -7,7 +7,10 @@ storiesOf('Stars', module)
     <Stars rating={4} />
   ))
   .addWithInfo('half rated', () => (
-    <Stars rating={4.5} size="l" />
+    <div>
+      <Stars rating={4.5} />
+      <Stars rating={3.3} />
+    </div>
   ))
   .addWithInfo('show number of ratings', () => (
     <Stars rating={4} reviews={34} />
