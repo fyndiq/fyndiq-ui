@@ -4,7 +4,7 @@
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "publish": "lerna publish",
+    "publish": "npm run build && lerna publish",
     "build": "./scripts/build.sh",
     "dev": "./scripts/build.sh dev"
   },
