@@ -6,53 +6,90 @@
   cursor: 'pointer';
   font-size: 15px;
   padding: 5px 12px;
-  background-color: @white;
+  background-color: @palegrey;
   color: @black;
   font-family: inherit;
 }
 
+.type-normal {
+  background-color: @palegrey;
+
+  &.interactive:hover {
+    background-color: lighten(@palegrey, 10%);
+  }
+}
+
 // Color themes
-.primary {
+.type-primary,
+.type-green {
   background-color: @green;
   color: @white;
   border-color: darken(@green, 20%);
+
+  &.interactive:hover {
+    background-color: lighten(@green, 10%);
+  }
 }
 
-.cancel {
-  background-color: @red;
-  color: @white;
-  border-color: darken(@red, 20%);
-}
-
-.blue {
+.type-secondary,
+.type-blue {
   background-color: @blue;
   color: @white;
   border-color: darken(@blue, 20%);
+
+  &.interactive:hover {
+    background-color: lighten(@blue, 10%);
+  }
 }
 
-.inverted {
+.type-third,
+.type-white {
+  background-color: @white;
+
+  &.interactive:hover {
+    background-color: @palegrey;
+  }
+}
+
+.type-cancel,
+.type-red {
+  background-color: @red;
+  color: @white;
+  border-color: darken(@red, 20%);
+
+  &.interactive:hover {
+    background-color: lighten(@red, 10%);
+  }
+}
+
+.type-inverted,
+.type-black {
   background-color: @black;
   color: @white;
   border-color: darken(@black, 20%);
+
+  &.interactive:hover {
+    background-color: lighten(@black, 10%);
+  }
 }
 
 // Sizes
-.xs {
+.size-xs {
   font-size: 10px;
   padding: 2px 4px;
 }
 
-.s {
+.size-s {
   font-size: 13px;
   padding: 3px 7px;
 }
 
-.l {
+.size-l {
   font-size: 20px;
   padding: 8px 20px;
 }
 
-.xl {
+.size-xl {
   font-size: 35px;
   padding: 20px 50px;
 }
@@ -60,4 +97,13 @@
 // Special margins
 .horizontal {
   margin-right: 5px;
+}
+
+
+.disabled {
+  opacity: .6;
+}
+
+.interactive {
+  cursor: pointer;
 }

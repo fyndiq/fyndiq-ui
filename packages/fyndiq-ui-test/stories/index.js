@@ -11,10 +11,11 @@ storiesOf('Button', module)
   .addWithInfo('color themes', () => (
     <div>
       <Button horizontal onClick={action('clicked')}>Normal</Button>
-      <Button horizontal onClick={action('clicked')} type="primary">Submit</Button>
+      <Button horizontal onClick={action('clicked')} type="white">White</Button>
+      <Button horizontal onClick={action('clicked')} type="primary">Primary</Button>
+      <Button horizontal onClick={action('clicked')} type="secondary">Secondary</Button>
       <Button horizontal onClick={action('clicked')} type="cancel">Cancel</Button>
-      <Button horizontal onClick={action('clicked')} type="blue">Blue</Button>
-      <Button horizontal onClick={action('clicked')} type="inverted">Inverted</Button>
+      <Button horizontal onClick={action('clicked')} type="inverted">Black</Button>
     </div>
   ))
   .addWithInfo('different sizes', () => (
@@ -26,6 +27,10 @@ storiesOf('Button', module)
       <Button horizontal onClick={action('clicked')} size="xl">x-large</Button>
     </div>
   ))
+  .addWithInfo('disabled button', () => (
+    <Button disabled>Disabled Button</Button>
+  ))
+
 
 storiesOf('Price', module)
   .addWithInfo('default', () => (

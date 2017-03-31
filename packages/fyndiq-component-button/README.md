@@ -36,6 +36,9 @@ import Button from 'fyndiq-component-button'
 >
   My big button
 </Button>
+
+// Disabled usage
+<Button disabled>My disabled Button</Button>
 ```
 
 # API
@@ -44,3 +47,4 @@ The component `Button` has the following customizable props:
 
 - **type**: (String) One of `primary`, `cancel`, `blue`, `inverted`. Changes the color style of the button
 - **size**: (String) One of `xs`, `s`, `l`, `xl`. Changes the size of the button
+- **disabled**: (Boolean) If true, will disable the button.
