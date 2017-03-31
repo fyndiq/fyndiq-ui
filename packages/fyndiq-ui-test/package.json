@@ -1,15 +1,15 @@
 {
   "name": "fyndiq-ui-test",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "dependencies": {
-    "fyndiq-component-button": "^0.0.3",
+    "fyndiq-component-button": "^0.0.4",
     "fyndiq-component-price": "^0.0.2",
-    "fyndiq-component-productcard": "^0.0.3",
-    "fyndiq-component-checkbox": "^0.0.2",
+    "fyndiq-component-productcard": "^0.0.4",
+    "fyndiq-component-checkbox": "^0.0.4",
     "fyndiq-component-stars": "^0.0.3",
-    "fyndiq-component-dropdown": "^0.0.3"
+    "fyndiq-component-dropdown": "^0.0.4"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.4.0",

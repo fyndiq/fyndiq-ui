@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-productcard",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Simon Olsson <simon.olsson@fyndiq.com>",
   "main": "lib/index.js",
   "dependencies": {
