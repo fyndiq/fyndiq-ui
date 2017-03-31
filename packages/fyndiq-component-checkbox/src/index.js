@@ -11,7 +11,6 @@ class Checkbox extends React.Component {
   }
 
   toggle() {
-    if (this.props.disabled) return
     this.setState({
       checked: !this.state.checked,
     })
@@ -28,6 +27,7 @@ class Checkbox extends React.Component {
           ${disabled ? '' : styles.interactiveCheckbox}
         `}
         onClick={() => this.toggle()}
+        disabled={disabled}
       >
         {this.state.checked ?
           <Checkmark className={styles.checkmark} /> :

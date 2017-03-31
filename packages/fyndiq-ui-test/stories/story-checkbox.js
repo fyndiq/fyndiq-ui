@@ -10,5 +10,8 @@ storiesOf('Checkbox', module)
     <Checkbox onToggle={action('toggle')} checked>Label</Checkbox>
   ))
   .addWithInfo('disabled', () => (
-    <Checkbox onToggle={action('toggle')} disabled>Disabled label</Checkbox>
+    <span>
+      <div><Checkbox onToggle={action('toggle')} disabled>Disabled label</Checkbox></div>
+      <div><Checkbox checked onToggle={action('toggle')} disabled>Disabled validated label</Checkbox></div>
+    </span>
   ))
