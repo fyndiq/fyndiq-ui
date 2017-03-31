@@ -11,8 +11,7 @@ const Productcard = ({ price, title, url, oldprice, rating }) => (
       <CurrentPrice>{ price }</CurrentPrice>
     </Price>
     <h3 className={ styles.title }>{ title }</h3>
-
-    <Stars rating={ rating }></Stars>
+    {rating ? <Stars rating={ rating }></Stars> : ''}
   </div>
 )
 
