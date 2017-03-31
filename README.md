@@ -20,6 +20,7 @@ To create a new component, create a new folder in the `packages/` directory and 
 This git repository is a monorepo built using [Lerna](//lerna.io). It contains several packages:
 
 | Package | Version | Description |
+|------|----|----|
 | [`fyndiq-component-button`](/packages/fyndiq-component-button) | [![npm](https://img.shields.io/npm/v/fyndiq-component-button.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-component-button) | Button component |
 | [`fyndiq-component-checkbox`](/packages/fyndiq-component-checkbox) | [![npm](https://img.shields.io/npm/v/fyndiq-component-checkbox.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-component-checkbox) | Checkbox component |
 | [`fyndiq-component-dropdown`](/packages/fyndiq-component-dropdown) | [![npm](https://img.shields.io/npm/v/fyndiq-component-dropdown.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-component-dropdown) | Dropdown component |
