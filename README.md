@@ -17,7 +17,7 @@ To create a new component, create a new folder in the `packages/` directory and 
 
 # Packages
 
-This git repository is a monorepo built using [Lerna](//lerna.io). It contains several packages:
+This git repository is a monorepo built using [Lerna](//lernajs.io). It contains several packages:
 
 | Package | Version | Description |
 |------|----|----|
