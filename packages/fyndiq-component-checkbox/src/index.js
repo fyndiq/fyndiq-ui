@@ -18,7 +18,7 @@ class Checkbox extends React.Component {
   }
 
   render() {
-    const { children, onToggle, checked, disabled } = this.props
+    const { children, disabled } = this.props
 
     return (
       <button
@@ -42,9 +42,15 @@ class Checkbox extends React.Component {
 }
 
 Checkbox.propTypes = {
-  onToggle: React.PropTypes.func.isRequired,
-  isChecked: React.PropTypes.bool,
+  onToggle: React.PropTypes.func,
+  checked: React.PropTypes.bool,
   disabled: React.PropTypes.bool,
+}
+
+Checkbox.defaultProps = {
+  onToggle: noop => noop,
+  checked: false,
+  disabled: false,
 }
 
 export default Checkbox

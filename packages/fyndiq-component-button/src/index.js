@@ -1,13 +1,12 @@
 import React from 'react'
-import colors from 'fyndiq-styles-colors'
 import styles from '../styles.less'
 
 const Button = ({ children, onClick, type, size, horizontal, disabled }) => (
   <button
     className={`
       ${styles.button}
-      ${type ? styles['type-' + type] : styles['type-normal']}
-      ${size ? styles['size-' + size]: ''}
+      ${type ? styles['type-' + type] : ''}
+      ${size ? styles['size-' + size] : ''}
       ${horizontal ? styles.horizontal : ''}
       ${disabled ? styles.disabled : styles.interactive}
     `}
@@ -27,4 +26,12 @@ Button.propTypes = {
   disabled: React.PropTypes.bool,
 }
 
-export default Button;
+Button.defaultProps = {
+  onClick: noop => noop,
+  type: 'normal',
+  size: 'm',
+  horizontal: false,
+  disabled: false,
+}
+
+export default Button

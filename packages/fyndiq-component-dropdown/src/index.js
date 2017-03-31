@@ -4,10 +4,27 @@ import Arrow from 'fyndiq-icon-arrow'
 import styles from '../styles.less'
 
 class Dropdown extends Component {
+  static propTypes = {
+    opened: React.PropTypes.bool,
+    button: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.element,
+    ]).isRequired,
+    children: React.PropTypes.node.isRequired,
+    noArrow: React.PropTypes.boolean,
+    noContentPadding: React.PropTypes.boolean,
+  }
+
+  static defaultProps = {
+    opened: false,
+    noArrow: false,
+    noContentPadding: false,
+  }
+
   constructor(props) {
     super(props)
     this.state = {
-      dropdownOpen: props.opened || false,
+      dropdownOpen: props.opened || false,
     }
   }
 

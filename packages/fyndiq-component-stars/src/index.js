@@ -5,13 +5,17 @@ import styles from '../styles.less'
 class Stars extends React.Component {
   static propTypes = {
     rating: React.PropTypes.number,
-    onChange: React.PropTypes.func,
-    interactive: React.PropTypes.bool,
-    size: React.PropTypes.string,
     reviews: React.PropTypes.number,
+    size: React.PropTypes.string,
+    interactive: React.PropTypes.bool,
+    onChange: React.PropTypes.func,
   }
 
   static defaultProps = {
+    rating: undefined,
+    reviews: undefined,
+    size: 'm',
+    interactive: false,
     onChange: noop => noop,
   }
 
@@ -40,7 +44,7 @@ class Stars extends React.Component {
     const starNodes = []
 
     // Overwrite rating if there's a current hoverRating
-    let liveRating = this.state.hoverRating || rating
+    const liveRating = this.state.hoverRating || rating
 
     for (let id = 1; id <= 5; id++) {
       starNodes.push(
@@ -59,18 +63,19 @@ class Stars extends React.Component {
           className={`
             ${styles.stars}
             ${interactive ? styles.interactive : ''}
-            ${size ? styles[size]: ''}
+            ${size ? styles['size-' + size] : ''}
           `}
           onMouseLeave={() => this.onMouseLeave()}
           data-test="STARS"
         >
           {starNodes}
         </div>
-        {reviews ? <span className={styles.reviews}>
-          ({reviews} reviews)
-        </span> : '' }
-
-    </div>
+        {reviews ? (
+          <span className={styles.reviews}>
+            ({reviews} reviews)
+          </span>
+        ) : '' }
+      </div>
     )
   }
 }

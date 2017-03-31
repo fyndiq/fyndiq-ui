@@ -28,12 +28,16 @@ const Star = ({ full, onClick, onHover }) => {
   )
 }
 
-
-
 Star.propTypes = {
   full: React.PropTypes.number,
   onClick: React.PropTypes.func,
   onHover: React.PropTypes.func,
+}
+
+Star.defaultProps = {
+  full: 1,
+  onClick: noop => noop,
+  onHover: noop => noop,
 }
 
 export default Star

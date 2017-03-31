@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf, action, linkTo } from '@kadira/storybook'
+import { storiesOf, action } from '@kadira/storybook'
 import Button from 'fyndiq-component-button'
 import { Price, OldPrice, CurrentPrice } from 'fyndiq-component-price'
 import './styles.less'
