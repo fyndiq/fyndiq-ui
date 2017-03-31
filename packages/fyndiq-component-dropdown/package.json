@@ -1,10 +1,10 @@
 {
   "name": "fyndiq-component-dropdown",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "dependencies": {
-    "fyndiq-component-button": "^0.0.2",
+    "fyndiq-component-button": "^0.0.3",
     "fyndiq-styles-colors": "^0.0.2",
     "fyndiq-icon-arrow": "^0.0.2"
   },
