@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Button from 'fyndiq-component-button'
 import Arrow from 'fyndiq-icon-arrow'
 import styles from '../styles.less'
 
-class Dropdown extends Component {
+class Dropdown extends React.Component {
   static propTypes = {
     opened: React.PropTypes.bool,
     button: React.PropTypes.oneOfType([
@@ -26,49 +26,30 @@ class Dropdown extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      dropdownOpen: props.opened || false,
+      dropdownOpen: props.opened,
     }
+
+    // Save this as a property so that addEventListener and removeEventListener
+    // work properly
+    this.boundHandler = this.handleDocumentClick.bind(this)
+  }
+
+  componentWillMount() {
+    document.addEventListener('click', this.boundHandler, false)
   }
 
   componentWillUnmount() {
-    document.body.onclick = noop => noop
+    document.removeEventListener('click', this.boundHandler, false)
   }
 
-  onButtonClick(event) {
-    if (event) {
-      event.stopPropagation()
-    }
-
-    if (this.state.dropdownOpen) {
-      this.closeDropdown()
-    } else {
-      this.openDropdown()
-    }
+  onButtonClick() {
+    this.setState({ dropdownOpen: !this.state.dropdownOpen })
   }
 
-  onDropdownClick(event) {
-    if (event) {
-      event.stopPropagation()
+  handleDocumentClick(event) {
+    if (this.wrapperNode && !this.wrapperNode.contains(event.target)) {
+      this.setState({ dropdownOpen: false })
     }
-    this.openDropdown()
-  }
-
-  openDropdown() {
-    if (document && document.body) {
-      document.body.onclick = () => this.closeDropdown()
-    }
-    this.setState({
-      dropdownOpen: true,
-    })
-  }
-
-  closeDropdown() {
-    if (document && document.body) {
-      document.body.onclick = noop => noop
-    }
-    this.setState({
-      dropdownOpen: false,
-    })
   }
 
   render() {
@@ -92,15 +73,13 @@ class Dropdown extends Component {
     }
 
     return (
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} ref={e => { this.wrapperNode = e }}>
         {buttonContent}
         <div
           className={`
             ${this.state.dropdownOpen ? styles.dropdownWrapperOpen : styles.dropdownWrapper}
             ${noContentPadding ? '' : styles.padded}
           `}
-          onClick={e => this.onDropdownClick(e)}
-          data-test="DROPDOWN_WRAPPER"
         >
           {children}
         </div>
