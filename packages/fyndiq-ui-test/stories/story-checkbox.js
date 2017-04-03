@@ -9,6 +9,9 @@ storiesOf('Checkbox', module)
   .addWithInfo('checked', () => (
     <Checkbox onToggle={action('toggle')} checked>Label</Checkbox>
   ))
+  .addWithInfo('custom color', () => (
+    <Checkbox onToggle={action('toggle')} color="#F00" checked>Red Label</Checkbox>
+  ))
   .addWithInfo('disabled', () => (
     <span>
       <div><Checkbox onToggle={action('toggle')} disabled>Disabled label</Checkbox></div>

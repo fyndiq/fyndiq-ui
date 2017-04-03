@@ -22,10 +22,13 @@ storiesOf('Button', module)
     <div>
       <Button horizontal onClick={action('clicked')} size="xs">x-small</Button>
       <Button horizontal onClick={action('clicked')} size="s">small</Button>
-      <Button horizontal onClick={action('clicked')}>normal</Button>
+      <Button horizontal onClick={action('clicked')} size="m">medium</Button>
       <Button horizontal onClick={action('clicked')} size="l">large</Button>
       <Button horizontal onClick={action('clicked')} size="xl">x-large</Button>
     </div>
+  ))
+  .addWithInfo('pressed button', () => (
+    <Button pressed>Pressed button</Button>
   ))
   .addWithInfo('disabled button', () => (
     <Button disabled>Disabled Button</Button>
