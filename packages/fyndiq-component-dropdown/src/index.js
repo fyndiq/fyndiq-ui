@@ -11,8 +11,8 @@ class Dropdown extends Component {
       React.PropTypes.element,
     ]).isRequired,
     children: React.PropTypes.node.isRequired,
-    noArrow: React.PropTypes.boolean,
-    noContentPadding: React.PropTypes.boolean,
+    noArrow: React.PropTypes.bool,
+    noContentPadding: React.PropTypes.bool,
   }
 
   static defaultProps = {
