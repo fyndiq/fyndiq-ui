@@ -19,6 +19,25 @@ storiesOf('Dropdown', module)
       Dropdown content
     </Dropdown>
   ))
+  .addWithInfo('custom sizes', () => (
+    <div>
+      <Dropdown button="x-small" size="xs">
+        Dropdown content
+      </Dropdown>
+      <Dropdown button="small" size="s">
+        Dropdown content
+      </Dropdown>
+      <Dropdown button="medium" size="m">
+        Dropdown content
+      </Dropdown>
+      <Dropdown button="large" size="l">
+        Dropdown content
+      </Dropdown>
+      <Dropdown button="x-large" size="xl">
+        Dropdown content
+      </Dropdown>
+    </div>
+  ))
   .addWithInfo('custom button', () => (
     <Dropdown button={<Button type="primary">Open me</Button>}>
       Dropdown content

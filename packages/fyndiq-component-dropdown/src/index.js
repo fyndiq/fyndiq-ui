@@ -11,6 +11,7 @@ class Dropdown extends Component {
       React.PropTypes.element,
     ]).isRequired,
     children: React.PropTypes.node.isRequired,
+    size: React.PropTypes.string,
     noArrow: React.PropTypes.bool,
     noContentPadding: React.PropTypes.bool,
   }
@@ -19,6 +20,7 @@ class Dropdown extends Component {
     opened: false,
     noArrow: false,
     noContentPadding: false,
+    size: undefined,
   }
 
   constructor(props) {
@@ -70,13 +72,13 @@ class Dropdown extends Component {
   }
 
   render() {
-    const { button, children, noArrow, noContentPadding } = this.props
+    const { button, children, noArrow, noContentPadding, size } = this.props
 
     let buttonContent
 
     if (typeof button === 'string') {
       buttonContent = (
-        <Button onClick={e => this.onButtonClick(e)}>
+        <Button onClick={e => this.onButtonClick(e)} size={size}>
           {button}
           {!noArrow ? <Arrow orientation="down" /> : ''}
         </Button>
