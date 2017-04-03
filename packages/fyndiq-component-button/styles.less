@@ -7,13 +7,24 @@
   background-color: @palegrey;
   color: @black;
   font-family: inherit;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.pressed {
+  box-shadow: 0 1px 6px 2px fadeout(@black, 80%) inset;
 }
 
 .type-normal {
   background-color: @palegrey;
 
-  &.interactive:hover {
-    background-color: lighten(@palegrey, 10%);
+  &.interactive {
+    &:hover,
+    &:focus {
+      background-color: lighten(@palegrey, 10%);
+    }
   }
 }
 
@@ -24,8 +35,11 @@
   color: @white;
   border-color: darken(@green, 20%);
 
-  &.interactive:hover {
-    background-color: lighten(@green, 10%);
+  &.interactive {
+    &:hover,
+    &:focus {
+      background-color: lighten(@green, 10%);
+    }
   }
 }
 
@@ -35,8 +49,11 @@
   color: @white;
   border-color: darken(@blue, 20%);
 
-  &.interactive:hover {
-    background-color: lighten(@blue, 10%);
+  &.interactive {
+    &:hover,
+    &:focus {
+      background-color: lighten(@blue, 10%);
+    }
   }
 }
 
@@ -44,8 +61,11 @@
 .type-white {
   background-color: @white;
 
-  &.interactive:hover {
-    background-color: @palegrey;
+  &.interactive {
+    &:hover,
+    &:focus {
+      background-color: @palegrey;
+    }
   }
 }
 
@@ -55,8 +75,11 @@
   color: @white;
   border-color: darken(@red, 20%);
 
-  &.interactive:hover {
-    background-color: lighten(@red, 10%);
+  &.interactive {
+    &:hover,
+    &:focus {
+      background-color: lighten(@red, 10%);
+    }
   }
 }
 
@@ -66,8 +89,11 @@
   color: @white;
   border-color: darken(@black, 20%);
 
-  &.interactive:hover {
-    background-color: lighten(@black, 10%);
+  &.interactive {
+    &:hover,
+    &:focus {
+      background-color: lighten(@black, 10%);
+    }
   }
 }
 
@@ -78,7 +104,7 @@
 }
 
 .size-s {
-  font-size: 13px;
+  font-size: 12px;
   padding: 3px 7px;
 }
 

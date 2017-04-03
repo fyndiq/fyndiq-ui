@@ -1,13 +1,14 @@
 import React from 'react'
 import styles from '../styles.less'
 
-const Button = ({ children, onClick, type, size, horizontal, disabled }) => (
+const Button = ({ children, onClick, type, size, horizontal, disabled, pressed }) => (
   <button
     className={`
       ${styles.button}
-      ${type ? styles['type-' + type] : ''}
-      ${size ? styles['size-' + size] : ''}
-      ${horizontal ? styles.horizontal : ''}
+      ${styles['type-' + type]}
+      ${styles['size-' + size]}
+      ${horizontal && styles.horizontal}
+      ${pressed && styles.pressed}
       ${disabled ? styles.disabled : styles.interactive}
     `}
     onClick={onClick}
@@ -24,14 +25,16 @@ Button.propTypes = {
   size: React.PropTypes.string,
   horizontal: React.PropTypes.bool,
   disabled: React.PropTypes.bool,
+  pressed: React.PropTypes.bool,
 }
 
 Button.defaultProps = {
   onClick: noop => noop,
   type: 'normal',
-  size: 'm',
+  size: 's',
   horizontal: false,
   disabled: false,
+  pressed: false,
 }
 
 export default Button
