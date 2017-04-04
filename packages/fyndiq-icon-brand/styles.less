@@ -1,0 +1,68 @@
+@import "~fyndiq-styles-colors/colors.less";
+
+@outline-stroke: 2px;
+
+.svg {
+  display: block;
+}
+
+.type-normal {
+  .outer {
+    fill: @brand;
+  }
+
+  .inner {
+    fill: @white;
+  }
+}
+
+.type-outline {
+  .outer {
+    fill: @white;
+    stroke: @brand;
+    stroke-width: @outline-stroke;
+  }
+
+  .inner {
+    fill: @brand;
+  }
+}
+
+.type-outline-transp {
+  composes: type-outline;
+
+  .outer {
+    fill: transparent;
+  }
+}
+
+.type-bw {
+  .outer {
+    fill: @black;
+  }
+
+  .inner {
+    fill: @white;
+  }
+}
+
+.type-outline-bw {
+  .outer {
+    fill: @white;
+    stroke: @black;
+    stroke-width: @outline-stroke;
+  }
+
+  .inner {
+    fill: @black;
+  }
+}
+
+
+.type-outline-transp-bw {
+  composes: type-outline-bw;
+
+  .outer {
+    fill: transparent;
+  }
+}

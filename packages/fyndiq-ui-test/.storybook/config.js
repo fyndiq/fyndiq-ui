@@ -8,6 +8,7 @@ function loadStories() {
   require('../stories/story-checkbox')
   require('../stories/story-stars')
   require('../stories/story-productcard')
+  require('../stories/icon-brand')
 }
 
 setAddon(infoAddon)

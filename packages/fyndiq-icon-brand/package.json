@@ -1,0 +1,12 @@
+{
+  "name": "fyndiq-icon-brand",
+  "version": "0.0.2",
+  "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
+  "main": "lib/index.js",
+  "dependencies": {
+    "fyndiq-styles-colors": "^0.0.2"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0"
+  }
+}
