@@ -27,6 +27,7 @@ FyndiqLogo.propTypes = {
     'outline',
     'outline-transp',
     'bw',
+    'outline-bw',
     'outline-transp-bw',
   ]),
   className: React.PropTypes.string,
