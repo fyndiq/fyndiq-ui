@@ -71,6 +71,8 @@ This git repository is a monorepo built using [Lerna](//lernajs.io). It contains
 | [`fyndiq-icon-checkmark`](/packages/fyndiq-icon-checkmark)  | [![npm](https://img.shields.io/npm/v/fyndiq-icon-checkmark.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-icon-checkmark) | Checkmark icon |
 | [`fyndiq-icon-star`](/packages/fyndiq-icon-star) | [![npm](https://img.shields.io/npm/v/fyndiq-icon-star.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-icon-star) | Star icon |
 | [`fyndiq-styles-colors`](/packages/fyndiq-styles-colors) | [![npm](https://img.shields.io/npm/v/fyndiq-styles-colors.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-styles-colors) | Default colors |
+| [`fyndiq-styles-fonts`](/packages/fyndiq-styles-fonts) | [![npm](https://img.shields.io/npm/v/fyndiq-styles-fonts.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-styles-fonts) | Default Fonts and helpers |
+| [`fyndiq-styles-medias`](/packages/fyndiq-styles-medias) | [![npm](https://img.shields.io/npm/v/fyndiq-styles-medias.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-styles-medias) | Default media queries |
 
 
 # Contribute
