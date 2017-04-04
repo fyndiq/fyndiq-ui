@@ -10,7 +10,7 @@ Install one of the provided packages (see list below) in your React project:
 npm i -S fyndiq-component-button
 ```
 
-Every component provide their own style using LESS. Your Webpack config should have an entry similar to this:
+Every component provide their own style using LESS. Thus, you need to be able to import LESS files inside your project. Using Webpack2, you can have an entry similar to this:
 
 ``` js
 module: {
@@ -43,9 +43,15 @@ module: {
           },
         ],
       }),
-    }
-  ]
-}
+    },
+  ],
+},
+```
+
+You will need the following loaders:
+
+``` bash
+npm i -D postcss-loader less-loader css-loader style-loader extract-text-webpack-plugin autoprefixer
 ```
 
 # Packages
