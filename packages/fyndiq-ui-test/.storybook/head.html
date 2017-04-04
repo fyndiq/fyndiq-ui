@@ -1,4 +1,10 @@
-<style>@font-face {
+<style>
+/*
+  TODO: These definitions are used because fonts cannot be loaded via blob:http:// protocol.
+  A better workaround would be to implement webpack's extractTextPlugin instead of
+  style-loader.
+*/
+@font-face {
   font-family: 'MuseoSans';
   font-style: normal;
   font-weight: 500;
