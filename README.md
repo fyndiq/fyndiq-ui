@@ -4,16 +4,49 @@ Library of reusable components for Fyndiq
 
 # Usage
 
-Clone the repository, then run
+Install one of the provided packages (see list below) in your React project:
 
-```
-npm i
-npm run bootstrap
-npm run dev
+``` bash
+npm i -S fyndiq-component-button
 ```
 
-To create a new component, create a new folder in the `packages/` directory and put your code in `src/`. Then, add your newly created package to the dependencies of `fyndiq-ui-test`'s package.json file, run `npm run bootstrap` and restart `npm run dev`.
+Every component provide their own style using LESS. Your Webpack config should have an entry similar to this:
 
+``` js
+module: {
+  rules: [
+    {
+      test: /\.less$/,
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: [
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              sourceMap: true,
+              modules: true,
+            },
+          }, {
+            loader: 'less-loader',
+            options: {
+              sourceMap: true,
+            },
+          }, {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: 'inline',
+              plugins: () => ([
+                require('autoprefixer'),
+              ]),
+            },
+          },
+        ],
+      }),
+    }
+  ]
+}
+```
 
 # Packages
 
@@ -31,3 +64,16 @@ This git repository is a monorepo built using [Lerna](//lernajs.io). It contains
 | [`fyndiq-icon-checkmark`](/packages/fyndiq-icon-checkmark)  | [![npm](https://img.shields.io/npm/v/fyndiq-icon-checkmark.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-icon-checkmark) | Checkmark icon |
 | [`fyndiq-icon-star`](/packages/fyndiq-icon-star) | [![npm](https://img.shields.io/npm/v/fyndiq-icon-star.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-icon-star) | Star icon |
 | [`fyndiq-styles-colors`](/packages/fyndiq-styles-colors) | [![npm](https://img.shields.io/npm/v/fyndiq-styles-colors.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-styles-colors) | Default colors |
+
+
+# Contribute
+
+Clone the repository, then run
+
+```
+npm i
+npm run bootstrap
+npm run dev
+```
+
+To create a new component, create a new folder in the `packages/` directory and put your code in `src/`. Then, add your newly created package to the dependencies of `fyndiq-ui-test`'s package.json file, run `npm run bootstrap` and restart `npm run dev`.
