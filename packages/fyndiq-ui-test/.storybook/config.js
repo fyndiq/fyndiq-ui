@@ -1,7 +1,9 @@
 import { configure, setAddon } from '@kadira/storybook'
 import infoAddon from '@kadira/react-storybook-addon-info'
 
-import './styles.less'
+// Bootstrap standard fonts
+
+import 'fyndiq-styles-fonts/bootstrap.less'
 
 function loadStories() {
   /* eslint-disable global-require */

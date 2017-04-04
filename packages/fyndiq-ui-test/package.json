@@ -10,7 +10,8 @@
     "fyndiq-component-checkbox": "^0.0.5",
     "fyndiq-component-stars": "^0.0.5",
     "fyndiq-component-dropdown": "^0.0.5",
-    "fyndiq-icon-brand": "^0.0.5"
+    "fyndiq-icon-brand": "^0.0.5",
+    "fyndiq-styles-fonts": "*"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.4.0",
