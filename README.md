@@ -67,6 +67,7 @@ This git repository is a monorepo built using [Lerna](//lernajs.io). It contains
 | [`fyndiq-component-productcard`](/packages/fyndiq-component-productcard) | [![npm](https://img.shields.io/npm/v/fyndiq-component-productcard.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-component-productcard) | Product card component |
 | [`fyndiq-component-stars`](/packages/fyndiq-component-stars) | [![npm](https://img.shields.io/npm/v/fyndiq-component-stars.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-component-stars) | Stars component |
 | [`fyndiq-icon-arrow`](/packages/fyndiq-icon-arrow) | [![npm](https://img.shields.io/npm/v/fyndiq-icon-arrow.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-icon-arrow) | Arrow icon |
+| [`fyndiq-icon-brand`](/packages/fyndiq-icon-brand)  | [![npm](https://img.shields.io/npm/v/fyndiq-icon-brand.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-icon-brand) | Brand icon |
 | [`fyndiq-icon-checkmark`](/packages/fyndiq-icon-checkmark)  | [![npm](https://img.shields.io/npm/v/fyndiq-icon-checkmark.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-icon-checkmark) | Checkmark icon |
 | [`fyndiq-icon-star`](/packages/fyndiq-icon-star) | [![npm](https://img.shields.io/npm/v/fyndiq-icon-star.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-icon-star) | Star icon |
 | [`fyndiq-styles-colors`](/packages/fyndiq-styles-colors) | [![npm](https://img.shields.io/npm/v/fyndiq-styles-colors.svg?maxAge=2592000)](https://www.npmjs.com/package/fyndiq-styles-colors) | Default colors |
