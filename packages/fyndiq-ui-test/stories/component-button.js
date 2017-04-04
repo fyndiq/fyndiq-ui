@@ -1,8 +1,6 @@
 import React from 'react'
 import { storiesOf, action } from '@kadira/storybook'
 import Button from 'fyndiq-component-button'
-import { Price, OldPrice, CurrentPrice } from 'fyndiq-component-price'
-import './styles.less'
 
 storiesOf('Button', module)
   .addWithInfo('default', () => (
@@ -32,24 +30,4 @@ storiesOf('Button', module)
   ))
   .addWithInfo('disabled button', () => (
     <Button disabled>Disabled Button</Button>
-  ))
-
-
-storiesOf('Price', module)
-  .addWithInfo('default', () => (
-    <Price>
-      <CurrentPrice>149Kr</CurrentPrice>
-      <OldPrice>200Kr</OldPrice>
-    </Price>
-  ))
-  .addWithInfo('without old price', () => (
-    <Price>
-      <CurrentPrice>149Kr</CurrentPrice>
-    </Price>
-  ))
-  .addWithInfo('old price on top', () => (
-    <Price>
-      <OldPrice>200Kr</OldPrice>
-      <CurrentPrice>149Kr</CurrentPrice>
-    </Price>
   ))

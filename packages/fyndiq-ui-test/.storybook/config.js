@@ -1,13 +1,16 @@
 import { configure, setAddon } from '@kadira/storybook'
 import infoAddon from '@kadira/react-storybook-addon-info'
 
+import './styles.less'
+
 function loadStories() {
   /* eslint-disable global-require */
-  require('../stories')
-  require('../stories/story-dropdown')
-  require('../stories/story-checkbox')
-  require('../stories/story-stars')
-  require('../stories/story-productcard')
+  require('../stories/component-button')
+  require('../stories/component-dropdown')
+  require('../stories/component-checkbox')
+  require('../stories/component-stars')
+  require('../stories/component-price')
+  require('../stories/component-productcard')
   require('../stories/icon-brand')
 }
 
