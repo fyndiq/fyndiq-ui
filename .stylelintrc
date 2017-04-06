@@ -1,0 +1,14 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "number-leading-zero": "never",
+    "selector-pseudo-element-colon-notation": "single",
+    "color-hex-case": "upper",
+    "selector-pseudo-class-no-unknown": [true, {
+      ignorePseudoClasses: ["global"]
+    }],
+    "property-no-unknown": [true, {
+      ignoreProperties: ["composes"]
+    }]
+  }
+}

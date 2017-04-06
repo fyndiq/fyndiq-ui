@@ -7,7 +7,9 @@
     "publish": "npm run build && lerna publish",
     "build": "./scripts/build.sh",
     "dev": "./scripts/build.sh dev",
-    "lint:js": "eslint --ignore-pattern node_modules --ignore-pattern lib ."
+    "lint": "npm run lint:js && npm run lint:less",
+    "lint:js": "eslint --ignore-pattern node_modules --ignore-pattern lib .",
+    "lint:less": "stylelint --syntax less \"packages/**/*.less\""
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
@@ -29,6 +31,8 @@
     "css-loader": "^0.27.3",
     "less": "^2.7.2",
     "less-loader": "^3.0.0",
-    "style-loader": "^0.16.1"
+    "style-loader": "^0.16.1",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0"
   }
 }
