@@ -3,18 +3,18 @@
 exports[`fyndiq-component-checkbox should be invoquable without parameters 1`] = `
 <button
   className="
-          undefined
-          undefined
+          checkbox
+          interactiveCheckbox
           
         "
   disabled={false}
   onClick={[Function]}
 >
   <div
-    className={undefined}
+    className="checkmark"
   />
   <span
-    className={undefined}
+    className="children"
   />
 </button>
 `;
@@ -22,15 +22,15 @@ exports[`fyndiq-component-checkbox should be invoquable without parameters 1`] =
 exports[`fyndiq-component-checkbox should have prop checked 1`] = `
 <button
   className="
-          undefined
-          undefined
+          checkbox
+          interactiveCheckbox
           
         "
   disabled={false}
   onClick={[Function]}
 >
   <svg
-    className=""
+    className="checkmark"
     fill="#999"
     height={15}
     viewBox="0 0 50 50"
@@ -41,7 +41,7 @@ exports[`fyndiq-component-checkbox should have prop checked 1`] = `
     />
   </svg>
   <span
-    className={undefined}
+    className="children"
   />
 </button>
 `;
@@ -49,15 +49,15 @@ exports[`fyndiq-component-checkbox should have prop checked 1`] = `
 exports[`fyndiq-component-checkbox should have prop color 1`] = `
 <button
   className="
-          undefined
-          undefined
+          checkbox
+          interactiveCheckbox
           
         "
   disabled={false}
   onClick={[Function]}
 >
   <svg
-    className=""
+    className="checkmark"
     fill="red"
     height={15}
     viewBox="0 0 50 50"
@@ -68,7 +68,7 @@ exports[`fyndiq-component-checkbox should have prop color 1`] = `
     />
   </svg>
   <span
-    className={undefined}
+    className="children"
   />
 </button>
 `;
@@ -76,7 +76,7 @@ exports[`fyndiq-component-checkbox should have prop color 1`] = `
 exports[`fyndiq-component-checkbox should have prop disabled 1`] = `
 <button
   className="
-          undefined
+          checkbox
           false
           
         "
@@ -84,10 +84,10 @@ exports[`fyndiq-component-checkbox should have prop disabled 1`] = `
   onClick={[Function]}
 >
   <div
-    className={undefined}
+    className="checkmark"
   />
   <span
-    className={undefined}
+    className="children"
   />
 </button>
 `;
@@ -95,18 +95,18 @@ exports[`fyndiq-component-checkbox should have prop disabled 1`] = `
 exports[`fyndiq-component-checkbox should have prop onToggle 1`] = `
 <button
   className="
-          undefined
-          undefined
+          checkbox
+          interactiveCheckbox
           
         "
   disabled={false}
   onClick={[Function]}
 >
   <div
-    className={undefined}
+    className="checkmark"
   />
   <span
-    className={undefined}
+    className="children"
   />
 </button>
 `;
