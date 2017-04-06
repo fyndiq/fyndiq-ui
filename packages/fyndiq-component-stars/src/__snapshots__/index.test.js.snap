@@ -795,3 +795,45 @@ exports[`fyndiq-component-stars should be rendered without props 1`] = `
   
 </div>
 `;
+
+exports[`fyndiq-component-stars should change its state when hovered and interactive 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="
+              stars
+              interactive
+              size-m
+            "
+    data-test="STARS"
+    onMouseLeave={[Function]}
+  >
+    <Star
+      full={1}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={1}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={1}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={0}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={0}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+  </div>
+</div>
+`;

@@ -22,6 +22,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "enzyme": "^2.8.0",
+    "enzyme-to-json": "^1.5.0",
     "eslint": "^3.18.0",
     "eslint-config-fyndiq": "0.0.1",
     "eslint-plugin-import": "^2.2.0",
@@ -44,6 +45,7 @@
     "stylelint-config-standard": "^16.0.0"
   },
   "jest": {
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
     "moduleNameMapper": {
       "\\.less$": "<rootDir>/scripts/less-mock.js"
     }
