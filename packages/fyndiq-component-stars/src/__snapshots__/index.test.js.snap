@@ -13,148 +13,32 @@ exports[`fyndiq-component-stars should be rendered with prop rating 1`] = `
     data-test="STARS"
     onMouseLeave={[Function]}
   >
-    <svg
-      className="star"
+    <Star
+      full={1}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={60}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={1}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={60}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={1}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={60}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={1}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={60}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={0.5}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={30}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
+      onHover={[Function]}
+    />
   </div>
-  
 </div>
 `;
 
@@ -171,146 +55,31 @@ exports[`fyndiq-component-stars should be rendered with prop reviews 1`] = `
     data-test="STARS"
     onMouseLeave={[Function]}
   >
-    <svg
-      className="star"
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
+      onHover={[Function]}
+    />
   </div>
   <span
     className="reviews"
@@ -335,148 +104,32 @@ exports[`fyndiq-component-stars should be rendered with prop reviews 2`] = `
     data-test="STARS"
     onMouseLeave={[Function]}
   >
-    <svg
-      className="star"
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
+      onHover={[Function]}
+    />
   </div>
-  
 </div>
 `;
 
@@ -493,148 +146,32 @@ exports[`fyndiq-component-stars should be rendered with prop size 1`] = `
     data-test="STARS"
     onMouseLeave={[Function]}
   >
-    <svg
-      className="star"
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
+      onHover={[Function]}
+    />
   </div>
-  
 </div>
 `;
 
@@ -651,148 +188,32 @@ exports[`fyndiq-component-stars should be rendered without props 1`] = `
     data-test="STARS"
     onMouseLeave={[Function]}
   >
-    <svg
-      className="star"
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
-    <svg
-      className="star"
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
       onClick={[Function]}
-      onMouseOver={[Function]}
-      viewBox="-5 -5 60 60"
-    >
-      <defs>
-        <clipPath
-          id="0.5"
-        >
-          <rect
-            height="60"
-            width={NaN}
-            x="-5"
-            y="-5"
-          />
-        </clipPath>
-      </defs>
-      <path
-        className="greystar"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-      <path
-        className="yellowstar"
-        clipPath="url(#0.5)"
-        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
-      />
-    </svg>
+      onHover={[Function]}
+    />
   </div>
-  
 </div>
 `;
 

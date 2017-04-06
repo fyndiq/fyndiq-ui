@@ -29,17 +29,12 @@ exports[`fyndiq-component-checkbox should have prop checked 1`] = `
   disabled={false}
   onClick={[Function]}
 >
-  <svg
+  <Checkmark
     className="checkmark"
-    fill="#999"
+    color="#999"
     height={15}
-    viewBox="0 0 50 50"
     width={15}
-  >
-    <path
-      d="M16.8 42c-.4 0-1-.2-1.2-.5l-14-14.2c-.8-.7-.8-1.8 0-2.5.6-.7 1.7-.7 2.4 0l12.8 13 29-29c.7-.7 1.8-.7 2.5 0s.7 1.8 0 2.5L18 41.5c-.2.3-.7.5-1.2.5z"
-    />
-  </svg>
+  />
   <span
     className="children"
   />
@@ -56,17 +51,12 @@ exports[`fyndiq-component-checkbox should have prop color 1`] = `
   disabled={false}
   onClick={[Function]}
 >
-  <svg
+  <Checkmark
     className="checkmark"
-    fill="red"
+    color="red"
     height={15}
-    viewBox="0 0 50 50"
     width={15}
-  >
-    <path
-      d="M16.8 42c-.4 0-1-.2-1.2-.5l-14-14.2c-.8-.7-.8-1.8 0-2.5.6-.7 1.7-.7 2.4 0l12.8 13 29-29c.7-.7 1.8-.7 2.5 0s.7 1.8 0 2.5L18 41.5c-.2.3-.7.5-1.2.5z"
-    />
-  </svg>
+  />
   <span
     className="children"
   />
@@ -93,6 +83,47 @@ exports[`fyndiq-component-checkbox should have prop disabled 1`] = `
 `;
 
 exports[`fyndiq-component-checkbox should have prop onToggle 1`] = `
+<button
+  className="
+          checkbox
+          interactiveCheckbox
+          
+        "
+  disabled={false}
+  onClick={[Function]}
+>
+  <div
+    className="checkmark"
+  />
+  <span
+    className="children"
+  />
+</button>
+`;
+
+exports[`fyndiq-component-checkbox should update its state when clicked on 1`] = `
+<button
+  className="
+          checkbox
+          interactiveCheckbox
+          
+        "
+  disabled={false}
+  onClick={[Function]}
+>
+  <Checkmark
+    className="checkmark"
+    color="#999"
+    height={15}
+    width={15}
+  />
+  <span
+    className="children"
+  />
+</button>
+`;
+
+exports[`fyndiq-component-checkbox should update its state when clicked on 2`] = `
 <button
   className="
           checkbox
