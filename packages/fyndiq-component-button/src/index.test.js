@@ -33,4 +33,11 @@ describe('fyndiq-component-button', () => {
     const component = shallow(<Button pressed>Hello</Button>)
     expect(component).toMatchSnapshot()
   })
+
+  test('should call the onClick handler when clicked on', () => {
+    const clickSpy = jest.fn()
+    const component = shallow(<Button onClick={clickSpy}>Hello</Button>)
+    component.simulate('click')
+    expect(clickSpy.mock.calls).toHaveLength(1)
+  })
 })
