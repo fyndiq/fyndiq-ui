@@ -4,8 +4,9 @@
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "publish": "npm run build && lerna publish",
     "build": "./scripts/build.sh",
+    "build-clean": "rm -rf ./packages/*/lib",
+    "publish": "npm run build-clean && npm run build && lerna publish",
     "dev": "./scripts/build.sh dev",
     "lint": "npm run lint:js && npm run lint:less",
     "lint:js": "eslint --cache --ignore-pattern coverage --ignore-pattern node_modules --ignore-pattern lib .",
