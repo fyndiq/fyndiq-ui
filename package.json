@@ -8,7 +8,7 @@
     "build": "./scripts/build.sh",
     "dev": "./scripts/build.sh dev",
     "lint": "npm run lint:js && npm run lint:less",
-    "lint:js": "eslint --ignore-pattern node_modules --ignore-pattern lib .",
+    "lint:js": "eslint --cache --ignore-pattern coverage --ignore-pattern node_modules --ignore-pattern lib .",
     "lint:less": "stylelint --syntax less \"packages/**/*.less\"",
     "jest": "jest",
     "test": "npm run jest && npm run lint"
