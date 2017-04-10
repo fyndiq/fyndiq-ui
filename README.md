@@ -1,5 +1,7 @@
 # fyndiq-ui
 
+[![Build Status](https://travis-ci.org/fyndiq/fyndiq-ui.svg?branch=master)](https://travis-ci.org/fyndiq/fyndiq-ui)
+
 Library of reusable components for Fyndiq
 
 # Usage
