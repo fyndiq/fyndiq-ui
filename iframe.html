@@ -1,0 +1,53 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+          if (window.parent !== window) {
+            window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__REACT_DEVTOOLS_GLOBAL_HOOK__;
+          }
+        </script>
+        <title>React Storybook</title>
+        <style>
+/*
+  TODO: These definitions are used because fonts cannot be loaded via blob:http:// protocol.
+  A better workaround would be to implement webpack's extractTextPlugin instead of
+  style-loader.
+*/
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/static/media/MuseoSans-500.eot') format('embedded-opentype'), url('/static/media/MuseoSans-500.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/static/media/MuseoSans-900.eot') format('embedded-opentype'), url('/static/media/MuseoSans-900.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cubano';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/static/media/cubano-regular-webfont.eot') format('embedded-opentype'), url('/static/media/cubano-regular-webfont.woff') format('woff');
+}
+
+html {
+  font-family: MuseoSans, Tahoma, sans-serif;
+}
+</style>
+
+        
+      </head>
+      <body>
+        <div id="root"></div>
+        <div id="error-display"></div>
+        <script src="static/preview.899baf6b19212d3461b3.bundle.js"></script>
+      </body>
+    </html>
+  
