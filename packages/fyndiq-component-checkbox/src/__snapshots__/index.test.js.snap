@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-checkbox should be invoquable without parameters 1`] = `
+<button
+  className="
+          checkbox
+          interactiveCheckbox
+          
+        "
+  disabled={false}
+  onClick={[Function]}
+>
+  <div
+    className="checkmark"
+  />
+  <span
+    className="children"
+  />
+</button>
+`;
+
+exports[`fyndiq-component-checkbox should have prop checked 1`] = `
+<button
+  className="
+          checkbox
+          interactiveCheckbox
+          
+        "
+  disabled={false}
+  onClick={[Function]}
+>
+  <Checkmark
+    className="checkmark"
+    color="#999"
+    height={15}
+    width={15}
+  />
+  <span
+    className="children"
+  />
+</button>
+`;
+
+exports[`fyndiq-component-checkbox should have prop color 1`] = `
+<button
+  className="
+          checkbox
+          interactiveCheckbox
+          
+        "
+  disabled={false}
+  onClick={[Function]}
+>
+  <Checkmark
+    className="checkmark"
+    color="red"
+    height={15}
+    width={15}
+  />
+  <span
+    className="children"
+  />
+</button>
+`;
+
+exports[`fyndiq-component-checkbox should have prop disabled 1`] = `
+<button
+  className="
+          checkbox
+          false
+          
+        "
+  disabled={true}
+  onClick={[Function]}
+>
+  <div
+    className="checkmark"
+  />
+  <span
+    className="children"
+  />
+</button>
+`;
+
+exports[`fyndiq-component-checkbox should have prop onToggle 1`] = `
+<button
+  className="
+          checkbox
+          interactiveCheckbox
+          
+        "
+  disabled={false}
+  onClick={[Function]}
+>
+  <div
+    className="checkmark"
+  />
+  <span
+    className="children"
+  />
+</button>
+`;
+
+exports[`fyndiq-component-checkbox should update its state when clicked on 1`] = `
+<button
+  className="
+          checkbox
+          interactiveCheckbox
+          
+        "
+  disabled={false}
+  onClick={[Function]}
+>
+  <Checkmark
+    className="checkmark"
+    color="#999"
+    height={15}
+    width={15}
+  />
+  <span
+    className="children"
+  />
+</button>
+`;
+
+exports[`fyndiq-component-checkbox should update its state when clicked on 2`] = `
+<button
+  className="
+          checkbox
+          interactiveCheckbox
+          
+        "
+  disabled={false}
+  onClick={[Function]}
+>
+  <div
+    className="checkmark"
+  />
+  <span
+    className="children"
+  />
+</button>
+`;

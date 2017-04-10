@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-button should be rendered without props 1`] = `
+<button
+  className="
+      button
+      type-normal
+      size-s
+      false
+      false
+      interactive
+    "
+  disabled={false}
+  onClick={[Function]}
+>
+  Hello
+</button>
+`;
+
+exports[`fyndiq-component-button should have a disabled prop 1`] = `
+<button
+  className="
+      button
+      type-normal
+      size-s
+      false
+      false
+      disabled
+    "
+  disabled={true}
+  onClick={[Function]}
+>
+  Hello
+</button>
+`;
+
+exports[`fyndiq-component-button should have a horizontal prop 1`] = `
+<button
+  className="
+      button
+      type-normal
+      size-s
+      horizontal
+      false
+      interactive
+    "
+  disabled={false}
+  onClick={[Function]}
+>
+  Hello
+</button>
+`;
+
+exports[`fyndiq-component-button should have a pressed prop 1`] = `
+<button
+  className="
+      button
+      type-normal
+      size-s
+      false
+      pressed
+      interactive
+    "
+  disabled={false}
+  onClick={[Function]}
+>
+  Hello
+</button>
+`;
+
+exports[`fyndiq-component-button should have a size prop 1`] = `
+<button
+  className="
+      button
+      type-normal
+      size-xs
+      false
+      false
+      interactive
+    "
+  disabled={false}
+  onClick={[Function]}
+>
+  Hello
+</button>
+`;
+
+exports[`fyndiq-component-button should have a type prop 1`] = `
+<button
+  className="
+      button
+      type-primary
+      size-s
+      false
+      false
+      interactive
+    "
+  disabled={false}
+  onClick={[Function]}
+>
+  Hello
+</button>
+`;
