@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from '../styles.less'
 
-const FyndiqLogo = ({ className, height, width, type, children }) => (
+const FyndiqLogo = ({ className, height, width, type, children, taglineSize }) => (
   <svg
     // Viewbox changes if there's a tagline or not
     viewBox={children ? '-10 -1 82 36' : '-1 -1 66 28'}
@@ -20,6 +20,7 @@ const FyndiqLogo = ({ className, height, width, type, children }) => (
       className={styles.tagline}
       x="32"
       y="33"
+      fontSize={taglineSize}
     >
       {children}
     </text> : null}
@@ -40,6 +41,7 @@ FyndiqLogo.propTypes = {
   ]),
   className: React.PropTypes.string,
   children: React.PropTypes.string,
+  taglineSize: React.PropTypes.number,
 }
 
 FyndiqLogo.defaultProps = {
@@ -48,6 +50,7 @@ FyndiqLogo.defaultProps = {
   type: 'normal',
   className: '',
   children: '',
+  taglineSize: 6.5,
 }
 
 export default FyndiqLogo

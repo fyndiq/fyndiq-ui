@@ -36,3 +36,4 @@ The icon `FyndiqLogo` has the following customizable props:
 - **className**: (String) optional class for advanced styling (size, ...)
 - **height**: (Number) height of the logo
 - **width**: (Number) width of the logo
+- **taglineSize**: (Number) Size of the tagline, if provided (default: 6.5)

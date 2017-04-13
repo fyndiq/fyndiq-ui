@@ -23,4 +23,8 @@ describe('fyndiq-icon-brand', () => {
   it('should have a tagline', () => {
     expect(shallow(<FyndiqLogo>Hello</FyndiqLogo>)).toMatchSnapshot()
   })
+
+  it('should have a taglineSize prop', () => {
+    expect(shallow(<FyndiqLogo taglineSize={5.5}>Hello</FyndiqLogo>)).toMatchSnapshot()
+  })
 })

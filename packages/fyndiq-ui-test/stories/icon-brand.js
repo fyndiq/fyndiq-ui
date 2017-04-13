@@ -25,10 +25,15 @@ storiesOf('Icon Brand', module)
   .addWithInfo('with tagline', () => (
     <div>
       <FyndiqLogo>
-        Fyndshopping på nätet
+        The Bargain Superstore
       </FyndiqLogo>
       <FyndiqLogo type="bw">
-        Fyndshopping på nätet
+        The Bargain Superstore
       </FyndiqLogo>
     </div>
+  ))
+  .addWithInfo('with different tagline size', () => (
+    <FyndiqLogo taglineSize={5.5}>
+      The Bargain Superstore
+    </FyndiqLogo>
   ))
