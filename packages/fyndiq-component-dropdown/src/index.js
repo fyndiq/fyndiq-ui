@@ -36,10 +36,12 @@ class Dropdown extends React.Component {
 
   componentWillMount() {
     document.addEventListener('click', this.boundHandler, false)
+    document.addEventListener('touchend', this.boundHandler, false)
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.boundHandler, false)
+    document.removeEventListener('touchend', this.boundHandler, false)
   }
 
   onButtonClick() {
