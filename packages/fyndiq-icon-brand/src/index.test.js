@@ -19,4 +19,8 @@ describe('fyndiq-icon-brand', () => {
   it('should have a className prop', () => {
     expect(shallow(<FyndiqLogo className="testClass" />)).toMatchSnapshot()
   })
+
+  it('should have a tagline', () => {
+    expect(shallow(<FyndiqLogo>Hello</FyndiqLogo>)).toMatchSnapshot()
+  })
 })

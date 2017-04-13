@@ -21,6 +21,11 @@ import FyndiqLogo from 'fyndiq-icon-brand'
 
 // Show only the outline version of the logo
 <FyndiqLogo type="outline" />
+
+// Add a tagline to the logo
+<FyndiqLogo>
+  Fyndshopping på nätet
+</FyndiqLogo>
 ```
 
 # API

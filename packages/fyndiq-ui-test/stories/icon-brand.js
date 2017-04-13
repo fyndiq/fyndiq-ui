@@ -22,3 +22,8 @@ storiesOf('Icon Brand', module)
       <FyndiqLogo type="outline-transp-bw" />
     </div>
   ))
+  .addWithInfo('with tagline', () => (
+    <FyndiqLogo>
+      Fyndshopping på nätet
+    </FyndiqLogo>
+  ))
