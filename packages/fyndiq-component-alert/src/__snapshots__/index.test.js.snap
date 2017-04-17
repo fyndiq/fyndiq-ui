@@ -8,7 +8,9 @@ exports[`fyndiq-component-alert should be rendered without props 1`] = `
           
         "
 >
-  <span>
+  <span
+    className="text"
+  >
     Notification
   </span>
   <div
@@ -28,7 +30,9 @@ exports[`fyndiq-component-alert should be self-closable 1`] = `
           hidden
         "
 >
-  <span />
+  <span
+    className="text"
+  />
   <div
     className="close"
     onClick={[Function]}
@@ -46,7 +50,9 @@ exports[`fyndiq-component-alert should have a type prop 1`] = `
           
         "
 >
-  <span>
+  <span
+    className="text"
+  >
     Warning
   </span>
   <div
@@ -66,7 +72,9 @@ exports[`fyndiq-component-alert should have a type prop 2`] = `
           
         "
 >
-  <span>
+  <span
+    className="text"
+  >
     Good
   </span>
   <div
@@ -86,7 +94,9 @@ exports[`fyndiq-component-alert should have a type prop 3`] = `
           
         "
 >
-  <span>
+  <span
+    className="text"
+  >
     Bad
   </span>
   <div
