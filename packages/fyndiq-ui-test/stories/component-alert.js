@@ -3,6 +3,13 @@ import { storiesOf, action } from '@kadira/storybook'
 import Alert from 'fyndiq-component-alert'
 
 storiesOf('Alert', module)
+  .addDecorator(story => (
+    // This decorator is here to avoid clashing the alert message with the info
+    // button on the top right
+    <div style={{ paddingTop: 30 }}>
+      {story()}
+    </div>
+  ))
   .addWithInfo('default', () => (
     <Alert onClose={action('closed')}>Your message here</Alert>
   ))
