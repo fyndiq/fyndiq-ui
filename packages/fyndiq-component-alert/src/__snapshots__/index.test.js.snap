@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-alert should be rendered without props 1`] = `
+<div
+  className="
+          alert
+          type-info
+          
+        "
+>
+  <span>
+    Notification
+  </span>
+  <div
+    className="close"
+    onClick={[Function]}
+  >
+    ×
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-alert should be self-closable 1`] = `
+<div
+  className="
+          alert
+          type-info
+          hidden
+        "
+>
+  <span />
+  <div
+    className="close"
+    onClick={[Function]}
+  >
+    ×
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-alert should have a type prop 1`] = `
+<div
+  className="
+          alert
+          type-warning
+          
+        "
+>
+  <span>
+    Warning
+  </span>
+  <div
+    className="close"
+    onClick={[Function]}
+  >
+    ×
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-alert should have a type prop 2`] = `
+<div
+  className="
+          alert
+          type-good
+          
+        "
+>
+  <span>
+    Good
+  </span>
+  <div
+    className="close"
+    onClick={[Function]}
+  >
+    ×
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-alert should have a type prop 3`] = `
+<div
+  className="
+          alert
+          type-bad
+          
+        "
+>
+  <span>
+    Bad
+  </span>
+  <div
+    className="close"
+    onClick={[Function]}
+  >
+    ×
+  </div>
+</div>
+`;
