@@ -2,20 +2,31 @@
 
 .alert {
   padding: 10px;
+  display: flex;
 }
 
 .hidden {
   display: none;
 }
 
+.text {
+  flex: 1;
+}
+
 .close {
-  display: inline-block;
+  flex: 1;
   float: right;
   font-family: monospace;
-  line-height: 1.2em;
-  font-size: 1.6em;
   font-weight: bold;
   cursor: pointer;
+  max-width: 1em;
+  line-height: 1em;
+  font-size: 18px;
+  text-align: center;
+
+  &:hover {
+    background-color: fadeout(@white, 60%);
+  }
 }
 
 .type-good {

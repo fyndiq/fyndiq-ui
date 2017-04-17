@@ -47,7 +47,7 @@ export default class Alert extends React.Component {
           ${this.state.displayed ? '' : styles.hidden}
         `}
       >
-        <span>{children}</span>
+        <span className={styles.text}>{children}</span>
         <div
           className={styles.close}
           onClick={() => this.handleCloseClick()}
