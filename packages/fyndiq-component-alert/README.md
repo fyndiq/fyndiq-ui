@@ -25,6 +25,11 @@ import Alert from 'fyndiq-component-alert'
 <Alert type="bad">
   You have some issues
 </Alert>
+
+// Alert than can't be closed
+<Alert unclosable>
+  You cannot close me
+</Alert>
 ```
 
 # API
@@ -32,4 +37,5 @@ import Alert from 'fyndiq-component-alert'
 The component `Alert` has the following customizable props:
 
 - **type**: (String) One of `info`, `good`, `bad`, `warning`. Changes the color style of the alert. (Default: `info`)
+- **unclosable**: (Boolean) if true, will not display a closing cross
 - **onClose**: (Function) Handler called when the alert is closed
