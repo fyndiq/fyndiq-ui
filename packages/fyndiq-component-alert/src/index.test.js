@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 
 import Alert from './'
 
@@ -15,14 +15,18 @@ describe('fyndiq-component-alert', () => {
   })
 
   test('should be self-closable', () => {
-    const component = shallow(<Alert />)
+    jest.useFakeTimers()
+    const component = mount(<Alert />)
     component.find('.close').simulate('click')
+    jest.runTimersToTime(50)
+    expect(component).toMatchSnapshot()
+    jest.runTimersToTime(500)
     expect(component).toMatchSnapshot()
   })
 
   test('should have a onClose handler', () => {
     const closeSpy = jest.fn()
-    const component = shallow(<Alert onClose={closeSpy} />)
+    const component = mount(<Alert onClose={closeSpy} />)
     component.find('.close').simulate('click')
     expect(closeSpy.mock.calls).toHaveLength(1)
   })
