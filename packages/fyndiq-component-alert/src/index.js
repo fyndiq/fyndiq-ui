@@ -10,12 +10,14 @@ export default class Alert extends React.Component {
       'warning',
       'bad',
     ]),
+    unclosable: React.PropTypes.bool,
     onClose: React.PropTypes.func,
   }
 
   static defaultProps = {
     children: '',
     type: 'info',
+    unclosable: false,
     onClose: noop => noop,
   }
 
@@ -23,13 +25,30 @@ export default class Alert extends React.Component {
     super(props)
     this.state = {
       displayed: true,
+      removed: false,
     }
   }
 
-  handleCloseClick() {
-    this.setState({
+  close() {
+    const height = this.nodeWrapper.clientHeight
+
+    // Set the height on the wrapper node, to start the animation
+    this.nodeWrapper.style.height = height + 'px'
+
+    // Wait a tick before starting the animation
+    setTimeout(() => this.setState({
       displayed: false,
-    })
+    }), 10)
+
+    // Once the animation is done, remove the div with display none
+    // Keep this 200 in sync with the styles.less file
+    setTimeout(() => this.setState({
+      removed: true,
+    }), 200)
+  }
+
+  handleCloseClick() {
+    this.close()
 
     if (this.props.onClose) {
       this.props.onClose()
@@ -37,22 +56,32 @@ export default class Alert extends React.Component {
   }
 
   render() {
-    const { children, type } = this.props
+    const { children, type, unclosable } = this.props
 
     return (
       <div
         className={`
-          ${styles.alert}
-          ${styles['type-' + type]}
-          ${this.state.displayed ? '' : styles.hidden}
+          ${styles.alertWrapper}
+          ${!this.state.displayed ? styles.hidden : ''}
+          ${this.state.removed ? styles.removed : ''}
         `}
+        ref={e => { this.nodeWrapper = e }}
       >
-        <span className={styles.text}>{children}</span>
         <div
-          className={styles.close}
-          onClick={() => this.handleCloseClick()}
+          className={`
+            ${styles.alert}
+            ${styles['type-' + type]}
+          `}
         >
-          &times;
+          <span className={styles.text}>{children}</span>
+          {unclosable ? null : (
+            <div
+              className={styles.close}
+              onClick={() => this.handleCloseClick()}
+            >
+              &times;
+            </div>
+          )}
         </div>
       </div>
     )
