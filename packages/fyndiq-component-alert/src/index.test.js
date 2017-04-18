@@ -14,6 +14,10 @@ describe('fyndiq-component-alert', () => {
     expect(shallow(<Alert type="bad">Bad</Alert>)).toMatchSnapshot()
   })
 
+  test('should have unclosable prop', () => {
+    expect(shallow(<Alert unclosable />)).toMatchSnapshot()
+  })
+
   test('should be self-closable', () => {
     jest.useFakeTimers()
     const component = mount(<Alert />)

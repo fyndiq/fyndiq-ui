@@ -181,3 +181,24 @@ exports[`fyndiq-component-alert should have a type prop 3`] = `
   </div>
 </div>
 `;
+
+exports[`fyndiq-component-alert should have unclosable prop 1`] = `
+<div
+  className="
+          alertWrapper
+          
+          
+        "
+>
+  <div
+    className="
+              alert
+              type-info
+            "
+  >
+    <span
+      className="text"
+    />
+  </div>
+</div>
+`;
