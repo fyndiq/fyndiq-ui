@@ -43,6 +43,20 @@ storiesOf('Dropdown', module)
       Dropdown content
     </Dropdown>
   ))
+  .addWithInfo('custom wrapper style', () => (
+    <Dropdown button="Open me" noWrapperStyle>
+      <div
+        style={{
+          background: '#333',
+          color: 'white',
+          padding: 50,
+          boxShadow: '0 0 5px #f50',
+        }}
+      >
+        Content
+      </div>
+    </Dropdown>
+  ))
   .addWithInfo('open on hover', () => (
     <Dropdown button="Hover me!" hoverMode>
       It works!

@@ -18,12 +18,14 @@ class Dropdown extends React.Component {
     ]),
     hoverMode: React.PropTypes.bool,
     noArrow: React.PropTypes.bool,
+    noWrapperStyle: React.PropTypes.bool,
   }
 
   static defaultProps = {
     opened: false,
     hoverMode: false,
     noArrow: false,
+    noWrapperStyle: false,
     size: undefined,
     position: 'bl',
   }
@@ -97,6 +99,7 @@ class Dropdown extends React.Component {
       noArrow,
       size,
       position,
+      noWrapperStyle,
     } = this.props
 
     let buttonContent
@@ -133,6 +136,7 @@ class Dropdown extends React.Component {
         <div
           className={`
             ${styles.dropdownWrapper}
+            ${!noWrapperStyle ? styles.dropdownDefault : ''}
             ${this.state.opened ? styles.open : ''}
             ${styles['position-' + position]}
           `}

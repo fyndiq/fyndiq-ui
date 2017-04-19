@@ -16,6 +16,12 @@ describe('fyndiq-component-dropdown', () => {
     )).toMatchSnapshot()
   })
 
+  test('should have a custom wrapper', () => {
+    expect(shallow(
+      <Dropdown button="B" noWrapperStyle>Content</Dropdown>
+    ).find('.dropdownWrapper')).toMatchSnapshot()
+  })
+
   test('should be opened when clicked on the button', () => {
     const component = shallow(<Dropdown button="button">Value</Dropdown>)
     component.find('Button').simulate('click')
