@@ -23,6 +23,7 @@ exports[`fyndiq-component-dropdown should be displayed with minimum props 1`] = 
   <div
     className="
               dropdownWrapper
+              dropdownDefault
               
               position-bl
             "
@@ -36,6 +37,7 @@ exports[`fyndiq-component-dropdown should be opened when clicked on the button 1
 <div
   className="
             dropdownWrapper
+            dropdownDefault
             open
             position-bl
           "
@@ -48,6 +50,7 @@ exports[`fyndiq-component-dropdown should be opened when hovered, if in hoverMod
 <div
   className="
             dropdownWrapper
+            dropdownDefault
             open
             position-bl
           "
@@ -60,6 +63,7 @@ exports[`fyndiq-component-dropdown should be opened when hovered, if in hoverMod
 <div
   className="
             dropdownWrapper
+            dropdownDefault
             
             position-bl
           "
@@ -84,12 +88,26 @@ exports[`fyndiq-component-dropdown should have a custom button 1`] = `
   <div
     className="
               dropdownWrapper
+              dropdownDefault
               
               position-bl
             "
   >
     Value
   </div>
+</div>
+`;
+
+exports[`fyndiq-component-dropdown should have a custom wrapper 1`] = `
+<div
+  className="
+            dropdownWrapper
+            
+            
+            position-bl
+          "
+>
+  Content
 </div>
 `;
 
@@ -104,6 +122,7 @@ exports[`fyndiq-component-dropdown should have different dropdown positions 1`] 
 <div
   className="
             dropdownWrapper
+            dropdownDefault
             
             position-bc
           "
