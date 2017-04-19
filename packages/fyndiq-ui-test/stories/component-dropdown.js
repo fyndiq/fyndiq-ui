@@ -43,3 +43,8 @@ storiesOf('Dropdown', module)
       Dropdown content
     </Dropdown>
   ))
+  .addWithInfo('open on hover', () => (
+    <Dropdown button="Hover me!" hoverMode>
+      It works!
+    </Dropdown>
+  ))

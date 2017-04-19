@@ -12,12 +12,14 @@ class Dropdown extends React.Component {
     ]).isRequired,
     children: React.PropTypes.node.isRequired,
     size: React.PropTypes.string,
+    hoverMode: React.PropTypes.bool,
     noArrow: React.PropTypes.bool,
     noContentPadding: React.PropTypes.bool,
   }
 
   static defaultProps = {
     opened: false,
+    hoverMode: false,
     noArrow: false,
     noContentPadding: false,
     size: undefined,
@@ -26,60 +28,102 @@ class Dropdown extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      dropdownOpen: props.opened,
+      opened: props.opened,
     }
 
-    // Save this as a property so that addEventListener and removeEventListener
-    // work properly
-    this.boundHandler = this.handleDocumentClick.bind(this)
+    this.onButtonClick = this.onButtonClick.bind(this)
+    this.onMouseOver = this.onMouseOver.bind(this)
+    this.onMouseOut = this.onMouseOut.bind(this)
+    this.handleDocumentClick = this.handleDocumentClick.bind(this)
   }
 
   componentWillMount() {
-    document.addEventListener('click', this.boundHandler, false)
-    document.addEventListener('touchend', this.boundHandler, false)
+    document.addEventListener('click', this.handleDocumentClick, false)
+    document.addEventListener('touchend', this.handleDocumentClick, false)
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.boundHandler, false)
-    document.removeEventListener('touchend', this.boundHandler, false)
+    document.removeEventListener('click', this.handleDocumentClick, false)
+    document.removeEventListener('touchend', this.handleDocumentClick, false)
   }
 
   onButtonClick() {
-    this.setState({ dropdownOpen: !this.state.dropdownOpen })
+    if (!this.props.hoverMode) {
+      this.toggleDropdown()
+    }
+  }
+
+  onMouseOver() {
+    if (this.props.hoverMode) {
+      clearTimeout(this.closeTimeout)
+      this.openDropdown()
+    }
+  }
+
+  onMouseOut() {
+    if (this.props.hoverMode) {
+      this.closeTimeout = setTimeout(() => this.closeDropdown(), 100)
+    }
+  }
+
+  openDropdown() {
+    this.setState({ opened: true })
+  }
+
+  closeDropdown() {
+    this.setState({ opened: false })
+  }
+
+  toggleDropdown() {
+    this.setState(state => ({ opened: !state.opened }))
   }
 
   handleDocumentClick(event) {
     if (this.wrapperNode && !this.wrapperNode.contains(event.target)) {
-      this.setState({ dropdownOpen: false })
+      this.closeDropdown()
     }
   }
 
   render() {
-    const { button, children, noArrow, noContentPadding, size } = this.props
+    const {
+      button,
+      children,
+      noArrow,
+      noContentPadding,
+      size,
+    } = this.props
 
     let buttonContent
 
     if (typeof button === 'string') {
       buttonContent = (
-        <Button onClick={e => this.onButtonClick(e)} size={size}>
+        <Button
+          size={size}
+          onClick={this.onButtonClick}
+        >
           {button}
           {!noArrow ? <Arrow orientation="down" /> : ''}
         </Button>
       )
     } else {
       buttonContent = (
-        <div onClick={e => this.onButtonClick(e)}>
+        <div onClick={this.onButtonClick}>
           {button}
         </div>
       )
     }
 
     return (
-      <div className={styles.wrapper} ref={e => { this.wrapperNode = e }}>
+      <div
+        className={styles.wrapper}
+        ref={e => { this.wrapperNode = e }}
+        onMouseOver={this.onMouseOver}
+        onMouseOut={this.onMouseOut}
+      >
         {buttonContent}
         <div
           className={`
-            ${this.state.dropdownOpen ? styles.dropdownWrapperOpen : styles.dropdownWrapper}
+            ${this.state.opened ? styles.dropdownWrapperOpen : styles.dropdownWrapper}
             ${noContentPadding ? '' : styles.padded}
           `}
         >
