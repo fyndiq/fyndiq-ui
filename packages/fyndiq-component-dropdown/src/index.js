@@ -50,19 +50,22 @@ class Dropdown extends React.Component {
   onButtonClick() {
     if (!this.props.hoverMode) {
       this.toggleDropdown()
+    } else {
+      this.openDropdown()
     }
   }
 
   onMouseOver() {
     if (this.props.hoverMode) {
-      clearTimeout(this.closeTimeout)
-      this.openDropdown()
+      clearTimeout(this.timeout)
+      this.timeout = setTimeout(() => this.openDropdown(), 200)
     }
   }
 
   onMouseOut() {
     if (this.props.hoverMode) {
-      this.closeTimeout = setTimeout(() => this.closeDropdown(), 100)
+      clearTimeout(this.timeout)
+      this.timeout = setTimeout(() => this.closeDropdown(), 100)
     }
   }
 
