@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-dropdown should be displayed with minimum props 1`] = `
+<div
+  className="wrapper"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  <Button
+    disabled={false}
+    horizontal={false}
+    onClick={[Function]}
+    pressed={false}
+    size="s"
+    type="normal"
+  >
+    Button
+    <Arrow
+      className=""
+      orientation="down"
+    />
+  </Button>
+  <div
+    className="
+              dropdownWrapper
+              
+              padded
+              position-bl
+            "
+  >
+    Value
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-dropdown should be opened when clicked on the button 1`] = `
+<div
+  className="
+            dropdownWrapper
+            open
+            padded
+            position-bl
+          "
+>
+  Value
+</div>
+`;
+
+exports[`fyndiq-component-dropdown should be opened when hovered, if in hoverMode 1`] = `
+<div
+  className="
+            dropdownWrapper
+            open
+            padded
+            position-bl
+          "
+>
+  Value
+</div>
+`;
+
+exports[`fyndiq-component-dropdown should be opened when hovered, if in hoverMode 2`] = `
+<div
+  className="
+            dropdownWrapper
+            
+            padded
+            position-bl
+          "
+>
+  Value
+</div>
+`;
+
+exports[`fyndiq-component-dropdown should have a custom button 1`] = `
+<div
+  className="wrapper"
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  <div
+    onClick={[Function]}
+  >
+    <div>
+      Hello
+    </div>
+  </div>
+  <div
+    className="
+              dropdownWrapper
+              
+              padded
+              position-bl
+            "
+  >
+    Value
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-dropdown should have an arrow oriented to the top if dropdown is above 1`] = `
+<Arrow
+  className=""
+  orientation="up"
+/>
+`;
+
+exports[`fyndiq-component-dropdown should have different dropdown positions 1`] = `
+<div
+  className="
+            dropdownWrapper
+            
+            padded
+            position-bc
+          "
+>
+  Content
+</div>
+`;
