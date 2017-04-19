@@ -12,6 +12,10 @@ class Dropdown extends React.Component {
     ]).isRequired,
     children: React.PropTypes.node.isRequired,
     size: React.PropTypes.string,
+    position: React.PropTypes.oneOf([
+      'bl', 'bc', 'br',
+      'tl', 'tc', 'tr',
+    ]),
     hoverMode: React.PropTypes.bool,
     noArrow: React.PropTypes.bool,
     noContentPadding: React.PropTypes.bool,
@@ -23,6 +27,7 @@ class Dropdown extends React.Component {
     noArrow: false,
     noContentPadding: false,
     size: undefined,
+    position: 'bl',
   }
 
   constructor(props) {
@@ -94,9 +99,13 @@ class Dropdown extends React.Component {
       noArrow,
       noContentPadding,
       size,
+      position,
     } = this.props
 
     let buttonContent
+
+    // Arrow orientation depends on the position of the dropdown
+    const arrowOrientation = position[0] === 't' ? 'up' : 'down'
 
     if (typeof button === 'string') {
       buttonContent = (
@@ -105,7 +114,7 @@ class Dropdown extends React.Component {
           onClick={this.onButtonClick}
         >
           {button}
-          {!noArrow ? <Arrow orientation="down" /> : ''}
+          {!noArrow ? <Arrow orientation={arrowOrientation} /> : ''}
         </Button>
       )
     } else {
@@ -126,8 +135,10 @@ class Dropdown extends React.Component {
         {buttonContent}
         <div
           className={`
-            ${this.state.opened ? styles.dropdownWrapperOpen : styles.dropdownWrapper}
-            ${noContentPadding ? '' : styles.padded}
+            ${styles.dropdownWrapper}
+            ${this.state.opened ? styles.open : ''}
+            ${!noContentPadding ? styles.padded : ''}
+            ${styles['position-' + position]}
           `}
         >
           {children}
