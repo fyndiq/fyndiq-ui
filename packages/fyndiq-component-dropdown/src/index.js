@@ -18,14 +18,12 @@ class Dropdown extends React.Component {
     ]),
     hoverMode: React.PropTypes.bool,
     noArrow: React.PropTypes.bool,
-    noContentPadding: React.PropTypes.bool,
   }
 
   static defaultProps = {
     opened: false,
     hoverMode: false,
     noArrow: false,
-    noContentPadding: false,
     size: undefined,
     position: 'bl',
   }
@@ -97,7 +95,6 @@ class Dropdown extends React.Component {
       button,
       children,
       noArrow,
-      noContentPadding,
       size,
       position,
     } = this.props
@@ -137,7 +134,6 @@ class Dropdown extends React.Component {
           className={`
             ${styles.dropdownWrapper}
             ${this.state.opened ? styles.open : ''}
-            ${!noContentPadding ? styles.padded : ''}
             ${styles['position-' + position]}
           `}
         >
