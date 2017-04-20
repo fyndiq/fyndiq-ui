@@ -24,7 +24,7 @@ describe('fyndiq-component-dropdown', () => {
 
   test('should be opened when clicked on the button', () => {
     const component = shallow(<Dropdown button="button">Value</Dropdown>)
-    component.find('Button').simulate('click')
+    component.find('div > div').at(0).simulate('click')
     expect(component.find('.dropdownWrapper')).toMatchSnapshot()
   })
 

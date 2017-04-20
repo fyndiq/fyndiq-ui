@@ -109,20 +109,13 @@ class Dropdown extends React.Component {
 
     if (typeof button === 'string') {
       buttonContent = (
-        <Button
-          size={size}
-          onClick={this.onButtonClick}
-        >
+        <Button size={size}>
           {button}
           {!noArrow ? <Arrow orientation={arrowOrientation} /> : ''}
         </Button>
       )
     } else {
-      buttonContent = (
-        <div onClick={this.onButtonClick}>
-          {button}
-        </div>
-      )
+      buttonContent = button
     }
 
     return (
@@ -132,7 +125,9 @@ class Dropdown extends React.Component {
         onMouseOver={this.onMouseOver}
         onMouseOut={this.onMouseOut}
       >
-        {buttonContent}
+        <div onClick={this.onButtonClick}>
+          {buttonContent}
+        </div>
         <div
           className={`
             ${styles.dropdownWrapper}

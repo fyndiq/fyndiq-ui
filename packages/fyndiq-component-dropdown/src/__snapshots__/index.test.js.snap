@@ -6,20 +6,24 @@ exports[`fyndiq-component-dropdown should be displayed with minimum props 1`] = 
   onMouseOut={[Function]}
   onMouseOver={[Function]}
 >
-  <Button
-    disabled={false}
-    horizontal={false}
+  <div
     onClick={[Function]}
-    pressed={false}
-    size="s"
-    type="normal"
   >
-    Button
-    <Arrow
-      className=""
-      orientation="down"
-    />
-  </Button>
+    <Button
+      disabled={false}
+      horizontal={false}
+      onClick={[Function]}
+      pressed={false}
+      size="s"
+      type="normal"
+    >
+      Button
+      <Arrow
+        className=""
+        orientation="down"
+      />
+    </Button>
+  </div>
   <div
     className="
               dropdownWrapper
