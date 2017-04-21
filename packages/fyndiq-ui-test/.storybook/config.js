@@ -9,6 +9,7 @@ function loadStories() {
   /* eslint-disable global-require */
   require('../stories/component-button')
   require('../stories/component-dropdown')
+  require('../stories/component-tooltip')
   require('../stories/component-checkbox')
   require('../stories/component-stars')
   require('../stories/component-price')

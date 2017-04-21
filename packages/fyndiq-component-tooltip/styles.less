@@ -1,0 +1,81 @@
+@import "~fyndiq-styles-colors/colors.less";
+
+.tooltip {
+  background-color: fadeout(@black, 10%);
+  color: @white;
+  padding: 3px 5px;
+  border-radius: 3px;
+  max-width: 200px;
+
+  &:before {
+    position: absolute;
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 4px 4px;
+    border-color: transparent transparent @black transparent;
+  }
+}
+
+.position-b:before {
+  top: -4px;
+  border-width: 0 4px 4px;
+  border-color: transparent transparent @black transparent;
+}
+
+.position-t:before {
+  bottom: -4px;
+  border-width: 4px 4px 0;
+  border-color: @black transparent transparent;
+}
+
+.position-bl {
+  composes: position-b;
+
+  &:before {
+    left: 10px;
+  }
+}
+
+.position-bc {
+  composes: position-b;
+
+  &:before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.position-br {
+  composes: position-b;
+
+  &:before {
+    right: 10px;
+  }
+}
+
+.position-tl {
+  composes: position-t;
+
+  &:before {
+    left: 10px;
+  }
+}
+
+.position-tc {
+  composes: position-t;
+
+  &:before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.position-tr {
+  composes: position-t;
+
+  &:before {
+    right: 10px;
+  }
+}

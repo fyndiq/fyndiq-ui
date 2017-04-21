@@ -10,6 +10,7 @@
     "fyndiq-component-checkbox": "^0.0.5",
     "fyndiq-component-stars": "^0.0.5",
     "fyndiq-component-dropdown": "^0.0.5",
+    "fyndiq-component-tooltip": "*",
     "fyndiq-icon-brand": "^0.0.6",
     "fyndiq-styles-fonts": "^0.0.6"
   },

@@ -1,0 +1,18 @@
+{
+  "name": "fyndiq-component-tooltip",
+  "version": "0.0.5",
+  "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fyndiq/fyndiq-ui.git"
+  },
+  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Tooltip&selectedStory=default",
+  "dependencies": {
+    "fyndiq-component-dropdown": "^0.0.5",
+    "fyndiq-styles-colors": "^0.0.5"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0"
+  }
+}
