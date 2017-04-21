@@ -24,27 +24,22 @@ exports[`fyndiq-component-dropdown should be displayed with minimum props 1`] = 
       />
     </Button>
   </div>
-  <div
-    className="
-              dropdownWrapper
-              dropdownDefault
-              
-              position-bl
-            "
-  >
-    Value
-  </div>
 </div>
 `;
 
 exports[`fyndiq-component-dropdown should be opened when clicked on the button 1`] = `
 <div
   className="
-            dropdownWrapper
-            dropdownDefault
-            open
-            position-bl
-          "
+              dropdownWrapper
+              dropdownDefault
+              position-bl
+            "
+  style={
+    Object {
+      "left": 0,
+      "top": 5,
+    }
+  }
 >
   Value
 </div>
@@ -53,28 +48,22 @@ exports[`fyndiq-component-dropdown should be opened when clicked on the button 1
 exports[`fyndiq-component-dropdown should be opened when hovered, if in hoverMode 1`] = `
 <div
   className="
-            dropdownWrapper
-            dropdownDefault
-            open
-            position-bl
-          "
+              dropdownWrapper
+              dropdownDefault
+              position-bl
+            "
+  style={
+    Object {
+      "left": 0,
+      "top": 5,
+    }
+  }
 >
   Value
 </div>
 `;
 
-exports[`fyndiq-component-dropdown should be opened when hovered, if in hoverMode 2`] = `
-<div
-  className="
-            dropdownWrapper
-            dropdownDefault
-            
-            position-bl
-          "
->
-  Value
-</div>
-`;
+exports[`fyndiq-component-dropdown should be opened when hovered, if in hoverMode 2`] = `""`;
 
 exports[`fyndiq-component-dropdown should have a custom button 1`] = `
 <div
@@ -89,27 +78,22 @@ exports[`fyndiq-component-dropdown should have a custom button 1`] = `
       Hello
     </div>
   </div>
-  <div
-    className="
-              dropdownWrapper
-              dropdownDefault
-              
-              position-bl
-            "
-  >
-    Value
-  </div>
 </div>
 `;
 
 exports[`fyndiq-component-dropdown should have a custom wrapper 1`] = `
 <div
   className="
-            dropdownWrapper
-            
-            
-            position-bl
-          "
+              dropdownWrapper
+              
+              position-bl
+            "
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
 >
   Content
 </div>
@@ -125,11 +109,16 @@ exports[`fyndiq-component-dropdown should have an arrow oriented to the top if d
 exports[`fyndiq-component-dropdown should have different dropdown positions 1`] = `
 <div
   className="
-            dropdownWrapper
-            dropdownDefault
-            
-            position-bc
-          "
+              dropdownWrapper
+              dropdownDefault
+              position-bc
+            "
+  style={
+    Object {
+      "left": 0,
+      "top": 0,
+    }
+  }
 >
   Content
 </div>
