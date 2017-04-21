@@ -1,17 +1,12 @@
 @import "~fyndiq-styles-colors/colors.less";
 
 .wrapper {
-  position: relative;
   display: inline-block;
-  margin-right: 10px;
 }
 
 .dropdownWrapper {
   position: absolute;
   z-index: 1;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
 }
 
 .dropdownDefault {
@@ -24,69 +19,113 @@
   box-shadow: 0 3px 8px fadeout(@black, 85%);
 }
 
-.open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-  transition: 150ms transform ease-out, 100ms opacity ease-out;
+.position {
+  animation: .15s cubic-bezier(.23, 1, .32, 1.2) normal forwards;
 }
 
-@margin: 5px;
+@scaleFactor: .92;
+@translateFactor: 4px;
 
-.position-b-extremity {
-  bottom: -@margin;
-  transform: translateY(95%);
+.position-bl {
+  composes: position;
+  animation-name: bl;
+}
 
-  &.open {
-    transform: translateY(100%);
+@keyframes bl {
+  from {
+    opacity: 0;
+    transform: translate(0, -@translateFactor) scale(@scaleFactor);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
-.position-bl {
-  composes: position-b-extremity;
-  left: 0;
+.position-bc {
+  composes: position;
+  animation-name: bc;
 }
 
-.position-bc {
-  bottom: -@margin;
-  left: 50%;
-  transform: translate(-50%, 95%);
+@keyframes bc {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -@translateFactor) scale(@scaleFactor);
+  }
 
-  &.open {
-    transform: translate(-50%, 100%);
+  to {
+    opacity: 1;
+    transform: translateX(-50%);
   }
 }
 
 .position-br {
-  composes: position-b-extremity;
-  right: 0;
+  composes: position;
+  animation-name: br;
 }
 
-.position-t-extremity {
-  top: -@margin;
-  transform: translateY(-95%);
+@keyframes br {
+  from {
+    opacity: 0;
+    transform: translate(-100%, -@translateFactor) scale(@scaleFactor);
+  }
 
-  &.open {
-    transform: translateY(-100%);
+  to {
+    opacity: 1;
+    transform: translateX(-100%);
   }
 }
 
+// Top
+
 .position-tl {
-  composes: position-t-extremity;
-  left: 0;
+  composes: position;
+  animation-name: tl;
+}
+
+@keyframes tl {
+  from {
+    opacity: 0;
+    transform: translate(0, (-100% + @translateFactor)) scale(@scaleFactor);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, -100%);
+  }
 }
 
 .position-tc {
-  top: -@margin;
-  left: 50%;
-  transform: translate(-50%, -95%);
+  composes: position;
+  animation-name: tc;
+}
 
-  &.open {
+@keyframes tc {
+  from {
+    opacity: 0;
+    transform: translate(-50%, (-100% + @translateFactor)) scale(@scaleFactor);
+  }
+
+  to {
+    opacity: 1;
     transform: translate(-50%, -100%);
   }
 }
 
 .position-tr {
-  composes: position-t-extremity;
-  right: 0;
+  composes: position;
+  animation-name: tr;
+}
+
+@keyframes tr {
+  from {
+    opacity: 0;
+    transform: translate(-100%, (-100% + @translateFactor)) scale(@scaleFactor);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-100%, -100%);
+  }
 }

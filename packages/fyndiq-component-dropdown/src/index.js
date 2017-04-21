@@ -16,6 +16,7 @@ class Dropdown extends React.Component {
       'bl', 'bc', 'br',
       'tl', 'tc', 'tr',
     ]),
+    margin: React.PropTypes.number,
     hoverMode: React.PropTypes.bool,
     noArrow: React.PropTypes.bool,
     noWrapperStyle: React.PropTypes.bool,
@@ -28,12 +29,15 @@ class Dropdown extends React.Component {
     noWrapperStyle: false,
     size: undefined,
     position: 'bl',
+    margin: 5,
   }
 
   constructor(props) {
     super(props)
     this.state = {
       opened: props.opened,
+      left: 0,
+      top: 0,
     }
 
     this.onButtonClick = this.onButtonClick.bind(this)
@@ -45,6 +49,10 @@ class Dropdown extends React.Component {
   componentWillMount() {
     document.addEventListener('click', this.handleDocumentClick, false)
     document.addEventListener('touchend', this.handleDocumentClick, false)
+  }
+
+  componentDidMount() {
+    this.updateDropdownPosition()
   }
 
   componentWillUnmount() {
@@ -74,7 +82,33 @@ class Dropdown extends React.Component {
     }
   }
 
+  updateDropdownPosition() {
+    const buttonSize = this.buttonNode.getBoundingClientRect()
+    const { position, margin } = this.props
+    let left = this.buttonNode.offsetLeft
+    let top = this.buttonNode.offsetTop
+
+    // If the dropdown is above the button
+    if (position[0] === 't') {
+      top -= margin
+    // If the dropdown is under the button
+    } else {
+      top += buttonSize.height + margin
+    }
+
+    if (position[1] === 'r') {
+      // If the dropdown is on the right
+      left += buttonSize.width
+    } else if (position[1] === 'c') {
+      // If it is in the center
+      left += buttonSize.width / 2
+    }
+
+    this.setState({ left, top })
+  }
+
   openDropdown() {
+    this.updateDropdownPosition()
     this.setState({ opened: true })
   }
 
@@ -83,6 +117,7 @@ class Dropdown extends React.Component {
   }
 
   toggleDropdown() {
+    this.updateDropdownPosition()
     this.setState(state => ({ opened: !state.opened }))
   }
 
@@ -125,19 +160,27 @@ class Dropdown extends React.Component {
         onMouseOver={this.onMouseOver}
         onMouseOut={this.onMouseOut}
       >
-        <div onClick={this.onButtonClick}>
+        <div
+          ref={e => { this.buttonNode = e }}
+          onClick={this.onButtonClick}
+        >
           {buttonContent}
         </div>
-        <div
-          className={`
-            ${styles.dropdownWrapper}
-            ${!noWrapperStyle ? styles.dropdownDefault : ''}
-            ${this.state.opened ? styles.open : ''}
-            ${styles['position-' + position]}
-          `}
-        >
-          {children}
-        </div>
+        {this.state.opened ? (
+          <div
+            className={`
+              ${styles.dropdownWrapper}
+              ${!noWrapperStyle ? styles.dropdownDefault : ''}
+              ${styles['position-' + position]}
+            `}
+            style={{
+              left: this.state.left,
+              top: this.state.top,
+            }}
+          >
+            {children}
+          </div>
+        ) : null}
       </div>
     )
   }
