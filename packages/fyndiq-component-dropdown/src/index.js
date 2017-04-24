@@ -1,25 +1,26 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Button from 'fyndiq-component-button'
 import Arrow from 'fyndiq-icon-arrow'
 import styles from '../styles.less'
 
 class Dropdown extends React.Component {
   static propTypes = {
-    opened: React.PropTypes.bool,
-    button: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.element,
+    opened: PropTypes.bool,
+    button: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element,
     ]).isRequired,
-    children: React.PropTypes.node.isRequired,
-    size: React.PropTypes.string,
-    position: React.PropTypes.oneOf([
+    children: PropTypes.node.isRequired,
+    size: PropTypes.string,
+    position: PropTypes.oneOf([
       'bl', 'bc', 'br',
       'tl', 'tc', 'tr',
     ]),
-    margin: React.PropTypes.number,
-    hoverMode: React.PropTypes.bool,
-    noArrow: React.PropTypes.bool,
-    noWrapperStyle: React.PropTypes.bool,
+    margin: PropTypes.number,
+    hoverMode: PropTypes.bool,
+    noArrow: PropTypes.bool,
+    noWrapperStyle: PropTypes.bool,
   }
 
   static defaultProps = {
