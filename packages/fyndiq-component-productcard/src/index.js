@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Price, CurrentPrice, OldPrice } from 'fyndiq-component-price'
 import Stars from 'fyndiq-component-stars'
 import styles from '../styles.less'
@@ -16,11 +17,11 @@ const Productcard = ({ price, title, url, oldprice, rating }) => (
 )
 
 Productcard.propTypes = {
-  price: React.PropTypes.string.isRequired,
-  title: React.PropTypes.string.isRequired,
-  url: React.PropTypes.string.isRequired,
-  oldprice: React.PropTypes.string,
-  rating: React.PropTypes.number,
+  price: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  oldprice: PropTypes.string,
+  rating: PropTypes.number,
 }
 
 Productcard.defaultProps = {
