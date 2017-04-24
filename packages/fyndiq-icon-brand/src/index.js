@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import styles from '../styles.less'
 
@@ -29,9 +30,9 @@ const FyndiqLogo = ({ className, height, width, type, children, taglineSize }) =
 )
 
 FyndiqLogo.propTypes = {
-  height: React.PropTypes.number,
-  width: React.PropTypes.number,
-  type: React.PropTypes.oneOf([
+  height: PropTypes.number,
+  width: PropTypes.number,
+  type: PropTypes.oneOf([
     'normal',
     'outline',
     'outline-transp',
@@ -39,9 +40,9 @@ FyndiqLogo.propTypes = {
     'outline-bw',
     'outline-transp-bw',
   ]),
-  className: React.PropTypes.string,
-  children: React.PropTypes.string,
-  taglineSize: React.PropTypes.number,
+  className: PropTypes.string,
+  children: PropTypes.string,
+  taglineSize: PropTypes.number,
 }
 
 FyndiqLogo.defaultProps = {

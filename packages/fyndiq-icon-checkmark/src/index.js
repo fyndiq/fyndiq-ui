@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import colors from 'fyndiq-styles-colors'
 
 const Checkmark = ({ height, width, className, color }) => (
@@ -14,10 +15,10 @@ const Checkmark = ({ height, width, className, color }) => (
 )
 
 Checkmark.propTypes = {
-  height: React.PropTypes.number,
-  width: React.PropTypes.number,
-  className: React.PropTypes.string,
-  color: React.PropTypes.string,
+  height: PropTypes.number,
+  width: PropTypes.number,
+  className: PropTypes.string,
+  color: PropTypes.string,
 }
 
 Checkmark.defaultProps = {
