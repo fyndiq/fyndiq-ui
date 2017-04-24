@@ -1,14 +1,15 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Star from 'fyndiq-icon-star'
 import styles from '../styles.less'
 
 class Stars extends React.Component {
   static propTypes = {
-    rating: React.PropTypes.number,
-    reviews: React.PropTypes.number,
-    size: React.PropTypes.string,
-    interactive: React.PropTypes.bool,
-    onChange: React.PropTypes.func,
+    rating: PropTypes.number,
+    reviews: PropTypes.number,
+    size: PropTypes.string,
+    interactive: PropTypes.bool,
+    onChange: PropTypes.func,
   }
 
   static defaultProps = {
