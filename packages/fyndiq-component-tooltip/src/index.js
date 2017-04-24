@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Dropdown from 'fyndiq-component-dropdown'
 
 import styles from '../styles.less'
@@ -22,8 +23,8 @@ const Tooltip = ({ text, children, position }) => (
 )
 
 Tooltip.propTypes = {
-  text: React.PropTypes.string,
-  children: React.PropTypes.string,
+  text: PropTypes.string,
+  children: PropTypes.string,
   position: Dropdown.propTypes.position,
 }
 
