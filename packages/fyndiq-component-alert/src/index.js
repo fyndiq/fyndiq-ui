@@ -1,17 +1,18 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from '../styles.less'
 
 export default class Alert extends React.Component {
   static propTypes = {
-    children: React.PropTypes.node,
-    type: React.PropTypes.oneOf([
+    children: PropTypes.node,
+    type: PropTypes.oneOf([
       'info',
       'good',
       'warning',
       'bad',
     ]),
-    unclosable: React.PropTypes.bool,
-    onClose: React.PropTypes.func,
+    unclosable: PropTypes.bool,
+    onClose: PropTypes.func,
   }
 
   static defaultProps = {
