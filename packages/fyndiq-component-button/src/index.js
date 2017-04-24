@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from '../styles.less'
 
 const Button = ({ children, onClick, type, size, horizontal, disabled, pressed }) => (
@@ -19,13 +20,13 @@ const Button = ({ children, onClick, type, size, horizontal, disabled, pressed }
 )
 
 Button.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  onClick: React.PropTypes.func,
-  type: React.PropTypes.string,
-  size: React.PropTypes.string,
-  horizontal: React.PropTypes.bool,
-  disabled: React.PropTypes.bool,
-  pressed: React.PropTypes.bool,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+  type: PropTypes.string,
+  size: PropTypes.string,
+  horizontal: PropTypes.bool,
+  disabled: PropTypes.bool,
+  pressed: PropTypes.bool,
 }
 
 Button.defaultProps = {

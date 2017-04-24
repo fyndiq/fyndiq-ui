@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from '../styles.less'
 
 const Arrow = ({ orientation, className }) => {
@@ -31,8 +32,8 @@ const Arrow = ({ orientation, className }) => {
 }
 
 Arrow.propTypes = {
-  orientation: React.PropTypes.oneOf(['up', 'down', 'right', 'left']),
-  className: React.PropTypes.string,
+  orientation: PropTypes.oneOf(['up', 'down', 'right', 'left']),
+  className: PropTypes.string,
 }
 
 Arrow.defaultProps = {
