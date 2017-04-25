@@ -1,0 +1,26 @@
+@import "~fyndiq-styles-colors/colors.less";
+
+@keyframes wave {
+  from {
+    transform: translate(0%, 100%);
+  }
+
+  49% {
+    transform: translate(-50%, 0%);
+  }
+
+  50% {
+    transform: translate(0%);
+  }
+
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
+
+.wave {
+  animation-name: wave;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}

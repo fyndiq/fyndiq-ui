@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-icon-loader it should be rendered with no props 1`] = `
+<svg
+  className=""
+  height={50}
+  viewBox="0 0 100 100"
+  width={50}
+>
+  <defs>
+    <clipPath
+      id="cut-loader"
+    >
+      <circle
+        cx="50"
+        cy="50"
+        r="50"
+      />
+    </clipPath>
+  </defs>
+  <g
+    clipPath="url(#cut-loader)"
+  >
+    <rect
+      fill="#EC514A"
+      height="100"
+      width="100"
+      x="0"
+      y="0"
+    />
+    <path
+      className="wave"
+      d="M 0 -12.5
+              q 40 12.5, 80 0
+              t 80 0
+              t 80 0
+              t 80 0
+              t 80 0
+              t 80 0
+              v 125
+              q -40 12.5, -80 0
+              t -80 0
+              t -80 0
+              t -80 0
+              t -80 0
+              t -80 0
+              Z
+            "
+      fill="#8AB7E3"
+    />
+  </g>
+</svg>
+`;
+
+exports[`fyndiq-icon-loader it should have a size prop 1`] = `
+<svg
+  className=""
+  height={40}
+  viewBox="0 0 100 100"
+  width={40}
+>
+  <defs>
+    <clipPath
+      id="cut-loader"
+    >
+      <circle
+        cx="50"
+        cy="50"
+        r="50"
+      />
+    </clipPath>
+  </defs>
+  <g
+    clipPath="url(#cut-loader)"
+  >
+    <rect
+      fill="#EC514A"
+      height="100"
+      width="100"
+      x="0"
+      y="0"
+    />
+    <path
+      className="wave"
+      d="M 0 -12.5
+              q 40 12.5, 80 0
+              t 80 0
+              t 80 0
+              t 80 0
+              t 80 0
+              t 80 0
+              v 125
+              q -40 12.5, -80 0
+              t -80 0
+              t -80 0
+              t -80 0
+              t -80 0
+              t -80 0
+              Z
+            "
+      fill="#8AB7E3"
+    />
+  </g>
+</svg>
+`;
+
+exports[`fyndiq-icon-loader it should have colors props 1`] = `
+<g
+  clipPath="url(#cut-loader)"
+>
+  <rect
+    fill="red"
+    height="100"
+    width="100"
+    x="0"
+    y="0"
+  />
+  <path
+    className="wave"
+    d="M 0 -12.5
+            q 40 12.5, 80 0
+            t 80 0
+            t 80 0
+            t 80 0
+            t 80 0
+            t 80 0
+            v 125
+            q -40 12.5, -80 0
+            t -80 0
+            t -80 0
+            t -80 0
+            t -80 0
+            t -80 0
+            Z
+          "
+    fill="black"
+  />
+</g>
+`;
+
+exports[`fyndiq-icon-loader it should have wave props 1`] = `
+<path
+  className="wave"
+  d="M 0 -2.5
+          q 2.5 2.5, 5 0
+          t 5 0
+          t 5 0
+          t 5 0
+          t 5 0
+          t 5 0
+          v 105
+          q -2.5 2.5, -5 0
+          t -5 0
+          t -5 0
+          t -5 0
+          t -5 0
+          t -5 0
+          Z
+        "
+  fill="#8AB7E3"
+/>
+`;
