@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
-import colors from 'fyndiq-styles-colors'
 import Loader from 'fyndiq-icon-loader'
 
 storiesOf('Loader', module)
@@ -8,7 +7,7 @@ storiesOf('Loader', module)
     <Loader />
   ))
   .addWithInfo('change colors', () => (
-    <Loader color1={colors.black} color2={colors.lightgrey} />
+    <Loader color1="PeachPuff" color2="RosyBrown" />
   ))
   .addWithInfo('change size', () => (
     <Loader size={100} />
