@@ -12,44 +12,44 @@ const Loader = ({
   waveAmplitude,
   waveLength,
 }) => (
-  <svg className={className} height={size} width={size} viewBox="0 0 100 100">
-    <defs>
-      <clipPath id="cut-loader">
-        <circle cx="50" cy="50" r="50" />
-      </clipPath>
-    </defs>
-
-    <g clipPath="url(#cut-loader)">
-      {/* Background color rectangle */}
-      <rect
-        x="0"
-        y="0"
-        width="100"
-        height="100"
-        fill={color1}
-      />
-      {/* Wave component. See SVG specification to understand how it's done */}
-      <path
-        className={styles.wave}
-        fill={color2}
-        d={`M 0 -${waveAmplitude / 2}
-          q ${waveLength / 2} ${waveAmplitude / 2}, ${waveLength} 0
-          t ${waveLength} 0
-          t ${waveLength} 0
-          t ${waveLength} 0
-          t ${waveLength} 0
-          t ${waveLength} 0
-          v ${100 + waveAmplitude}
-          q ${-waveLength / 2} ${waveAmplitude / 2}, ${-waveLength} 0
-          t ${-waveLength} 0
-          t ${-waveLength} 0
-          t ${-waveLength} 0
-          t ${-waveLength} 0
-          t ${-waveLength} 0
-          Z
-        `}
-      />
-    </g>
+  <svg
+    className={`
+      ${styles.icon}
+      ${className}
+    `}
+    height={size}
+    width={size}
+    viewBox="0 0 100 100"
+  >
+    {/* Background color rectangle */}
+    <rect
+      x="0"
+      y="0"
+      width="100"
+      height="100"
+      fill={color1}
+    />
+    {/* Wave component. See SVG specification to understand how it's done */}
+    <path
+      className={styles.wave}
+      fill={color2}
+      d={`M 0 -${waveAmplitude / 2}
+        q ${waveLength / 2} ${waveAmplitude / 2}, ${waveLength} 0
+        t ${waveLength} 0
+        t ${waveLength} 0
+        t ${waveLength} 0
+        t ${waveLength} 0
+        t ${waveLength} 0
+        v ${100 + waveAmplitude}
+        q ${-waveLength / 2} ${waveAmplitude / 2}, ${-waveLength} 0
+        t ${-waveLength} 0
+        t ${-waveLength} 0
+        t ${-waveLength} 0
+        t ${-waveLength} 0
+        t ${-waveLength} 0
+        Z
+      `}
+    />
   </svg>
 )
 
