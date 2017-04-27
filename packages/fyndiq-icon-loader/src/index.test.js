@@ -14,7 +14,7 @@ describe('fyndiq-icon-loader', () => {
   test('it should have colors props', () => {
     expect(shallow(
       <Loader color1="red" color2="black" />
-    ).find('g')).toMatchSnapshot()
+    )).toMatchSnapshot()
   })
 
   test('it should have wave props', () => {
