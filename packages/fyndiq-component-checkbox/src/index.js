@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Checkmark from 'fyndiq-icon-checkmark'
 import colors from 'fyndiq-styles-colors'
 import styles from '../styles.less'
@@ -12,10 +13,11 @@ class Checkbox extends React.Component {
   }
 
   toggle() {
+    const checked = !this.state.checked
     this.setState({
-      checked: !this.state.checked,
+      checked,
     })
-    this.props.onToggle(this.state.checked)
+    this.props.onToggle(checked)
   }
 
   render() {
@@ -44,11 +46,11 @@ class Checkbox extends React.Component {
 }
 
 Checkbox.propTypes = {
-  onToggle: React.PropTypes.func,
-  checked: React.PropTypes.bool,
-  disabled: React.PropTypes.bool,
-  color: React.PropTypes.string,
-  className: React.PropTypes.string,
+  onToggle: PropTypes.func,
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  color: PropTypes.string,
+  className: PropTypes.string,
 }
 
 Checkbox.defaultProps = {

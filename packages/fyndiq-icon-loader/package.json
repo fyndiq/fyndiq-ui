@@ -1,5 +1,5 @@
 {
-  "name": "fyndiq-icon-checkmark",
+  "name": "fyndiq-icon-loader",
   "version": "0.1.0",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/fyndiq/fyndiq-ui.git"
   },
-  "homepage": "https://github.com/fyndiq/fyndiq-ui",
+  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Loader&selectedStory=default",
   "dependencies": {
     "fyndiq-styles-colors": "^0.1.0"
   },

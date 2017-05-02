@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-stars should be rendered with prop rating 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="
+              stars
+              
+              size-m
+            "
+    data-test="STARS"
+    onMouseLeave={[Function]}
+  >
+    <Star
+      full={1}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={1}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={1}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={1}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={0.5}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-stars should be rendered with prop reviews 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="
+              stars
+              
+              size-m
+            "
+    data-test="STARS"
+    onMouseLeave={[Function]}
+  >
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+  </div>
+  <span
+    className="reviews"
+  >
+    (
+    4
+     reviews)
+  </span>
+</div>
+`;
+
+exports[`fyndiq-component-stars should be rendered with prop reviews 2`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="
+              stars
+              interactive
+              size-m
+            "
+    data-test="STARS"
+    onMouseLeave={[Function]}
+  >
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-stars should be rendered with prop size 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="
+              stars
+              
+              size-l
+            "
+    data-test="STARS"
+    onMouseLeave={[Function]}
+  >
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-stars should be rendered without props 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="
+              stars
+              
+              size-m
+            "
+    data-test="STARS"
+    onMouseLeave={[Function]}
+  >
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-stars should change its state when hovered and interactive 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="
+              stars
+              interactive
+              size-m
+            "
+    data-test="STARS"
+    onMouseLeave={[Function]}
+  >
+    <Star
+      full={1}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={1}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={1}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={0}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={0}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+  </div>
+</div>
+`;

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from '../styles.less'
 
 const Star = ({ full, onClick, onHover }) => {
@@ -29,9 +30,9 @@ const Star = ({ full, onClick, onHover }) => {
 }
 
 Star.propTypes = {
-  full: React.PropTypes.number,
-  onClick: React.PropTypes.func,
-  onHover: React.PropTypes.func,
+  full: PropTypes.number,
+  onClick: PropTypes.func,
+  onHover: PropTypes.func,
 }
 
 Star.defaultProps = {
