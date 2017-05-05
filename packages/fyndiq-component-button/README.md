@@ -47,6 +47,10 @@ import Button from 'fyndiq-component-button'
 
 The component `Button` has the following customizable props:
 
-- **type**: (String) One of `primary`, `cancel`, `blue`, `inverted`. Changes the color style of the button
-- **size**: (String) One of `xs`, `s`, `l`, `xl`. Changes the size of the button
-- **disabled**: (Boolean) If true, will disable the button.
+| Name | Type | Description | Default value |
+|---|---|---|---|
+| **type** | String | One of `primary`, `cancel`, `blue`, `inverted`. Changes the color style of the button | `normal` |
+| **size** | String | One of `xs`, `s`, `l`, `xl`. Changes the size of the button | `m` |
+| **disabled** | Boolean | If true, will disable the button. | `false` |
+| **pressed** | Boolean | Show the button as pressed | `false` |
+| **onClick** | Function | Callback when the button is pressed | `noop => noop` |

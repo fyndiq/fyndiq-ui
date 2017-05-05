@@ -1,4 +1,4 @@
-# fyndiq-styles-colors
+# fyndiq-styles-colors [![npm](https://img.shields.io/npm/v/fyndiq-styles-colors.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-styles-colors)
 
 Fyndiq brand colors
 
