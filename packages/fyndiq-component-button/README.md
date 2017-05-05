@@ -1,4 +1,6 @@
-# fyndiq-component-button
+# fyndiq-component-button [![npm](https://img.shields.io/npm/v/fyndiq-component-button.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-button)
+
+[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Button&selectedStory=default)
 
 A button component for Fyndiq
 
