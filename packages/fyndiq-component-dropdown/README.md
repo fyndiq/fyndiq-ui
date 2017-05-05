@@ -1,4 +1,6 @@
-# fyndiq-component-dropdown
+# fyndiq-component-dropdown [![npm](https://img.shields.io/npm/v/fyndiq-component-dropdown.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-dropdown)
+
+[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Dropdown&selectedStory=default)
 
 A dropdown component for Fyndiq
 
@@ -43,5 +45,10 @@ See also : [`fyndiq-component-button`](/fyndiq/labday-fyndiq-ui/tree/master/pack
 
 The component `Dropdown` has the following customizable props:
 
-- **button**: (String or Component) The inside of the dropdown's button
-- **noArrow**: (boolean) if true and if `button` is used in String mode, hides the downwards arrow
+| Name | Type | Description | Default value |
+|---|---|---|---|
+| **button** | String or Component | The inside of the dropdown's button. If a String is passed, a `<Button>` will be shown. | (required) |
+| **children** | Component | Content of the dropdown | (required) |
+| **noArrow** | boolean | If **button** is used in String mode, hides the downwards arrow | `false` |
+| **opened** | boolean | Allows to externally control the dropdown | `false` |
+| **size** | String | Size of the button if **button** is used in String mode. For values, see [`Button`'s API`](../fyndiq-component-button#API) | Button's default |

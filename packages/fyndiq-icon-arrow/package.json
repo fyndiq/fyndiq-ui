@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-icon-arrow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "repository": {

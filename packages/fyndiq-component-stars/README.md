@@ -1,4 +1,6 @@
-# fyndiq-component-stars
+# fyndiq-component-stars [![npm](https://img.shields.io/npm/v/fyndiq-component-stars.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-stars)
+
+[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Stars&selectedStory=default)
 
 A rating stars component for Fyndiq
 
@@ -33,8 +35,10 @@ import Stars from 'fyndiq-component-stars'
 
 The component `Stars` has the following customizable props:
 
-- **rating**: (Number) the current rating of the product (between 0 and 5). Can be decimal
-- **reviews**: (Number) if not undefined, will show the number of reviews
-- **size**: (String) can be "l" for a bigger component
-- **interactive**: (Boolean) if true, enable interactive mode.
-- **onChange**: (Function) the handler when used in `interactive` mode
+| Name | Type | Description | Default value |
+|---|---|---|---|
+| **rating** | Number | The current rating of the product (between 0 and 5). Can be decimal | `undefined` |
+| **reviews** | Number | Number of reviews | `undefined` |
+| **size** | String | Can be `l` for a bigger component | `m` |
+| **interactive** | Boolean | Enables interactive mode | `false` |
+| **onChange** | Function | The handler when used in `interactive` mode. | `noop => noop` |

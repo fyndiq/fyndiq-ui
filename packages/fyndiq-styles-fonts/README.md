@@ -1,4 +1,4 @@
-# fyndiq-styles-fonts
+# fyndiq-styles-fonts [![npm](https://img.shields.io/npm/v/fyndiq-styles-fonts.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-styles-fonts)
 
 Font helpers for Fyndiq
 

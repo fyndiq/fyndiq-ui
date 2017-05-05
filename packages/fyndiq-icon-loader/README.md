@@ -1,4 +1,6 @@
-# fyndiq-icon-loader
+# fyndiq-icon-loader [![npm](https://img.shields.io/npm/v/fyndiq-icon-loader.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-icon-loader)
+
+[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Loader&selectedStory=default)
 
 A Loader icon for Fyndiq
 
@@ -33,9 +35,11 @@ import Loader from 'fyndiq-icon-loader'
 
 The icon `Loader` has the following customizable props:
 
-- **size**: (Number) Size of the logo
-- **className**: (String) class for advanced styling
-- **color1**: (String) first color of the loader
-- **color2**: (String) second color of the loader
-- **waveLength**: (Number) wavelength of the wave
-- **waveAmplitude**: (Number) amplitude of the wave
+| Name | Type | Description | Default value |
+|---|---|---|---|
+| **size** | Number | Size of the logo | 50 |
+| **className** | String | Class for advanced styling | `''` |
+| **color1** | String | First color of the loader | red |
+| **color2** | String | Second color of the loader | blue |
+| **waveLength** | Number | Wavelength of the wave | 80 |
+| **waveAmplitude** | Number | Amplitude of the wave | 25 |
