@@ -4,8 +4,6 @@ import Button from 'fyndiq-component-button'
 import Arrow from 'fyndiq-icon-arrow'
 import styles from '../styles.less'
 
-let document
-
 class Dropdown extends React.Component {
   static propTypes = {
     opened: PropTypes.bool,
@@ -50,11 +48,8 @@ class Dropdown extends React.Component {
   }
 
   componentWillMount() {
-    // Test if the component is rendered in the browser or not
-    if (document) {
-      document.addEventListener('click', this.handleDocumentClick, false)
-      document.addEventListener('touchend', this.handleDocumentClick, false)
-    }
+    document.addEventListener('click', this.handleDocumentClick)
+    document.addEventListener('touchend', this.handleDocumentClick)
   }
 
   componentDidMount() {
@@ -62,11 +57,8 @@ class Dropdown extends React.Component {
   }
 
   componentWillUnmount() {
-    // Test if the component is rendered in the browser or not
-    if (document) {
-      document.removeEventListener('click', this.handleDocumentClick, false)
-      document.removeEventListener('touchend', this.handleDocumentClick, false)
-    }
+    document.removeEventListener('click', this.handleDocumentClick)
+    document.removeEventListener('touchend', this.handleDocumentClick)
   }
 
   onButtonClick() {
