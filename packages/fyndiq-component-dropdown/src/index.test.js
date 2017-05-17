@@ -3,6 +3,14 @@ import { shallow, mount } from 'enzyme'
 
 import Dropdown from './'
 
+// Simulate events on <body>
+// Usage : simulate.click('body') for a click event
+//         simulate.keyup({ keyCode: 27 }) for an escape key press.
+const simulate = {}
+document.addEventListener = jest.fn((event, cb) => {
+  simulate[event] = cb
+})
+
 describe('fyndiq-component-dropdown', () => {
   test('should be displayed with minimum props', () => {
     expect(shallow(<Dropdown button="Button">Value</Dropdown>)).toMatchSnapshot()
@@ -49,5 +57,12 @@ describe('fyndiq-component-dropdown', () => {
     expect(shallow(
       <Dropdown button="B" position="tr" opened>Content</Dropdown>
     ).find('Arrow')).toMatchSnapshot()
+  })
+
+  test('should be closable by pressing the Escape key', () => {
+    const component = mount(<Dropdown button="button">Content</Dropdown>)
+    component.find('div > div').at(0).simulate('click')
+    simulate.keyup({ keyCode: 27 })
+    expect(component.find('.dropdownWrapper')).toMatchSnapshot()
   })
 })
