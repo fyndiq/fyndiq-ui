@@ -36,6 +36,13 @@ describe('fyndiq-component-dropdown', () => {
     expect(component.find('.dropdownWrapper')).toMatchSnapshot()
   })
 
+  test('should be closed when clicking outside', () => {
+    const component = mount(<Dropdown button="button">Value</Dropdown>)
+    component.find('div > div').at(0).simulate('click')
+    simulate.click('body')
+    expect(component.find('.dropdownWrapper')).toMatchSnapshot()
+  })
+
   test('should be opened when hovered, if in hoverMode', () => {
     jest.useFakeTimers()
     const component = mount(<Dropdown button="button" hoverMode>Value</Dropdown>)
