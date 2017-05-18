@@ -13,6 +13,7 @@ function loadStories() {
   require('../stories/component-stars')
   require('../stories/component-price')
   require('../stories/component-productcard')
+  require('../stories/component-alert')
   require('../stories/icon-brand')
   require('../stories/icon-loader')
 }

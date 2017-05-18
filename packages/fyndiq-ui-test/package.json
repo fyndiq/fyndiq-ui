@@ -4,6 +4,7 @@
   "version": "0.1.1",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "dependencies": {
+    "fyndiq-component-alert": "*",
     "fyndiq-component-button": "^0.1.1",
     "fyndiq-component-price": "^0.1.1",
     "fyndiq-component-productcard": "^0.1.1",

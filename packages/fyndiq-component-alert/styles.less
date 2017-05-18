@@ -1,0 +1,62 @@
+@import "~fyndiq-styles-colors/colors.less";
+
+.alertWrapper {
+  overflow: hidden;
+  // Keep the transition time in sync with the JS file
+  transition: height 200ms cubic-bezier(.23, 1, .32, 1);
+}
+
+.hidden {
+  // Important because the height needs to be fixed in JS in the style attribute
+  height: 0 !important;
+}
+
+.removed {
+  display: none;
+}
+
+.alert {
+  padding: 10px;
+  display: flex;
+}
+
+.text {
+  flex: 1;
+}
+
+.close {
+  flex: 1;
+  float: right;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+  max-width: 1em;
+  height: 1em;
+  line-height: 1em;
+  font-size: 18px;
+  text-align: center;
+
+  &:hover {
+    background-color: fadeout(@white, 60%);
+  }
+}
+
+.type-good {
+  background-color: lighten(@green, 40%);
+  color: @green;
+}
+
+.type-warning {
+  background-color: lighten(@orange, 34%);
+  color: @orange;
+}
+
+.type-bad {
+  background-color: lighten(@red, 35%);
+  color: @red;
+}
+
+.type-info {
+  background-color: lighten(@blue, 35%);
+  color: @blue;
+}
