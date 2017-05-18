@@ -44,9 +44,15 @@
   .inner {
     fill: @white;
   }
+
+  .tagline {
+    fill: @black;
+  }
 }
 
 .type-outline-bw {
+  composes: type-bw;
+
   .outer {
     fill: @white;
     stroke: @black;
@@ -64,4 +70,10 @@
   .outer {
     fill: transparent;
   }
+}
+
+.tagline {
+  fill: @red;
+  text-anchor: middle;
+  font-weight: bold;
 }
