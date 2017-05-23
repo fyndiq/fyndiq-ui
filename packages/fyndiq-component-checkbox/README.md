@@ -1,4 +1,6 @@
-# fyndiq-component-checkbox
+# fyndiq-component-checkbox [![npm](https://img.shields.io/npm/v/fyndiq-component-checkbox.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-checkbox)
+
+[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Checkbox&selectedStory=default)
 
 A checkbox component for Fyndiq
 
@@ -33,8 +35,10 @@ import Checkbox from 'fyndiq-component-checkbox'
 
 The component `Checkbox` has the following customizable props:
 
-- **onToggle**: (Function) The handler called whenever the checkbox changes state. The argument passed is the new state of the checkbox.
-- **className**: (String) optional class for advanced styling (size, ...)
-- **color**: (String) The color of the checkmark (default : light grey)
-- **checked**: (Boolean) If true, will activate the checkbox.
-- **disabled**: (Boolean) If true, will disable the checkbox.
+| Name | Type | Description | Default value |
+|---|---|---|---|
+| **onToggle** | Function | The handler called whenever the checkbox changes state. The argument passed is the new state of the checkbox. | `noop => noop`
+| **className** | String | Optional class for advanced styling | `''` |
+| **color** | String | The color of the checkmark | light grey |
+| **checked** | Boolean | Activates the checkbox. | `false` |
+| **disabled** | Boolean | Disables the checkbox. | `false` |

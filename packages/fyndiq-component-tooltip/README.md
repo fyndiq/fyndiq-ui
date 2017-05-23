@@ -1,4 +1,6 @@
-# fyndiq-component-tooltip
+# fyndiq-component-tooltip [![npm](https://img.shields.io/npm/v/fyndiq-component-tooltip.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-tooltip)
+
+[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Tooltip&selectedStory=default)
 
 A tooltip component for Fyndiq
 
@@ -29,5 +31,8 @@ import Tooltip from 'fyndiq-component-tooltip'
 
 The component `Stars` has the following customizable props:
 
-- **text**: (String) The tooltip text
-- **position**: (String) The position of the tooltip (see [Dropdown's API](../fyndiq-component-dropdown#api))
+| Name | Type | Description | Default value |
+|---|---|---|---|
+| **text** | String | The tooltip text | (required) |
+| **position** | String | The position of the tooltip (see [Dropdown's API](../fyndiq-component-dropdown#api) for possible values) | `bc` |
+

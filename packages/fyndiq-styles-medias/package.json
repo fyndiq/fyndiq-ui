@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-styles-medias",
-  "version": "0.0.6",
+  "version": "0.1.1",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "repository": {

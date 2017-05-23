@@ -45,11 +45,13 @@ class Dropdown extends React.Component {
     this.onMouseOver = this.onMouseOver.bind(this)
     this.onMouseOut = this.onMouseOut.bind(this)
     this.handleDocumentClick = this.handleDocumentClick.bind(this)
+    this.handleKeypress = this.handleKeypress.bind(this)
   }
 
   componentWillMount() {
-    document.addEventListener('click', this.handleDocumentClick, false)
-    document.addEventListener('touchend', this.handleDocumentClick, false)
+    document.addEventListener('click', this.handleDocumentClick)
+    document.addEventListener('touchend', this.handleDocumentClick)
+    document.addEventListener('keyup', this.handleKeypress)
   }
 
   componentDidMount() {
@@ -57,8 +59,9 @@ class Dropdown extends React.Component {
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.handleDocumentClick, false)
-    document.removeEventListener('touchend', this.handleDocumentClick, false)
+    document.removeEventListener('click', this.handleDocumentClick)
+    document.removeEventListener('touchend', this.handleDocumentClick)
+    document.removeEventListener('keyup', this.handleKeypress)
   }
 
   onButtonClick() {
@@ -124,6 +127,13 @@ class Dropdown extends React.Component {
 
   handleDocumentClick(event) {
     if (this.wrapperNode && !this.wrapperNode.contains(event.target)) {
+      this.closeDropdown()
+    }
+  }
+
+  handleKeypress(event) {
+    // escape key
+    if (event.keyCode === 27) {
       this.closeDropdown()
     }
   }
