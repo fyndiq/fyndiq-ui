@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-alert should be rendered without props 1`] = `
+<div
+  className="
+          alertWrapper
+          
+          
+        "
+>
+  <div
+    className="
+              alert
+              type-info
+            "
+  >
+    <span
+      className="text"
+    >
+      Notification
+    </span>
+    <div
+      className="close"
+      onClick={[Function]}
+    >
+      ×
+    </div>
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-alert should be self-closable 1`] = `
+<Alert
+  onClose={[Function]}
+  type="info"
+  unclosable={false}
+>
+  <div
+    className="
+            alertWrapper
+            hidden
+            
+          "
+  >
+    <div
+      className="
+                alert
+                type-info
+              "
+    >
+      <span
+        className="text"
+      />
+      <div
+        className="close"
+        onClick={[Function]}
+      >
+        ×
+      </div>
+    </div>
+  </div>
+</Alert>
+`;
+
+exports[`fyndiq-component-alert should be self-closable 2`] = `
+<Alert
+  onClose={[Function]}
+  type="info"
+  unclosable={false}
+>
+  <div
+    className="
+            alertWrapper
+            hidden
+            removed
+          "
+  >
+    <div
+      className="
+                alert
+                type-info
+              "
+    >
+      <span
+        className="text"
+      />
+      <div
+        className="close"
+        onClick={[Function]}
+      >
+        ×
+      </div>
+    </div>
+  </div>
+</Alert>
+`;
+
+exports[`fyndiq-component-alert should have a type prop 1`] = `
+<div
+  className="
+          alertWrapper
+          
+          
+        "
+>
+  <div
+    className="
+              alert
+              type-warning
+            "
+  >
+    <span
+      className="text"
+    >
+      Warning
+    </span>
+    <div
+      className="close"
+      onClick={[Function]}
+    >
+      ×
+    </div>
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-alert should have a type prop 2`] = `
+<div
+  className="
+          alertWrapper
+          
+          
+        "
+>
+  <div
+    className="
+              alert
+              type-good
+            "
+  >
+    <span
+      className="text"
+    >
+      Good
+    </span>
+    <div
+      className="close"
+      onClick={[Function]}
+    >
+      ×
+    </div>
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-alert should have a type prop 3`] = `
+<div
+  className="
+          alertWrapper
+          
+          
+        "
+>
+  <div
+    className="
+              alert
+              type-bad
+            "
+  >
+    <span
+      className="text"
+    >
+      Bad
+    </span>
+    <div
+      className="close"
+      onClick={[Function]}
+    >
+      ×
+    </div>
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-alert should have unclosable prop 1`] = `
+<div
+  className="
+          alertWrapper
+          
+          
+        "
+>
+  <div
+    className="
+              alert
+              type-info
+            "
+  >
+    <span
+      className="text"
+    />
+  </div>
+</div>
+`;

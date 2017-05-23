@@ -1,4 +1,4 @@
-# fyndiq-icon-arrow
+# fyndiq-icon-arrow [![npm](https://img.shields.io/npm/v/fyndiq-icon-arrow.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-icon-arrow)
 
 An arrow icon for Fyndiq
 
@@ -27,5 +27,7 @@ import Arrow from 'fyndiq-icon-arrow'
 
 The icon `Arrow` has the following customizable props:
 
-- **orientation**: (String) orientation of the arrow (can be `up`, `down`, `right` or `left` (default))
-- **className**: (String) optional class for advanced styling (size, ...)
+| Name | Type | Description | Default value |
+|---|---|---|---|
+| **orientation** | String | Orientation of the arrow (can be `up`, `down`, `right` or `left`) | `left` |
+| **className** | String | Optional class for advanced styling | `''` |

@@ -62,6 +62,7 @@ This git repository is a monorepo built using [Lerna](//lernajs.io). It contains
 
 | Package | Version | Description |
 |------|----|----|
+| [`fyndiq-component-alert`](/packages/fyndiq-component-alert) | [![npm](https://img.shields.io/npm/v/fyndiq-component-alert.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-alert) | Alert component |
 | [`fyndiq-component-button`](/packages/fyndiq-component-button) | [![npm](https://img.shields.io/npm/v/fyndiq-component-button.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-button) | Button component |
 | [`fyndiq-component-checkbox`](/packages/fyndiq-component-checkbox) | [![npm](https://img.shields.io/npm/v/fyndiq-component-checkbox.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-checkbox) | Checkbox component |
 | [`fyndiq-component-dropdown`](/packages/fyndiq-component-dropdown) | [![npm](https://img.shields.io/npm/v/fyndiq-component-dropdown.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-dropdown) | Dropdown component |

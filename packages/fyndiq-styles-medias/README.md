@@ -1,4 +1,4 @@
-# fyndiq-styles-medias
+# fyndiq-styles-medias [![npm](https://img.shields.io/npm/v/fyndiq-styles-medias.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-styles-medias)
 
 Media queries helpers for Fyndiq
 

@@ -1,4 +1,6 @@
-# fyndiq-component-dropdown
+# fyndiq-component-dropdown [![npm](https://img.shields.io/npm/v/fyndiq-component-dropdown.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-dropdown)
+
+[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Dropdown&selectedStory=default)
 
 A dropdown component for Fyndiq
 
@@ -53,10 +55,13 @@ See also : [`fyndiq-component-button`](/fyndiq/labday-fyndiq-ui/tree/master/pack
 
 The component `Dropdown` has the following customizable props:
 
-- **opened**: (Boolean) controls externally the state of the dropdown
-- **button**: (String or Component) The inside of the dropdown's button
-- **size**: (String) size of the button (see button API for possible values)
-- **position**: (String) position of the dropdown, relatively to the button. One of `bl`, `bc`, `br`, `tl`, `tc`, `tr`
-- **hoverMode**: (Boolean) if true, the dropdown will open when the user hovers over the button
-- **noWrapperStyle**: (boolean) if true, the dropdown wrapper will have no cosmetic styles
-- **noArrow**: (boolean) if true and if `button` is used in String mode, hides the downwards arrow
+| Name | Type | Description | Default value |
+|---|---|---|---|
+| **button** | String or Component | The inside of the dropdown's button. If a String is passed, a `<Button>` will be shown. | (required) |
+| **children** | Component | Content of the dropdown | (required) |
+| **size** | String | Size of the button if **button** is used in String mode. For values, see [`Button`'s API](../fyndiq-component-button#API) | Button's default |
+| **position** | String | Position of the dropdown, relatively to the button. One of `bl`, `bc`, `br`, `tl`, `tc`, `tr` | `bl` |
+| **noArrow** | boolean | If **button** is used in String mode, hides the downwards arrow | `false` |
+| **noWrapperStyle** | boolean | Remove cosmetic styles for the wrapper | `false` |
+| **opened** | boolean | Allows to externally control the dropdown | `false` |
+| **hoverMode** | boolean | Opens the dropdown on hover rather than on click | `false` |
