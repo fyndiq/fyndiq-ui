@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from '../styles.less'
+import { loadstate, saveState } from './localStorage'
 
 export default class Alert extends React.Component {
   static propTypes = {
@@ -27,8 +28,10 @@ export default class Alert extends React.Component {
     this.state = {
       displayed: true,
       removed: false,
+      count: loadstate(),
     }
   }
+
 
   close() {
     const height = this.nodeWrapper.clientHeight
@@ -57,34 +60,39 @@ export default class Alert extends React.Component {
   }
 
   render() {
-    const { children, type, unclosable } = this.props
+    if (this.state.count < 5) {
+      console.log(this.state.count)
+      saveState(this.state.count + 1)
+      const { children, type, unclosable } = this.props
 
-    return (
-      <div
-        className={`
-          ${styles.alertWrapper}
-          ${!this.state.displayed ? styles.hidden : ''}
-          ${this.state.removed ? styles.removed : ''}
-        `}
-        ref={e => { this.nodeWrapper = e }}
-      >
+      return (
         <div
           className={`
-            ${styles.alert}
-            ${styles['type-' + type]}
+            ${styles.alertWrapper}
+            ${!this.state.displayed ? styles.hidden : ''}
+            ${this.state.removed ? styles.removed : ''}
           `}
+          ref={e => { this.nodeWrapper = e }}
         >
-          <span className={styles.text}>{children}</span>
-          {unclosable ? null : (
-            <div
-              className={styles.close}
-              onClick={() => this.handleCloseClick()}
-            >
-              &times;
-            </div>
-          )}
+          <div
+            className={`
+              ${styles.alert}
+              ${styles['type-' + type]}
+            `}
+          >
+            <span className={styles.text}>{children}</span>
+            {unclosable ? null : (
+              <div
+                className={styles.close}
+                onClick={() => this.handleCloseClick()}
+              >
+                &times;
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-    )
+      )
+    }
+    return null
   }
 }
