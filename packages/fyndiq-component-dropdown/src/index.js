@@ -13,79 +13,185 @@ class Dropdown extends React.Component {
     ]).isRequired,
     children: PropTypes.node.isRequired,
     size: PropTypes.string,
+    position: PropTypes.oneOf([
+      'bl', 'bc', 'br',
+      'tl', 'tc', 'tr',
+    ]),
+    margin: PropTypes.number,
+    hoverMode: PropTypes.bool,
     noArrow: PropTypes.bool,
-    noContentPadding: PropTypes.bool,
+    noWrapperStyle: PropTypes.bool,
   }
 
   static defaultProps = {
     opened: false,
+    hoverMode: false,
     noArrow: false,
-    noContentPadding: false,
+    noWrapperStyle: false,
     size: undefined,
+    position: 'bl',
+    margin: 5,
   }
 
   constructor(props) {
     super(props)
     this.state = {
-      dropdownOpen: props.opened,
+      opened: props.opened,
+      left: 0,
+      top: 0,
     }
 
-    // Save this as a property so that addEventListener and removeEventListener
-    // work properly
-    this.boundHandler = this.handleDocumentClick.bind(this)
+    this.onButtonClick = this.onButtonClick.bind(this)
+    this.onMouseOver = this.onMouseOver.bind(this)
+    this.onMouseOut = this.onMouseOut.bind(this)
+    this.handleDocumentClick = this.handleDocumentClick.bind(this)
+    this.handleKeypress = this.handleKeypress.bind(this)
   }
 
   componentWillMount() {
-    document.addEventListener('click', this.boundHandler, false)
-    document.addEventListener('touchend', this.boundHandler, false)
+    document.addEventListener('click', this.handleDocumentClick)
+    document.addEventListener('touchend', this.handleDocumentClick)
+    document.addEventListener('keyup', this.handleKeypress)
+  }
+
+  componentDidMount() {
+    this.updateDropdownPosition()
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.boundHandler, false)
-    document.removeEventListener('touchend', this.boundHandler, false)
+    document.removeEventListener('click', this.handleDocumentClick)
+    document.removeEventListener('touchend', this.handleDocumentClick)
+    document.removeEventListener('keyup', this.handleKeypress)
   }
 
   onButtonClick() {
-    this.setState({ dropdownOpen: !this.state.dropdownOpen })
+    if (!this.props.hoverMode) {
+      this.toggleDropdown()
+    } else {
+      this.openDropdown()
+    }
+  }
+
+  onMouseOver() {
+    if (this.props.hoverMode) {
+      clearTimeout(this.timeout)
+      this.timeout = setTimeout(() => this.openDropdown(), 200)
+    }
+  }
+
+  onMouseOut() {
+    if (this.props.hoverMode) {
+      clearTimeout(this.timeout)
+      this.timeout = setTimeout(() => this.closeDropdown(), 100)
+    }
+  }
+
+  updateDropdownPosition() {
+    const buttonSize = this.buttonNode.getBoundingClientRect()
+    const { position, margin } = this.props
+    let left = this.buttonNode.offsetLeft
+    let top = this.buttonNode.offsetTop
+
+    // If the dropdown is above the button
+    if (position[0] === 't') {
+      top -= margin
+    // If the dropdown is under the button
+    } else {
+      top += buttonSize.height + margin
+    }
+
+    if (position[1] === 'r') {
+      // If the dropdown is on the right
+      left += buttonSize.width
+    } else if (position[1] === 'c') {
+      // If it is in the center
+      left += buttonSize.width / 2
+    }
+
+    this.setState({ left, top })
+  }
+
+  openDropdown() {
+    this.updateDropdownPosition()
+    this.setState({ opened: true })
+  }
+
+  closeDropdown() {
+    this.setState({ opened: false })
+  }
+
+  toggleDropdown() {
+    this.updateDropdownPosition()
+    this.setState(state => ({ opened: !state.opened }))
   }
 
   handleDocumentClick(event) {
     if (this.wrapperNode && !this.wrapperNode.contains(event.target)) {
-      this.setState({ dropdownOpen: false })
+      this.closeDropdown()
+    }
+  }
+
+  handleKeypress(event) {
+    // escape key
+    if (event.keyCode === 27) {
+      this.closeDropdown()
     }
   }
 
   render() {
-    const { button, children, noArrow, noContentPadding, size } = this.props
+    const {
+      button,
+      children,
+      noArrow,
+      size,
+      position,
+      noWrapperStyle,
+    } = this.props
 
     let buttonContent
 
+    // Arrow orientation depends on the position of the dropdown
+    const arrowOrientation = position[0] === 't' ? 'up' : 'down'
+
     if (typeof button === 'string') {
       buttonContent = (
-        <Button onClick={e => this.onButtonClick(e)} size={size}>
+        <Button size={size}>
           {button}
-          {!noArrow ? <Arrow orientation="down" /> : ''}
+          {!noArrow ? <Arrow orientation={arrowOrientation} /> : ''}
         </Button>
       )
     } else {
-      buttonContent = (
-        <div onClick={e => this.onButtonClick(e)}>
-          {button}
-        </div>
-      )
+      buttonContent = button
     }
 
     return (
-      <div className={styles.wrapper} ref={e => { this.wrapperNode = e }}>
-        {buttonContent}
+      <div
+        className={styles.wrapper}
+        ref={e => { this.wrapperNode = e }}
+        onMouseOver={this.onMouseOver}
+        onMouseOut={this.onMouseOut}
+      >
         <div
-          className={`
-            ${this.state.dropdownOpen ? styles.dropdownWrapperOpen : styles.dropdownWrapper}
-            ${noContentPadding ? '' : styles.padded}
-          `}
+          ref={e => { this.buttonNode = e }}
+          onClick={this.onButtonClick}
         >
-          {children}
+          {buttonContent}
         </div>
+        {this.state.opened ? (
+          <div
+            className={`
+              ${styles.dropdownWrapper}
+              ${!noWrapperStyle ? styles.dropdownDefault : ''}
+              ${styles['position-' + position]}
+            `}
+            style={{
+              left: this.state.left,
+              top: this.state.top,
+            }}
+          >
+            {children}
+          </div>
+        ) : null}
       </div>
     )
   }

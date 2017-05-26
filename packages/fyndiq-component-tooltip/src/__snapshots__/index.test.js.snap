@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-tooltip should be rendered without props 1`] = `
+<Dropdown
+  button={
+    <span>
+      tooltip
+    </span>
+  }
+  hoverMode={true}
+  margin={5}
+  noArrow={false}
+  noWrapperStyle={true}
+  opened={false}
+  position="bc"
+>
+  <div
+    className="
+          tooltip
+          position-bc
+        "
+  >
+    help
+  </div>
+</Dropdown>
+`;
+
+exports[`fyndiq-component-tooltip should have the right position 1`] = `
+<Dropdown
+  button={
+    <span>
+      tooltip
+    </span>
+  }
+  hoverMode={true}
+  margin={5}
+  noArrow={false}
+  noWrapperStyle={true}
+  opened={false}
+  position="tr"
+>
+  <div
+    className="
+          tooltip
+          position-tr
+        "
+  >
+    help
+  </div>
+</Dropdown>
+`;
