@@ -11,6 +11,7 @@
     "fyndiq-component-checkbox": "^0.1.1",
     "fyndiq-component-stars": "^0.1.1",
     "fyndiq-component-dropdown": "^0.1.1",
+    "fyndiq-component-tooltip": "*",
     "fyndiq-icon-brand": "^0.1.1",
     "fyndiq-icon-loader": "^0.1.1",
     "fyndiq-styles-fonts": "^0.1.1"

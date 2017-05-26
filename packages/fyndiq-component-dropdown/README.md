@@ -20,12 +20,12 @@ import Dropdown from 'fyndiq-component-dropdown'
 
 // Normal usage
 <Dropdown button="Open dropdown">
-  <div>Dropdown content</div>
+  Dropdown content
 </Dropdown>
 
 // No arrow pointing downwards
 <Dropdown button="Open dropdown" noArrow>
-  <div>Dropdown content</div>
+  Dropdown content
 </Dropdown>
 
 // Custom button
@@ -35,7 +35,17 @@ import Button from 'fyndiq-component-button'
     Open Dropdown
   </Button>
 )}>
-  <div>Dropdown content</div>
+  Dropdown content
+</Dropdown>
+
+// Open dropdown on hover
+<Dropdown button="Hover me" hoverMode>
+  Dropdown content
+</Dropdown>
+
+// Change the position of the dropdown
+<Dropdown button="Top right" position="tr">
+  Dropdown content
 </Dropdown>
 ```
 
@@ -49,6 +59,10 @@ The component `Dropdown` has the following customizable props:
 |---|---|---|---|
 | **button** | String or Component | The inside of the dropdown's button. If a String is passed, a `<Button>` will be shown. | (required) |
 | **children** | Component | Content of the dropdown | (required) |
+| **size** | String | Size of the button if **button** is used in String mode. For values, see [`Button`'s API](../fyndiq-component-button#API) | Button's default |
+| **position** | String | Position of the dropdown, relatively to the button. One of `bl`, `bc`, `br`, `tl`, `tc`, `tr` | `bl` |
+| **margin** | Number | Distance from the dropdown to the button | `5` |
 | **noArrow** | boolean | If **button** is used in String mode, hides the downwards arrow | `false` |
+| **noWrapperStyle** | boolean | Remove cosmetic styles for the wrapper | `false` |
 | **opened** | boolean | Allows to externally control the dropdown | `false` |
-| **size** | String | Size of the button if **button** is used in String mode. For values, see [`Button`'s API`](../fyndiq-component-button#API) | Button's default |
+| **hoverMode** | boolean | Opens the dropdown on hover rather than on click | `false` |
