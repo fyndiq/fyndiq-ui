@@ -33,6 +33,7 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
     "file-loader": "^0.10.1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.0",
     "lerna": "2.0.0-rc.5",
     "react": "^15.4.2",
@@ -54,7 +55,7 @@
       "enzyme-to-json/serializer"
     ],
     "moduleNameMapper": {
-      "\\.less$": "<rootDir>/scripts/less-mock.js"
+      "\\.less$": "identity-obj-proxy"
     }
   }
 }
