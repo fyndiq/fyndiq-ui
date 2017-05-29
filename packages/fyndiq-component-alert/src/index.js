@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from '../styles.less'
-import { loadstate, saveState } from './localStorage'
+import { loadState, saveState } from './localStorage'
 
 export default class Alert extends React.Component {
   static propTypes = {
@@ -13,6 +13,8 @@ export default class Alert extends React.Component {
       'bad',
     ]),
     unclosable: PropTypes.bool,
+    componentKey: PropTypes.string,
+    stopShowingWhenClosed: PropTypes.number,
     onClose: PropTypes.func,
   }
 
@@ -20,6 +22,8 @@ export default class Alert extends React.Component {
     children: '',
     type: 'info',
     unclosable: false,
+    stopShowingWhenClosed: undefined,
+    componentKey: '',
     onClose: noop => noop,
   }
 
@@ -28,13 +32,13 @@ export default class Alert extends React.Component {
     this.state = {
       displayed: true,
       removed: false,
-      count: loadstate(),
+      count: loadState(this.props.componentKey),
     }
   }
 
-
   close() {
     const height = this.nodeWrapper.clientHeight
+    saveState(this.props.componentKey, this.state.count + 1) // counter for stopShowingWhenClosed
 
     // Set the height on the wrapper node, to start the animation
     this.nodeWrapper.style.height = height + 'px'
@@ -53,18 +57,15 @@ export default class Alert extends React.Component {
 
   handleCloseClick() {
     this.close()
-
     if (this.props.onClose) {
       this.props.onClose()
     }
   }
 
   render() {
-    if (this.state.count < 5) {
-      console.log(this.state.count)
-      saveState(this.state.count + 1)
-      const { children, type, unclosable } = this.props
+    const { children, type, unclosable } = this.props
 
+    if (this.state.count < this.props.stopShowingWhenClosed || this.props.stopShowingWhenClosed === undefined) {
       return (
         <div
           className={`

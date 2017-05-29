@@ -1,6 +1,7 @@
-export const loadstate = () => {
+
+export const loadState = (componentKey) => {
   try {
-    const serializedState = localStorage.getItem('count')
+    const serializedState = localStorage.getItem(componentKey)
     if (serializedState === null) {
       return 0
     }
@@ -9,11 +10,10 @@ export const loadstate = () => {
     return 0
   }
 }
-
-export const saveState = (count) => {
+export const saveState = (componentKey, value) => {
   try {
-    const serializedState = JSON.stringify(count)
-    localStorage.setItem('count', serializedState)
+    const serializedState = JSON.stringify(value)
+    localStorage.setItem(componentKey, serializedState)
   } catch (err) {
 // any text
   }
