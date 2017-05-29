@@ -2,6 +2,7 @@
   "name": "fyndiq-ui-build",
   "private": true,
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
+  "license": "MIT",
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "clean": "lerna exec -- rimraf lib",
