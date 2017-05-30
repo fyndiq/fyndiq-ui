@@ -34,4 +34,9 @@ describe('fyndiq-component-alert', () => {
     component.find('.close').simulate('click')
     expect(closeSpy.mock.calls).toHaveLength(1)
   })
+
+  test('should have a stopShowingAfter and stopShowingAfterKey props', () => {
+    expect(shallow(<Alert stopShowingAfter={5} stopShowingAfterKey="Information-Alert">
+      Text for Alert</Alert>)).toMatchSnapshot()
+  })
 })

@@ -13,8 +13,8 @@ export default class Alert extends React.Component {
       'bad',
     ]),
     unclosable: PropTypes.bool,
-    componentKey: PropTypes.string,
-    stopShowingWhenClosed: PropTypes.number,
+    stopShowingAfter: PropTypes.number,
+    stopShowingAfterKey: PropTypes.string,
     onClose: PropTypes.func,
   }
 
@@ -22,8 +22,8 @@ export default class Alert extends React.Component {
     children: '',
     type: 'info',
     unclosable: false,
-    stopShowingWhenClosed: undefined,
-    componentKey: '',
+    stopShowingAfter: undefined,
+    stopShowingAfterKey: '',
     onClose: noop => noop,
   }
 
@@ -32,13 +32,13 @@ export default class Alert extends React.Component {
     this.state = {
       displayed: true,
       removed: false,
-      count: loadState(this.props.componentKey),
+      count: loadState(this.props.stopShowingAfterKey),
     }
   }
 
   close() {
     const height = this.nodeWrapper.clientHeight
-    saveState(this.props.componentKey, this.state.count + 1) // counter for stopShowingWhenClosed
+    saveState(this.props.stopShowingAfterKey, this.state.count + 1) // counter for stopShowingAfter
 
     // Set the height on the wrapper node, to start the animation
     this.nodeWrapper.style.height = height + 'px'
@@ -63,9 +63,9 @@ export default class Alert extends React.Component {
   }
 
   render() {
-    const { children, type, unclosable } = this.props
-
-    if (this.state.count < this.props.stopShowingWhenClosed || this.props.stopShowingWhenClosed === undefined) {
+    const { children, type, unclosable, stopShowingAfter } = this.props
+    const validToDo = this.state.count < stopShowingAfter || stopShowingAfter === undefined
+    if (validToDo) {
       return (
         <div
           className={`

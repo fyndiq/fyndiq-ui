@@ -3,16 +3,16 @@
 exports[`fyndiq-component-alert should be rendered without props 1`] = `
 <div
   className="
-          alertWrapper
-          
-          
-        "
+            alertWrapper
+            
+            
+          "
 >
   <div
     className="
-              alert
-              type-info
-            "
+                alert
+                type-info
+              "
   >
     <span
       className="text"
@@ -32,21 +32,22 @@ exports[`fyndiq-component-alert should be rendered without props 1`] = `
 exports[`fyndiq-component-alert should be self-closable 1`] = `
 <Alert
   onClose={[Function]}
+  stopShowingAfterKey=""
   type="info"
   unclosable={false}
 >
   <div
     className="
-            alertWrapper
-            hidden
-            
-          "
+              alertWrapper
+              hidden
+              
+            "
   >
     <div
       className="
-                alert
-                type-info
-              "
+                  alert
+                  type-info
+                "
     >
       <span
         className="text"
@@ -65,21 +66,22 @@ exports[`fyndiq-component-alert should be self-closable 1`] = `
 exports[`fyndiq-component-alert should be self-closable 2`] = `
 <Alert
   onClose={[Function]}
+  stopShowingAfterKey=""
   type="info"
   unclosable={false}
 >
   <div
     className="
-            alertWrapper
-            hidden
-            removed
-          "
+              alertWrapper
+              hidden
+              removed
+            "
   >
     <div
       className="
-                alert
-                type-info
-              "
+                  alert
+                  type-info
+                "
     >
       <span
         className="text"
@@ -95,19 +97,48 @@ exports[`fyndiq-component-alert should be self-closable 2`] = `
 </Alert>
 `;
 
-exports[`fyndiq-component-alert should have a type prop 1`] = `
+exports[`fyndiq-component-alert should have a stopShowingAfter and stopShowingAfterKey props 1`] = `
 <div
   className="
-          alertWrapper
-          
-          
-        "
+            alertWrapper
+            
+            
+          "
 >
   <div
     className="
-              alert
-              type-warning
-            "
+                alert
+                type-info
+              "
+  >
+    <span
+      className="text"
+    >
+      Text for Alert
+    </span>
+    <div
+      className="close"
+      onClick={[Function]}
+    >
+      ×
+    </div>
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-alert should have a type prop 1`] = `
+<div
+  className="
+            alertWrapper
+            
+            
+          "
+>
+  <div
+    className="
+                alert
+                type-warning
+              "
   >
     <span
       className="text"
@@ -127,16 +158,16 @@ exports[`fyndiq-component-alert should have a type prop 1`] = `
 exports[`fyndiq-component-alert should have a type prop 2`] = `
 <div
   className="
-          alertWrapper
-          
-          
-        "
+            alertWrapper
+            
+            
+          "
 >
   <div
     className="
-              alert
-              type-good
-            "
+                alert
+                type-good
+              "
   >
     <span
       className="text"
@@ -156,16 +187,16 @@ exports[`fyndiq-component-alert should have a type prop 2`] = `
 exports[`fyndiq-component-alert should have a type prop 3`] = `
 <div
   className="
-          alertWrapper
-          
-          
-        "
+            alertWrapper
+            
+            
+          "
 >
   <div
     className="
-              alert
-              type-bad
-            "
+                alert
+                type-bad
+              "
   >
     <span
       className="text"
@@ -185,16 +216,16 @@ exports[`fyndiq-component-alert should have a type prop 3`] = `
 exports[`fyndiq-component-alert should have unclosable prop 1`] = `
 <div
   className="
-          alertWrapper
-          
-          
-        "
+            alertWrapper
+            
+            
+          "
 >
   <div
     className="
-              alert
-              type-info
-            "
+                alert
+                type-info
+              "
   >
     <span
       className="text"
