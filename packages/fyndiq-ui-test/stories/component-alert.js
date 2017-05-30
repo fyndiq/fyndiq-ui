@@ -26,6 +26,15 @@ storiesOf('Alert', module)
       <h3>Alert title</h3>
       <p>This is an alert. The text can spawn over several different lines.</p>
       <p>You can put <strong>watever you want</strong> really, it&apos;s fine.</p>
+      <p>You can show alert for a specific number of times.</p>
+    </Alert>
+  ))
+  .addWithInfo('repeatable alert', () => (
+    <Alert stopShowingAfter={2} stopShowingAfterKey="Sample_alert">
+      <h3>Alert Repeatable</h3>
+      <p>This alert will be availble for specific number of times.</p>
+      <p>This alert need two props one for to display for specific time.</p>
+      <p>Second for a unique key name for alert component.</p>
     </Alert>
   ))
   .addWithInfo('unclosable alert', () => (
