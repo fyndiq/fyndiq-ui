@@ -4,10 +4,13 @@
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "build": "./scripts/build.sh",
-    "build-clean": "rm -rf ./packages/*/lib",
-    "publish": "npm run build-clean && npm run build && lerna publish",
-    "dev": "./scripts/build.sh dev",
+    "clean": "lerna exec -- rimraf lib",
+    "prebuild": "npm run clean",
+    "build": "lerna exec --ignore fyndiq-ui-test -- babel src -d lib --ignore *.test.js",
+    "build:watch": "lerna exec --parallel --ignore fyndiq-ui-test -- babel src -d lib --ignore *.test.js -w",
+    "publish": "npm run build && lerna publish",
+    "dev": "npm run build:watch & lerna run storybook",
+    "lerna": "lerna",
     "lint": "npm run lint:js && npm run lint:less",
     "lint:js": "eslint --cache --ignore-pattern coverage --ignore-pattern node_modules --ignore-pattern lib .",
     "lint:less": "stylelint --syntax less \"packages/**/*.less\"",
@@ -30,12 +33,14 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
     "file-loader": "^0.10.1",
-    "jest": "^19.0.2",
-    "lerna": "2.0.0-beta.38",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^20.0.0",
+    "lerna": "2.0.0-rc.5",
     "mock-local-storage": "^1.0.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-test-renderer": "^15.5.4"
+    "react-test-renderer": "^15.5.4",
+    "rimraf": "^2.6.1"
   },
   "dependencies": {
     "css-loader": "^0.27.3",
@@ -52,7 +57,7 @@
       "enzyme-to-json/serializer"
     ],
     "moduleNameMapper": {
-      "\\.less$": "<rootDir>/scripts/less-mock.js"
+      "\\.less$": "identity-obj-proxy"
     }
   }
 }
