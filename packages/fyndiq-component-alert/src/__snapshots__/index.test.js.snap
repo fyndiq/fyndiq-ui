@@ -212,30 +212,5 @@ exports[`fyndiq-component-alert stopShowingAfter and stopShowingAfterKey props f
   stopShowingAfterKey="Information-Alert"
   type="info"
   unclosable={false}
->
-  <div
-    className="
-              alertWrapper
-              
-              
-            "
-  >
-    <div
-      className="
-                  alert
-                  type-info
-                "
-    >
-      <span
-        className="text"
-      />
-      <div
-        className="close"
-        onClick={[Function]}
-      >
-        ×
-      </div>
-    </div>
-  </div>
-</Alert>
+/>
 `;

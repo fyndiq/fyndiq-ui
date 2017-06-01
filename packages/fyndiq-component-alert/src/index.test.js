@@ -46,6 +46,7 @@ describe('fyndiq-component-alert', () => {
     component.find('.close').simulate('click')
     component = mount(reactComponent)
     component.find('.close').simulate('click')
+    component = mount(reactComponent)
     expect(component).toMatchSnapshot()
   })
 })
