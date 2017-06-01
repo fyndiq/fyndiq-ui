@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-
 import Alert from './'
 
 describe('fyndiq-component-alert', () => {
@@ -33,5 +32,21 @@ describe('fyndiq-component-alert', () => {
     const component = mount(<Alert onClose={closeSpy} />)
     component.find('.close').simulate('click')
     expect(closeSpy.mock.calls).toHaveLength(1)
+  })
+
+  test('stopShowingAfter and stopShowingAfterKey props functionality', () => {
+    const props = {
+      stopShowingAfter: 3,
+      stopShowingAfterKey: 'Information-Alert',
+    }
+    const reactComponent = <Alert {...props} />
+    let component = mount(reactComponent)
+    component.find('.close').simulate('click')
+    component = mount(reactComponent)
+    component.find('.close').simulate('click')
+    component = mount(reactComponent)
+    component.find('.close').simulate('click')
+    component = mount(reactComponent)
+    expect(component).toMatchSnapshot()
   })
 })

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from '../styles.less'
+import { loadState, saveState } from './localStorage'
 
 export default class Alert extends React.Component {
   static propTypes = {
@@ -12,6 +13,8 @@ export default class Alert extends React.Component {
       'bad',
     ]),
     unclosable: PropTypes.bool,
+    stopShowingAfter: PropTypes.number,
+    stopShowingAfterKey: PropTypes.string,
     onClose: PropTypes.func,
   }
 
@@ -19,6 +22,8 @@ export default class Alert extends React.Component {
     children: '',
     type: 'info',
     unclosable: false,
+    stopShowingAfter: undefined,
+    stopShowingAfterKey: '',
     onClose: noop => noop,
   }
 
@@ -27,12 +32,13 @@ export default class Alert extends React.Component {
     this.state = {
       displayed: true,
       removed: false,
+      count: loadState(this.props.stopShowingAfterKey),
     }
   }
 
   close() {
     const height = this.nodeWrapper.clientHeight
-
+    saveState(this.props.stopShowingAfterKey, this.state.count + 1) // counter for stopShowingAfter
     // Set the height on the wrapper node, to start the animation
     this.nodeWrapper.style.height = height + 'px'
 
@@ -50,41 +56,43 @@ export default class Alert extends React.Component {
 
   handleCloseClick() {
     this.close()
-
     if (this.props.onClose) {
       this.props.onClose()
     }
   }
 
   render() {
-    const { children, type, unclosable } = this.props
-
-    return (
-      <div
-        className={`
-          ${styles.alertWrapper}
-          ${!this.state.displayed ? styles.hidden : ''}
-          ${this.state.removed ? styles.removed : ''}
-        `}
-        ref={e => { this.nodeWrapper = e }}
-      >
+    const { children, type, unclosable, stopShowingAfter } = this.props
+    const isShown = this.state.count <= stopShowingAfter || stopShowingAfter === undefined
+    if (isShown) {
+      return (
         <div
           className={`
-            ${styles.alert}
-            ${styles['type-' + type]}
+            ${styles.alertWrapper}
+            ${!this.state.displayed ? styles.hidden : ''}
+            ${this.state.removed ? styles.removed : ''}
           `}
+          ref={e => { this.nodeWrapper = e }}
         >
-          <span className={styles.text}>{children}</span>
-          {unclosable ? null : (
-            <div
-              className={styles.close}
-              onClick={() => this.handleCloseClick()}
-            >
-              &times;
-            </div>
-          )}
+          <div
+            className={`
+              ${styles.alert}
+              ${styles['type-' + type]}
+            `}
+          >
+            <span className={styles.text}>{children}</span>
+            {unclosable ? null : (
+              <div
+                className={styles.close}
+                onClick={() => this.handleCloseClick()}
+              >
+                &times;
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-    )
+      )
+    }
+    return null
   }
 }
