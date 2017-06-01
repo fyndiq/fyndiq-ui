@@ -36,6 +36,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.0",
     "lerna": "2.0.0-rc.5",
+    "mock-local-storage": "^1.0.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-test-renderer": "^15.5.4",
@@ -51,6 +52,7 @@
     "stylelint-config-standard": "^16.0.0"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "mock-local-storage",
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
