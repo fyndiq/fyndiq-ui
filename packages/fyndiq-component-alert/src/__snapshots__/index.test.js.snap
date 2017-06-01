@@ -97,35 +97,6 @@ exports[`fyndiq-component-alert should be self-closable 2`] = `
 </Alert>
 `;
 
-exports[`fyndiq-component-alert should have a stopShowingAfter and stopShowingAfterKey props 1`] = `
-<div
-  className="
-            alertWrapper
-            
-            
-          "
->
-  <div
-    className="
-                alert
-                type-info
-              "
-  >
-    <span
-      className="text"
-    >
-      Text for Alert
-    </span>
-    <div
-      className="close"
-      onClick={[Function]}
-    >
-      ×
-    </div>
-  </div>
-</div>
-`;
-
 exports[`fyndiq-component-alert should have a type prop 1`] = `
 <div
   className="
@@ -232,4 +203,39 @@ exports[`fyndiq-component-alert should have unclosable prop 1`] = `
     />
   </div>
 </div>
+`;
+
+exports[`fyndiq-component-alert stopShowingAfter and stopShowingAfterKey props functionality 1`] = `
+<Alert
+  onClose={[Function]}
+  stopShowingAfter={3}
+  stopShowingAfterKey="Information-Alert"
+  type="info"
+  unclosable={false}
+>
+  <div
+    className="
+              alertWrapper
+              
+              
+            "
+  >
+    <div
+      className="
+                  alert
+                  type-info
+                "
+    >
+      <span
+        className="text"
+      />
+      <div
+        className="close"
+        onClick={[Function]}
+      >
+        ×
+      </div>
+    </div>
+  </div>
+</Alert>
 `;

@@ -39,7 +39,6 @@ export default class Alert extends React.Component {
   close() {
     const height = this.nodeWrapper.clientHeight
     saveState(this.props.stopShowingAfterKey, this.state.count + 1) // counter for stopShowingAfter
-
     // Set the height on the wrapper node, to start the animation
     this.nodeWrapper.style.height = height + 'px'
 
@@ -64,7 +63,7 @@ export default class Alert extends React.Component {
 
   render() {
     const { children, type, unclosable, stopShowingAfter } = this.props
-    const validToDo = this.state.count < stopShowingAfter || stopShowingAfter === undefined
+    const validToDo = this.state.count <= stopShowingAfter || stopShowingAfter === undefined
     if (validToDo) {
       return (
         <div

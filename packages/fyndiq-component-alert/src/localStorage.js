@@ -3,11 +3,11 @@ export const loadState = (componentKey) => {
   try {
     const serializedState = localStorage.getItem(componentKey)
     if (serializedState === null) {
-      return 0
+      return 1
     }
     return JSON.parse(serializedState)
   } catch (err) {
-    return 0
+    return 1
   }
 }
 export const saveState = (componentKey, value) => {
