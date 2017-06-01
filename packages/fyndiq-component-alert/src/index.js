@@ -63,8 +63,8 @@ export default class Alert extends React.Component {
 
   render() {
     const { children, type, unclosable, stopShowingAfter } = this.props
-    const validToDo = this.state.count <= stopShowingAfter || stopShowingAfter === undefined
-    if (validToDo) {
+    const isShown = this.state.count <= stopShowingAfter || stopShowingAfter === undefined
+    if (isShown) {
       return (
         <div
           className={`
