@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.2.2",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
+  "license": "MIT",
   "dependencies": {
     "fyndiq-component-alert": "^0.2.2",
     "fyndiq-component-button": "^0.1.1",
