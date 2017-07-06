@@ -23,7 +23,7 @@ const Tooltip = ({ text, children, position }) => (
 )
 
 Tooltip.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.node,
   children: PropTypes.node,
   position: Dropdown.propTypes.position,
 }
