@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-icon-brand",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Icon%20Brand&selectedStory=default",
   "dependencies": {
-    "fyndiq-styles-colors": "^0.1.1"
+    "fyndiq-styles-colors": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0"
