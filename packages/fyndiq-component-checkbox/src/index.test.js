@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 
 import Checkbox from './'
 
@@ -47,6 +47,12 @@ describe('fyndiq-component-checkbox', () => {
     expect(component).toMatchSnapshot()
 
     component.simulate('click')
+    expect(component).toMatchSnapshot()
+  })
+
+  test('should be programatically checkable', () => {
+    const component = mount(<Checkbox />)
+    component.setProps({ checked: true })
     expect(component).toMatchSnapshot()
   })
 })
