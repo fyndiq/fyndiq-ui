@@ -1,0 +1,53 @@
+@import "~fyndiq-styles-colors/colors.less";
+
+.wrapper {
+  padding: 7px;
+  display: flex;
+  border-radius: 3px;
+}
+
+.wrapperInteractive {
+  outline: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: @palegrey;
+  }
+}
+
+.wrapperOpen {
+  background: @palegrey;
+
+  .imgWrapper {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.imgWrapper {
+  align-self: flex-start;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  margin-right: 10px;
+  transition: .1s ease-out;
+}
+
+.mainContent {
+  flex-grow: 1;
+}
+
+.img {
+  height: 100%;
+  display: inline-block;
+}
+
+.title {
+  display: inline-block;
+  margin: 0;
+}
+
+.shopLink {
+  color: @darkgrey;
+}
