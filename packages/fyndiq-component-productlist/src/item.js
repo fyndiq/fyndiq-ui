@@ -1,28 +1,85 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Stars from 'fyndiq-component-stars'
 import { Price, CurrentPrice, OldPrice } from 'fyndiq-component-price'
 
 import styles from '../styles.less'
 
 class ProductListItem extends React.Component {
+  static propTypes = {
+    category: PropTypes.string,
+    brand: PropTypes.string,
+    dealType: PropTypes.string,
+    imageUrl: PropTypes.string.isRequired,
+    oldPrice: PropTypes.string,
+    price: PropTypes.string.isRequired,
+    rating: Stars.propTypes.rating,
+    shopUrl: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    uploadDate: PropTypes.string,
+    uploadDateHuman: PropTypes.string,
+    additionnalData: PropTypes.arrayOf(PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.node,
+    })),
+    interactive: PropTypes.bool,
+    open: PropTypes.bool,
+    showOldPrice: PropTypes.bool,
+    showYours: PropTypes.bool,
+    onClick: PropTypes.func,
+  }
+
   static defaultProps = {
+    category: '',
+    brand: '',
+    shopUrl: '',
+    oldPrice: '',
+    rating: '',
+    dealType: '',
+    uploadDate: '',
+    uploadDateHuman: '',
+    additionnalData: [],
+    interactive: false,
+    open: false,
     showOldPrice: true,
+    showYours: false,
+    onClick: noop => noop,
+  }
+
+  constructor(props) {
+    super(props)
+
+    this.onClick = this.onClick.bind(this)
+  }
+
+  onClick() {
+    if (this.props.interactive) {
+      if (this.props.open) {
+        this.nodeWrapper.blur()
+      }
+
+      this.props.onClick()
+    }
   }
 
   render() {
     const {
-      shopUrl,
+      category,
+      brand,
       imageUrl,
       price,
       oldPrice,
       showOldPrice,
       title,
       rating,
+      dealType,
+      shopUrl,
+      uploadDate,
+      uploadDateHuman,
+      additionnalData,
       interactive,
-      trendiness,
-      popularity,
       open,
-      onClick,
+      showYours,
     } = this.props
 
     return (
@@ -32,40 +89,96 @@ class ProductListItem extends React.Component {
           ${interactive ? styles.wrapperInteractive : ''}
           ${open ? styles.wrapperOpen : ''}
         `}
-        onClick={onClick}
-        onKeyPress={onClick}
+        onClick={this.onClick}
+        onKeyPress={this.onClick}
         role={interactive && 'button'}
         tabIndex={interactive && '0'}
+        ref={e => { this.nodeWrapper = e }}
       >
-        <div className={styles.imgWrapper}>
-          <img
-            className={styles.img}
-            src={imageUrl}
-            alt={title}
-          />
-        </div>
-        <div className={styles.mainContent}>
-          <div>
-            <h3 className={styles.title}>{title}</h3>
+        <div className={styles.firstLine}>
+          <div className={styles.imgWrapper}>
+            <img
+              className={styles.img}
+              src={imageUrl}
+              alt={title}
+            />
           </div>
-          {rating && <Stars rating={rating} />}
-          {open && (
+          <div className={styles.mainContent}>
             <div>
-              <a className={styles.shopLink} href={shopUrl}>View on site</a>
-              <ul>
-                <li>Popularity: <strong>{Math.round(popularity * 10) / 10}</strong></li>
-                <li>Trendiness: <strong>{Math.round(trendiness)}</strong></li>
-              </ul>
+              {showYours && (
+                <span className={styles.yours}>Your product</span>
+              )}
+              <h3 className={styles.title}>{title}</h3>
+              {dealType && (
+                <span
+                  className={`
+                    ${styles.deal}
+                    ${styles[`deal--${dealType}`]}
+                  `}
+                >
+                  {dealType} deal
+                </span>
+              )}
             </div>
-          )}
+
+            {rating && <Stars rating={rating} />}
+
+            <div className={styles.onlyOpen}>
+              <a className={styles.shopLink} href={shopUrl}>View on site</a>
+            </div>
+          </div>
+          <div>
+            <Price>
+              <CurrentPrice>{price}</CurrentPrice>
+              {showOldPrice && oldPrice && (
+                <OldPrice>{oldPrice}</OldPrice>
+              )}
+            </Price>
+          </div>
         </div>
-        <div>
-          <Price>
-            <CurrentPrice>{price}</CurrentPrice>
-            {showOldPrice && oldPrice && (
-              <OldPrice>{oldPrice}</OldPrice>
+        <div className={styles.onlyOpen}>
+          <ul className={styles.labelsWrapper}>
+            {category && (
+              <li className={styles.labelWrapper}>
+                <span className={styles.label}>
+                  Category
+                </span>
+                <strong className={styles.labelValue}>
+                  {category}
+                </strong>
+              </li>
             )}
-          </Price>
+            {brand && (
+              <li className={styles.labelWrapper}>
+                <span className={styles.label}>
+                  Brand
+                </span>
+                <strong className={styles.labelValue}>
+                  {brand}
+                </strong>
+              </li>
+            )}
+            <li className={styles.labelWrapper}>
+              <span className={styles.label}>
+                Uploaded
+              </span>
+              <strong className={styles.labelValue}>
+                <time dateTime={uploadDate} title={uploadDate}>
+                  {uploadDateHuman}
+                </time>
+              </strong>
+            </li>
+            {additionnalData && additionnalData.map(({ label, value }) => (
+              <li className={styles.labelWrapper}>
+                <span className={styles.label}>
+                  {label}
+                </span>
+                <strong className={styles.labelValue}>
+                  {value}
+                </strong>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     )

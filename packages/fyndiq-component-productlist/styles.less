@@ -1,9 +1,9 @@
 @import "~fyndiq-styles-colors/colors.less";
 
 .wrapper {
-  padding: 7px;
-  display: flex;
   border-radius: 3px;
+  border: 1px solid transparent;
+  transition: .1s;
 }
 
 .wrapperInteractive {
@@ -16,13 +16,29 @@
   }
 }
 
+.onlyOpen {
+  display: none;
+}
+
 .wrapperOpen {
   background: @palegrey;
+  border-color: @bordercolor;
+  box-shadow: 0 2px 6px fadeout(@black, 85%);
+  margin: 12px 0;
 
   .imgWrapper {
     height: 100px;
     width: 100px;
   }
+
+  .onlyOpen {
+    display: block;
+  }
+}
+
+.firstLine {
+  display: flex;
+  padding: 7px;
 }
 
 .imgWrapper {
@@ -31,7 +47,7 @@
   width: 40px;
   text-align: center;
   margin-right: 10px;
-  transition: .1s ease-out;
+  transition: .1s;
 }
 
 .mainContent {
@@ -44,10 +60,63 @@
 }
 
 .title {
+  display: inline;
+  margin: 0 8px 0 0;
+  text-transform: capitalize;
+}
+
+.titlePill {
   display: inline-block;
-  margin: 0;
+  vertical-align: middle;
+  margin-top: -4px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: .6em;
+}
+
+.yours {
+  composes: titlePill;
+  color: @lightgrey;
+  border: 1px solid @bordercolor;
+  margin-right: 8px;
+}
+
+.deal {
+  composes: titlePill;
+  font-size: .6em;
+  text-transform: capitalize;
+  margin-top: -3px;
+}
+
+.deal--weekly {
+  background: @black;
+  color: @white;
 }
 
 .shopLink {
   color: @darkgrey;
+}
+
+.labelsWrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 0 8px;
+  background: @white;
+  border-top: 1px solid @bordercolor;
+  border-bottom: 1px solid @bordercolor;
+}
+
+.labelWrapper {
+  padding: 6px;
+}
+
+.label {
+  display: block;
+  color: @lightgrey;
+}
+
+.labelValue {
+  display: block;
+  font-size: 1.4em;
+  line-height: 1.2em;
 }
