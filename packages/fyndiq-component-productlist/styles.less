@@ -1,4 +1,7 @@
 @import "~fyndiq-styles-colors/colors.less";
+@import "~fyndiq-styles-medias/medias.less";
+
+@margin: 8px;
 
 .wrapper {
   border-radius: 3px;
@@ -38,7 +41,8 @@
 
 .firstLine {
   display: flex;
-  padding: 7px;
+  padding: @margin;
+  text-align: left;
 }
 
 .imgWrapper {
@@ -61,7 +65,7 @@
 
 .title {
   display: inline;
-  margin: 0 8px 0 0;
+  margin: 0 @margin 0 0;
   text-transform: capitalize;
 }
 
@@ -78,7 +82,7 @@
   composes: titlePill;
   color: @lightgrey;
   border: 1px solid @bordercolor;
-  margin-right: 8px;
+  margin-right: @margin;
 }
 
 .deal {
@@ -100,14 +104,22 @@
 .labelsWrapper {
   display: flex;
   justify-content: space-around;
-  margin: 0 0 8px;
+  margin: 0 0 @margin;
   background: @white;
   border-top: 1px solid @bordercolor;
   border-bottom: 1px solid @bordercolor;
+
+  @media @phone {
+    flex-wrap: wrap;
+  }
 }
 
 .labelWrapper {
   padding: 6px;
+
+  @media @phone {
+    width: 50%;
+  }
 }
 
 .label {
