@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   module: {
@@ -17,4 +18,9 @@ module.exports = {
       },
     }],
   },
+  plugins: [
+    // Ignore locales for momentJS
+    // see http://stackoverflow.com/questions/25384360
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+  ]
 }
