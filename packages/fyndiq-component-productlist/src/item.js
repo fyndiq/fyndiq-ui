@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import moment from 'moment'
 import Stars from 'fyndiq-component-stars'
 import { Price, CurrentPrice, OldPrice } from 'fyndiq-component-price'
 
@@ -16,8 +17,7 @@ class ProductListItem extends React.Component {
     rating: Stars.propTypes.rating,
     shopUrl: PropTypes.string,
     title: PropTypes.string.isRequired,
-    uploadDate: PropTypes.string,
-    uploadDateHuman: PropTypes.string,
+    uploadDate: PropTypes.instanceOf(Date),
     additionnalData: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.string,
       value: PropTypes.node,
@@ -75,7 +75,6 @@ class ProductListItem extends React.Component {
       dealType,
       shopUrl,
       uploadDate,
-      uploadDateHuman,
       additionnalData,
       interactive,
       open,
@@ -163,8 +162,11 @@ class ProductListItem extends React.Component {
                 Uploaded
               </span>
               <strong className={styles.labelValue}>
-                <time dateTime={uploadDate} title={uploadDate}>
-                  {uploadDateHuman}
+                <time
+                  dateTime={moment(uploadDate).toISOString()}
+                  title={moment(uploadDate).format('YYYY-MM-DD')}
+                >
+                  {moment(uploadDate).fromNow()}
                 </time>
               </strong>
             </li>
