@@ -30,14 +30,13 @@ class ProductListItem extends React.Component {
   }
 
   static defaultProps = {
-    category: '',
-    brand: '',
-    shopUrl: '',
-    oldPrice: '',
-    rating: '',
-    dealType: '',
-    uploadDate: '',
-    uploadDateHuman: '',
+    category: null,
+    brand: null,
+    dealType: null,
+    shopUrl: null,
+    oldPrice: null,
+    rating: null,
+    uploadDate: null,
     additionnalData: [],
     interactive: false,
     open: false,
