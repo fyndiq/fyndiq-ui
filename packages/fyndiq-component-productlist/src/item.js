@@ -9,7 +9,7 @@ class ProductListItem extends React.Component {
   static propTypes = {
     category: PropTypes.string,
     brand: PropTypes.string,
-    dealType: PropTypes.string,
+    dealType: PropTypes.oneOf(['weekly', 'daily']),
     imageUrl: PropTypes.string.isRequired,
     oldPrice: PropTypes.string,
     price: PropTypes.string.isRequired,

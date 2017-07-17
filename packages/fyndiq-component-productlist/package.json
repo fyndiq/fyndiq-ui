@@ -12,7 +12,8 @@
   "dependencies": {
     "fyndiq-component-price": "^1.0.0",
     "fyndiq-component-stars": "^1.0.0",
-    "fyndiq-styles-colors": "^1.0.0"
+    "fyndiq-styles-colors": "^1.0.0",
+    "fyndiq-styles-medias": "*"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0"
