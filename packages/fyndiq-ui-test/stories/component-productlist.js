@@ -5,7 +5,6 @@ import ProductListItem, { Wrapper } from 'fyndiq-component-productlist'
 
 const productList = [
   <ProductListItem
-    id="8159035"
     key="1"
     title="LED Lamp - 1000 Lumens"
     price="$24"
@@ -17,7 +16,6 @@ const productList = [
     uploadDate={moment().subtract(4, 'days').toDate()}
   />,
   <ProductListItem
-    id="8600762"
     key="2"
     title="Pink flamingo inflatable matress"
     price="$39"
@@ -30,7 +28,6 @@ const productList = [
     uploadDate={moment().subtract(60, 'days').toDate()}
   />,
   <ProductListItem
-    id="1459969"
     key="3"
     title="Child-proof scissors"
     price="$35"
