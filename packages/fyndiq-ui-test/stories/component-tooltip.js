@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@storybook/react'
 import Tooltip from 'fyndiq-component-tooltip'
 
 storiesOf('Tooltip', module)
