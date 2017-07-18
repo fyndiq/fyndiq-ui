@@ -41,27 +41,12 @@ const productList = [
 
 storiesOf('Product List', module)
   .addWithInfo('default', () => (
-    <ProductListItem
-      title="LED Lamp - 1000 Lumens"
-      price="$24"
-      oldPrice="$29"
-      imageUrl="https://media.fyndiq.se/product/4c/c8/c0/128569693ffe98c9dcd1d07a100cf6f607/original.png"
-      rating={4.5}
-    />
+    productList[0]
   ))
   .addWithInfo('with open card', () => (
-    <ProductListItem
-      title="Pink flamingo inflatable mattress"
-      price="$39"
-      oldPrice="$59"
-      imageUrl="https://media.fyndiq.se/product/b1/3b/90/30209761604354deb1c24c6a833a595a79/original.png"
-      shopUrl="https://fyndiq.se/product/8600762"
-      dealType="weekly"
-      category="Mattresses"
-      brand="Pink Flamingo Corp."
-      uploadDate={moment().subtract(20, 'days').toDate()}
-      open
-    />
+    React.cloneElement(productList[1], {
+      open: true,
+    })
   ))
   .addWithInfo('interactive', () => (
     <Wrapper>
