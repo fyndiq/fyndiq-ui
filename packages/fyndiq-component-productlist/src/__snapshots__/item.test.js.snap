@@ -317,7 +317,7 @@ exports[`fyndiq-component-productlist ProductListItem should have an open state 
           className="labelValue"
         >
           <time
-            dateTime="2017-02-01T00:00:00+01:00"
+            dateTime="2017-02-01T00:00"
             title="2017-02-01"
           >
             14 days ago
