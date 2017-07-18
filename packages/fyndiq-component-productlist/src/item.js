@@ -170,7 +170,7 @@ class ProductListItem extends React.Component {
               </strong>
             </li>
             {additionnalData && additionnalData.map(({ label, value }) => (
-              <li className={styles.labelWrapper}>
+              <li key={label} className={styles.labelWrapper}>
                 <span className={styles.label}>
                   {label}
                 </span>
