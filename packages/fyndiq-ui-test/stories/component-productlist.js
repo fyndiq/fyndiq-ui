@@ -17,13 +17,13 @@ const productList = [
   />,
   <ProductListItem
     key="2"
-    title="Pink flamingo inflatable matress"
+    title="Pink flamingo inflatable mattress"
     price="$39"
     oldPrice="$59"
     imageUrl="https://media.fyndiq.se/product/b1/3b/90/30209761604354deb1c24c6a833a595a79/original.png"
     shopUrl="https://fyndiq.se/product/8600762"
     dealType="weekly"
-    category="Matresses"
+    category="Mattresses"
     brand="Pink Flamingo Corp."
     uploadDate={moment().subtract(60, 'days').toDate()}
   />,
@@ -51,13 +51,13 @@ storiesOf('Product List', module)
   ))
   .addWithInfo('with open card', () => (
     <ProductListItem
-      title="Pink flamingo inflatable matress"
+      title="Pink flamingo inflatable mattress"
       price="$39"
       oldPrice="$59"
       imageUrl="https://media.fyndiq.se/product/b1/3b/90/30209761604354deb1c24c6a833a595a79/original.png"
       shopUrl="https://fyndiq.se/product/8600762"
       dealType="weekly"
-      category="Matresses"
+      category="Mattresses"
       brand="Pink Flamingo Corp."
       uploadDate={moment().subtract(20, 'days').toDate()}
       open
