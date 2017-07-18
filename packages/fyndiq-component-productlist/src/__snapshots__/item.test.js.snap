@@ -71,7 +71,7 @@ exports[`fyndiq-component-productlist ProductListItem should be displayed with m
           className="labelValue"
         >
           <time
-            dateTime={null}
+            dateTime="Invalid date"
             title="Invalid date"
           >
             Invalid date
@@ -113,7 +113,7 @@ exports[`fyndiq-component-productlist ProductListItem should have a brand 1`] = 
       className="labelValue"
     >
       <time
-        dateTime={null}
+        dateTime="Invalid date"
         title="Invalid date"
       >
         Invalid date
@@ -153,7 +153,7 @@ exports[`fyndiq-component-productlist ProductListItem should have a category 1`]
       className="labelValue"
     >
       <time
-        dateTime={null}
+        dateTime="Invalid date"
         title="Invalid date"
       >
         Invalid date
@@ -208,7 +208,7 @@ exports[`fyndiq-component-productlist ProductListItem should have additionnal da
       className="labelValue"
     >
       <time
-        dateTime={null}
+        dateTime="Invalid date"
         title="Invalid date"
       >
         Invalid date
@@ -317,7 +317,7 @@ exports[`fyndiq-component-productlist ProductListItem should have an open state 
           className="labelValue"
         >
           <time
-            dateTime="2017-01-31T23:00:00.000Z"
+            dateTime="2017-02-01T00:00:00+01:00"
             title="2017-02-01"
           >
             14 days ago

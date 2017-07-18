@@ -162,7 +162,7 @@ class ProductListItem extends React.Component {
               </span>
               <strong className={styles.labelValue}>
                 <time
-                  dateTime={moment(uploadDate).toISOString()}
+                  dateTime={moment(uploadDate).format()}
                   title={moment(uploadDate).format('YYYY-MM-DD')}
                 >
                   {moment(uploadDate).fromNow()}
