@@ -34,8 +34,7 @@ import ProductListItem from 'fyndiq-component-productlist'
   imageUrl="https://i.imgur.com/BCKlYFQ.jpg"
   rating="4.5"
   shopUrl="https://fyndiq.se/product/12345678"
-  uploadDate="2017-07-01"
-  uploadDateHuman="1 month ago"
+  uploadDate={new Date(2017, 6, 12)}
 />
 ```
 
