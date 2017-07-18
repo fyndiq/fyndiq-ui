@@ -68,7 +68,7 @@ The component `ProductListItem` has the following customizable props:
 
 ``` js
 import React from 'react'
-import ProductListItem, { Wrapper } from 'fyndiq-component-productlist`
+import ProductListItem, { Wrapper } from 'fyndiq-component-productlist'
 
 // Normal usage
 <Wrapper>
