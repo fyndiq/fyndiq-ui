@@ -122,7 +122,14 @@ class ProductListItem extends React.Component {
             {rating && <Stars rating={rating} />}
 
             <div className={styles.onlyOpen}>
-              <a className={styles.shopLink} href={shopUrl}>View on site</a>
+              <a
+                className={styles.shopLink}
+                href={shopUrl}
+                // Don't call the onClick event on the wrapper
+                onClick={e => e.stopPropagation()}
+              >
+                View on site
+              </a>
             </div>
           </div>
           <div>
