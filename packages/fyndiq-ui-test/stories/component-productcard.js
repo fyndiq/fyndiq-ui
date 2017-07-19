@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@storybook/react'
 import Productcard from 'fyndiq-component-productcard'
 
 storiesOf('Product card', module)

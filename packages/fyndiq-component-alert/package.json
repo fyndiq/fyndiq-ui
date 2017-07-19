@@ -1,8 +1,9 @@
 {
   "name": "fyndiq-component-alert",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fyndiq/fyndiq-ui.git"
