@@ -15,6 +15,6 @@ export const saveState = (componentKey, value) => {
     const serializedState = JSON.stringify(value)
     localStorage.setItem(componentKey, serializedState)
   } catch (err) {
-// any text
+    // any text
   }
 }
