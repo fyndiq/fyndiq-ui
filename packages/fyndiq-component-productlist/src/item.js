@@ -52,13 +52,13 @@ class ProductListItem extends React.Component {
   }
 
   onClick() {
-    if (this.props.interactive) {
-      if (this.props.open) {
-        this.nodeWrapper.blur()
-      }
+    if (!this.props.interactive) return
 
-      this.props.onClick()
+    if (this.props.open) {
+      this.nodeWrapper.blur()
     }
+
+    this.props.onClick()
   }
 
   render() {

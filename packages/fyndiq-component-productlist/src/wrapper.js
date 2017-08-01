@@ -23,13 +23,7 @@ export class Wrapper extends React.Component {
     this.setState(state => {
       let openedProducts = []
       // If the wrapper doesn't allow multiple products open at the same time,
-      if (!this.props.openMultiples) {
-        // If the first product is not the one clicked, then we open this
-        // one and only this one. Otherwise, the default value [] is good
-        if (state.openedProducts[0] !== id) {
-          openedProducts = [id]
-        }
-      } else {
+      if (this.props.openMultiples) {
         const index = state.openedProducts.indexOf(id)
 
         if (index === -1) {
@@ -44,7 +38,12 @@ export class Wrapper extends React.Component {
             ...state.openedProducts.slice(index + 1),
           ]
         }
+      } else if (state.openedProducts[0] !== id) {
+        // If the first product is not the one clicked, then we open this
+        // one and only this one.
+        openedProducts = [id]
       }
+      // No else : the default value [] is good
 
       return { openedProducts }
     })
