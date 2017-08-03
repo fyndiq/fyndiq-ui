@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-productlist Wrapper should display ProductListItem 1`] = `
+<div
+  className="listWrapper"
+>
+  <ProductListItem
+    additionnalData={Array []}
+    brand={null}
+    category={null}
+    dealType={null}
+    imageUrl="imageUrl1"
+    interactive={true}
+    oldPrice={null}
+    onClick={[Function]}
+    open={false}
+    price="price1"
+    rating={null}
+    shopUrl={null}
+    showOldPrice={true}
+    showYours={false}
+    title="title1"
+    uploadDate={null}
+  />
+  <ProductListItem
+    additionnalData={Array []}
+    brand={null}
+    category={null}
+    dealType={null}
+    imageUrl="imageUrl2"
+    interactive={true}
+    oldPrice={null}
+    onClick={[Function]}
+    open={false}
+    price="price2"
+    rating={null}
+    shopUrl={null}
+    showOldPrice={true}
+    showYours={false}
+    title="title2"
+    uploadDate={null}
+  />
+  <ProductListItem
+    additionnalData={Array []}
+    brand={null}
+    category={null}
+    dealType={null}
+    imageUrl="imageUrl3"
+    interactive={true}
+    oldPrice={null}
+    onClick={[Function]}
+    open={false}
+    price="price3"
+    rating={null}
+    shopUrl={null}
+    showOldPrice={true}
+    showYours={false}
+    title="title3"
+    uploadDate={null}
+  />
+</div>
+`;

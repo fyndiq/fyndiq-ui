@@ -37,7 +37,7 @@ The component `Stars` has the following customizable props:
 
 | Name | Type | Description | Default value |
 |---|---|---|---|
-| **rating** | Number | The current rating of the product (between 0 and 5). Can be decimal | `undefined` |
+| **rating** | Number or String | The current rating of the product (between 0 and 5). Can be decimal | `undefined` |
 | **reviews** | Number | Number of reviews | `undefined` |
 | **size** | String | Can be `l` for a bigger component | `m` |
 | **interactive** | Boolean | Enables interactive mode | `false` |
