@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-productlist",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Thibaut Remy <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
