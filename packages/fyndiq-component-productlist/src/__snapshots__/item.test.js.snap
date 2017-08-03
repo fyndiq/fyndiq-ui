@@ -9,8 +9,6 @@ exports[`fyndiq-component-productlist ProductListItem should be displayed with m
         "
   onClick={[Function]}
   onKeyPress={[Function]}
-  role={false}
-  tabIndex={false}
 >
   <div
     className="firstLine"
@@ -256,8 +254,6 @@ exports[`fyndiq-component-productlist ProductListItem should have an open state 
         "
   onClick={[Function]}
   onKeyPress={[Function]}
-  role={false}
-  tabIndex={false}
 >
   <div
     className="firstLine"
