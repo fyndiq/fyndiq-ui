@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-alert",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
