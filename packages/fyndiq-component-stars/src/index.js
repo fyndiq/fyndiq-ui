@@ -5,7 +5,7 @@ import styles from '../styles.less'
 
 class Stars extends React.Component {
   static propTypes = {
-    rating: PropTypes.number,
+    rating: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     reviews: PropTypes.number,
     size: PropTypes.string,
     interactive: PropTypes.bool,

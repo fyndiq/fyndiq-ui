@@ -1,0 +1,332 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-productlist ProductListItem should be displayed with minimal props 1`] = `
+<div
+  className="
+          wrapper
+          
+          
+        "
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role={false}
+  tabIndex={false}
+>
+  <div
+    className="firstLine"
+  >
+    <div
+      className="imgWrapper"
+    >
+      <img
+        alt="title"
+        className="img"
+        src="imageUrl"
+      />
+    </div>
+    <div
+      className="mainContent"
+    >
+      <div>
+        <h3
+          className="title"
+        >
+          title
+        </h3>
+      </div>
+      <div
+        className="onlyOpen"
+      >
+        <a
+          className="shopLink"
+          href={null}
+          onClick={[Function]}
+        >
+          View on site
+        </a>
+      </div>
+    </div>
+    <div>
+      <Price>
+        <CurrentPrice>
+          price
+        </CurrentPrice>
+      </Price>
+    </div>
+  </div>
+  <div
+    className="onlyOpen"
+  >
+    <ul
+      className="labelsWrapper"
+    >
+      <li
+        className="labelWrapper"
+      >
+        <span
+          className="label"
+        >
+          Uploaded
+        </span>
+        <strong
+          className="labelValue"
+        >
+          <time
+            dateTime="Invalid date"
+            title="Invalid date"
+          >
+            Invalid date
+          </time>
+        </strong>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`fyndiq-component-productlist ProductListItem should have a brand 1`] = `
+<ul
+  className="labelsWrapper"
+>
+  <li
+    className="labelWrapper"
+  >
+    <span
+      className="label"
+    >
+      Brand
+    </span>
+    <strong
+      className="labelValue"
+    >
+      Brand name
+    </strong>
+  </li>
+  <li
+    className="labelWrapper"
+  >
+    <span
+      className="label"
+    >
+      Uploaded
+    </span>
+    <strong
+      className="labelValue"
+    >
+      <time
+        dateTime="Invalid date"
+        title="Invalid date"
+      >
+        Invalid date
+      </time>
+    </strong>
+  </li>
+</ul>
+`;
+
+exports[`fyndiq-component-productlist ProductListItem should have a category 1`] = `
+<ul
+  className="labelsWrapper"
+>
+  <li
+    className="labelWrapper"
+  >
+    <span
+      className="label"
+    >
+      Category
+    </span>
+    <strong
+      className="labelValue"
+    >
+      Category name
+    </strong>
+  </li>
+  <li
+    className="labelWrapper"
+  >
+    <span
+      className="label"
+    >
+      Uploaded
+    </span>
+    <strong
+      className="labelValue"
+    >
+      <time
+        dateTime="Invalid date"
+        title="Invalid date"
+      >
+        Invalid date
+      </time>
+    </strong>
+  </li>
+</ul>
+`;
+
+exports[`fyndiq-component-productlist ProductListItem should have a dealType prop 1`] = `
+<span
+  className="
+                    deal
+                    deal--weekly
+                  "
+>
+  weekly
+   deal
+</span>
+`;
+
+exports[`fyndiq-component-productlist ProductListItem should have a rating prop 1`] = `
+<Stars
+  interactive={false}
+  onChange={[Function]}
+  rating={4.5}
+  size="m"
+/>
+`;
+
+exports[`fyndiq-component-productlist ProductListItem should have a showYours prop 1`] = `
+<span
+  className="yours"
+>
+  Your product
+</span>
+`;
+
+exports[`fyndiq-component-productlist ProductListItem should have additionnal data 1`] = `
+<ul
+  className="labelsWrapper"
+>
+  <li
+    className="labelWrapper"
+  >
+    <span
+      className="label"
+    >
+      Uploaded
+    </span>
+    <strong
+      className="labelValue"
+    >
+      <time
+        dateTime="Invalid date"
+        title="Invalid date"
+      >
+        Invalid date
+      </time>
+    </strong>
+  </li>
+  <li
+    className="labelWrapper"
+  >
+    <span
+      className="label"
+    >
+      label1
+    </span>
+    <strong
+      className="labelValue"
+    >
+      value1
+    </strong>
+  </li>
+  <li
+    className="labelWrapper"
+  >
+    <span
+      className="label"
+    >
+      label2
+    </span>
+    <strong
+      className="labelValue"
+    >
+      value2
+    </strong>
+  </li>
+</ul>
+`;
+
+exports[`fyndiq-component-productlist ProductListItem should have an open state 1`] = `
+<div
+  className="
+          wrapper
+          
+          wrapperOpen
+        "
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role={false}
+  tabIndex={false}
+>
+  <div
+    className="firstLine"
+  >
+    <div
+      className="imgWrapper"
+    >
+      <img
+        alt="title"
+        className="img"
+        src="imageUrl"
+      />
+    </div>
+    <div
+      className="mainContent"
+    >
+      <div>
+        <h3
+          className="title"
+        >
+          title
+        </h3>
+      </div>
+      <div
+        className="onlyOpen"
+      >
+        <a
+          className="shopLink"
+          href={null}
+          onClick={[Function]}
+        >
+          View on site
+        </a>
+      </div>
+    </div>
+    <div>
+      <Price>
+        <CurrentPrice>
+          price
+        </CurrentPrice>
+      </Price>
+    </div>
+  </div>
+  <div
+    className="onlyOpen"
+  >
+    <ul
+      className="labelsWrapper"
+    >
+      <li
+        className="labelWrapper"
+      >
+        <span
+          className="label"
+        >
+          Uploaded
+        </span>
+        <strong
+          className="labelValue"
+        >
+          <time
+            dateTime="2017-02-01T00:00"
+            title="2017-02-01"
+          >
+            14 days ago
+          </time>
+        </strong>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
