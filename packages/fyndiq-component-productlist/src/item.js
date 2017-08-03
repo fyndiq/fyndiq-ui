@@ -80,6 +80,11 @@ class ProductListItem extends React.Component {
       showYours,
     } = this.props
 
+    const interactiveProps = !interactive ? {} : ({
+      role: 'button',
+      tabIndex: '0',
+    })
+
     return (
       <div
         className={`
@@ -89,9 +94,8 @@ class ProductListItem extends React.Component {
         `}
         onClick={this.onClick}
         onKeyPress={this.onClick}
-        role={interactive && 'button'}
-        tabIndex={interactive && '0'}
         ref={e => { this.nodeWrapper = e }}
+        {...interactiveProps}
       >
         <div className={styles.firstLine}>
           <div className={styles.imgWrapper}>
