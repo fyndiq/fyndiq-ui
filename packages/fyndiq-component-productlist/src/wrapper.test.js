@@ -40,5 +40,23 @@ describe('fyndiq-component-productlist', () => {
       Component.find(ProductListItem).at(2).simulate('click')
       expect(Component.find(ProductListItem).at(1).prop('open')).toBeTruthy()
     })
+
+    test('should not overwrite onClick of a ProductListItem', () => {
+      const spy = jest.fn()
+      const products = [
+        ...ProductList,
+        <ProductListItem
+          key={1}
+          title="title1"
+          price="price1"
+          imageUrl="imageUrl1"
+          onClick={spy}
+        />,
+      ]
+
+      const Component = shallow(<Wrapper>{products}</Wrapper>)
+      Component.find(ProductListItem).at(3).simulate('click')
+      expect(spy).toHaveBeenCalled()
+    })
   })
 })
