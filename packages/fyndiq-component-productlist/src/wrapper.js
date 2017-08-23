@@ -58,7 +58,12 @@ export class Wrapper extends React.Component {
         {children.map((child, id) => React.cloneElement(child, {
           interactive: true,
           open: this.state.openedProducts.indexOf(id) !== -1,
-          onClick: () => this.toggleProduct(id),
+          onClick: () => {
+            // Toggle open this product
+            this.toggleProduct(id)
+            // Don't overwrite the products's onClick prop
+            child.props.onClick()
+          },
         }))}
       </div>
     )
