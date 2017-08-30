@@ -1,6 +1,6 @@
 # fyndiq-ui
 
-[![Build Status](https://travis-ci.org/fyndiq/fyndiq-ui.svg?branch=master)](https://travis-ci.org/fyndiq/fyndiq-ui)
+[![Build Status](https://travis-ci.org/fyndiq/fyndiq-ui.svg?branch=master)](https://travis-ci.org/fyndiq/fyndiq-ui) [![Coverage Status](https://coveralls.io/repos/github/fyndiq/fyndiq-ui/badge.svg?branch=coveralls)](https://coveralls.io/github/fyndiq/fyndiq-ui?branch=coveralls)
 
 Library of reusable components for Fyndiq
 
