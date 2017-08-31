@@ -16,7 +16,7 @@
     "lint:js": "eslint --cache --ignore-pattern coverage --ignore-pattern node_modules --ignore-pattern lib .",
     "lint:less": "stylelint --syntax less \"packages/**/*.less\"",
     "jest": "jest",
-    "test": "jest --coverage && cat ./coverage/lcov.info | coveralls && npm run lint"
+    "test": "jest && npm run lint"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
