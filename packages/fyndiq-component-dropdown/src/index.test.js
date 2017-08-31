@@ -10,6 +10,11 @@ const simulate = {}
 document.addEventListener = jest.fn((event, cb) => {
   simulate[event] = cb
 })
+document.removeEventListener = jest.fn((event, cb) => {
+  if (simulate[event] === cb) {
+    delete simulate[event]
+  }
+})
 
 describe('fyndiq-component-dropdown', () => {
   test('should be displayed with minimum props', () => {
@@ -54,9 +59,26 @@ describe('fyndiq-component-dropdown', () => {
     expect(component.find('.dropdownWrapper')).toMatchSnapshot()
   })
 
+  test('should open the dropdown on button click in hoverMode', () => {
+    jest.useFakeTimers()
+    const component = mount(<Dropdown button="button" hoverMode>Value</Dropdown>)
+    component.simulate('mouseover')
+    jest.runTimersToTime(200)
+    component.find('div > div').at(0).simulate('click')
+    expect(component.find('.dropdownWrapper')).toMatchSnapshot()
+  })
+
   test('should have different dropdown positions', () => {
-    expect(shallow(
+    expect(mount(
       <Dropdown button="B" position="bc" opened>Content</Dropdown>
+    ).find('.dropdownWrapper')).toMatchSnapshot()
+
+    expect(mount(
+      <Dropdown button="B" position="tr" opened>Content</Dropdown>
+    ).find('.dropdownWrapper')).toMatchSnapshot()
+
+    expect(mount(
+      <Dropdown button="B" position="tc" opened>Content</Dropdown>
     ).find('.dropdownWrapper')).toMatchSnapshot()
   })
 
@@ -71,5 +93,11 @@ describe('fyndiq-component-dropdown', () => {
     component.find('div > div').at(0).simulate('click')
     simulate.keyup({ keyCode: 27 })
     expect(component.find('.dropdownWrapper')).toMatchSnapshot()
+  })
+
+  test('should remove eventListeners when unmounted', () => {
+    const component = mount(<Dropdown button="button">Content</Dropdown>)
+    component.unmount()
+    expect(simulate).toMatchSnapshot()
   })
 })
