@@ -157,7 +157,7 @@ class Dropdown extends React.Component {
       buttonContent = (
         <Button size={size}>
           {button}
-          {!noArrow ? <Arrow orientation={arrowOrientation} /> : ''}
+          {!noArrow && <Arrow orientation={arrowOrientation} />}
         </Button>
       )
     } else {
@@ -177,7 +177,7 @@ class Dropdown extends React.Component {
         >
           {buttonContent}
         </div>
-        {this.state.opened ? (
+        {this.state.opened && (
           <div
             className={`
               ${styles.dropdownWrapper}
@@ -191,7 +191,7 @@ class Dropdown extends React.Component {
           >
             {children}
           </div>
-        ) : null}
+        )}
       </div>
     )
   }
