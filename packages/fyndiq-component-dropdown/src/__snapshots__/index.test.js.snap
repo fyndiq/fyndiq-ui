@@ -120,10 +120,71 @@ exports[`fyndiq-component-dropdown should have different dropdown positions 1`] 
   style={
     Object {
       "left": 0,
-      "top": 0,
+      "top": 5,
     }
   }
 >
   Content
 </div>
+`;
+
+exports[`fyndiq-component-dropdown should have different dropdown positions 2`] = `
+<div
+  className="
+              dropdownWrapper
+              dropdownDefault
+              position-tr
+            "
+  style={
+    Object {
+      "left": 0,
+      "top": -5,
+    }
+  }
+>
+  Content
+</div>
+`;
+
+exports[`fyndiq-component-dropdown should have different dropdown positions 3`] = `
+<div
+  className="
+              dropdownWrapper
+              dropdownDefault
+              position-tc
+            "
+  style={
+    Object {
+      "left": 0,
+      "top": -5,
+    }
+  }
+>
+  Content
+</div>
+`;
+
+exports[`fyndiq-component-dropdown should open the dropdown on button click in hoverMode 1`] = `
+<div
+  className="
+              dropdownWrapper
+              dropdownDefault
+              position-bl
+            "
+  style={
+    Object {
+      "left": 0,
+      "top": 5,
+    }
+  }
+>
+  Value
+</div>
+`;
+
+exports[`fyndiq-component-dropdown should remove eventListeners when unmounted 1`] = `
+Object {
+  "mouseout": [Function],
+  "mouseover": [Function],
+}
 `;

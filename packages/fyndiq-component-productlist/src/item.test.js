@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 
 import Stars from 'fyndiq-component-stars'
 
@@ -102,8 +102,33 @@ describe('fyndiq-component-productlist', () => {
       />)
 
       wrapper.find('.wrapper').simulate('click')
-
       expect(spy).toHaveBeenCalled()
+    })
+
+    test('should call blur when clicked and open', () => {
+      const wrapper = mount(<ProductListItem
+        {...defaultProps}
+        interactive
+        open
+      />)
+
+      const spy = jest.fn()
+      wrapper.getDOMNode().blur = spy
+
+      wrapper.find('.wrapper').simulate('click')
+      expect(spy).toHaveBeenCalled()
+    })
+
+    test('should not propagate click event when clicking on the shop link', () => {
+      const spy = jest.fn()
+      const wrapper = mount(<ProductListItem
+        {...defaultProps}
+        interactive
+        onClick={spy}
+      />)
+
+      wrapper.find('.shopLink').simulate('click')
+      expect(spy).not.toHaveBeenCalled()
     })
 
     test('should not call onClick when not interactive', () => {
