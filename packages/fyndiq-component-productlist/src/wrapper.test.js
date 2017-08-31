@@ -41,6 +41,18 @@ describe('fyndiq-component-productlist', () => {
       expect(Component.find(ProductListItem).at(1).prop('open')).toBeTruthy()
     })
 
+    test('should close only one product if clicked again on', () => {
+      const Component = shallow(<Wrapper openMultiples>{ProductList}</Wrapper>)
+      // Open the first product
+      Component.find(ProductListItem).at(1).simulate('click')
+      // Open the second product
+      Component.find(ProductListItem).at(2).simulate('click')
+      // Close it
+      Component.find(ProductListItem).at(2).simulate('click')
+      expect(Component.find(ProductListItem).at(2).prop('open')).toBeFalsy()
+      expect(Component.find(ProductListItem).at(1).prop('open')).toBeTruthy()
+    })
+
     test('should not overwrite onClick of a ProductListItem', () => {
       const spy = jest.fn()
       const products = [
