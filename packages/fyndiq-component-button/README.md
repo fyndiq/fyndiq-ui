@@ -46,7 +46,7 @@ import Button from 'fyndiq-component-button'
 <Button link="#hello">My link</Button>
 
 // Use a custom Link element
-import { Link } from 'react-router-dom
+import { Link } from 'react-router-dom'
 <Button
   link={<Link to="my/path" />}
 >
