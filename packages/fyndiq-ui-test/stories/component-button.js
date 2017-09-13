@@ -31,3 +31,6 @@ storiesOf('Button', module)
   .addWithInfo('disabled button', () => (
     <Button disabled>Disabled Button</Button>
   ))
+  .addWithInfo('<a> tag', () => (
+    <Button href="#hello">I am a link</Button>
+  ))
