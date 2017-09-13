@@ -69,10 +69,10 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   pressed: PropTypes.bool,
   htmlType: PropTypes.string,
-  link: PropTypes.oneOfType(
+  link: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.element,
-  ),
+  ]),
 }
 
 Button.defaultProps = {
