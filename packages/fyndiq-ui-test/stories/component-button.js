@@ -32,5 +32,5 @@ storiesOf('Button', module)
     <Button disabled>Disabled Button</Button>
   ))
   .addWithInfo('<a> tag', () => (
-    <Button href="#hello">I am a link</Button>
+    <Button link="#hello">I am a link</Button>
   ))
