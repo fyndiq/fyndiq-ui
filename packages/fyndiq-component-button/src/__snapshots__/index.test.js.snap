@@ -12,6 +12,7 @@ exports[`fyndiq-component-button should be rendered without props 1`] = `
     "
   disabled={false}
   onClick={[Function]}
+  type={null}
 >
   Hello
 </button>
@@ -29,6 +30,7 @@ exports[`fyndiq-component-button should have a disabled prop 1`] = `
     "
   disabled={true}
   onClick={[Function]}
+  type={null}
 >
   Hello
 </button>
@@ -46,6 +48,25 @@ exports[`fyndiq-component-button should have a horizontal prop 1`] = `
     "
   disabled={false}
   onClick={[Function]}
+  type={null}
+>
+  Hello
+</button>
+`;
+
+exports[`fyndiq-component-button should have a htmlType prop 1`] = `
+<button
+  className="
+      button
+      type-normal
+      size-s
+      false
+      false
+      interactive
+    "
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
 >
   Hello
 </button>
@@ -63,6 +84,7 @@ exports[`fyndiq-component-button should have a pressed prop 1`] = `
     "
   disabled={false}
   onClick={[Function]}
+  type={null}
 >
   Hello
 </button>
@@ -80,6 +102,7 @@ exports[`fyndiq-component-button should have a size prop 1`] = `
     "
   disabled={false}
   onClick={[Function]}
+  type={null}
 >
   Hello
 </button>
@@ -97,6 +120,7 @@ exports[`fyndiq-component-button should have a type prop 1`] = `
     "
   disabled={false}
   onClick={[Function]}
+  type={null}
 >
   Hello
 </button>

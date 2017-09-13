@@ -2,7 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from '../styles.less'
 
-const Button = ({ children, onClick, type, size, horizontal, disabled, pressed }) => (
+const Button = ({
+  children,
+  onClick,
+  type,
+  size,
+  horizontal,
+  disabled,
+  pressed,
+  htmlType,
+}) => (
   <button
     className={`
       ${styles.button}
@@ -14,6 +23,7 @@ const Button = ({ children, onClick, type, size, horizontal, disabled, pressed }
     `}
     onClick={onClick}
     disabled={disabled}
+    type={htmlType}
   >
     {children}
   </button>
@@ -27,6 +37,7 @@ Button.propTypes = {
   horizontal: PropTypes.bool,
   disabled: PropTypes.bool,
   pressed: PropTypes.bool,
+  htmlType: PropTypes.string,
 }
 
 Button.defaultProps = {
@@ -36,6 +47,7 @@ Button.defaultProps = {
   horizontal: false,
   disabled: false,
   pressed: false,
+  htmlType: null,
 }
 
 export default Button
