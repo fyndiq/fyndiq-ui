@@ -4,6 +4,10 @@ import { shallow } from 'enzyme'
 import Button from './'
 
 describe('fyndiq-component-button', () => {
+  test('should have a default onClick handler', () => {
+    expect(Button.defaultProps.onClick(4)).toBe(4)
+  })
+
   test('should be rendered without props', () => {
     const component = shallow(<Button>Hello</Button>)
     expect(component).toMatchSnapshot()
