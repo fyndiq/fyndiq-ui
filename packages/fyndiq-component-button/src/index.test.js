@@ -38,6 +38,29 @@ describe('fyndiq-component-button', () => {
     expect(component).toMatchSnapshot()
   })
 
+  test('should have a htmlType prop', () => {
+    const component = shallow(<Button htmlType="submit">Hello</Button>)
+    expect(component).toMatchSnapshot()
+  })
+
+  test('should be renderable as a link', () => {
+    const component = shallow(<Button link="#hello">Hello</Button>)
+    expect(component).toMatchSnapshot()
+  })
+
+  test('should be renderable as a custom link element', () => {
+    // Create Link element that follows react-router API
+    const Link = ({ to, children }) => (
+      <a href={to}>
+        {children}
+      </a>
+    )
+    const component = shallow(<Button link={<Link to="my/path" />}>
+      Hello
+    </Button>)
+    expect(component).toMatchSnapshot()
+  })
+
   test('should call the onClick handler when clicked on', () => {
     const clickSpy = jest.fn()
     const component = shallow(<Button onClick={clickSpy}>Hello</Button>)
