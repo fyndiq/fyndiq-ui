@@ -1,16 +1,15 @@
 <div align="center">
 
-![fyndiq-ui logo](https://github.com/fyndiq/fyndiq-ui/docs/logo.jpg)
+![fyndiq-ui logo](https://github.com/fyndiq/fyndiq-ui/blob/master/docs/logo.jpg?raw=true)
 
 # fyndiq-ui
 
 [![Build Status](https://travis-ci.org/fyndiq/fyndiq-ui.svg?branch=master)](https://travis-ci.org/fyndiq/fyndiq-ui) [![Coverage Status](https://coveralls.io/repos/github/fyndiq/fyndiq-ui/badge.svg?branch=master)](https://coveralls.io/github/fyndiq/fyndiq-ui?branch=master)
 
-</div>
-
 Library of reusable components for Fyndiq
 
 # Usage
+</div>
 
 Install one of the provided packages (see list below) in your React project:
 
