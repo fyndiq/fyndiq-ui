@@ -18,6 +18,23 @@ module.exports = {
           name: 'static/media/[name].[ext]',
         },
       },
+    }, {
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        'css-loader?importLoaders=1&sourceMap=true&modules=true',
+        {
+          loader: 'postcss-loader',
+          options: {
+            plugins: () => ([
+              require('postcss-import'),
+              require('postcss-custom-properties'),
+              require('postcss-color-function'),
+              require('autoprefixer'),
+            ])
+          }
+        },
+      ]
     }],
   },
   plugins: [

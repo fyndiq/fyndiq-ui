@@ -46,8 +46,10 @@
   },
   "dependencies": {
     "css-loader": "^0.28.7",
-    "less": "^2.7.2",
-    "less-loader": "^4.0.5",
+    "postcss-color-function": "^4.0.0",
+    "postcss-custom-properties": "^6.1.0",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.6",
     "prop-types": "^15.5.6",
     "style-loader": "^0.18.2",
     "stylelint": "~8.0.0",
