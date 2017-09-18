@@ -4,6 +4,10 @@ import { shallow } from 'enzyme'
 import Button from './'
 
 describe('fyndiq-component-button', () => {
+  test('should have a default onClick handler', () => {
+    expect(Button.defaultProps.onClick(4)).toBe(4)
+  })
+
   test('should be rendered without props', () => {
     const component = shallow(<Button>Hello</Button>)
     expect(component).toMatchSnapshot()
@@ -31,6 +35,29 @@ describe('fyndiq-component-button', () => {
 
   test('should have a pressed prop', () => {
     const component = shallow(<Button pressed>Hello</Button>)
+    expect(component).toMatchSnapshot()
+  })
+
+  test('should have a htmlType prop', () => {
+    const component = shallow(<Button htmlType="submit">Hello</Button>)
+    expect(component).toMatchSnapshot()
+  })
+
+  test('should be renderable as a link', () => {
+    const component = shallow(<Button link="#hello">Hello</Button>)
+    expect(component).toMatchSnapshot()
+  })
+
+  test('should be renderable as a custom link element', () => {
+    // Create Link element that follows react-router API
+    const Link = ({ to, children }) => (
+      <a href={to}>
+        {children}
+      </a>
+    )
+    const component = shallow(<Button link={<Link to="my/path" />}>
+      Hello
+    </Button>)
     expect(component).toMatchSnapshot()
   })
 

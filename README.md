@@ -1,10 +1,15 @@
+<div align="center">
+
+![fyndiq-ui logo](https://github.com/fyndiq/fyndiq-ui/blob/master/docs/logo.jpg?raw=true)
+
 # fyndiq-ui
 
-[![Build Status](https://travis-ci.org/fyndiq/fyndiq-ui.svg?branch=master)](https://travis-ci.org/fyndiq/fyndiq-ui)
+[![Build Status](https://travis-ci.org/fyndiq/fyndiq-ui.svg?branch=master)](https://travis-ci.org/fyndiq/fyndiq-ui) [![Coverage Status](https://coveralls.io/repos/github/fyndiq/fyndiq-ui/badge.svg?branch=master)](https://coveralls.io/github/fyndiq/fyndiq-ui?branch=master)
 
 Library of reusable components for Fyndiq
 
 # Usage
+</div>
 
 Install one of the provided packages (see list below) in your React project:
 
@@ -56,7 +61,10 @@ You will need the following loaders:
 npm i -D postcss-loader less-loader css-loader style-loader extract-text-webpack-plugin autoprefixer
 ```
 
+<div align="center">
+
 # Packages
+</div>
 
 This git repository is a monorepo built using [Lerna](//lernajs.io). It contains several packages:
 
@@ -80,8 +88,10 @@ This git repository is a monorepo built using [Lerna](//lernajs.io). It contains
 | [`fyndiq-styles-fonts`](/packages/fyndiq-styles-fonts) | [![npm](https://img.shields.io/npm/v/fyndiq-styles-fonts.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-styles-fonts) | Default Fonts and helpers |
 | [`fyndiq-styles-medias`](/packages/fyndiq-styles-medias) | [![npm](https://img.shields.io/npm/v/fyndiq-styles-medias.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-styles-medias) | Default media queries |
 
+<div align="center">
 
 # Contribute
+</div>
 
 Clone the repository, then run
 

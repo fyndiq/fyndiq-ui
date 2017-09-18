@@ -41,6 +41,17 @@ import Button from 'fyndiq-component-button'
 
 // Disabled usage
 <Button disabled>My disabled Button</Button>
+
+// Render a link as a button
+<Button link="#hello">My link</Button>
+
+// Use a custom Link element
+import { Link } from 'react-router-dom'
+<Button
+  link={<Link to="my/path" />}
+>
+  My link
+</Button>
 ```
 
 # API
@@ -50,7 +61,9 @@ The component `Button` has the following customizable props:
 | Name | Type | Description | Default value |
 |---|---|---|---|
 | **type** | String | One of `primary`, `cancel`, `blue`, `inverted`. Changes the color style of the button | `normal` |
+| **htmlType** | String | Set the original html type for `button`. See: [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type) | `undefined` |
 | **size** | String | One of `xs`, `s`, `l`, `xl`. Changes the size of the button | `m` |
 | **disabled** | Boolean | If true, will disable the button. | `false` |
 | **pressed** | Boolean | Show the button as pressed | `false` |
+| **link** | String or Element | Uses an `<a>` tag or a custom element to render the button | `undefined` |
 | **onClick** | Function | Callback when the button is pressed | `noop => noop` |

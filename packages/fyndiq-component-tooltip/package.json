@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-tooltip",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Tooltip&selectedStory=default",
   "dependencies": {
-    "fyndiq-component-dropdown": "^1.1.1",
+    "fyndiq-component-dropdown": "^1.2.0",
     "fyndiq-styles-colors": "^0.0.5"
   },
   "peerDependencies": {
