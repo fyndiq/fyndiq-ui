@@ -12,9 +12,9 @@
     "publish": "npm run build && lerna publish",
     "dev": "npm run build:watch & lerna run storybook",
     "lerna": "lerna",
-    "lint": "npm run lint:js && npm run lint:less",
+    "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint --cache --ignore-pattern coverage --ignore-pattern node_modules --ignore-pattern lib .",
-    "lint:less": "stylelint --syntax less \"packages/**/*.less\"",
+    "lint:css": "stylelint \"packages/**/*.css\"",
     "jest": "jest",
     "test": "jest --coverage && cat ./coverage/lcov.info | coveralls && npm run lint"
   },

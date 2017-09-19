@@ -2,6 +2,7 @@
 
 .alertWrapper {
   overflow: hidden;
+
   /* Keep the transition time in sync with the JS file */
   transition: height 200ms cubic-bezier(.23, 1, .32, 1);
 }
