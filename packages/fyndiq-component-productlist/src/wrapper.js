@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from '../styles.less'
+import styles from '../styles.css'
 
 export class Wrapper extends React.Component {
   static propTypes = {

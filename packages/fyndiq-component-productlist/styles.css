@@ -1,7 +1,9 @@
-@import "~fyndiq-styles-colors/colors.less";
-@import "~fyndiq-styles-medias/medias.less";
+@import "fyndiq-styles-colors/colors.css";
+@import "fyndiq-styles-medias/medias.css";
 
-@margin: 8px;
+:root {
+  --margin: 8px;
+}
 
 .wrapper {
   border-radius: 3px;
@@ -15,7 +17,7 @@
 
   &:hover,
   &:focus {
-    background: @palegrey;
+    background: var(--color-palegrey);
   }
 }
 
@@ -24,24 +26,24 @@
 }
 
 .wrapperOpen {
-  background: @palegrey;
-  border-color: @bordercolor;
-  box-shadow: 0 2px 6px fadeout(@black, 85%);
+  background: var(--color-palegrey);
+  border-color: var(--color-border);
+  box-shadow: 0 2px 6px color(var(--color-black) a(15%));
   margin: 12px 0;
 
-  .imgWrapper {
+  & .imgWrapper {
     height: 100px;
     width: 100px;
   }
 
-  .onlyOpen {
+  & .onlyOpen {
     display: block;
   }
 }
 
 .firstLine {
   display: flex;
-  padding: @margin;
+  padding: var(--margin);
   text-align: left;
 }
 
@@ -65,7 +67,7 @@
 
 .title {
   display: inline;
-  margin: 0 @margin 0 0;
+  margin: 0 var(--margin) 0 0;
   text-transform: capitalize;
 }
 
@@ -80,9 +82,9 @@
 
 .yours {
   composes: titlePill;
-  color: @lightgrey;
-  border: 1px solid @bordercolor;
-  margin-right: @margin;
+  color: var(--color-lightgrey);
+  border: 1px solid var(--color-border);
+  margin-right: var(--margin);
 }
 
 .deal {
@@ -93,30 +95,30 @@
 }
 
 .deal--weekly {
-  background: @black;
-  color: @white;
+  background: var(--color-black);
+  color: var(--color-white);
 }
 
 .deal--daily {
-  background: @yellow-deal;
-  color: @black;
+  background: var(--color-yellow-deal);
+  color: var(--color-black);
 }
 
 .shopLink {
-  color: @darkgrey;
+  color: var(--color-darkgrey);
 }
 
 .labelsWrapper {
   display: flex;
   justify-content: space-around;
-  margin: 0 0 @margin;
+  margin: 0 0 var(--margin);
   padding: 0;
-  border-top: 1px solid @bordercolor;
-  border-bottom: 1px solid @bordercolor;
-  background: @white;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-white);
   list-style: none;
 
-  @media @phone {
+  @media (--phone) {
     flex-wrap: wrap;
   }
 }
@@ -124,14 +126,14 @@
 .labelWrapper {
   padding: 6px;
 
-  @media @phone {
+  @media (--phone) {
     width: 50%;
   }
 }
 
 .label {
   display: block;
-  color: @lightgrey;
+  color: var(--color-lightgrey);
 }
 
 .labelValue {

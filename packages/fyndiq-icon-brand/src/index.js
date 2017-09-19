@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from '../styles.less'
+import styles from '../styles.css'
 
 const FyndiqLogo = ({ className, height, width, type, children, taglineSize }) => (
   <svg

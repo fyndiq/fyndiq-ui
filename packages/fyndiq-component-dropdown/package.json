@@ -10,9 +10,9 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Dropdown&selectedStory=default",
   "dependencies": {
-    "fyndiq-component-button": "^1.2.0",
+    "fyndiq-component-button": "*",
     "fyndiq-icon-arrow": "^1.0.0",
-    "fyndiq-styles-colors": "^1.1.1"
+    "fyndiq-styles-colors": "*"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0"

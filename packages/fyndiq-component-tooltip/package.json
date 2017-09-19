@@ -11,7 +11,7 @@
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Tooltip&selectedStory=default",
   "dependencies": {
     "fyndiq-component-dropdown": "^1.2.0",
-    "fyndiq-styles-colors": "^0.0.5"
+    "fyndiq-styles-colors": "*"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0"
