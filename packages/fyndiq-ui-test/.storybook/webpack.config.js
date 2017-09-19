@@ -22,15 +22,13 @@ module.exports = {
       test: /\.css$/,
       use: [
         'style-loader',
-        'css-loader?importLoaders=1&sourceMap=true&modules=true',
+        'css-loader?importLoaders=1&modules=true',
         {
-          loader: 'postcss-loader',
+          loader: require.resolve('postcss-loader'),
           options: {
             plugins: () => ([
               require('postcss-import'),
-              require('postcss-custom-properties'),
-              require('postcss-color-function'),
-              require('autoprefixer'),
+              require('postcss-cssnext'),
             ])
           }
         },
