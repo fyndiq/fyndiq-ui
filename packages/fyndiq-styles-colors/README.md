@@ -12,15 +12,15 @@ npm i -S fyndiq-styles-colors
 
 # Usage
 
-You can use the brand colors module for your LESS files (recommended) and Javascript files
+You can use the brand colors module for your CSS files (recommended) and Javascript files
 
-### LESS
+### CSS
 
-``` less
-@import "~fyndiq-styles-colors/colors.less"
+``` CSS
+@import "fyndiq-styles-colors/colors.css"
 
 .myDiv {
-  color: @red;
+  color: var(--color-red);
 }
 ```
 
@@ -36,4 +36,4 @@ import colors from 'fyndiq-styles-colors'
 
 # API
 
-See the [source](./colors.less) for more information about all colors
+See the [source](./colors.css) for more information about all colors
