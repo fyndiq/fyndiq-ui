@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from '../styles.less'
+
 import { loadState, saveState } from './localStorage'
+import styles from '../styles.css'
 
 export default class Alert extends React.Component {
   static propTypes = {
