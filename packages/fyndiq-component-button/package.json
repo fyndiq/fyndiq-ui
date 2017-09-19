@@ -10,7 +10,7 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Button&selectedStory=default",
   "dependencies": {
-    "fyndiq-styles-colors": "^1.1.1"
+    "fyndiq-styles-colors": "*"
   },
   "peerDependencies": {
     "prop-types": "^15.0.0",
