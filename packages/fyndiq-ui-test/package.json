@@ -19,8 +19,6 @@
     "fyndiq-styles-fonts": "^1.0.0"
   },
   "devDependencies": {
-    "@storybook/addon-info": "^3.1.9",
-    "@storybook/react": "3.1.9",
     "moment": "^2.18.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
