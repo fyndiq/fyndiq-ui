@@ -27,7 +27,7 @@ describe('fyndiq-component-stars', () => {
     expect(component).toMatchSnapshot()
   })
 
-  it('should be rendered with prop reviews', () => {
+  it('should be rendered with prop interactive', () => {
     const component = shallow(<Stars interactive />)
     expect(component).toMatchSnapshot()
   })
