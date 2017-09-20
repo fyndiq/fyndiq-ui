@@ -4,7 +4,7 @@
 
 Fyndiq-ui v2 removes the need for LESS compiler, and adds some postcss plugins dependencies.
 
-To start with, update all your `fyndiq-*` dependencies in your `package.json` file to version `"^2.0.0"`
+To start with, update all your `fyndiq-*` dependencies in your `package.json` file to version `"^2.0.0"` and run `npm i`
 
 #### Install dependencies
 
