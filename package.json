@@ -10,7 +10,7 @@
     "build": "lerna exec --ignore fyndiq-ui-test -- babel src -d lib --ignore *.test.js",
     "build:watch": "lerna exec --parallel --ignore fyndiq-ui-test -- babel src -d lib --ignore *.test.js -w",
     "publish": "npm run build && lerna publish",
-    "dev": "npm run build:watch & lerna run storybook",
+    "dev": "npm run build:watch & lerna run storybook --stream --scope fyndiq-ui-test",
     "lerna": "lerna",
     "lint": "npm run lint:js && npm run lint:less",
     "lint:js": "eslint --cache --ignore-pattern coverage --ignore-pattern node_modules --ignore-pattern lib .",
