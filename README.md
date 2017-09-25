@@ -101,4 +101,6 @@ npm run bootstrap
 npm run dev
 ```
 
+The Storybook will be available on port `6006`.
+
 To create a new component, create a new folder in the `packages/` directory and put your code in `src/`. Then, add your newly created package to the dependencies of `fyndiq-ui-test`'s package.json file, run `npm run bootstrap` and restart `npm run dev`.
