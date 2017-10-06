@@ -45,7 +45,7 @@ describe('fyndiq-component-dropdown', () => {
     const component = mount(<Dropdown button="button">Value</Dropdown>)
     component.find('div > div').at(0).simulate('click')
     simulate.click('body')
-    expect(component.find('.dropdownWrapper')).toMatchSnapshot()
+    expect(component.find('.dropdownWrapper').exists()).toBe(false)
   })
 
   test('should be opened when hovered, if in hoverMode', () => {
@@ -56,7 +56,7 @@ describe('fyndiq-component-dropdown', () => {
     expect(component.find('.dropdownWrapper')).toMatchSnapshot()
     component.simulate('mouseout')
     jest.runTimersToTime(100)
-    expect(component.find('.dropdownWrapper')).toMatchSnapshot()
+    expect(component.find('.dropdownWrapper').exists()).toBe(false)
   })
 
   test('should open the dropdown on button click in hoverMode', () => {
@@ -92,7 +92,7 @@ describe('fyndiq-component-dropdown', () => {
     const component = mount(<Dropdown button="button">Content</Dropdown>)
     component.find('div > div').at(0).simulate('click')
     simulate.keyup({ keyCode: 27 })
-    expect(component.find('.dropdownWrapper')).toMatchSnapshot()
+    expect(component.find('.dropdownWrapper').exists()).toBe(false)
   })
 
   test('should remove eventListeners when unmounted', () => {
