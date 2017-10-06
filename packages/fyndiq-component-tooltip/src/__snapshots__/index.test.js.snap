@@ -13,6 +13,7 @@ exports[`fyndiq-component-tooltip should be rendered without props 1`] = `
   noWrapperStyle={true}
   opened={false}
   position="bc"
+  propagateClickEvent={false}
 >
   <div
     className="
@@ -38,6 +39,7 @@ exports[`fyndiq-component-tooltip should have a component for the prop text 1`] 
   noWrapperStyle={true}
   opened={false}
   position="bc"
+  propagateClickEvent={false}
 >
   <div
     className="
@@ -65,6 +67,7 @@ exports[`fyndiq-component-tooltip should have the right position 1`] = `
   noWrapperStyle={true}
   opened={false}
   position="tr"
+  propagateClickEvent={false}
 >
   <div
     className="
