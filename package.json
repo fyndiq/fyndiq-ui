@@ -41,6 +41,7 @@
     "jest": "^20.0.0",
     "lerna": "^2.2.0",
     "mock-local-storage": "^1.0.4",
+    "moment": "^2.18.1",
     "raf": "^3.4.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
