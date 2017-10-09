@@ -13,6 +13,7 @@
     "fyndiq-styles-colors": "^2.0.0-pre.0"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1"
   }
 }

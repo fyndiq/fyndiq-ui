@@ -15,6 +15,11 @@
     "fyndiq-styles-colors": "^2.0.0-pre.0"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
+    "css-loader": "^0.28.7",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.6",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1"
   }
 }
