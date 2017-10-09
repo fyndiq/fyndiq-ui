@@ -66,4 +66,4 @@ The component `Dropdown` has the following customizable props:
 | **noWrapperStyle** | boolean | Remove cosmetic styles for the wrapper | `false` |
 | **opened** | boolean | Allows to externally control the dropdown | `false` |
 | **hoverMode** | boolean | Opens the dropdown on hover rather than on click | `false` |
-| **propagateClickEvent** | boolean | Bubbles up the click event to the parent | `false` |
+| **noPropagateClickEvent** | boolean | Stop the propagation of the click event | `false` |

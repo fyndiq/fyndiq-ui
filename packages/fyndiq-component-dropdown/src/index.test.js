@@ -101,7 +101,7 @@ describe('fyndiq-component-dropdown', () => {
     expect(simulate).toMatchSnapshot()
   })
 
-  test('should not bubble up click event', () => {
+  test('should bubble up click event', () => {
     const spy = jest.fn()
     const component = mount(
       <div onClick={spy}>
@@ -110,17 +110,18 @@ describe('fyndiq-component-dropdown', () => {
     )
     component.find('Button').simulate('click')
     component.find('.dropdownWrapper').simulate('click')
-    expect(spy).not.toHaveBeenCalled()
+    expect(spy).toHaveBeenCalledTimes(2)
   })
 
-  test('should bubble up click event if the prop propagateClickEvent is present', () => {
+  test('should not bubble up click event if the prop noPropagateClickEvent is set', () => {
     const spy = jest.fn()
     const component = mount(
       <div onClick={spy}>
-        <Dropdown button="button" propagateClickEvent>Content</Dropdown>
+        <Dropdown button="button" noPropagateClickEvent>Content</Dropdown>
       </div>
     )
     component.find('Button').simulate('click')
-    expect(spy).toHaveBeenCalled()
+    component.find('.dropdownWrapper').simulate('click')
+    expect(spy).not.toHaveBeenCalled()
   })
 })
