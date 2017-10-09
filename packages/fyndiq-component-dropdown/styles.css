@@ -1,4 +1,4 @@
-@import "~fyndiq-styles-colors/colors.less";
+@import "fyndiq-styles-colors/colors.css";
 
 .wrapper {
   display: inline-block;
@@ -14,18 +14,20 @@
   padding: 10px;
   width: auto;
   min-width: 220px;
-  border: 1px solid @bordercolor;
+  border: 1px solid var(--color-border);
   background-color: #FFF;
   border-radius: 3px;
-  box-shadow: 0 3px 8px fadeout(@black, 85%);
+  box-shadow: 0 3px 8px fadeout(var(--color-black), 85%);
 }
 
 .position {
   animation: .15s cubic-bezier(.23, 1, .32, 1.2) normal forwards;
 }
 
-@scaleFactor: .92;
-@translateFactor: 4px;
+:root {
+  --scaleFactor: .92;
+  --translateFactor: 4px;
+}
 
 .position-bl {
   composes: position;
@@ -35,7 +37,7 @@
 @keyframes bl {
   from {
     opacity: 0;
-    transform: translate(0, -@translateFactor) scale(@scaleFactor);
+    transform: translate(0, -var(--translateFactor)) scale(var(--scaleFactor));
   }
 
   to {
@@ -52,7 +54,7 @@
 @keyframes bc {
   from {
     opacity: 0;
-    transform: translate(-50%, -@translateFactor) scale(@scaleFactor);
+    transform: translate(-50%, -var(--translateFactor)) scale(var(--scaleFactor));
   }
 
   to {
@@ -69,7 +71,7 @@
 @keyframes br {
   from {
     opacity: 0;
-    transform: translate(-100%, -@translateFactor) scale(@scaleFactor);
+    transform: translate(-100%, -var(--translateFactor)) scale(var(--scaleFactor));
   }
 
   to {
@@ -78,7 +80,7 @@
   }
 }
 
-// Top
+/* Top */
 
 .position-tl {
   composes: position;
@@ -88,7 +90,7 @@
 @keyframes tl {
   from {
     opacity: 0;
-    transform: translate(0, (-100% + @translateFactor)) scale(@scaleFactor);
+    transform: translate(0, calc(-100% + var(--translateFactor))) scale(var(--scaleFactor));
   }
 
   to {
@@ -105,7 +107,7 @@
 @keyframes tc {
   from {
     opacity: 0;
-    transform: translate(-50%, (-100% + @translateFactor)) scale(@scaleFactor);
+    transform: translate(-50%, calc(-100% + var(--translateFactor))) scale(var(--scaleFactor));
   }
 
   to {
@@ -122,7 +124,7 @@
 @keyframes tr {
   from {
     opacity: 0;
-    transform: translate(-100%, (-100% + @translateFactor)) scale(@scaleFactor);
+    transform: translate(-100%, calc(-100% + var(--translateFactor))) scale(var(--scaleFactor));
   }
 
   to {

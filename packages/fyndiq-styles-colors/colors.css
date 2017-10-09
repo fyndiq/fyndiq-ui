@@ -1,0 +1,23 @@
+:root {
+  /* Brand color */
+  --color-red: #EC514A;
+  --color-brand: var(--color-red);
+
+  /* Grey levels */
+  --color-black: #333;
+  --color-darkgrey: #666;
+  --color-lightgrey: #999;
+  --color-lightergrey: #BBB;
+  --color-palegrey: #F2F2F2;
+  --color-white: #FFF;
+
+  /* Theme colors */
+  --color-blue: #57A5D3;
+  --color-green: #70B65A;
+  --color-yellow: #FFD600;
+  --color-yellow-deal: #FE0;
+  --color-orange: #F08C48;
+
+  /* Component colors */
+  --color-border: #DADADA;
+}

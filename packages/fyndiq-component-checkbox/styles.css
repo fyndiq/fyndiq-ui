@@ -1,22 +1,22 @@
-@import "~fyndiq-styles-colors/colors.less";
+@import "fyndiq-styles-colors/colors.css";
 
 .checkbox {
   display: inline-block;
   border: 0;
   background: transparent;
   font-family: inherit;
-  color: @lightergrey;
+  color: var(--color-lightergrey);
   text-decoration: none;
   padding: 4px 10px;
   font-size: 12px;
 }
 
 .interactiveCheckbox {
-  color: @darkgrey;
+  color: var(--color-darkgrey);
   cursor: pointer;
 
   &:hover {
-    background-color: @palegrey;
+    background-color: var(--color-palegrey);
   }
 }
 

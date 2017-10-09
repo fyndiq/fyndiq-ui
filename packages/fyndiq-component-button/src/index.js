@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from '../styles.less'
+
+import styles from '../styles.css'
 
 const Button = ({
   children,

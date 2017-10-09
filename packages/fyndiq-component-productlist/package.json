@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-productlist",
-  "version": "1.2.1",
+  "version": "2.0.0-pre.0",
   "author": "Thibaut Remy <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
@@ -10,10 +10,10 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Product%20List&selectedStory=default",
   "dependencies": {
-    "fyndiq-component-price": "^1.1.1",
-    "fyndiq-component-stars": "^1.2.1",
-    "fyndiq-styles-colors": "^1.1.1",
-    "fyndiq-styles-medias": "*"
+    "fyndiq-component-price": "^2.0.0-pre.0",
+    "fyndiq-component-stars": "^2.0.0-pre.0",
+    "fyndiq-styles-colors": "^2.0.0-pre.0",
+    "fyndiq-styles-medias": "^2.0.0-pre.0"
   },
   "peerDependencies": {
     "moment": "^2.18.1",

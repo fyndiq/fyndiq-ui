@@ -17,13 +17,13 @@ Install one of the provided packages (see list below) in your React project:
 npm i -S fyndiq-component-button
 ```
 
-Every component provide their own style using LESS. Thus, you need to be able to import LESS files inside your project. Using Webpack2, you can have an entry similar to this:
+Every component provide their own style using CSSNext. Thus, you need to be able to import CSS files inside your project. Using Webpack2, you can have an entry similar to this:
 
 ``` js
 module: {
   rules: [
     {
-      test: /\.less$/,
+      test: /\.css$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [
@@ -35,16 +35,11 @@ module: {
               modules: true,
             },
           }, {
-            loader: 'less-loader',
-            options: {
-              sourceMap: true,
-            },
-          }, {
             loader: 'postcss-loader',
             options: {
-              sourceMap: 'inline',
               plugins: () => ([
-                require('autoprefixer'),
+                require('postcss-import'),
+                require('postcss-cssnext'),
               ]),
             },
           },
@@ -58,7 +53,7 @@ module: {
 You will need the following loaders:
 
 ``` bash
-npm i -D postcss-loader less-loader css-loader style-loader extract-text-webpack-plugin autoprefixer
+npm i -D postcss-loader css-loader style-loader extract-text-webpack-plugin postcss-import postcss-cssnext
 ```
 
 <div align="center">

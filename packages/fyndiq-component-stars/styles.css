@@ -1,4 +1,4 @@
-@import "~fyndiq-styles-colors/colors.less";
+@import "fyndiq-styles-colors/colors.css";
 
 .stars {
   display: inline-block;
@@ -20,6 +20,6 @@
 .reviews {
   display: inline-block;
   vertical-align: middle;
-  color: @lightgrey;
-  font-size: .9  em;
+  color: var(--color-lightgrey);
+  font-size: .9 em;
 }
