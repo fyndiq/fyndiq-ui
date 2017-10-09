@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-stars",
-  "version": "2.0.0-pre.0",
+  "version": "2.0.0",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "repository": {
@@ -9,8 +9,8 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Stars&selectedStory=default",
   "dependencies": {
-    "fyndiq-icon-star": "^2.0.0-pre.0",
-    "fyndiq-styles-colors": "^2.0.0-pre.0"
+    "fyndiq-icon-star": "^2.0.0",
+    "fyndiq-styles-colors": "^2.0.0"
   },
   "peerDependencies": {
     "css-loader": "^0.28.7",
