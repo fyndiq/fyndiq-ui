@@ -10,11 +10,11 @@
     "build": "lerna exec --ignore fyndiq-ui-test -- babel src -d lib --ignore *.test.js",
     "build:watch": "lerna exec --parallel --ignore fyndiq-ui-test -- babel src -d lib --ignore *.test.js -w",
     "publish": "npm run build && lerna publish",
-    "dev": "npm run build:watch & lerna run storybook",
+    "dev": "npm run build:watch & lerna run storybook --stream --scope fyndiq-ui-test",
     "lerna": "lerna",
-    "lint": "npm run lint:js && npm run lint:less",
+    "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint --cache --ignore-pattern coverage --ignore-pattern node_modules --ignore-pattern lib .",
-    "lint:less": "stylelint --syntax less \"packages/**/*.less\"",
+    "lint:css": "stylelint \"packages/**/*.css\"",
     "jest": "jest",
     "test": "jest --coverage && cat ./coverage/lcov.info | coveralls && npm run lint"
   },
@@ -32,6 +32,7 @@
     "eslint": "^4.5.0",
     "eslint-config-fyndiq": "^0.1.0",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jest": "^21.1.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
     "file-loader": "^0.11.2",
@@ -45,9 +46,12 @@
     "rimraf": "^2.6.1"
   },
   "dependencies": {
+    "@storybook/addon-info": "^3.1.9",
+    "@storybook/react": "^3.2.8",
     "css-loader": "^0.28.7",
-    "less": "^2.7.2",
-    "less-loader": "^4.0.5",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.6",
     "prop-types": "^15.5.6",
     "style-loader": "^0.18.2",
     "stylelint": "~8.0.0",
@@ -59,7 +63,7 @@
       "enzyme-to-json/serializer"
     ],
     "moduleNameMapper": {
-      "\\.less$": "identity-obj-proxy"
+      "\\.css$": "identity-obj-proxy"
     }
   }
 }

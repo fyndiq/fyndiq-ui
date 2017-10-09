@@ -1,5 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`fyndiq-component-stars should be rendered with prop interactive 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="
+              stars
+              interactive
+              size-m
+            "
+    data-test="STARS"
+    onMouseLeave={[Function]}
+  >
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+    <Star
+      full={NaN}
+      onClick={[Function]}
+      onHover={[Function]}
+    />
+  </div>
+</div>
+`;
+
 exports[`fyndiq-component-stars should be rendered with prop rating 1`] = `
 <div
   className="wrapper"
@@ -88,48 +130,6 @@ exports[`fyndiq-component-stars should be rendered with prop reviews 1`] = `
     4
      reviews)
   </span>
-</div>
-`;
-
-exports[`fyndiq-component-stars should be rendered with prop reviews 2`] = `
-<div
-  className="wrapper"
->
-  <div
-    className="
-              stars
-              interactive
-              size-m
-            "
-    data-test="STARS"
-    onMouseLeave={[Function]}
-  >
-    <Star
-      full={NaN}
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-  </div>
 </div>
 `;
 

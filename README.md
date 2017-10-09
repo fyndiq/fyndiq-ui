@@ -17,13 +17,13 @@ Install one of the provided packages (see list below) in your React project:
 npm i -S fyndiq-component-button
 ```
 
-Every component provide their own style using LESS. Thus, you need to be able to import LESS files inside your project. Using Webpack2, you can have an entry similar to this:
+Every component provide their own style using CSSNext. Thus, you need to be able to import CSS files inside your project. Using Webpack2, you can have an entry similar to this:
 
 ``` js
 module: {
   rules: [
     {
-      test: /\.less$/,
+      test: /\.css$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [
@@ -35,16 +35,11 @@ module: {
               modules: true,
             },
           }, {
-            loader: 'less-loader',
-            options: {
-              sourceMap: true,
-            },
-          }, {
             loader: 'postcss-loader',
             options: {
-              sourceMap: 'inline',
               plugins: () => ([
-                require('autoprefixer'),
+                require('postcss-import'),
+                require('postcss-cssnext'),
               ]),
             },
           },
@@ -58,7 +53,7 @@ module: {
 You will need the following loaders:
 
 ``` bash
-npm i -D postcss-loader less-loader css-loader style-loader extract-text-webpack-plugin autoprefixer
+npm i -D postcss-loader css-loader style-loader extract-text-webpack-plugin postcss-import postcss-cssnext
 ```
 
 <div align="center">
@@ -76,7 +71,7 @@ This git repository is a monorepo built using [Lerna](//lernajs.io). It contains
 | [`fyndiq-component-dropdown`](/packages/fyndiq-component-dropdown) | [![npm](https://img.shields.io/npm/v/fyndiq-component-dropdown.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-dropdown) | Dropdown component |
 | [`fyndiq-component-price`](/packages/fyndiq-component-price) | [![npm](https://img.shields.io/npm/v/fyndiq-component-price.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-price) | Price tag component |
 | [`fyndiq-component-productcard`](/packages/fyndiq-component-productcard) | [![npm](https://img.shields.io/npm/v/fyndiq-component-productcard.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-productcard) | Product card component |
-| [`fyndiq-component-productlist`](/packages/fyndiq-component-productlist) | [![npm](https://img.shields.io/npm/v/fyndiq-component-productlist.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-productlist) | Product card component |
+| [`fyndiq-component-productlist`](/packages/fyndiq-component-productlist) | [![npm](https://img.shields.io/npm/v/fyndiq-component-productlist.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-productlist) | Product list component |
 | [`fyndiq-component-stars`](/packages/fyndiq-component-stars) | [![npm](https://img.shields.io/npm/v/fyndiq-component-stars.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-stars) | Stars component |
 | [`fyndiq-component-tooltip`](/packages/fyndiq-component-tooltip) | [![npm](https://img.shields.io/npm/v/fyndiq-component-tooltip.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-tooltip) | Tooltip component |
 | [`fyndiq-icon-arrow`](/packages/fyndiq-icon-arrow) | [![npm](https://img.shields.io/npm/v/fyndiq-icon-arrow.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-icon-arrow) | Arrow icon |
@@ -100,5 +95,7 @@ npm i
 npm run bootstrap
 npm run dev
 ```
+
+The Storybook will be available on port `6006`.
 
 To create a new component, create a new folder in the `packages/` directory and put your code in `src/`. Then, add your newly created package to the dependencies of `fyndiq-ui-test`'s package.json file, run `npm run bootstrap` and restart `npm run dev`.

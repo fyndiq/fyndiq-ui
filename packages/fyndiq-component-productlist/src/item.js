@@ -4,7 +4,7 @@ import moment from 'moment'
 import Stars from 'fyndiq-component-stars'
 import { Price, CurrentPrice, OldPrice } from 'fyndiq-component-price'
 
-import styles from '../styles.less'
+import styles from '../styles.css'
 
 class ProductListItem extends React.Component {
   static propTypes = {

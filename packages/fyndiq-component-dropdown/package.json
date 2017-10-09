@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-dropdown",
-  "version": "1.2.0",
+  "version": "2.0.0-pre.0",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
@@ -10,9 +10,9 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Dropdown&selectedStory=default",
   "dependencies": {
-    "fyndiq-component-button": "^1.2.0",
-    "fyndiq-icon-arrow": "^1.0.0",
-    "fyndiq-styles-colors": "^1.1.1"
+    "fyndiq-component-button": "^2.0.0-pre.0",
+    "fyndiq-icon-arrow": "^2.0.0-pre.0",
+    "fyndiq-styles-colors": "^2.0.0-pre.0"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0"

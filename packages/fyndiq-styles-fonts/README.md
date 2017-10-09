@@ -12,15 +12,15 @@ npm i -S fyndiq-styles-fonts
 
 # Usage
 
-This package exposes 2 main modules: `bootstrap.less` and `fonts.less`.
+This package exposes 2 main modules: `bootstrap.css` and `fonts.css`.
 
-### `bootstrap.less`
+### `bootstrap.css`
 
 This script bootstraps the usage of the fonts, declaring and loading the fonts (WOFF, EOT) as well as setting the default font on the `<html>` tag.
 
 ``` js
 // In Javascript
-import `fyndiq-styles-fonts/bootstrap.less`
+import `fyndiq-styles-fonts/bootstrap.css`
 ```
 
 In order for it to work properly, a custom loader for the WOFF and EOT files need to be implemented in your webpack config
@@ -37,14 +37,14 @@ In order for it to work properly, a custom loader for the WOFF and EOT files nee
 }
 ```
 
-### `fonts.less`
+### `fonts.css`
 
 This file exposes 2 variables: the `@font-standard` which corresponds to font supposed to be in the body of your webpage, and `@font-headline` which corresponds to the headlines font.
 
-``` less
-@import "~fyndiq-styles-fonts/fonts.less";
+``` css
+@import "fyndiq-styles-fonts/fonts.css";
 
 h3.mySpecialHeadline {
-  font-family: @font-headline;
+  font-family: var(--font-headline);
 }
 ```

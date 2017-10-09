@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import colors from 'fyndiq-styles-colors'
 
-import styles from '../styles.less'
+import styles from '../styles.css'
 
 const Loader = ({
   size,

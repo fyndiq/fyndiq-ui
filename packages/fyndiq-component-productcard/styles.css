@@ -1,0 +1,16 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.card {
+  width: 220px;
+  padding: 1em;
+  background: var(--color-white);
+  border-radius: .2em;
+}
+
+.image {
+  width: 100%;
+}
+
+.title {
+  color: var(--color-black);
+}

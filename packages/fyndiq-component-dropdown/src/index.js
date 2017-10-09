@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Button from 'fyndiq-component-button'
 import Arrow from 'fyndiq-icon-arrow'
-import styles from '../styles.less'
+import styles from '../styles.css'
 
 class Dropdown extends React.Component {
   static propTypes = {

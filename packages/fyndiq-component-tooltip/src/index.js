@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Dropdown from 'fyndiq-component-dropdown'
 
-import styles from '../styles.less'
+import styles from '../styles.css'
 
 const Tooltip = ({ text, children, position }) => (
   <Dropdown
