@@ -9,6 +9,7 @@
     "prebuild": "npm run clean",
     "build": "lerna exec --ignore fyndiq-ui-test -- babel src -d lib --ignore *.test.js",
     "build:watch": "lerna exec --parallel --ignore fyndiq-ui-test -- babel src -d lib --ignore *.test.js -w",
+    "build-storybook": "npm run build && rimraf static && lerna run build-storybook --scope fyndiq-ui-test && mv packages/fyndiq-ui-test/storybook-static/* .",
     "publish": "npm run build && lerna publish",
     "dev": "npm run build:watch & lerna run storybook --stream --scope fyndiq-ui-test",
     "lerna": "lerna",
