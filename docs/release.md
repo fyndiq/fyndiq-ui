@@ -27,8 +27,9 @@ git pull origin master
 # build the storybook
 ./scripts/build-storybook.sh
 
-# commit the files
-git commit -am "Build storybook"
+# Add and commit the files
+git add .
+git commit -m "Build storybook"
 
 git push origin gh-pages
 ```

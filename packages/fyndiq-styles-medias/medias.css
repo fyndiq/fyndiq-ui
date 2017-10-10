@@ -1,0 +1,12 @@
+:root {
+  --size-screen-xs: 320px;
+  --size-screen-s: 425px;
+  --size-screen-m: 768px;
+  --size-screen-l: 1024px;
+}
+
+@custom-media --phone-xs (width <= 320px);
+@custom-media --phone (width <= 425px);
+@custom-media --tablet (width <= 768px);
+@custom-media --desktop (width <= 1024px);
+@custom-media --desktop-l (width >= 1024px);

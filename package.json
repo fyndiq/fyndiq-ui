@@ -10,11 +10,11 @@
     "build": "lerna exec --ignore fyndiq-ui-test -- babel src -d lib --ignore *.test.js",
     "build:watch": "lerna exec --parallel --ignore fyndiq-ui-test -- babel src -d lib --ignore *.test.js -w",
     "publish": "npm run build && lerna publish",
-    "dev": "npm run build:watch & lerna run storybook",
+    "dev": "npm run build:watch & lerna run storybook --stream --scope fyndiq-ui-test",
     "lerna": "lerna",
-    "lint": "npm run lint:js && npm run lint:less",
+    "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint --cache --ignore-pattern coverage --ignore-pattern node_modules --ignore-pattern lib .",
-    "lint:less": "stylelint --syntax less \"packages/**/*.less\"",
+    "lint:css": "stylelint \"packages/**/*.css\"",
     "jest": "jest",
     "test": "jest --coverage && cat ./coverage/lcov.info | coveralls && npm run lint"
   },
@@ -27,39 +27,50 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "coveralls": "^2.13.1",
-    "enzyme": "^2.8.1",
-    "enzyme-to-json": "^1.5.0",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "enzyme-to-json": "^3.1.2",
     "eslint": "^4.5.0",
     "eslint-config-fyndiq": "^0.1.0",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jest": "^21.1.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
     "file-loader": "^0.11.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.0",
-    "lerna": "^2.1.2",
+    "lerna": "^2.2.0",
     "mock-local-storage": "^1.0.4",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-test-renderer": "^15.5.4",
+    "moment": "~2.18.1",
+    "raf": "^3.4.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-test-renderer": "^16.0.0",
     "rimraf": "^2.6.1"
   },
   "dependencies": {
+    "@storybook/addon-info": "^3.1.9",
+    "@storybook/react": "^3.2.12",
     "css-loader": "^0.28.7",
-    "less": "^2.7.2",
-    "less-loader": "^4.0.5",
-    "prop-types": "^15.5.6",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.6",
+    "prop-types": "^15.6.0",
     "style-loader": "^0.18.2",
     "stylelint": "~8.0.0",
     "stylelint-config-standard": "~17.0.0"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "mock-local-storage",
+    "setupFiles": [
+      "mock-local-storage",
+      "raf/polyfill",
+      "./setup-test.js"
+    ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
     "moduleNameMapper": {
-      "\\.less$": "identity-obj-proxy"
+      "\\.css$": "identity-obj-proxy"
     }
   }
 }

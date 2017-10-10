@@ -1,4 +1,4 @@
-@import "~fyndiq-styles-colors/colors.less";
+@import "fyndiq-styles-colors/colors.css";
 
 .price {
   display: inline-block;
@@ -6,7 +6,7 @@
 }
 
 .currentPrice {
-  color: @red;
+  color: var(--color-red);
   display: block;
   font-size: 18px;
   font-weight: bold;
@@ -14,7 +14,7 @@
 
 .oldPrice {
   display: block;
-  color: @lightgrey;
+  color: var(--color-lightgrey);
   text-decoration: line-through;
   font-size: 11px;
 }

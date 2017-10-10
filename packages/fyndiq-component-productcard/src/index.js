@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Price, CurrentPrice, OldPrice } from 'fyndiq-component-price'
 import Stars from 'fyndiq-component-stars'
-import styles from '../styles.less'
+import styles from '../styles.css'
 
 const Productcard = ({ price, title, url, oldprice, rating }) => (
   <div className={styles.card}>

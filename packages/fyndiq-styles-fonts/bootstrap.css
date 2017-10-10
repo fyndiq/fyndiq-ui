@@ -1,0 +1,6 @@
+@import "./declarations.css";
+@import "./fonts.css";
+
+html {
+  font-family: var(--font-standard);
+}
