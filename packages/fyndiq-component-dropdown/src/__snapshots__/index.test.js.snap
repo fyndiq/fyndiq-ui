@@ -1,9 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`fyndiq-component-dropdown should be closable by pressing the Escape key 1`] = `""`;
-
-exports[`fyndiq-component-dropdown should be closed when clicking outside 1`] = `""`;
-
 exports[`fyndiq-component-dropdown should be displayed with minimum props 1`] = `
 <div
   className="wrapper"
@@ -66,8 +62,6 @@ exports[`fyndiq-component-dropdown should be opened when hovered, if in hoverMod
   Value
 </div>
 `;
-
-exports[`fyndiq-component-dropdown should be opened when hovered, if in hoverMode 2`] = `""`;
 
 exports[`fyndiq-component-dropdown should have a custom button 1`] = `
 <div

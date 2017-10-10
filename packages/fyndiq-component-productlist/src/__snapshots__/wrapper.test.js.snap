@@ -11,6 +11,7 @@ exports[`fyndiq-component-productlist Wrapper should display ProductListItem 1`]
     dealType={null}
     imageUrl="imageUrl1"
     interactive={true}
+    key="1"
     oldPrice={null}
     onClick={[Function]}
     open={false}
@@ -29,6 +30,7 @@ exports[`fyndiq-component-productlist Wrapper should display ProductListItem 1`]
     dealType={null}
     imageUrl="imageUrl2"
     interactive={true}
+    key="2"
     oldPrice={null}
     onClick={[Function]}
     open={false}
@@ -47,6 +49,7 @@ exports[`fyndiq-component-productlist Wrapper should display ProductListItem 1`]
     dealType={null}
     imageUrl="imageUrl3"
     interactive={true}
+    key="3"
     oldPrice={null}
     onClick={[Function]}
     open={false}

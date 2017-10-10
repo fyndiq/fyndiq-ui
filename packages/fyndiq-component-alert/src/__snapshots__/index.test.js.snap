@@ -32,6 +32,7 @@ exports[`fyndiq-component-alert should be rendered without props 1`] = `
 exports[`fyndiq-component-alert should be self-closable 1`] = `
 <Alert
   onClose={[Function]}
+  stopShowingAfter={undefined}
   stopShowingAfterKey=""
   type="info"
   unclosable={false}
@@ -66,6 +67,7 @@ exports[`fyndiq-component-alert should be self-closable 1`] = `
 exports[`fyndiq-component-alert should be self-closable 2`] = `
 <Alert
   onClose={[Function]}
+  stopShowingAfter={undefined}
   stopShowingAfterKey=""
   type="info"
   unclosable={false}
