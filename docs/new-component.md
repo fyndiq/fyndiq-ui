@@ -30,7 +30,7 @@ that displays a name, and uses Fyndiq Theme Colors.
   },
   "peerDependencies": {
     "prop-types": "^15.0.0",
-    "react": "^15.0.0"
+    "react": "^15.0.0 || ^16.0.0"
   }
 }
 ```
