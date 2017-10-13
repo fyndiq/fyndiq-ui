@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import FyndiqLogo from './'
 
-describe('fyndiq-icon-brand', () => {
+describe('fyndiq-component-brand', () => {
   it('should be rendered without props', () => {
     expect(shallow(<FyndiqLogo />)).toMatchSnapshot()
   })
