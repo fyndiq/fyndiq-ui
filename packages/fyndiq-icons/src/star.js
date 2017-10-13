@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from '../styles.css'
+import styles from '../star.css'
 
 const Star = ({ full, onClick, onHover }) => {
   const starId = Math.random() + ''

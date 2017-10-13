@@ -10,7 +10,7 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Checkbox&selectedStory=default",
   "dependencies": {
-    "fyndiq-icon-checkmark": "^2.0.1",
+    "fyndiq-icons": "*",
     "fyndiq-styles-colors": "^2.0.0"
   },
   "peerDependencies": {
