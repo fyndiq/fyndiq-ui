@@ -1,4 +1,4 @@
-# fyndiq-icon-loader [![npm](https://img.shields.io/npm/v/fyndiq-icon-loader.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-icon-loader)
+# fyndiq-component-loader [![npm](https://img.shields.io/npm/v/fyndiq-component-loader.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-loader)
 
 [Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Loader&selectedStory=default)
 
@@ -9,14 +9,14 @@ A Loader icon for Fyndiq
 The component can be installed through NPM:
 
 ``` bash
-npm i -S fyndiq-icon-loader
+npm i -S fyndiq-component-loader
 ```
 
 # Usage
 
 ``` js
 import React from 'react'
-import Loader from 'fyndiq-icon-loader'
+import Loader from 'fyndiq-component-loader'
 
 // Basic usage
 <Loader />
