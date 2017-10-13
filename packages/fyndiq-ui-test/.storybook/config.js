@@ -16,7 +16,7 @@ function loadStories() {
   require('../stories/component-productcard')
   require('../stories/component-productlist')
   require('../stories/component-alert')
-  require('../stories/icon-brand')
+  require('../stories/component-brand')
   require('../stories/icon-loader')
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "fyndiq-icon-brand",
+  "name": "fyndiq-component-brand",
   "version": "2.0.1",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",

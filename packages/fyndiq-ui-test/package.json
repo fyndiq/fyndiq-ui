@@ -14,7 +14,7 @@
     "fyndiq-component-productlist": "^2.0.1",
     "fyndiq-component-stars": "^2.0.1",
     "fyndiq-component-tooltip": "^2.0.1",
-    "fyndiq-icon-brand": "^2.0.1",
+    "fyndiq-component-brand": "^2.0.1",
     "fyndiq-icon-loader": "^2.0.1",
     "fyndiq-styles-fonts": "^2.0.1"
   },
