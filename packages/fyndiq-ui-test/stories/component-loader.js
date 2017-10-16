@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import Loader from 'fyndiq-icon-loader'
+import Loader from 'fyndiq-component-loader'
 
 storiesOf('Loader', module)
   .addWithInfo('default', () => (

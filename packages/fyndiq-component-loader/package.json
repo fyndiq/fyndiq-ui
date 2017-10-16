@@ -1,5 +1,5 @@
 {
-  "name": "fyndiq-icon-checkmark",
+  "name": "fyndiq-component-loader",
   "version": "2.0.1",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
@@ -8,11 +8,15 @@
     "type": "git",
     "url": "git+https://github.com/fyndiq/fyndiq-ui.git"
   },
-  "homepage": "https://github.com/fyndiq/fyndiq-ui",
+  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Loader&selectedStory=default",
   "dependencies": {
     "fyndiq-styles-colors": "^2.0.0"
   },
   "peerDependencies": {
+    "css-loader": "^0.28.7",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.6",
     "prop-types": "^15.5.10",
     "react": "^15.6.1 || ^16.0.0"
   }

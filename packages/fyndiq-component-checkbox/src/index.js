@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Checkmark from 'fyndiq-icon-checkmark'
+import { Checkmark } from 'fyndiq-icons'
 import colors from 'fyndiq-styles-colors'
 import styles from '../styles.css'
 

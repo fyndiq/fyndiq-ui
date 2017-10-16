@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Star from 'fyndiq-icon-star'
+import { Star } from 'fyndiq-icons'
 import styles from '../styles.css'
 
 class Stars extends React.Component {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`fyndiq-icon-brand should be rendered in different types 1`] = `
+exports[`fyndiq-component-brand should be rendered in different types 1`] = `
 <svg
   className="
       svg
@@ -21,7 +21,7 @@ exports[`fyndiq-icon-brand should be rendered in different types 1`] = `
 </svg>
 `;
 
-exports[`fyndiq-icon-brand should be rendered in different types 2`] = `
+exports[`fyndiq-component-brand should be rendered in different types 2`] = `
 <svg
   className="
       svg
@@ -42,7 +42,7 @@ exports[`fyndiq-icon-brand should be rendered in different types 2`] = `
 </svg>
 `;
 
-exports[`fyndiq-icon-brand should be rendered in different types 3`] = `
+exports[`fyndiq-component-brand should be rendered in different types 3`] = `
 <svg
   className="
       svg
@@ -63,7 +63,7 @@ exports[`fyndiq-icon-brand should be rendered in different types 3`] = `
 </svg>
 `;
 
-exports[`fyndiq-icon-brand should be rendered in different types 4`] = `
+exports[`fyndiq-component-brand should be rendered in different types 4`] = `
 <svg
   className="
       svg
@@ -84,7 +84,7 @@ exports[`fyndiq-icon-brand should be rendered in different types 4`] = `
 </svg>
 `;
 
-exports[`fyndiq-icon-brand should be rendered in different types 5`] = `
+exports[`fyndiq-component-brand should be rendered in different types 5`] = `
 <svg
   className="
       svg
@@ -105,7 +105,7 @@ exports[`fyndiq-icon-brand should be rendered in different types 5`] = `
 </svg>
 `;
 
-exports[`fyndiq-icon-brand should be rendered without props 1`] = `
+exports[`fyndiq-component-brand should be rendered without props 1`] = `
 <svg
   className="
       svg
@@ -126,7 +126,7 @@ exports[`fyndiq-icon-brand should be rendered without props 1`] = `
 </svg>
 `;
 
-exports[`fyndiq-icon-brand should have a className prop 1`] = `
+exports[`fyndiq-component-brand should have a className prop 1`] = `
 <svg
   className="
       svg
@@ -147,7 +147,7 @@ exports[`fyndiq-icon-brand should have a className prop 1`] = `
 </svg>
 `;
 
-exports[`fyndiq-icon-brand should have a tagline 1`] = `
+exports[`fyndiq-component-brand should have a tagline 1`] = `
 <svg
   className="
       svg
@@ -176,7 +176,7 @@ exports[`fyndiq-icon-brand should have a tagline 1`] = `
 </svg>
 `;
 
-exports[`fyndiq-icon-brand should have a taglineSize prop 1`] = `
+exports[`fyndiq-component-brand should have a taglineSize prop 1`] = `
 <svg
   className="
       svg

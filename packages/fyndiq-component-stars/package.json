@@ -9,7 +9,7 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Stars&selectedStory=default",
   "dependencies": {
-    "fyndiq-icon-star": "^2.0.1",
+    "fyndiq-icons": "*",
     "fyndiq-styles-colors": "^2.0.0"
   },
   "peerDependencies": {

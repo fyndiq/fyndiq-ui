@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import FyndiqLogo from 'fyndiq-icon-brand'
+import FyndiqLogo from 'fyndiq-component-brand'
 
 storiesOf('Icon Brand', module)
   .addWithInfo('default', () => (
