@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-checkbox",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Checkbox&selectedStory=default",
   "dependencies": {
-    "fyndiq-icons": "*",
+    "fyndiq-icons": "^2.0.1",
     "fyndiq-styles-colors": "^2.0.0"
   },
   "peerDependencies": {
