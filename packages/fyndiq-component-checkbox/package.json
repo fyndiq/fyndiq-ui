@@ -11,7 +11,7 @@
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Checkbox&selectedStory=default",
   "dependencies": {
     "fyndiq-icons": "^2.0.1",
-    "fyndiq-styles-colors": "^2.0.0"
+    "fyndiq-styles-colors": "*"
   },
   "peerDependencies": {
     "css-loader": "^0.28.7",
