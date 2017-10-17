@@ -7,7 +7,7 @@ export default {
   darkgrey: '#666',
   lightgrey: '#7E7E7E',
   lightergrey: '#BBB',
-  palegrey: '#F2F2F2',
+  palegrey: '#FAFAFC',
   white: '#FFF',
 
   /* Theme colors */
