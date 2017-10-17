@@ -3,7 +3,14 @@ import PropTypes from 'prop-types'
 
 import styles from '../styles.css'
 
-const FyndiqLogo = ({ className, height, width, type, children, taglineSize }) => (
+const FyndiqLogo = ({
+  className,
+  height,
+  width,
+  type,
+  children,
+  taglineSize,
+}) => (
   <svg
     // Viewbox changes if there's a tagline or not
     viewBox={children ? '-10 -1 82 36' : '-1 -1 66 28'}
@@ -55,3 +62,39 @@ FyndiqLogo.defaultProps = {
 }
 
 export default FyndiqLogo
+
+const Square = ({
+  className,
+  height,
+  width,
+  type,
+}) => (
+  <svg
+    className={`
+      ${styles['type-' + type]}
+      ${className}
+    `}
+    width={width}
+    height={height}
+    viewBox="-20 -14 56 56"
+  >
+    <rect className={styles.outer} x="-20" y="-14" width="56" height="56" />
+    <path className={styles.inner} d="M18.162 4.259c0 .321-.118.636-.32.861a1.045 1.045 0 0 1-.773.358H5.421v6.189h10.081c.287 0 .57.13.773.358.203.225.319.54.319.86v3.042c0 .32-.116.634-.32.86a1.045 1.045 0 0 1-.772.357H5.421v11.211c0 .321-.117.636-.32.861a1.047 1.047 0 0 1-.773.358H1.092c-.287 0-.569-.13-.772-.358a1.3 1.3 0 0 1-.32-.86V1.218C0 .899.117.583.32.358.523.13.805 0 1.092 0h15.977c.288 0 .57.13.773.358.202.225.32.541.32.86V4.26z" />
+  </svg>
+)
+
+Square.propTypes = {
+  className: PropTypes.string,
+  height: PropTypes.number,
+  width: PropTypes.number,
+  type: FyndiqLogo.propTypes.type,
+}
+
+Square.defaultProps = {
+  className: '',
+  height: 56,
+  width: 56,
+  type: FyndiqLogo.defaultProps.type,
+}
+
+export { Square }

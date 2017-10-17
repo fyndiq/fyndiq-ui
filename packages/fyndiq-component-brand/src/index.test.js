@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import FyndiqLogo from './'
+import FyndiqLogo, { Square } from './'
 
 describe('fyndiq-component-brand', () => {
   it('should be rendered without props', () => {
@@ -26,5 +26,10 @@ describe('fyndiq-component-brand', () => {
 
   it('should have a taglineSize prop', () => {
     expect(shallow(<FyndiqLogo taglineSize={5.5}>Hello</FyndiqLogo>)).toMatchSnapshot()
+  })
+
+  it('should exist in square version', () => {
+    expect(shallow(<Square />)).toMatchSnapshot()
+    expect(shallow(<Square type="outline" />)).toMatchSnapshot()
   })
 })

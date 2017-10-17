@@ -28,6 +28,11 @@ import FyndiqLogo from 'fyndiq-component-brand'
 <FyndiqLogo>
   Fyndshopping på nätet
 </FyndiqLogo>
+
+// Square version
+import { Square } from 'fyndiq-component-brand'
+<Square />
+<Square type="outline" />
 ```
 
 # API
