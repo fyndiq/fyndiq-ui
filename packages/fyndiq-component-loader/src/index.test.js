@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Loader from './'
 
-describe('fyndiq-icon-loader', () => {
+describe('fyndiq-component-loader', () => {
   test('it should be rendered with no props', () => {
     expect(shallow(<Loader />)).toMatchSnapshot()
   })

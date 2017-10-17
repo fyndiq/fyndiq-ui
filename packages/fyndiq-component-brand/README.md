@@ -1,4 +1,4 @@
-# fyndiq-icon-brand [![npm](https://img.shields.io/npm/v/fyndiq-icon-brand.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-icon-brand)
+# fyndiq-component-brand [![npm](https://img.shields.io/npm/v/fyndiq-component-brand.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-brand)
 
 [Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Icon%20Brand&selectedStory=default)
 
@@ -9,14 +9,14 @@ A logo icon for Fyndiq
 The component can be installed through NPM:
 
 ``` bash
-npm i -S fyndiq-icon-brand
+npm i -S fyndiq-component-brand
 ```
 
 # Usage
 
 ``` js
 import React from 'react'
-import FyndiqLogo from 'fyndiq-icon-brand'
+import FyndiqLogo from 'fyndiq-component-brand'
 
 // Basic usage
 <FyndiqLogo />
@@ -28,6 +28,11 @@ import FyndiqLogo from 'fyndiq-icon-brand'
 <FyndiqLogo>
   Fyndshopping på nätet
 </FyndiqLogo>
+
+// Square version
+import { Square } from 'fyndiq-component-brand'
+<Square />
+<Square type="outline" />
 ```
 
 # API

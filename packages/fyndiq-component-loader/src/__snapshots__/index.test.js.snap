@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`fyndiq-icon-loader it should be rendered with no props 1`] = `
+exports[`fyndiq-component-loader it should be rendered with no props 1`] = `
 <svg
   className="
       icon
@@ -40,7 +40,7 @@ exports[`fyndiq-icon-loader it should be rendered with no props 1`] = `
 </svg>
 `;
 
-exports[`fyndiq-icon-loader it should have a size prop 1`] = `
+exports[`fyndiq-component-loader it should have a size prop 1`] = `
 <svg
   className="
       icon
@@ -80,7 +80,7 @@ exports[`fyndiq-icon-loader it should have a size prop 1`] = `
 </svg>
 `;
 
-exports[`fyndiq-icon-loader it should have colors props 1`] = `
+exports[`fyndiq-component-loader it should have colors props 1`] = `
 <svg
   className="
       icon
@@ -120,7 +120,7 @@ exports[`fyndiq-icon-loader it should have colors props 1`] = `
 </svg>
 `;
 
-exports[`fyndiq-icon-loader it should have wave props 1`] = `
+exports[`fyndiq-component-loader it should have wave props 1`] = `
 <path
   className="wave"
   d="M 0 -2.5

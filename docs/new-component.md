@@ -29,8 +29,12 @@ that displays a name, and uses Fyndiq Theme Colors.
     "fyndiq-styles-colors": "*"
   },
   "peerDependencies": {
+    "css-loader": "^0.28.7",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.6",
     "prop-types": "^15.0.0",
-    "react": "^15.0.0"
+    "react": "^15.0.0 || ^16.0.0"
   }
 }
 ```

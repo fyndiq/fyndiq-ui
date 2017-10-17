@@ -16,8 +16,8 @@ function loadStories() {
   require('../stories/component-productcard')
   require('../stories/component-productlist')
   require('../stories/component-alert')
-  require('../stories/icon-brand')
-  require('../stories/icon-loader')
+  require('../stories/component-brand')
+  require('../stories/component-loader')
 }
 
 setAddon(infoAddon)
