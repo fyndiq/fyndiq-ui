@@ -28,8 +28,25 @@ class Checkbox extends React.Component {
     this.props.onToggle(checked)
   }
 
+  renderCheckmark() {
+    if (this.state.checked) {
+      return (
+        <Checkmark
+          className={styles.checkmark}
+          color={this.props.color}
+        />
+      )
+    }
+
+    return <div className={styles.checkmark} />
+  }
+
   render() {
-    const { children, disabled, color, className } = this.props
+    const {
+      children,
+      disabled,
+      className,
+    } = this.props
 
     return (
       <button
@@ -41,10 +58,7 @@ class Checkbox extends React.Component {
         onClick={() => this.toggle()}
         disabled={disabled}
       >
-        {this.state.checked ?
-          <Checkmark className={styles.checkmark} color={color} /> :
-          <div className={styles.checkmark} />
-        }
+        {this.renderCheckmark()}
         <span className={styles.children}>
           {children}
         </span>
