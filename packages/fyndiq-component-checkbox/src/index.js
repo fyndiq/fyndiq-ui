@@ -1,8 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames/bind'
 import { Checkmark } from 'fyndiq-icons'
 import colors from 'fyndiq-styles-colors'
 import styles from '../styles.css'
+
+const cx = classnames.bind(styles)
 
 class Checkbox extends React.Component {
   constructor(props) {
@@ -29,6 +32,24 @@ class Checkbox extends React.Component {
   }
 
   renderCheckmark() {
+    // frame mode
+    if (this.props.frame) {
+      if (this.state.checked) {
+        return (
+          <div
+            className={cx({
+              checkmarkFrame: true,
+              checkmarkFrameChecked: true,
+            })}
+          />
+        )
+      }
+
+      return (
+        <div className={styles.checkmarkFrame} />
+      )
+    }
+
     if (this.state.checked) {
       return (
         <Checkmark
@@ -73,6 +94,7 @@ Checkbox.propTypes = {
   disabled: PropTypes.bool,
   color: PropTypes.string,
   className: PropTypes.string,
+  frame: PropTypes.bool,
 }
 
 Checkbox.defaultProps = {
@@ -81,6 +103,7 @@ Checkbox.defaultProps = {
   disabled: false,
   color: colors.lightgrey,
   className: '',
+  frame: false,
 }
 
 export default Checkbox
