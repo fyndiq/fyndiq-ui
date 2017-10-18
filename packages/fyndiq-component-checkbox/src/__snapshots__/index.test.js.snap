@@ -1,22 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`fyndiq-component-checkbox should be invoquable without parameters 1`] = `
-<button
+<span
   className="
-          checkbox
-          interactiveCheckbox
-          
+          wrapper
+          false
         "
-  disabled={false}
-  onClick={[Function]}
 >
-  <div
-    className="checkmark"
+  <input
+    checked={false}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={false}
+    id="randomID"
+    onChange={[Function]}
+    type="checkbox"
   />
-  <span
-    className="children"
-  />
-</button>
+  <label
+    className="label"
+    htmlFor="randomID"
+  >
+    <Checkmark
+      className="checkmark"
+      color="#999"
+      height={15}
+      width={15}
+    />
+  </label>
+</span>
 `;
 
 exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
@@ -25,161 +39,248 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
   className=""
   color="#999"
   disabled={false}
+  frame={false}
   onToggle={[Function]}
 >
-  <button
+  <span
     className="
-            checkbox
-            interactiveCheckbox
-            
+            wrapper
+            false
           "
+  >
+    <input
+      checked={true}
+      className="
+                checkbox
+                false
+                
+              "
+      disabled={false}
+      id="randomID"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <label
+      className="label"
+      htmlFor="randomID"
+    >
+      <Checkmark
+        className="checkmark"
+        color="#999"
+        height={15}
+        width={15}
+      >
+        <svg
+          className="checkmark"
+          fill="#999"
+          height={15}
+          viewBox="0 0 50 50"
+          width={15}
+        >
+          <path
+            d="M16.8 42c-.4 0-1-.2-1.2-.5l-14-14.2c-.8-.7-.8-1.8 0-2.5.6-.7 1.7-.7 2.4 0l12.8 13 29-29c.7-.7 1.8-.7 2.5 0s.7 1.8 0 2.5L18 41.5c-.2.3-.7.5-1.2.5z"
+          />
+        </svg>
+      </Checkmark>
+    </label>
+  </span>
+</Checkbox>
+`;
+
+exports[`fyndiq-component-checkbox should have prop checked 1`] = `
+<span
+  className="
+          wrapper
+          false
+        "
+>
+  <input
+    checked={true}
+    className="
+              checkbox
+              false
+              
+            "
     disabled={false}
-    onClick={[Function]}
+    id="randomID"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="label"
+    htmlFor="randomID"
   >
     <Checkmark
       className="checkmark"
       color="#999"
       height={15}
       width={15}
-    >
-      <svg
-        className="checkmark"
-        fill="#999"
-        height={15}
-        viewBox="0 0 50 50"
-        width={15}
-      >
-        <path
-          d="M16.8 42c-.4 0-1-.2-1.2-.5l-14-14.2c-.8-.7-.8-1.8 0-2.5.6-.7 1.7-.7 2.4 0l12.8 13 29-29c.7-.7 1.8-.7 2.5 0s.7 1.8 0 2.5L18 41.5c-.2.3-.7.5-1.2.5z"
-        />
-      </svg>
-    </Checkmark>
-    <span
-      className="children"
     />
-  </button>
-</Checkbox>
-`;
-
-exports[`fyndiq-component-checkbox should have prop checked 1`] = `
-<button
-  className="
-          checkbox
-          interactiveCheckbox
-          
-        "
-  disabled={false}
-  onClick={[Function]}
->
-  <Checkmark
-    className="checkmark"
-    color="#999"
-    height={15}
-    width={15}
-  />
-  <span
-    className="children"
-  />
-</button>
+  </label>
+</span>
 `;
 
 exports[`fyndiq-component-checkbox should have prop color 1`] = `
-<button
+<span
   className="
-          checkbox
-          interactiveCheckbox
-          
+          wrapper
+          false
         "
-  disabled={false}
-  onClick={[Function]}
 >
-  <Checkmark
-    className="checkmark"
-    color="red"
-    height={15}
-    width={15}
+  <input
+    checked={true}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={false}
+    id="randomID"
+    onChange={[Function]}
+    type="checkbox"
   />
-  <span
-    className="children"
-  />
-</button>
+  <label
+    className="label"
+    htmlFor="randomID"
+  >
+    <Checkmark
+      className="checkmark"
+      color="red"
+      height={15}
+      width={15}
+    />
+  </label>
+</span>
 `;
 
 exports[`fyndiq-component-checkbox should have prop disabled 1`] = `
-<button
+<span
   className="
-          checkbox
-          false
-          
+          wrapper
+          wrapperDisabled
         "
-  disabled={true}
-  onClick={[Function]}
 >
-  <div
-    className="checkmark"
+  <input
+    checked={false}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={true}
+    id="randomID"
+    onChange={[Function]}
+    type="checkbox"
   />
-  <span
-    className="children"
-  />
-</button>
+  <label
+    className="label"
+    htmlFor="randomID"
+  >
+    <Checkmark
+      className="checkmark"
+      color="#999"
+      height={15}
+      width={15}
+    />
+  </label>
+</span>
 `;
 
 exports[`fyndiq-component-checkbox should have prop onToggle 1`] = `
-<button
+<span
   className="
-          checkbox
-          interactiveCheckbox
-          
+          wrapper
+          false
         "
-  disabled={false}
-  onClick={[Function]}
 >
-  <div
-    className="checkmark"
+  <input
+    checked={false}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={false}
+    id="randomID"
+    onChange={[Function]}
+    type="checkbox"
   />
-  <span
-    className="children"
-  />
-</button>
+  <label
+    className="label"
+    htmlFor="randomID"
+  >
+    <Checkmark
+      className="checkmark"
+      color="#999"
+      height={15}
+      width={15}
+    />
+  </label>
+</span>
 `;
 
 exports[`fyndiq-component-checkbox should update its state when clicked on 1`] = `
-<button
+<span
   className="
-          checkbox
-          interactiveCheckbox
-          
+          wrapper
+          false
         "
-  disabled={false}
-  onClick={[Function]}
 >
-  <Checkmark
-    className="checkmark"
-    color="#999"
-    height={15}
-    width={15}
+  <input
+    checked={false}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={false}
+    id="randomID"
+    onChange={[Function]}
+    type="checkbox"
   />
-  <span
-    className="children"
-  />
-</button>
+  <label
+    className="label"
+    htmlFor="randomID"
+  >
+    <Checkmark
+      className="checkmark"
+      color="#999"
+      height={15}
+      width={15}
+    />
+  </label>
+</span>
 `;
 
 exports[`fyndiq-component-checkbox should update its state when clicked on 2`] = `
-<button
+<span
   className="
-          checkbox
-          interactiveCheckbox
-          
+          wrapper
+          false
         "
-  disabled={false}
-  onClick={[Function]}
 >
-  <div
-    className="checkmark"
+  <input
+    checked={false}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={false}
+    id="randomID"
+    onChange={[Function]}
+    type="checkbox"
   />
-  <span
-    className="children"
-  />
-</button>
+  <label
+    className="label"
+    htmlFor="randomID"
+  >
+    <Checkmark
+      className="checkmark"
+      color="#999"
+      height={15}
+      width={15}
+    />
+  </label>
+</span>
 `;

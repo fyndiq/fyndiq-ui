@@ -3,6 +3,9 @@ import { shallow, mount } from 'enzyme'
 
 import Checkbox from './'
 
+// Mock Math.random
+Math.random = jest.fn(() => 'randomID')
+
 describe('fyndiq-component-checkbox', () => {
   test('should be invoquable without parameters', () => {
     const component = shallow(<Checkbox />)
@@ -32,12 +35,16 @@ describe('fyndiq-component-checkbox', () => {
   test('should call onToggle when clicked on', () => {
     const toggleSpy = jest.fn()
     const component = shallow(<Checkbox onToggle={toggleSpy} />)
-    component.simulate('click')
+    component.find('input').simulate('change', {
+      target: { checked: true },
+    })
 
     expect(toggleSpy.mock.calls).toHaveLength(1)
     expect(toggleSpy.mock.calls[0][0]).toBe(true)
 
-    component.simulate('click')
+    component.find('input').simulate('change', {
+      target: { checked: false },
+    })
     expect(toggleSpy.mock.calls[1][0]).toBe(false)
   })
 
