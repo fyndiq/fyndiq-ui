@@ -29,20 +29,6 @@ class Checkbox extends React.Component {
     this.props.onToggle(e.target.checked)
   }
 
-  renderCheckmark() {
-    // Return a checkmark when not in frame mode
-    if (this.state.checked) {
-      return (
-        <Checkmark
-          className={styles.checkmark}
-          color={this.props.color}
-        />
-      )
-    }
-
-    return <div className={styles.checkmark} />
-  }
-
   render() {
     const {
       children,
@@ -75,7 +61,12 @@ class Checkbox extends React.Component {
           htmlFor={this.state.id}
           className={styles.label}
         >
-          {!frame && this.renderCheckmark()}
+          {!frame && (
+            <Checkmark
+              className={styles.checkmark}
+              color={this.props.color}
+            />
+          )}
           {children}
         </label>
       </span>

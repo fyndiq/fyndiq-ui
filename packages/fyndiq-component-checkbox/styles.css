@@ -30,6 +30,12 @@
   vertical-align: middle;
 }
 
+/* Hide the custom checkmark when the checkbox is not checked */
+.checkbox:not(:checked) + .label .checkmark {
+  opacity: 0;
+}
+
+/* Hide the checkbox when not in frame mode */
 .checkbox:not(.checkboxFrame) {
   display: none;
 }
