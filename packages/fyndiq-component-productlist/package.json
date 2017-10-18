@@ -12,7 +12,7 @@
   "dependencies": {
     "fyndiq-component-price": "^2.0.1",
     "fyndiq-component-stars": "^2.0.3",
-    "fyndiq-styles-colors": "*",
+    "fyndiq-styles-colors": "^2.0.0",
     "fyndiq-styles-medias": "^2.0.0"
   },
   "peerDependencies": {
