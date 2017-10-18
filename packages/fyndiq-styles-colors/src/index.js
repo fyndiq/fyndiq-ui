@@ -13,7 +13,7 @@ export default {
   /* Theme colors */
   red: '#E74A51',
   blue: '#4A90E2',
-  green: '#70B65A',
+  green: '#37B578',
   yellow: '#FFD600',
   'yellow-deal': '#FE0',
   orange: '#F08C48',
