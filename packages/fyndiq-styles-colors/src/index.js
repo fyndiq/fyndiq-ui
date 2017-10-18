@@ -15,7 +15,7 @@ export default {
   green: '#37B578',
   yellow: '#FFD600',
   'yellow-deal': '#FE0',
-  orange: '#F08C48',
+  orange: '#F7A626',
 
   /* Component colors */
   border: '#CCD1DD',
