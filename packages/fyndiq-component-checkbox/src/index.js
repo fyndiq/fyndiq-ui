@@ -1,18 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames/bind'
 import { Checkmark } from 'fyndiq-icons'
 import colors from 'fyndiq-styles-colors'
 import styles from '../styles.css'
 
-const cx = classnames.bind(styles)
 
 class Checkbox extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       checked: !!props.checked,
+      id: Math.random(),
     }
+
+    this.toggle = this.toggle.bind(this)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -23,33 +24,13 @@ class Checkbox extends React.Component {
     }
   }
 
-  toggle() {
-    const checked = !this.state.checked
-    this.setState({
-      checked,
-    })
-    this.props.onToggle(checked)
+  toggle(e) {
+    this.setState({ checked: e.target.checked })
+    this.props.onToggle(e.target.checked)
   }
 
   renderCheckmark() {
-    // frame mode
-    if (this.props.frame) {
-      if (this.state.checked) {
-        return (
-          <div
-            className={cx({
-              checkmarkFrame: true,
-              checkmarkFrameChecked: true,
-            })}
-          />
-        )
-      }
-
-      return (
-        <div className={styles.checkmarkFrame} />
-      )
-    }
-
+    // Return a checkmark when not in frame mode
     if (this.state.checked) {
       return (
         <Checkmark
@@ -67,23 +48,37 @@ class Checkbox extends React.Component {
       children,
       disabled,
       className,
+      frame,
     } = this.props
 
     return (
-      <button
+      <span
         className={`
-          ${styles.checkbox}
-          ${!disabled && styles.interactiveCheckbox}
-          ${className}
+          ${styles.wrapper}
+          ${disabled && styles.wrapperDisabled}
         `}
-        onClick={() => this.toggle()}
-        disabled={disabled}
       >
-        {this.renderCheckmark()}
-        <span className={styles.children}>
+        <input
+          id={this.state.id}
+          type="checkbox"
+          className={`
+            ${styles.checkbox}
+            ${frame && styles.checkboxFrame}
+            ${className}
+          `}
+          checked={this.state.checked}
+          onChange={this.toggle}
+          disabled={disabled}
+        />
+
+        <label
+          htmlFor={this.state.id}
+          className={styles.label}
+        >
+          {!frame && this.renderCheckmark()}
           {children}
-        </span>
-      </button>
+        </label>
+      </span>
     )
   }
 }

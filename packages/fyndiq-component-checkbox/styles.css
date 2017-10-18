@@ -1,22 +1,24 @@
 @import "fyndiq-styles-colors/colors.css";
 
-.checkbox {
+.wrapper {
   display: inline-block;
-  border: 0;
-  background: transparent;
-  font-family: inherit;
-  color: var(--color-lightergrey);
-  text-decoration: none;
-  padding: 4px 10px;
-  font-size: 12px;
+
+  &:not(.wrapperDisabled) {
+    cursor: pointer;
+
+    & .checkbox {
+      cursor: pointer;
+    }
+
+    & .label {
+      cursor: pointer;
+    }
+  }
 }
 
-.interactiveCheckbox {
-  color: var(--color-darkgrey);
-  cursor: pointer;
-
-  &:hover {
-    background-color: var(--color-palegrey);
+.wrapperDisabled {
+  & .label {
+    color: var(--color-lightgrey);
   }
 }
 
@@ -28,28 +30,39 @@
   vertical-align: middle;
 }
 
-.children {
-  display: inline-block;
-  vertical-align: middle;
+.checkbox:not(.checkboxFrame) {
+  display: none;
 }
 
-.checkmarkFrame {
-  display: inline-block;
+.checkbox {
+  appearance: none;
+  outline: none;
   position: relative;
-  top: 2px;
-  width: 11px;
-  height: 11px;
+  top: 3px;
+  height: 12px;
+  width: 12px;
+  margin-right: 8px;
   border: 1px solid var(--color-border);
   padding: 1px;
-  margin-right: 10px;
-}
 
-.checkmarkFrameChecked {
   &:before {
     content: " ";
     display: block;
-    height: 100%;
     width: 100%;
-    background-color: var(--color-lightgrey);
+    height: 100%;
+    background-color: var(--color-darkgrey);
+    transform: scale(.9);
+    opacity: 0;
+    transition: .1s ease-out;
+    will-change: transform, opacity;
+  }
+
+  &:checked {
+    border-color: var(--color-darkgrey);
+
+    &:before {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }
