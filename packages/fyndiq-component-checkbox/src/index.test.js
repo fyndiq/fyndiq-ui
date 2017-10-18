@@ -28,7 +28,7 @@ describe('fyndiq-component-checkbox', () => {
   })
 
   test('should have prop onToggle', () => {
-    const component = shallow(<Checkbox onToggle={jest.fn()} />)
+    const component = shallow(<Checkbox />)
     expect(component).toMatchSnapshot()
   })
 
@@ -49,11 +49,15 @@ describe('fyndiq-component-checkbox', () => {
   })
 
   test('should update its state when clicked on', () => {
-    const component = shallow(<Checkbox onToggle={jest.fn()} />)
-    component.simulate('click')
+    const component = shallow(<Checkbox />)
+    component.find('input').simulate('change', {
+      target: { checked: true },
+    })
     expect(component).toMatchSnapshot()
 
-    component.simulate('click')
+    component.find('input').simulate('change', {
+      target: { checked: false },
+    })
     expect(component).toMatchSnapshot()
   })
 

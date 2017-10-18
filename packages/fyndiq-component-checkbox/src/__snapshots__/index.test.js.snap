@@ -227,7 +227,7 @@ exports[`fyndiq-component-checkbox should update its state when clicked on 1`] =
         "
 >
   <input
-    checked={false}
+    checked={true}
     className="
               checkbox
               false
