@@ -62,4 +62,10 @@ describe('fyndiq-component-checkbox', () => {
     component.setProps({ checked: true })
     expect(component).toMatchSnapshot()
   })
+
+  test('should have a frame mode', () => {
+    const component = shallow(<Checkbox frame />)
+    // Shouldn't render the Checkmark icon
+    expect(component.find('Checkmark').exists()).toBe(false)
+  })
 })
