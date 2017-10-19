@@ -3,9 +3,6 @@ import { shallow, mount } from 'enzyme'
 
 import Checkbox from './'
 
-// Mock Math.random
-Math.random = jest.fn(() => 'randomID')
-
 describe('fyndiq-component-checkbox', () => {
   test('should be invoquable without parameters', () => {
     const component = shallow(<Checkbox />)

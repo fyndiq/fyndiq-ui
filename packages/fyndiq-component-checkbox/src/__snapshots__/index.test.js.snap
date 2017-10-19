@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`fyndiq-component-checkbox should be invoquable without parameters 1`] = `
-<span
+<label
   className="
           wrapper
           false
@@ -15,22 +15,16 @@ exports[`fyndiq-component-checkbox should be invoquable without parameters 1`] =
               
             "
     disabled={false}
-    id="randomID"
     onChange={[Function]}
     type="checkbox"
   />
-  <label
-    className="label"
-    htmlFor="randomID"
-  >
-    <Checkmark
-      className="checkmark"
-      color="#999"
-      height={15}
-      width={15}
-    />
-  </label>
-</span>
+  <Checkmark
+    className="checkmark"
+    color="#7E7E7E"
+    height={15}
+    width={15}
+  />
+</label>
 `;
 
 exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
@@ -42,13 +36,12 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
   frame={false}
   onToggle={[Function]}
 >
-  <span
+  <label
     className="
             wrapper
             false
           "
   >
-<<<<<<< HEAD
     <input
       checked={true}
       className="
@@ -57,80 +50,33 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
                 
               "
       disabled={false}
-      id="randomID"
       onChange={[Function]}
       type="checkbox"
     />
-    <label
-      className="label"
-      htmlFor="randomID"
-=======
     <Checkmark
       className="checkmark"
       color="#7E7E7E"
       height={15}
       width={15}
->>>>>>> 440054e6327c28ee384614427e715d94a20cefa6
     >
-      <Checkmark
+      <svg
         className="checkmark"
-<<<<<<< HEAD
-        color="#999"
-=======
         fill="#7E7E7E"
->>>>>>> 440054e6327c28ee384614427e715d94a20cefa6
         height={15}
+        viewBox="0 0 50 50"
         width={15}
       >
-        <svg
-          className="checkmark"
-          fill="#999"
-          height={15}
-          viewBox="0 0 50 50"
-          width={15}
-        >
-          <path
-            d="M16.8 42c-.4 0-1-.2-1.2-.5l-14-14.2c-.8-.7-.8-1.8 0-2.5.6-.7 1.7-.7 2.4 0l12.8 13 29-29c.7-.7 1.8-.7 2.5 0s.7 1.8 0 2.5L18 41.5c-.2.3-.7.5-1.2.5z"
-          />
-        </svg>
-      </Checkmark>
-    </label>
-  </span>
+        <path
+          d="M16.8 42c-.4 0-1-.2-1.2-.5l-14-14.2c-.8-.7-.8-1.8 0-2.5.6-.7 1.7-.7 2.4 0l12.8 13 29-29c.7-.7 1.8-.7 2.5 0s.7 1.8 0 2.5L18 41.5c-.2.3-.7.5-1.2.5z"
+        />
+      </svg>
+    </Checkmark>
+  </label>
 </Checkbox>
 `;
 
 exports[`fyndiq-component-checkbox should have prop checked 1`] = `
-<span
-  className="
-          wrapper
-          false
-        "
->
-  <Checkmark
-    className="checkmark"
-    color="#7E7E7E"
-    height={15}
-    width={15}
-  />
-  <span
-    className="children"
-  />
-  <label
-    className="label"
-    htmlFor="randomID"
-  >
-    <Checkmark
-      className="checkmark"
-      color="#999"
-      height={15}
-      width={15}
-    />
-  </label>
-</span>
-`;
-
-exports[`fyndiq-component-checkbox should have prop color 1`] = `
-<span
+<label
   className="
           wrapper
           false
@@ -144,26 +90,47 @@ exports[`fyndiq-component-checkbox should have prop color 1`] = `
               
             "
     disabled={false}
-    id="randomID"
     onChange={[Function]}
     type="checkbox"
   />
-  <label
-    className="label"
-    htmlFor="randomID"
-  >
-    <Checkmark
-      className="checkmark"
-      color="red"
-      height={15}
-      width={15}
-    />
-  </label>
-</span>
+  <Checkmark
+    className="checkmark"
+    color="#7E7E7E"
+    height={15}
+    width={15}
+  />
+</label>
+`;
+
+exports[`fyndiq-component-checkbox should have prop color 1`] = `
+<label
+  className="
+          wrapper
+          false
+        "
+>
+  <input
+    checked={true}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <Checkmark
+    className="checkmark"
+    color="red"
+    height={15}
+    width={15}
+  />
+</label>
 `;
 
 exports[`fyndiq-component-checkbox should have prop disabled 1`] = `
-<span
+<label
   className="
           wrapper
           wrapperDisabled
@@ -177,26 +144,20 @@ exports[`fyndiq-component-checkbox should have prop disabled 1`] = `
               
             "
     disabled={true}
-    id="randomID"
     onChange={[Function]}
     type="checkbox"
   />
-  <label
-    className="label"
-    htmlFor="randomID"
-  >
-    <Checkmark
-      className="checkmark"
-      color="#999"
-      height={15}
-      width={15}
-    />
-  </label>
-</span>
+  <Checkmark
+    className="checkmark"
+    color="#7E7E7E"
+    height={15}
+    width={15}
+  />
+</label>
 `;
 
 exports[`fyndiq-component-checkbox should have prop onToggle 1`] = `
-<span
+<label
   className="
           wrapper
           false
@@ -210,32 +171,25 @@ exports[`fyndiq-component-checkbox should have prop onToggle 1`] = `
               
             "
     disabled={false}
-    id="randomID"
     onChange={[Function]}
     type="checkbox"
   />
-  <label
-    className="label"
-    htmlFor="randomID"
-  >
-    <Checkmark
-      className="checkmark"
-      color="#999"
-      height={15}
-      width={15}
-    />
-  </label>
-</span>
+  <Checkmark
+    className="checkmark"
+    color="#7E7E7E"
+    height={15}
+    width={15}
+  />
+</label>
 `;
 
 exports[`fyndiq-component-checkbox should update its state when clicked on 1`] = `
-<span
+<label
   className="
           wrapper
           false
         "
 >
-<<<<<<< HEAD
   <input
     checked={true}
     className="
@@ -244,36 +198,20 @@ exports[`fyndiq-component-checkbox should update its state when clicked on 1`] =
               
             "
     disabled={false}
-    id="randomID"
     onChange={[Function]}
     type="checkbox"
-=======
+  />
   <Checkmark
     className="checkmark"
     color="#7E7E7E"
     height={15}
     width={15}
   />
-  <span
-    className="children"
->>>>>>> 440054e6327c28ee384614427e715d94a20cefa6
-  />
-  <label
-    className="label"
-    htmlFor="randomID"
-  >
-    <Checkmark
-      className="checkmark"
-      color="#999"
-      height={15}
-      width={15}
-    />
-  </label>
-</span>
+</label>
 `;
 
 exports[`fyndiq-component-checkbox should update its state when clicked on 2`] = `
-<span
+<label
   className="
           wrapper
           false
@@ -287,20 +225,14 @@ exports[`fyndiq-component-checkbox should update its state when clicked on 2`] =
               
             "
     disabled={false}
-    id="randomID"
     onChange={[Function]}
     type="checkbox"
   />
-  <label
-    className="label"
-    htmlFor="randomID"
-  >
-    <Checkmark
-      className="checkmark"
-      color="#999"
-      height={15}
-      width={15}
-    />
-  </label>
-</span>
+  <Checkmark
+    className="checkmark"
+    color="#7E7E7E"
+    height={15}
+    width={15}
+  />
+</label>
 `;
