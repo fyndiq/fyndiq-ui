@@ -20,6 +20,7 @@ class Dropdown extends React.Component {
     ]),
     margin: PropTypes.number,
     hoverMode: PropTypes.bool,
+    noPropagateClickEvent: PropTypes.bool,
     noArrow: PropTypes.bool,
     noWrapperStyle: PropTypes.bool,
   }
@@ -32,6 +33,7 @@ class Dropdown extends React.Component {
     size: undefined,
     position: 'bl',
     margin: 5,
+    noPropagateClickEvent: false,
   }
 
   constructor(props) {
@@ -147,6 +149,7 @@ class Dropdown extends React.Component {
       size,
       position,
       noWrapperStyle,
+      noPropagateClickEvent,
     } = this.props
 
     let buttonContent
@@ -171,6 +174,7 @@ class Dropdown extends React.Component {
         ref={e => { this.wrapperNode = e }}
         onMouseOver={this.onMouseOver}
         onMouseOut={this.onMouseOut}
+        onClick={e => noPropagateClickEvent && e.stopPropagation()}
       >
         <div
           ref={e => { this.buttonNode = e }}
