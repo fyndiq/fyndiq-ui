@@ -11,7 +11,7 @@ exports[`fyndiq-component-loader it should be rendered with no props 1`] = `
   width={50}
 >
   <rect
-    fill="#EC514A"
+    fill="#E74A51"
     height="100"
     width="100"
     x="0"
@@ -35,7 +35,7 @@ exports[`fyndiq-component-loader it should be rendered with no props 1`] = `
           t -80 0
           Z
         "
-    fill="#8AB7E3"
+    fill="#4A90E2"
   />
 </svg>
 `;
@@ -51,7 +51,7 @@ exports[`fyndiq-component-loader it should have a size prop 1`] = `
   width={40}
 >
   <rect
-    fill="#EC514A"
+    fill="#E74A51"
     height="100"
     width="100"
     x="0"
@@ -75,7 +75,7 @@ exports[`fyndiq-component-loader it should have a size prop 1`] = `
           t -80 0
           Z
         "
-    fill="#8AB7E3"
+    fill="#4A90E2"
   />
 </svg>
 `;
@@ -139,6 +139,6 @@ exports[`fyndiq-component-loader it should have wave props 1`] = `
         t -5 0
         Z
       "
-  fill="#8AB7E3"
+  fill="#4A90E2"
 />
 `;

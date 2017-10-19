@@ -1,18 +1,22 @@
 export default {
-  red: '#EC514A',
+  /* Brand color */
   brand: '#EC514A',
 
-  black: '#333',
+  /* Grey levels */
+  black: '#3B4257',
   darkgrey: '#666',
-  lightgrey: '#999',
-  lightergrey: '#BBB',
-  palegrey: '#F2F2F2',
+  lightgrey: '#7E7E7E',
+  palegrey: '#FAFAFC',
   white: '#FFF',
 
-  blue: '#8AB7E3',
-  green: '#70B65A',
+  /* Theme colors */
+  red: '#E74A51',
+  blue: '#4A90E2',
+  green: '#37B578',
   yellow: '#FFD600',
-  orange: '#F08C48',
+  'yellow-deal': '#FE0',
+  orange: '#F7A626',
 
-  bordercolor: '#DADADA',
+  /* Component colors */
+  border: '#CCD1DD',
 }
