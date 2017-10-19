@@ -9,8 +9,8 @@
 }
 
 .greystar {
-  fill: var(--color-lightergrey);
-  stroke: var(--color-lightergrey);
+  fill: var(--color-border);
+  stroke: var(--color-border);
 }
 
 .yellowstar {

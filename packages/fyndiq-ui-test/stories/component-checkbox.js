@@ -18,3 +18,6 @@ storiesOf('Checkbox', module)
       <div><Checkbox checked onToggle={action('toggle')} disabled>Disabled validated label</Checkbox></div>
     </span>
   ))
+  .addWithInfo('frame mode', () => (
+    <Checkbox onToggle={action('toggle')} frame>Label</Checkbox>
+  ))
