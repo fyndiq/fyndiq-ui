@@ -23,7 +23,7 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
 <Checkbox
   checked={true}
   className=""
-  color="#999"
+  color="#7E7E7E"
   disabled={false}
   onToggle={[Function]}
 >
@@ -38,13 +38,13 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
   >
     <Checkmark
       className="checkmark"
-      color="#999"
+      color="#7E7E7E"
       height={15}
       width={15}
     >
       <svg
         className="checkmark"
-        fill="#999"
+        fill="#7E7E7E"
         height={15}
         viewBox="0 0 50 50"
         width={15}
@@ -73,7 +73,7 @@ exports[`fyndiq-component-checkbox should have prop checked 1`] = `
 >
   <Checkmark
     className="checkmark"
-    color="#999"
+    color="#7E7E7E"
     height={15}
     width={15}
   />
@@ -155,7 +155,7 @@ exports[`fyndiq-component-checkbox should update its state when clicked on 1`] =
 >
   <Checkmark
     className="checkmark"
-    color="#999"
+    color="#7E7E7E"
     height={15}
     width={15}
   />
