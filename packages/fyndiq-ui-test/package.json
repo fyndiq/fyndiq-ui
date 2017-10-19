@@ -16,6 +16,7 @@
     "fyndiq-component-productlist": "^2.1.0",
     "fyndiq-component-stars": "^2.1.0",
     "fyndiq-component-tooltip": "^2.1.0",
+    "fyndiq-illustrations": "*",
     "fyndiq-styles-fonts": "^2.0.2"
   },
   "scripts": {
