@@ -37,7 +37,7 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
 <Checkbox
   checked={true}
   className=""
-  color="#999"
+  color="#7E7E7E"
   disabled={false}
   frame={false}
   onToggle={[Function]}
@@ -48,6 +48,7 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
             false
           "
   >
+<<<<<<< HEAD
     <input
       checked={true}
       className="
@@ -63,10 +64,21 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
     <label
       className="label"
       htmlFor="randomID"
+=======
+    <Checkmark
+      className="checkmark"
+      color="#7E7E7E"
+      height={15}
+      width={15}
+>>>>>>> 440054e6327c28ee384614427e715d94a20cefa6
     >
       <Checkmark
         className="checkmark"
+<<<<<<< HEAD
         color="#999"
+=======
+        fill="#7E7E7E"
+>>>>>>> 440054e6327c28ee384614427e715d94a20cefa6
         height={15}
         width={15}
       >
@@ -94,17 +106,14 @@ exports[`fyndiq-component-checkbox should have prop checked 1`] = `
           false
         "
 >
-  <input
-    checked={true}
-    className="
-              checkbox
-              false
-              
-            "
-    disabled={false}
-    id="randomID"
-    onChange={[Function]}
-    type="checkbox"
+  <Checkmark
+    className="checkmark"
+    color="#7E7E7E"
+    height={15}
+    width={15}
+  />
+  <span
+    className="children"
   />
   <label
     className="label"
@@ -226,6 +235,7 @@ exports[`fyndiq-component-checkbox should update its state when clicked on 1`] =
           false
         "
 >
+<<<<<<< HEAD
   <input
     checked={true}
     className="
@@ -237,6 +247,16 @@ exports[`fyndiq-component-checkbox should update its state when clicked on 1`] =
     id="randomID"
     onChange={[Function]}
     type="checkbox"
+=======
+  <Checkmark
+    className="checkmark"
+    color="#7E7E7E"
+    height={15}
+    width={15}
+  />
+  <span
+    className="children"
+>>>>>>> 440054e6327c28ee384614427e715d94a20cefa6
   />
   <label
     className="label"
