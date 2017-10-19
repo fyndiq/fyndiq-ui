@@ -18,20 +18,25 @@ document.removeEventListener = jest.fn((event, cb) => {
 
 describe('fyndiq-component-dropdown', () => {
   test('should be displayed with minimum props', () => {
-    expect(shallow(<Dropdown button="Button">Value</Dropdown>)).toMatchSnapshot()
+    expect(shallow(
+      <Dropdown button="Button">Value</Dropdown>,
+      { disableLifecycleMethods: true },
+    )).toMatchSnapshot()
   })
 
   test('should have a custom button', () => {
     expect(shallow(
       <Dropdown button={<div>Hello</div>}>
         Value
-      </Dropdown>
+      </Dropdown>,
+      { disableLifecycleMethods: true }
     )).toMatchSnapshot()
   })
 
   test('should have a custom wrapper', () => {
     expect(shallow(
-      <Dropdown button="B" noWrapperStyle opened>Content</Dropdown>
+      <Dropdown button="B" noWrapperStyle opened>Content</Dropdown>,
+      { disableLifecycleMethods: true }
     ).find('.dropdownWrapper')).toMatchSnapshot()
   })
 
@@ -45,6 +50,7 @@ describe('fyndiq-component-dropdown', () => {
     const component = mount(<Dropdown button="button">Value</Dropdown>)
     component.find('div > div').at(0).simulate('click')
     simulate.click('body')
+    component.update()
     expect(component.find('.dropdownWrapper').exists()).toBe(false)
   })
 
@@ -53,9 +59,11 @@ describe('fyndiq-component-dropdown', () => {
     const component = mount(<Dropdown button="button" hoverMode>Value</Dropdown>)
     component.simulate('mouseover')
     jest.runTimersToTime(200)
+    component.update()
     expect(component.find('.dropdownWrapper')).toMatchSnapshot()
     component.simulate('mouseout')
     jest.runTimersToTime(100)
+    component.update()
     expect(component.find('.dropdownWrapper').exists()).toBe(false)
   })
 
@@ -84,7 +92,8 @@ describe('fyndiq-component-dropdown', () => {
 
   test('should have an arrow oriented to the top if dropdown is above', () => {
     expect(shallow(
-      <Dropdown button="B" position="tr" opened>Content</Dropdown>
+      <Dropdown button="B" position="tr" opened>Content</Dropdown>,
+      { disableLifecycleMethods: true },
     ).find('Arrow')).toMatchSnapshot()
   })
 
@@ -92,6 +101,7 @@ describe('fyndiq-component-dropdown', () => {
     const component = mount(<Dropdown button="button">Content</Dropdown>)
     component.find('div > div').at(0).simulate('click')
     simulate.keyup({ keyCode: 27 })
+    component.update()
     expect(component.find('.dropdownWrapper').exists()).toBe(false)
   })
 

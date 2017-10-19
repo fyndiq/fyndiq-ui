@@ -1,50 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`fyndiq-component-checkbox should be invoquable without parameters 1`] = `
-<button
+<label
   className="
-          checkbox
-          interactiveCheckbox
-          
+          wrapper
+          false
         "
-  disabled={false}
-  onClick={[Function]}
 >
-  <div
+  <input
+    checked={false}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <Checkmark
     className="checkmark"
+    color="#7E7E7E"
+    height={15}
+    width={15}
   />
-  <span
-    className="children"
-  />
-</button>
+</label>
 `;
 
 exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
 <Checkbox
   checked={true}
   className=""
-  color="#999"
+  color="#7E7E7E"
   disabled={false}
+  frame={false}
   onToggle={[Function]}
 >
-  <button
+  <label
     className="
-            checkbox
-            interactiveCheckbox
-            
+            wrapper
+            false
           "
-    disabled={false}
-    onClick={[Function]}
   >
+    <input
+      checked={true}
+      className="
+                checkbox
+                false
+                
+              "
+      disabled={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
     <Checkmark
       className="checkmark"
-      color="#999"
+      color="#7E7E7E"
       height={15}
       width={15}
     >
       <svg
         className="checkmark"
-        fill="#999"
+        fill="#7E7E7E"
         height={15}
         viewBox="0 0 50 50"
         width={15}
@@ -54,132 +71,168 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
         />
       </svg>
     </Checkmark>
-    <span
-      className="children"
-    />
-  </button>
+  </label>
 </Checkbox>
 `;
 
 exports[`fyndiq-component-checkbox should have prop checked 1`] = `
-<button
+<label
   className="
-          checkbox
-          interactiveCheckbox
-          
+          wrapper
+          false
         "
-  disabled={false}
-  onClick={[Function]}
 >
+  <input
+    checked={true}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
   <Checkmark
     className="checkmark"
-    color="#999"
+    color="#7E7E7E"
     height={15}
     width={15}
   />
-  <span
-    className="children"
-  />
-</button>
+</label>
 `;
 
 exports[`fyndiq-component-checkbox should have prop color 1`] = `
-<button
+<label
   className="
-          checkbox
-          interactiveCheckbox
-          
+          wrapper
+          false
         "
-  disabled={false}
-  onClick={[Function]}
 >
+  <input
+    checked={true}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
   <Checkmark
     className="checkmark"
     color="red"
     height={15}
     width={15}
   />
-  <span
-    className="children"
-  />
-</button>
+</label>
 `;
 
 exports[`fyndiq-component-checkbox should have prop disabled 1`] = `
-<button
+<label
   className="
-          checkbox
-          false
-          
+          wrapper
+          wrapperDisabled
         "
-  disabled={true}
-  onClick={[Function]}
 >
-  <div
-    className="checkmark"
+  <input
+    checked={false}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={true}
+    onChange={[Function]}
+    type="checkbox"
   />
-  <span
-    className="children"
-  />
-</button>
-`;
-
-exports[`fyndiq-component-checkbox should have prop onToggle 1`] = `
-<button
-  className="
-          checkbox
-          interactiveCheckbox
-          
-        "
-  disabled={false}
-  onClick={[Function]}
->
-  <div
-    className="checkmark"
-  />
-  <span
-    className="children"
-  />
-</button>
-`;
-
-exports[`fyndiq-component-checkbox should update its state when clicked on 1`] = `
-<button
-  className="
-          checkbox
-          interactiveCheckbox
-          
-        "
-  disabled={false}
-  onClick={[Function]}
->
   <Checkmark
     className="checkmark"
-    color="#999"
+    color="#7E7E7E"
     height={15}
     width={15}
   />
-  <span
-    className="children"
+</label>
+`;
+
+exports[`fyndiq-component-checkbox should have prop onToggle 1`] = `
+<label
+  className="
+          wrapper
+          false
+        "
+>
+  <input
+    checked={false}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={false}
+    onChange={[Function]}
+    type="checkbox"
   />
-</button>
+  <Checkmark
+    className="checkmark"
+    color="#7E7E7E"
+    height={15}
+    width={15}
+  />
+</label>
+`;
+
+exports[`fyndiq-component-checkbox should update its state when clicked on 1`] = `
+<label
+  className="
+          wrapper
+          false
+        "
+>
+  <input
+    checked={true}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <Checkmark
+    className="checkmark"
+    color="#7E7E7E"
+    height={15}
+    width={15}
+  />
+</label>
 `;
 
 exports[`fyndiq-component-checkbox should update its state when clicked on 2`] = `
-<button
+<label
   className="
-          checkbox
-          interactiveCheckbox
-          
+          wrapper
+          false
         "
-  disabled={false}
-  onClick={[Function]}
 >
-  <div
+  <input
+    checked={false}
+    className="
+              checkbox
+              false
+              
+            "
+    disabled={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <Checkmark
     className="checkmark"
+    color="#7E7E7E"
+    height={15}
+    width={15}
   />
-  <span
-    className="children"
-  />
-</button>
+</label>
 `;

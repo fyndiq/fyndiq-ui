@@ -1,0 +1,19 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.star {
+  display: inline-block;
+  margin-right: .3em;
+  height: 1em;
+  width: 1em;
+  stroke-width: .1em;
+}
+
+.greystar {
+  fill: var(--color-border);
+  stroke: var(--color-border);
+}
+
+.yellowstar {
+  fill: var(--color-yellow);
+  stroke: var(--color-yellow);
+}

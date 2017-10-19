@@ -25,28 +25,36 @@ describe('fyndiq-component-checkbox', () => {
   })
 
   test('should have prop onToggle', () => {
-    const component = shallow(<Checkbox onToggle={jest.fn()} />)
+    const component = shallow(<Checkbox />)
     expect(component).toMatchSnapshot()
   })
 
   test('should call onToggle when clicked on', () => {
     const toggleSpy = jest.fn()
     const component = shallow(<Checkbox onToggle={toggleSpy} />)
-    component.simulate('click')
+    component.find('input').simulate('change', {
+      target: { checked: true },
+    })
 
     expect(toggleSpy.mock.calls).toHaveLength(1)
     expect(toggleSpy.mock.calls[0][0]).toBe(true)
 
-    component.simulate('click')
+    component.find('input').simulate('change', {
+      target: { checked: false },
+    })
     expect(toggleSpy.mock.calls[1][0]).toBe(false)
   })
 
   test('should update its state when clicked on', () => {
-    const component = shallow(<Checkbox onToggle={jest.fn()} />)
-    component.simulate('click')
+    const component = shallow(<Checkbox />)
+    component.find('input').simulate('change', {
+      target: { checked: true },
+    })
     expect(component).toMatchSnapshot()
 
-    component.simulate('click')
+    component.find('input').simulate('change', {
+      target: { checked: false },
+    })
     expect(component).toMatchSnapshot()
   })
 
@@ -54,5 +62,11 @@ describe('fyndiq-component-checkbox', () => {
     const component = mount(<Checkbox />)
     component.setProps({ checked: true })
     expect(component).toMatchSnapshot()
+  })
+
+  test('should have a frame mode', () => {
+    const component = shallow(<Checkbox frame />)
+    // Shouldn't render the Checkmark icon
+    expect(component.find('Checkmark').exists()).toBe(false)
   })
 })

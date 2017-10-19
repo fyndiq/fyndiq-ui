@@ -25,7 +25,7 @@ git pull origin gh-pages
 git pull origin master
 
 # build the storybook
-./scripts/build-storybook.sh
+npm run build-storybook
 
 # Add and commit the files
 git add .

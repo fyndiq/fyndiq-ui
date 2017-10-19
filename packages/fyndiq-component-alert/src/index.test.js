@@ -22,8 +22,10 @@ describe('fyndiq-component-alert', () => {
     const component = mount(<Alert />)
     component.find('.close').simulate('click')
     jest.runTimersToTime(50)
+    component.update()
     expect(component).toMatchSnapshot()
     jest.runTimersToTime(500)
+    component.update()
     expect(component).toMatchSnapshot()
   })
 

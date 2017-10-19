@@ -1,0 +1,8 @@
+@import "./declarations.css";
+@import "./fonts.css";
+
+html,
+input,
+button {
+  font-family: var(--font-standard);
+}

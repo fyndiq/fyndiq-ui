@@ -15,26 +15,31 @@ exports[`fyndiq-component-stars should be rendered with prop interactive 1`] = `
   >
     <Star
       full={NaN}
+      key="1"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="2"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="3"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="4"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="5"
       onClick={[Function]}
       onHover={[Function]}
     />
@@ -57,26 +62,31 @@ exports[`fyndiq-component-stars should be rendered with prop rating 1`] = `
   >
     <Star
       full={1}
+      key="1"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={1}
+      key="2"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={1}
+      key="3"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={1}
+      key="4"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={0.5}
+      key="5"
       onClick={[Function]}
       onHover={[Function]}
     />
@@ -99,26 +109,31 @@ exports[`fyndiq-component-stars should be rendered with prop reviews 1`] = `
   >
     <Star
       full={NaN}
+      key="1"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="2"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="3"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="4"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="5"
       onClick={[Function]}
       onHover={[Function]}
     />
@@ -148,26 +163,31 @@ exports[`fyndiq-component-stars should be rendered with prop size 1`] = `
   >
     <Star
       full={NaN}
+      key="1"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="2"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="3"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="4"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="5"
       onClick={[Function]}
       onHover={[Function]}
     />
@@ -190,26 +210,31 @@ exports[`fyndiq-component-stars should be rendered without props 1`] = `
   >
     <Star
       full={NaN}
+      key="1"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="2"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="3"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="4"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={NaN}
+      key="5"
       onClick={[Function]}
       onHover={[Function]}
     />
@@ -232,26 +257,31 @@ exports[`fyndiq-component-stars should change its state when hovered and interac
   >
     <Star
       full={1}
+      key="1"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={1}
+      key="2"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={1}
+      key="3"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={0}
+      key="4"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={0}
+      key="5"
       onClick={[Function]}
       onHover={[Function]}
     />
@@ -274,26 +304,31 @@ exports[`fyndiq-component-stars should not change its state when hovered and not
   >
     <Star
       full={1}
+      key="1"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={1}
+      key="2"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={1}
+      key="3"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={1}
+      key="4"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={0}
+      key="5"
       onClick={[Function]}
       onHover={[Function]}
     />
@@ -316,26 +351,31 @@ exports[`fyndiq-component-stars should reset its state when the mouse leaves 1`]
   >
     <Star
       full={1}
+      key="1"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={1}
+      key="2"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={1}
+      key="3"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={1}
+      key="4"
       onClick={[Function]}
       onHover={[Function]}
     />
     <Star
       full={0.2999999999999998}
+      key="5"
       onClick={[Function]}
       onHover={[Function]}
     />

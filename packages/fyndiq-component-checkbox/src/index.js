@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Checkmark from 'fyndiq-icon-checkmark'
+import { Checkmark } from 'fyndiq-icons'
 import colors from 'fyndiq-styles-colors'
-import styles from '../styles.less'
+import styles from '../styles.css'
+
 
 class Checkbox extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      checked: !!props.checked,
-    }
+    this.state = { checked: !!props.checked }
+
+    this.toggle = this.toggle.bind(this)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -20,35 +21,47 @@ class Checkbox extends React.Component {
     }
   }
 
-  toggle() {
-    const checked = !this.state.checked
-    this.setState({
-      checked,
-    })
-    this.props.onToggle(checked)
+  toggle(e) {
+    this.setState({ checked: e.target.checked })
+    this.props.onToggle(e.target.checked)
   }
 
   render() {
-    const { children, disabled, color, className } = this.props
+    const {
+      children,
+      disabled,
+      className,
+      frame,
+    } = this.props
 
     return (
-      <button
+      <label
         className={`
-          ${styles.checkbox}
-          ${!disabled && styles.interactiveCheckbox}
-          ${className}
+          ${styles.wrapper}
+          ${disabled && styles.wrapperDisabled}
         `}
-        onClick={() => this.toggle()}
-        disabled={disabled}
       >
-        {this.state.checked ?
-          <Checkmark className={styles.checkmark} color={color} /> :
-          <div className={styles.checkmark} />
-        }
-        <span className={styles.children}>
-          {children}
-        </span>
-      </button>
+        <input
+          type="checkbox"
+          className={`
+            ${styles.checkbox}
+            ${frame && styles.checkboxFrame}
+            ${className}
+          `}
+          checked={this.state.checked}
+          onChange={this.toggle}
+          disabled={disabled}
+        />
+
+        {!frame && (
+          <Checkmark
+            className={styles.checkmark}
+            color={this.props.color}
+          />
+        )}
+
+        {children}
+      </label>
     )
   }
 }
@@ -59,6 +72,7 @@ Checkbox.propTypes = {
   disabled: PropTypes.bool,
   color: PropTypes.string,
   className: PropTypes.string,
+  frame: PropTypes.bool,
 }
 
 Checkbox.defaultProps = {
@@ -67,6 +81,7 @@ Checkbox.defaultProps = {
   disabled: false,
   color: colors.lightgrey,
   className: '',
+  frame: false,
 }
 
 export default Checkbox

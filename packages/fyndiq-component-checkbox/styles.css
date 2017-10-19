@@ -1,0 +1,64 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.wrapper {
+  display: inline-block;
+
+  &:not(.wrapperDisabled) {
+    cursor: pointer;
+  }
+}
+
+.wrapperDisabled {
+  color: var(--color-lightgrey);
+}
+
+.checkmark {
+  display: inline-block;
+  width: 14px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* Hide the custom checkmark when the checkbox is not checked */
+.checkbox:not(:checked) + .checkmark {
+  opacity: 0;
+}
+
+/* Hide the checkbox when not in frame mode */
+.checkbox:not(.checkboxFrame) {
+  display: none;
+}
+
+.checkbox {
+  appearance: none;
+  outline: none;
+  position: relative;
+  top: 3px;
+  height: 12px;
+  width: 12px;
+  margin-right: 8px;
+  border: 1px solid var(--color-border);
+  padding: 1px;
+
+  &:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-darkgrey);
+    transform: scale(.9);
+    opacity: 0;
+    transition: .1s ease-out;
+    will-change: transform, opacity;
+  }
+
+  &:checked {
+    border-color: var(--color-darkgrey);
+
+    &:before {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

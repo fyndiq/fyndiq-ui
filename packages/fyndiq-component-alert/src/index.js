@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from '../styles.less'
+
 import { loadState, saveState } from './localStorage'
+import styles from '../styles.css'
 
 export default class Alert extends React.Component {
   static propTypes = {
@@ -48,7 +49,7 @@ export default class Alert extends React.Component {
     }), 10)
 
     // Once the animation is done, remove the div with display none
-    // Keep this 200 in sync with the styles.less file
+    // Keep this 200 in sync with the styles.css file
     setTimeout(() => this.setState({
       removed: true,
     }), 200)

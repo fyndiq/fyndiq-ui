@@ -1,0 +1,143 @@
+@import "fyndiq-styles-colors/colors.css";
+@import "fyndiq-styles-medias/medias.css";
+
+:root {
+  --margin: 8px;
+}
+
+.wrapper {
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: .1s;
+}
+
+.wrapperInteractive {
+  outline: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: var(--color-palegrey);
+  }
+}
+
+.onlyOpen {
+  display: none;
+}
+
+.wrapperOpen {
+  background: var(--color-palegrey);
+  border-color: var(--color-border);
+  box-shadow: 0 2px 6px color(var(--color-black) a(15%));
+  margin: 12px 0;
+
+  & .imgWrapper {
+    height: 100px;
+    width: 100px;
+  }
+
+  & .onlyOpen {
+    display: block;
+  }
+}
+
+.firstLine {
+  display: flex;
+  padding: var(--margin);
+  text-align: left;
+}
+
+.imgWrapper {
+  align-self: flex-start;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  margin-right: 10px;
+  transition: .1s;
+}
+
+.mainContent {
+  flex-grow: 1;
+}
+
+.img {
+  height: 100%;
+  display: inline-block;
+}
+
+.title {
+  display: inline;
+  margin: 0 var(--margin) 0 0;
+  text-transform: capitalize;
+}
+
+.titlePill {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -4px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: .6em;
+}
+
+.yours {
+  composes: titlePill;
+  color: var(--color-lightgrey);
+  border: 1px solid var(--color-border);
+  margin-right: var(--margin);
+}
+
+.deal {
+  composes: titlePill;
+  font-size: .6em;
+  text-transform: capitalize;
+  margin-top: -3px;
+}
+
+.deal--weekly {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.deal--daily {
+  background: var(--color-yellow-deal);
+  color: var(--color-black);
+}
+
+.shopLink {
+  color: var(--color-darkgrey);
+}
+
+.labelsWrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 0 var(--margin);
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-white);
+  list-style: none;
+
+  @media (--phone) {
+    flex-wrap: wrap;
+  }
+}
+
+.labelWrapper {
+  padding: 6px;
+
+  @media (--phone) {
+    width: 50%;
+  }
+}
+
+.label {
+  display: block;
+  color: var(--color-lightgrey);
+}
+
+.labelValue {
+  display: block;
+  font-size: 1.4em;
+  line-height: 1.2em;
+}

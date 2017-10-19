@@ -1,0 +1,134 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdownWrapper {
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdownDefault {
+  padding: 10px;
+  width: auto;
+  min-width: 220px;
+  border: 1px solid var(--color-border);
+  background-color: #FFF;
+  border-radius: 3px;
+  box-shadow: 0 3px 8px fadeout(var(--color-black), 85%);
+}
+
+.position {
+  animation: .15s cubic-bezier(.23, 1, .32, 1.2) normal forwards;
+}
+
+:root {
+  --scaleFactor: .92;
+  --translateFactor: 4px;
+}
+
+.position-bl {
+  composes: position;
+  animation-name: bl;
+}
+
+@keyframes bl {
+  from {
+    opacity: 0;
+    transform: translate(0, -var(--translateFactor)) scale(var(--scaleFactor));
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.position-bc {
+  composes: position;
+  animation-name: bc;
+}
+
+@keyframes bc {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -var(--translateFactor)) scale(var(--scaleFactor));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+}
+
+.position-br {
+  composes: position;
+  animation-name: br;
+}
+
+@keyframes br {
+  from {
+    opacity: 0;
+    transform: translate(-100%, -var(--translateFactor)) scale(var(--scaleFactor));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+}
+
+/* Top */
+
+.position-tl {
+  composes: position;
+  animation-name: tl;
+}
+
+@keyframes tl {
+  from {
+    opacity: 0;
+    transform: translate(0, calc(-100% + var(--translateFactor))) scale(var(--scaleFactor));
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, -100%);
+  }
+}
+
+.position-tc {
+  composes: position;
+  animation-name: tc;
+}
+
+@keyframes tc {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-100% + var(--translateFactor))) scale(var(--scaleFactor));
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -100%);
+  }
+}
+
+.position-tr {
+  composes: position;
+  animation-name: tr;
+}
+
+@keyframes tr {
+  from {
+    opacity: 0;
+    transform: translate(-100%, calc(-100% + var(--translateFactor))) scale(var(--scaleFactor));
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-100%, -100%);
+  }
+}

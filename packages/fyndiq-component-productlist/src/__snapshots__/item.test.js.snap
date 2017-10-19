@@ -216,6 +216,7 @@ exports[`fyndiq-component-productlist ProductListItem should have additionnal da
   </li>
   <li
     className="labelWrapper"
+    key="label1"
   >
     <span
       className="label"
@@ -230,6 +231,7 @@ exports[`fyndiq-component-productlist ProductListItem should have additionnal da
   </li>
   <li
     className="labelWrapper"
+    key="label2"
   >
     <span
       className="label"

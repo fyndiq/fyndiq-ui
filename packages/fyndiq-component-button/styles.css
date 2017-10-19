@@ -1,0 +1,131 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.button {
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  background-color: var(--color-palegrey);
+  color: var(--color-black);
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:enabled {
+  cursor: pointer;
+}
+
+.pressed {
+  box-shadow: 0 1px 6px 2px color(var(--color-black) a(20%)) inset;
+}
+
+.type-normal {
+  background-color: var(--color-palegrey);
+
+  &.interactive:hover,
+  &.interactive:focus {
+    background-color: color(var(--color-palegrey) tint(50%));
+  }
+}
+
+/* Color themes */
+.type-primary,
+.type-green {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border-color: color(var(--color-green) shade(20%));
+
+  &.interactive:hover,
+  &.interactive:focus {
+    background-color: color(var(--color-green) tint(15%));
+  }
+}
+
+.type-secondary,
+.type-blue {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border-color: color(var(--color-blue) shade(20%));
+
+  &.interactive:hover,
+  &.interactive:focus {
+    background-color: color(var(--color-blue) tint(15%));
+  }
+}
+
+.type-third,
+.type-white {
+  background-color: var(--color-white);
+
+  &.interactive:hover,
+  &.interactive:focus {
+    background-color: var(--color-palegrey);
+  }
+}
+
+.type-cancel,
+.type-red {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border-color: color(var(--color-red) shade(20%));
+
+  &.interactive:hover,
+  &.interactive:focus {
+    background-color: color(var(--color-red) tint(15%));
+  }
+}
+
+.type-inverted,
+.type-black {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-color: color(var(--color-black) shade(20%));
+
+  &.interactive:hover,
+  &.interactive:focus {
+    background-color: color(var(--color-black) tint(15%));
+  }
+}
+
+/* Sizes */
+
+.size-xs {
+  font-size: 10px;
+  padding: 2px 4px;
+}
+
+.size-s {
+  font-size: 12px;
+  padding: 3px 7px;
+}
+
+.size-m {
+  font-size: 15px;
+  padding: 5px 12px;
+}
+
+.size-l {
+  font-size: 20px;
+  padding: 8px 20px;
+}
+
+.size-xl {
+  font-size: 35px;
+  padding: 20px 50px;
+}
+
+/* Special margins */
+
+.horizontal {
+  margin-right: 5px;
+}
+
+.disabled {
+  opacity: .6;
+}
+
+.interactive {
+  cursor: pointer;
+}

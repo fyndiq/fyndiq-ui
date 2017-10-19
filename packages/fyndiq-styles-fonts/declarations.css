@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/MuseoSans-500.eot') format('embedded-opentype'), url('./fonts/MuseoSans-500.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./fonts/MuseoSans-900.eot') format('embedded-opentype'), url('./fonts/MuseoSans-900.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cubano';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/cubano-regular-webfont.eot') format('embedded-opentype'), url('./fonts/cubano-regular-webfont.woff') format('woff');
+}

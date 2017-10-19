@@ -1,0 +1,81 @@
+@import "fyndiq-styles-colors/colors.css";
+
+:root {
+  --outline-stroke: 2px;
+}
+
+.svg {
+  display: block;
+}
+
+.type-normal {
+  & .outer {
+    fill: var(--color-brand);
+  }
+
+  & .inner {
+    fill: var(--color-white);
+  }
+}
+
+.type-outline {
+  & .outer {
+    fill: var(--color-white);
+    stroke: var(--color-brand);
+    stroke-width: var(--outline-stroke);
+  }
+
+  & .inner {
+    fill: var(--color-brand);
+  }
+}
+
+.type-outline-transp {
+  composes: type-outline;
+
+  & .outer {
+    fill: transparent;
+  }
+}
+
+.type-bw {
+  & .outer {
+    fill: var(--color-black);
+  }
+
+  & .inner {
+    fill: var(--color-white);
+  }
+
+  & .tagline {
+    fill: var(--color-black);
+  }
+}
+
+.type-outline-bw {
+  composes: type-bw;
+
+  & .outer {
+    fill: var(--color-white);
+    stroke: var(--color-black);
+    stroke-width: var(--outline-stroke);
+  }
+
+  & .inner {
+    fill: var(--color-black);
+  }
+}
+
+.type-outline-transp-bw {
+  composes: type-outline-bw;
+
+  & .outer {
+    fill: transparent;
+  }
+}
+
+.tagline {
+  fill: var(--color-red);
+  text-anchor: middle;
+  font-weight: bold;
+}

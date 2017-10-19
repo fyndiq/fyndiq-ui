@@ -1,0 +1,25 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.stars {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.interactive {
+  cursor: pointer;
+}
+
+.size-m {
+  font-size: 1em;
+}
+
+.size-l {
+  font-size: 3em;
+}
+
+.reviews {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--color-lightgrey);
+  font-size: .9 em;
+}
