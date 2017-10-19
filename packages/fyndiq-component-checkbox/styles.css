@@ -5,21 +5,11 @@
 
   &:not(.wrapperDisabled) {
     cursor: pointer;
-
-    & .checkbox {
-      cursor: pointer;
-    }
-
-    & .label {
-      cursor: pointer;
-    }
   }
 }
 
 .wrapperDisabled {
-  & .label {
-    color: var(--color-lightgrey);
-  }
+  color: var(--color-lightgrey);
 }
 
 .checkmark {
@@ -31,7 +21,7 @@
 }
 
 /* Hide the custom checkmark when the checkbox is not checked */
-.checkbox:not(:checked) + .label .checkmark {
+.checkbox:not(:checked) + .checkmark {
   opacity: 0;
 }
 

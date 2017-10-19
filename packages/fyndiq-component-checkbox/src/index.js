@@ -8,10 +8,7 @@ import styles from '../styles.css'
 class Checkbox extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      checked: !!props.checked,
-      id: Math.random(),
-    }
+    this.state = { checked: !!props.checked }
 
     this.toggle = this.toggle.bind(this)
   }
@@ -38,14 +35,13 @@ class Checkbox extends React.Component {
     } = this.props
 
     return (
-      <span
+      <label
         className={`
           ${styles.wrapper}
           ${disabled && styles.wrapperDisabled}
         `}
       >
         <input
-          id={this.state.id}
           type="checkbox"
           className={`
             ${styles.checkbox}
@@ -57,19 +53,15 @@ class Checkbox extends React.Component {
           disabled={disabled}
         />
 
-        <label
-          htmlFor={this.state.id}
-          className={styles.label}
-        >
-          {!frame && (
-            <Checkmark
-              className={styles.checkmark}
-              color={this.props.color}
-            />
-          )}
-          {children}
-        </label>
-      </span>
+        {!frame && (
+          <Checkmark
+            className={styles.checkmark}
+            color={this.props.color}
+          />
+        )}
+
+        {children}
+      </label>
     )
   }
 }
