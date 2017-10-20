@@ -85,12 +85,12 @@ export default class Alert extends React.Component {
           >
             <span className={styles.text}>{children}</span>
             {unclosable ? null : (
-              <div
+              <button
                 className={styles.close}
                 onClick={() => this.handleCloseClick()}
               >
                 &times;
-              </div>
+              </button>
             )}
           </div>
         </div>
