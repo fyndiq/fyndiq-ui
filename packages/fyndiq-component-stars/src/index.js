@@ -41,21 +41,21 @@ class Stars extends React.Component {
   }
 
   render() {
-    const { onChange, rating, interactive, size, reviews } = this.props
+    const {
+      onChange, rating, interactive, size, reviews,
+    } = this.props
     const starNodes = []
 
     // Overwrite rating if there's a current hoverRating
     const liveRating = this.state.hoverRating || rating
 
     for (let id = 1; id <= 5; id++) {
-      starNodes.push(
-        <Star
-          key={id}
-          full={Math.min(1, Math.max(0, liveRating - id + 1))}
-          onClick={() => onChange(id)}
-          onHover={() => this.changeHoverRating(id)}
-        />
-      )
+      starNodes.push(<Star
+        key={id}
+        full={Math.min(1, Math.max(0, liveRating - id + 1))}
+        onClick={() => onChange(id)}
+        onHover={() => this.changeHoverRating(id)}
+      />)
     }
 
     return (
@@ -64,7 +64,7 @@ class Stars extends React.Component {
           className={`
             ${styles.stars}
             ${interactive ? styles.interactive : ''}
-            ${size ? styles['size-' + size] : ''}
+            ${size ? styles[`size-${size}`] : ''}
           `}
           onMouseLeave={() => this.onMouseLeave()}
           data-test="STARS"

@@ -14,7 +14,7 @@ const Tooltip = ({ text, children, position }) => (
     <div
       className={`
         ${styles.tooltip}
-        ${styles['position-' + position]}
+        ${styles[`position-${position}`]}
       `}
     >
       {text}

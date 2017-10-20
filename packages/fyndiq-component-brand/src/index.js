@@ -16,7 +16,7 @@ const FyndiqLogo = ({
     viewBox={children ? '-10 -1 82 36' : '-1 -1 66 28'}
     className={`
       ${styles.svg}
-      ${styles['type-' + type]}
+      ${styles[`type-${type}`]}
       ${className}
     `}
     height={height}
@@ -71,7 +71,7 @@ const Square = ({
 }) => (
   <svg
     className={`
-      ${styles['type-' + type]}
+      ${styles[`type-${type}`]}
       ${className}
     `}
     width={width}

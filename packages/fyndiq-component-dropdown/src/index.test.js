@@ -77,17 +77,11 @@ describe('fyndiq-component-dropdown', () => {
   })
 
   test('should have different dropdown positions', () => {
-    expect(mount(
-      <Dropdown button="B" position="bc" opened>Content</Dropdown>
-    ).find('.dropdownWrapper')).toMatchSnapshot()
+    expect(mount(<Dropdown button="B" position="bc" opened>Content</Dropdown>).find('.dropdownWrapper')).toMatchSnapshot()
 
-    expect(mount(
-      <Dropdown button="B" position="tr" opened>Content</Dropdown>
-    ).find('.dropdownWrapper')).toMatchSnapshot()
+    expect(mount(<Dropdown button="B" position="tr" opened>Content</Dropdown>).find('.dropdownWrapper')).toMatchSnapshot()
 
-    expect(mount(
-      <Dropdown button="B" position="tc" opened>Content</Dropdown>
-    ).find('.dropdownWrapper')).toMatchSnapshot()
+    expect(mount(<Dropdown button="B" position="tc" opened>Content</Dropdown>).find('.dropdownWrapper')).toMatchSnapshot()
   })
 
   test('should have an arrow oriented to the top if dropdown is above', () => {
@@ -113,11 +107,9 @@ describe('fyndiq-component-dropdown', () => {
 
   test('should bubble up click event', () => {
     const spy = jest.fn()
-    const component = mount(
-      <div onClick={spy}>
-        <Dropdown button="button">Content</Dropdown>
-      </div>
-    )
+    const component = mount(<div onClick={spy}>
+      <Dropdown button="button">Content</Dropdown>
+    </div>)
     component.find('Button').simulate('click')
     component.find('.dropdownWrapper').simulate('click')
     expect(spy).toHaveBeenCalledTimes(2)
@@ -125,11 +117,9 @@ describe('fyndiq-component-dropdown', () => {
 
   test('should not bubble up click event if the prop noPropagateClickEvent is set', () => {
     const spy = jest.fn()
-    const component = mount(
-      <div onClick={spy}>
-        <Dropdown button="button" noPropagateClickEvent>Content</Dropdown>
-      </div>
-    )
+    const component = mount(<div onClick={spy}>
+      <Dropdown button="button" noPropagateClickEvent>Content</Dropdown>
+    </div>)
     component.find('Button').simulate('click')
     component.find('.dropdownWrapper').simulate('click')
     expect(spy).not.toHaveBeenCalled()

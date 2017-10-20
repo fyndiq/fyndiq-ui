@@ -187,7 +187,7 @@ class Dropdown extends React.Component {
             className={`
               ${styles.dropdownWrapper}
               ${!noWrapperStyle ? styles.dropdownDefault : ''}
-              ${styles['position-' + position]}
+              ${styles[`position-${position}`]}
             `}
             style={{
               left: this.state.left,
