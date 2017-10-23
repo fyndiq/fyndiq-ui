@@ -7,8 +7,9 @@ const Star = ({ full, onClick, onHover }) => {
   return (
     <svg
       className={styles.star}
-      onClick={() => onClick()}
-      onMouseOver={() => onHover()}
+      onClick={onClick}
+      onMouseOver={onHover}
+      onFocus={onHover}
       viewBox="-5 -5 60 60"
     >
       <defs>

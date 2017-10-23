@@ -6,9 +6,11 @@ exports[`fyndiq-component-dropdown should be displayed with minimum props 1`] = 
   onClick={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
+  role="button"
 >
   <div
     onClick={[Function]}
+    role="button"
   >
     <Button
       disabled={false}
@@ -70,9 +72,11 @@ exports[`fyndiq-component-dropdown should have a custom button 1`] = `
   onClick={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
+  role="button"
 >
   <div
     onClick={[Function]}
+    role="button"
   >
     <div>
       Hello

@@ -3,6 +3,9 @@ import { shallow, mount } from 'enzyme'
 
 import Dropdown from './'
 
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+
 // Simulate events on <body>
 // Usage : simulate.click('body') for a click event
 //         simulate.keyup({ keyCode: 27 }) for an escape key press.
@@ -107,9 +110,12 @@ describe('fyndiq-component-dropdown', () => {
 
   test('should bubble up click event', () => {
     const spy = jest.fn()
-    const component = mount(<div onClick={spy}>
-      <Dropdown button="button">Content</Dropdown>
-    </div>)
+    const wrapper = (
+      <div onClick={spy}>
+        <Dropdown button="button">Content</Dropdown>
+      </div>
+    )
+    const component = mount(wrapper)
     component.find('Button').simulate('click')
     component.find('.dropdownWrapper').simulate('click')
     expect(spy).toHaveBeenCalledTimes(2)
@@ -117,9 +123,12 @@ describe('fyndiq-component-dropdown', () => {
 
   test('should not bubble up click event if the prop noPropagateClickEvent is set', () => {
     const spy = jest.fn()
-    const component = mount(<div onClick={spy}>
-      <Dropdown button="button" noPropagateClickEvent>Content</Dropdown>
-    </div>)
+    const wrapper = (
+      <div onClick={spy}>
+        <Dropdown button="button" noPropagateClickEvent>Content</Dropdown>
+      </div>
+    )
+    const component = mount(wrapper)
     component.find('Button').simulate('click')
     component.find('.dropdownWrapper').simulate('click')
     expect(spy).not.toHaveBeenCalled()

@@ -52,7 +52,7 @@ class Stars extends React.Component {
     for (let id = 1; id <= 5; id++) {
       starNodes.push(<Star
         key={id}
-        full={Math.min(1, Math.max(0, liveRating - id + 1))}
+        full={Math.min(1, Math.max(0, (1 + liveRating) - id))}
         onClick={() => onChange(id)}
         onHover={() => this.changeHoverRating(id)}
       />)

@@ -25,7 +25,7 @@ const Tooltip = ({ text, children, position }) => (
 Tooltip.propTypes = {
   text: PropTypes.node,
   children: PropTypes.node,
-  position: Dropdown.propTypes.position,
+  position: Dropdown.propTypes.position, // eslint-disable-line react/no-typos
 }
 
 Tooltip.defaultProps = {
