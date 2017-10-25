@@ -67,6 +67,7 @@ class Checkbox extends React.Component {
 }
 
 Checkbox.propTypes = {
+  children: PropTypes.string,
   onToggle: PropTypes.func,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -76,6 +77,7 @@ Checkbox.propTypes = {
 }
 
 Checkbox.defaultProps = {
+  children: '',
   onToggle: noop => noop,
   checked: false,
   disabled: false,

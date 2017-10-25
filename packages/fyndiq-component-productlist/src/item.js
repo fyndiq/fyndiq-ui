@@ -94,6 +94,8 @@ class ProductListItem extends React.Component {
         `}
         onClick={this.onClick}
         onKeyPress={this.onClick}
+        role="button"
+        tabIndex={0}
         ref={e => { this.nodeWrapper = e }}
         {...interactiveProps}
       >

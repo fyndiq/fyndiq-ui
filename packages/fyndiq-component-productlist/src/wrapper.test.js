@@ -12,9 +12,7 @@ const ProductList = [
 describe('fyndiq-component-productlist', () => {
   describe('Wrapper', () => {
     test('should display ProductListItem', () => {
-      expect(shallow(
-        <Wrapper>{ProductList}</Wrapper>
-      )).toMatchSnapshot()
+      expect(shallow(<Wrapper>{ProductList}</Wrapper>)).toMatchSnapshot()
     })
 
     test('should open the product clicked on', () => {

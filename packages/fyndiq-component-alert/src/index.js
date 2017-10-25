@@ -41,7 +41,7 @@ export default class Alert extends React.Component {
     const height = this.nodeWrapper.clientHeight
     saveState(this.props.stopShowingAfterKey, this.state.count + 1) // counter for stopShowingAfter
     // Set the height on the wrapper node, to start the animation
-    this.nodeWrapper.style.height = height + 'px'
+    this.nodeWrapper.style.height = `${height}px`
 
     // Wait a tick before starting the animation
     setTimeout(() => this.setState({
@@ -63,7 +63,9 @@ export default class Alert extends React.Component {
   }
 
   render() {
-    const { children, type, unclosable, stopShowingAfter } = this.props
+    const {
+      children, type, unclosable, stopShowingAfter,
+    } = this.props
     const isShown = this.state.count <= stopShowingAfter || stopShowingAfter === undefined
     if (isShown) {
       return (
@@ -78,17 +80,17 @@ export default class Alert extends React.Component {
           <div
             className={`
               ${styles.alert}
-              ${styles['type-' + type]}
+              ${styles[`type-${type}`]}
             `}
           >
             <span className={styles.text}>{children}</span>
             {unclosable ? null : (
-              <div
+              <button
                 className={styles.close}
                 onClick={() => this.handleCloseClick()}
               >
                 &times;
-              </div>
+              </button>
             )}
           </div>
         </div>

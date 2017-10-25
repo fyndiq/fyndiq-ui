@@ -9,19 +9,19 @@ const Arrow = ({ orientation, className }) => {
   switch (orientation) {
     case 'up':
       transform = 'rotate(90 25 25)'
-      stylesSvg += ' ' + styles.up
+      stylesSvg += ` ${styles.up}`
       break
     case 'down':
       transform = 'rotate(270 25 25)'
-      stylesSvg += ' ' + styles.down
+      stylesSvg += ` ${styles.down}`
       break
     case 'right':
       transform = 'rotate(180 25 25)'
-      stylesSvg += ' ' + styles.right
+      stylesSvg += ` ${styles.right}`
       break
     default:
       transform = ''
-      stylesSvg += ' ' + styles.left
+      stylesSvg += ` ${styles.left}`
   }
 
   return (

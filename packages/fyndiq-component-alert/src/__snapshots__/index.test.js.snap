@@ -19,12 +19,12 @@ exports[`fyndiq-component-alert should be rendered without props 1`] = `
     >
       Notification
     </span>
-    <div
+    <button
       className="close"
       onClick={[Function]}
     >
       ×
-    </div>
+    </button>
   </div>
 </div>
 `;
@@ -53,12 +53,12 @@ exports[`fyndiq-component-alert should be self-closable 1`] = `
       <span
         className="text"
       />
-      <div
+      <button
         className="close"
         onClick={[Function]}
       >
         ×
-      </div>
+      </button>
     </div>
   </div>
 </Alert>
@@ -88,12 +88,12 @@ exports[`fyndiq-component-alert should be self-closable 2`] = `
       <span
         className="text"
       />
-      <div
+      <button
         className="close"
         onClick={[Function]}
       >
         ×
-      </div>
+      </button>
     </div>
   </div>
 </Alert>
@@ -118,12 +118,12 @@ exports[`fyndiq-component-alert should have a type prop 1`] = `
     >
       Warning
     </span>
-    <div
+    <button
       className="close"
       onClick={[Function]}
     >
       ×
-    </div>
+    </button>
   </div>
 </div>
 `;
@@ -147,12 +147,12 @@ exports[`fyndiq-component-alert should have a type prop 2`] = `
     >
       Good
     </span>
-    <div
+    <button
       className="close"
       onClick={[Function]}
     >
       ×
-    </div>
+    </button>
   </div>
 </div>
 `;
@@ -176,12 +176,12 @@ exports[`fyndiq-component-alert should have a type prop 3`] = `
     >
       Bad
     </span>
-    <div
+    <button
       className="close"
       onClick={[Function]}
     >
       ×
-    </div>
+    </button>
   </div>
 </div>
 `;

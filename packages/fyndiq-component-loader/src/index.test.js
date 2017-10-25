@@ -12,14 +12,10 @@ describe('fyndiq-component-loader', () => {
   })
 
   test('it should have colors props', () => {
-    expect(shallow(
-      <Loader color1="red" color2="black" />
-    )).toMatchSnapshot()
+    expect(shallow(<Loader color1="red" color2="black" />)).toMatchSnapshot()
   })
 
   test('it should have wave props', () => {
-    expect(shallow(
-      <Loader waveAmplitude={5} waveLength={5} />
-    ).find('path')).toMatchSnapshot()
+    expect(shallow(<Loader waveAmplitude={5} waveLength={5} />).find('path')).toMatchSnapshot()
   })
 })

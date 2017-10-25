@@ -8,7 +8,6 @@
 .currentPrice {
   color: var(--color-red);
   display: block;
-  font-size: 18px;
   font-weight: bold;
 }
 
@@ -16,5 +15,14 @@
   display: block;
   color: var(--color-lightgrey);
   text-decoration: line-through;
-  font-size: 11px;
+}
+
+.emphasize {
+  & .currentPrice {
+    font-size: 18px;
+  }
+
+  & .oldPrice {
+    font-size: 11px;
+  }
 }
