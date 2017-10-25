@@ -9,13 +9,18 @@
   --color-palegrey: #FAFAFC;
   --color-white: #FFF;
 
-  /* Theme colors */
+  /* Main colors */
   --color-red: #E74A51;
   --color-blue: #4A90E2;
   --color-green: #37B578;
   --color-yellow: #FFD600;
-  --color-yellow-deal: #FE0;
   --color-orange: #F7A626;
+
+  /* Contextual colors */
+  --color-return: #2699F7;
+  --color-reclamation: #BC26F7;
+  --color-missing: #F7A626;
+  --color-yellow-deal: #FE0;
 
   /* Component colors */
   --color-border: #CCD1DD;

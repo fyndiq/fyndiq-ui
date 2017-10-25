@@ -14,8 +14,13 @@ export default {
   blue: '#4A90E2',
   green: '#37B578',
   yellow: '#FFD600',
-  'yellow-deal': '#FE0',
   orange: '#F7A626',
+
+  /* Contextual colors */
+  return: '#2699F7',
+  reclamation: '#BC26F7',
+  missing: '#F7A626',
+  'yellow-deal': '#FE0',
 
   /* Component colors */
   border: '#CCD1DD',
