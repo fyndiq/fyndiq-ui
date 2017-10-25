@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import colors from 'fyndiq-styles-colors'
 
 import styles from '../illustrations.css'
@@ -144,7 +145,14 @@ const LoginIllustration = ({ className }) => (
       </g>
     </g>
   </svg>
-
 )
+
+LoginIllustration.propTypes = {
+  className: PropTypes.string,
+}
+
+LoginIllustration.defaultProps = {
+  className: '',
+}
 
 export default LoginIllustration

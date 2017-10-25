@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import colors from 'fyndiq-styles-colors'
 
 import styles from '../illustrations.css'
@@ -127,7 +128,14 @@ const SearchNoResultIllustration = ({ className }) => (
       <path id="Stroke-63" stroke={colors.black} strokeWidth="4" d="M163.06 60.54c-.37-4.58-7.03-12.23-7.03-12.23s-5.3 9.46-4.94 14.04c.35 4.6 3.33 7.9 6.63 7.4s5.7-4.62 5.33-9.2" />
     </g>
   </svg>
-
 )
+
+SearchNoResultIllustration.propTypes = {
+  className: PropTypes.string,
+}
+
+SearchNoResultIllustration.defaultProps = {
+  className: '',
+}
 
 export default SearchNoResultIllustration

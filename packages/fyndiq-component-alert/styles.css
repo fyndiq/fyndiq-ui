@@ -29,14 +29,18 @@
 .close {
   flex: 1;
   float: right;
+  padding: 0;
+  border: none;
   font-family: monospace;
   font-weight: bold;
   cursor: pointer;
+  color: inherit;
   max-width: 1em;
   height: 1em;
   line-height: 1em;
   font-size: 18px;
   text-align: center;
+  background-color: transparent;
 
   &:hover {
     background-color: color(var(--color-white) a(60%));

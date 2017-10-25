@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import colors from 'fyndiq-styles-colors'
 
 import styles from '../illustrations.css'
@@ -128,7 +129,14 @@ const SearchIllustration = ({ className }) => (
       </g>
     </g>
   </svg>
-
 )
+
+SearchIllustration.propTypes = {
+  className: PropTypes.string,
+}
+
+SearchIllustration.defaultProps = {
+  className: '',
+}
 
 export default SearchIllustration

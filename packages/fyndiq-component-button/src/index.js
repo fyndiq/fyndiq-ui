@@ -16,8 +16,8 @@ const Button = ({
 }) => {
   const className = `
     ${styles.button}
-    ${styles['type-' + type]}
-    ${styles['size-' + size]}
+    ${styles[`type-${type}`]}
+    ${styles[`size-${size}`]}
     ${horizontal && styles.horizontal}
     ${pressed && styles.pressed}
     ${disabled ? styles.disabled : styles.interactive}

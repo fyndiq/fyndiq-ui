@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import styles from '../star.css'
 
 const Star = ({ full, onClick, onHover }) => {
-  const starId = Math.random() + ''
+  const starId = `${Math.random()}`
   return (
     <svg
       className={styles.star}
-      onClick={() => onClick()}
-      onMouseOver={() => onHover()}
+      onClick={onClick}
+      onMouseOver={onHover}
+      onFocus={onHover}
       viewBox="-5 -5 60 60"
     >
       <defs>
