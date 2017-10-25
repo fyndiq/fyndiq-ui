@@ -1,6 +1,13 @@
 @font-face {
   font-family: 'MuseoSans';
   font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/MuseoSans-300.eot') format('embedded-opentype'), url('./fonts/MuseoSans-300.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  font-style: normal;
   font-weight: 500;
   src: url('./fonts/MuseoSans-500.eot') format('embedded-opentype'), url('./fonts/MuseoSans-500.woff') format('woff');
 }
