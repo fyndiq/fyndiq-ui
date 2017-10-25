@@ -15,6 +15,7 @@
   display: block;
   color: var(--color-lightgrey);
   text-decoration: line-through;
+  font-weight: 300;
 }
 
 .emphasize {
