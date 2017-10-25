@@ -1,7 +1,7 @@
 {
   "name": "fyndiq-ui-test",
   "private": true,
-  "version": "2.1.5",
+  "version": "2.1.6",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "license": "MIT",
   "dependencies": {
@@ -17,7 +17,7 @@
     "fyndiq-component-stars": "^2.1.2",
     "fyndiq-component-tooltip": "^2.1.3",
     "fyndiq-illustrations": "^2.0.2",
-    "fyndiq-styles-fonts": "^2.0.2"
+    "fyndiq-styles-fonts": "^2.1.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
