@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrentPrice Component should have a default structure 1`] = `
+<span
+  className="currentPrice"
+>
+  125 kr
+</span>
+`;
+
+exports[`OldPrice Component should have a default structure 1`] = `
+<span
+  className="oldPrice"
+>
+  125 kr
+</span>
+`;
+
+exports[`Price Component should have a default structure 1`] = `
+<span
+  className="
+      price
+      emphasize
+    "
+/>
+`;
+
+exports[`Price Component should have a emphasize prop 1`] = `
+<span
+  className="
+      price
+      false
+    "
+/>
+`;

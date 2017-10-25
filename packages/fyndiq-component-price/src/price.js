@@ -14,11 +14,12 @@ const Price = ({ children, emphasize }) => (
 )
 
 Price.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   emphasize: PropTypes.bool,
 }
 
 Price.defaultProps = {
+  children: null,
   emphasize: true,
 }
 
