@@ -1,8 +1,12 @@
 @import "./declarations.css";
 @import "./fonts.css";
 
-html,
-input,
-button {
+html {
   font-family: var(--font-standard);
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
 }
