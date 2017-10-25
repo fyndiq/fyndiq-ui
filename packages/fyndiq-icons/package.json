@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-icons",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "author": "Thibaut Remy <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
