@@ -17,22 +17,16 @@ const h2 = {
 storiesOf('Illustrations', module)
   .addWithInfo('search', () => (
     <div>
-      <h2 style={h2}>
-        {'<SearchIllustration />'}
-      </h2>
+      <h2 style={h2}>&lt;SearchIllustration /&gt;</h2>
       <SearchIllustration />
 
-      <h2 style={h2}>
-        {'<SearchNoResultIllustration />'}
-      </h2>
+      <h2 style={h2}>&lt;SearchNoResultIllustration /&gt;</h2>
       <SearchNoResultIllustration />
     </div>
   ))
   .addWithInfo('login', () => (
     <div>
-      <h2 style={h2}>
-        {'<LoginIllustration />'}
-      </h2>
+      <h2 style={h2}>&lt;LoginIllustration /&gt;</h2>
       <LoginIllustration />
     </div>
   ))

@@ -41,21 +41,21 @@ class Stars extends React.Component {
   }
 
   render() {
-    const {
-      onChange, rating, interactive, size, reviews,
-    } = this.props
+    const { onChange, rating, interactive, size, reviews } = this.props
     const starNodes = []
 
     // Overwrite rating if there's a current hoverRating
     const liveRating = this.state.hoverRating || rating
 
     for (let id = 1; id <= 5; id++) {
-      starNodes.push(<Star
-        key={id}
-        full={Math.min(1, Math.max(0, (1 + liveRating) - id))}
-        onClick={() => onChange(id)}
-        onHover={() => this.changeHoverRating(id)}
-      />)
+      starNodes.push(
+        <Star
+          key={id}
+          full={Math.min(1, Math.max(0, 1 + liveRating - id))}
+          onClick={() => onChange(id)}
+          onHover={() => this.changeHoverRating(id)}
+        />,
+      )
     }
 
     return (
@@ -72,10 +72,10 @@ class Stars extends React.Component {
           {starNodes}
         </div>
         {reviews ? (
-          <span className={styles.reviews}>
-            ({reviews} reviews)
-          </span>
-        ) : '' }
+          <span className={styles.reviews}>({reviews} reviews)</span>
+        ) : (
+          ''
+        )}
       </div>
     )
   }

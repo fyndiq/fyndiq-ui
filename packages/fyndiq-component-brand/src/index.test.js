@@ -25,7 +25,9 @@ describe('fyndiq-component-brand', () => {
   })
 
   it('should have a taglineSize prop', () => {
-    expect(shallow(<FyndiqLogo taglineSize={5.5}>Hello</FyndiqLogo>)).toMatchSnapshot()
+    expect(
+      shallow(<FyndiqLogo taglineSize={5.5}>Hello</FyndiqLogo>),
+    ).toMatchSnapshot()
   })
 
   it('should exist in square version', () => {

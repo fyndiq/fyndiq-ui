@@ -8,16 +8,11 @@ import styles from '../styles.css'
 class Dropdown extends React.Component {
   static propTypes = {
     opened: PropTypes.bool,
-    button: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]).isRequired,
+    button: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+      .isRequired,
     children: PropTypes.node.isRequired,
     size: PropTypes.string,
-    position: PropTypes.oneOf([
-      'bl', 'bc', 'br',
-      'tl', 'tc', 'tr',
-    ]),
+    position: PropTypes.oneOf(['bl', 'bc', 'br', 'tl', 'tc', 'tr']),
     margin: PropTypes.number,
     hoverMode: PropTypes.bool,
     noPropagateClickEvent: PropTypes.bool,
@@ -98,7 +93,7 @@ class Dropdown extends React.Component {
     // If the dropdown is above the button
     if (position[0] === 't') {
       top -= margin
-    // If the dropdown is under the button
+      // If the dropdown is under the button
     } else {
       top += buttonSize.height + margin
     }
@@ -178,14 +173,18 @@ class Dropdown extends React.Component {
     return (
       <div
         className={styles.wrapper}
-        ref={e => { this.wrapperNode = e }}
+        ref={e => {
+          this.wrapperNode = e
+        }}
         onMouseOver={this.onMouseOver}
         onMouseOut={this.onMouseOut}
         onClick={e => noPropagateClickEvent && e.stopPropagation()}
         role="button"
       >
         <div
-          ref={e => { this.buttonNode = e }}
+          ref={e => {
+            this.buttonNode = e
+          }}
           onClick={this.onButtonClick}
           role="button"
         >
@@ -210,6 +209,5 @@ class Dropdown extends React.Component {
     )
   }
 }
-
 
 export default Dropdown

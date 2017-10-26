@@ -23,5 +23,4 @@ Price.defaultProps = {
   emphasize: true,
 }
 
-
 export default Price

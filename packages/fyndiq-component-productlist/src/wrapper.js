@@ -55,16 +55,18 @@ export class Wrapper extends React.Component {
     return (
       <div className={styles.listWrapper}>
         {/* Add some props to the childs */}
-        {children.map((child, id) => React.cloneElement(child, {
-          interactive: true,
-          open: this.state.openedProducts.indexOf(id) !== -1,
-          onClick: () => {
-            // Toggle open this product
-            this.toggleProduct(id)
-            // Don't overwrite the products's onClick prop
-            child.props.onClick()
-          },
-        }))}
+        {children.map((child, id) =>
+          React.cloneElement(child, {
+            interactive: true,
+            open: this.state.openedProducts.indexOf(id) !== -1,
+            onClick: () => {
+              // Toggle open this product
+              this.toggleProduct(id)
+              // Don't overwrite the products's onClick prop
+              child.props.onClick()
+            },
+          }),
+        )}
       </div>
     )
   }

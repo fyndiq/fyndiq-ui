@@ -3,9 +3,7 @@ import { storiesOf } from '@storybook/react'
 import FyndiqLogo, { Square } from 'fyndiq-component-brand'
 
 storiesOf('Icon Brand', module)
-  .addWithInfo('default', () => (
-    <FyndiqLogo />
-  ))
+  .addWithInfo('default', () => <FyndiqLogo />)
   .addWithInfo('change size', () => (
     <div>
       <FyndiqLogo height={30} />
@@ -24,18 +22,12 @@ storiesOf('Icon Brand', module)
   ))
   .addWithInfo('with tagline', () => (
     <div>
-      <FyndiqLogo>
-        The Bargain Superstore
-      </FyndiqLogo>
-      <FyndiqLogo type="bw">
-        The Bargain Superstore
-      </FyndiqLogo>
+      <FyndiqLogo>The Bargain Superstore</FyndiqLogo>
+      <FyndiqLogo type="bw">The Bargain Superstore</FyndiqLogo>
     </div>
   ))
   .addWithInfo('with different tagline size', () => (
-    <FyndiqLogo taglineSize={5.5}>
-      The Bargain Superstore
-    </FyndiqLogo>
+    <FyndiqLogo taglineSize={5.5}>The Bargain Superstore</FyndiqLogo>
   ))
   .addWithInfo('square icon', () => (
     <div style={{ background: '#eee' }}>

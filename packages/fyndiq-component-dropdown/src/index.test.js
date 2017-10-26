@@ -21,37 +21,47 @@ document.removeEventListener = jest.fn((event, cb) => {
 
 describe('fyndiq-component-dropdown', () => {
   test('should be displayed with minimum props', () => {
-    expect(shallow(
-      <Dropdown button="Button">Value</Dropdown>,
-      { disableLifecycleMethods: true },
-    )).toMatchSnapshot()
+    expect(
+      shallow(<Dropdown button="Button">Value</Dropdown>, {
+        disableLifecycleMethods: true,
+      }),
+    ).toMatchSnapshot()
   })
 
   test('should have a custom button', () => {
-    expect(shallow(
-      <Dropdown button={<div>Hello</div>}>
-        Value
-      </Dropdown>,
-      { disableLifecycleMethods: true }
-    )).toMatchSnapshot()
+    expect(
+      shallow(<Dropdown button={<div>Hello</div>}>Value</Dropdown>, {
+        disableLifecycleMethods: true,
+      }),
+    ).toMatchSnapshot()
   })
 
   test('should have a custom wrapper', () => {
-    expect(shallow(
-      <Dropdown button="B" noWrapperStyle opened>Content</Dropdown>,
-      { disableLifecycleMethods: true }
-    ).find('.dropdownWrapper')).toMatchSnapshot()
+    expect(
+      shallow(
+        <Dropdown button="B" noWrapperStyle opened>
+          Content
+        </Dropdown>,
+        { disableLifecycleMethods: true },
+      ).find('.dropdownWrapper'),
+    ).toMatchSnapshot()
   })
 
   test('should be opened when clicked on the button', () => {
     const component = mount(<Dropdown button="button">Value</Dropdown>)
-    component.find('div > div').at(0).simulate('click')
+    component
+      .find('div > div')
+      .at(0)
+      .simulate('click')
     expect(component.find('.dropdownWrapper')).toMatchSnapshot()
   })
 
   test('should be closed when clicking outside', () => {
     const component = mount(<Dropdown button="button">Value</Dropdown>)
-    component.find('div > div').at(0).simulate('click')
+    component
+      .find('div > div')
+      .at(0)
+      .simulate('click')
     simulate.click('body')
     component.update()
     expect(component.find('.dropdownWrapper').exists()).toBe(false)
@@ -59,7 +69,11 @@ describe('fyndiq-component-dropdown', () => {
 
   test('should be opened when hovered, if in hoverMode', () => {
     jest.useFakeTimers()
-    const component = mount(<Dropdown button="button" hoverMode>Value</Dropdown>)
+    const component = mount(
+      <Dropdown button="button" hoverMode>
+        Value
+      </Dropdown>,
+    )
     component.simulate('mouseover')
     jest.runTimersToTime(200)
     component.update()
@@ -72,31 +86,63 @@ describe('fyndiq-component-dropdown', () => {
 
   test('should open the dropdown on button click in hoverMode', () => {
     jest.useFakeTimers()
-    const component = mount(<Dropdown button="button" hoverMode>Value</Dropdown>)
+    const component = mount(
+      <Dropdown button="button" hoverMode>
+        Value
+      </Dropdown>,
+    )
     component.simulate('mouseover')
     jest.runTimersToTime(200)
-    component.find('div > div').at(0).simulate('click')
+    component
+      .find('div > div')
+      .at(0)
+      .simulate('click')
     expect(component.find('.dropdownWrapper')).toMatchSnapshot()
   })
 
   test('should have different dropdown positions', () => {
-    expect(mount(<Dropdown button="B" position="bc" opened>Content</Dropdown>).find('.dropdownWrapper')).toMatchSnapshot()
+    expect(
+      mount(
+        <Dropdown button="B" position="bc" opened>
+          Content
+        </Dropdown>,
+      ).find('.dropdownWrapper'),
+    ).toMatchSnapshot()
 
-    expect(mount(<Dropdown button="B" position="tr" opened>Content</Dropdown>).find('.dropdownWrapper')).toMatchSnapshot()
+    expect(
+      mount(
+        <Dropdown button="B" position="tr" opened>
+          Content
+        </Dropdown>,
+      ).find('.dropdownWrapper'),
+    ).toMatchSnapshot()
 
-    expect(mount(<Dropdown button="B" position="tc" opened>Content</Dropdown>).find('.dropdownWrapper')).toMatchSnapshot()
+    expect(
+      mount(
+        <Dropdown button="B" position="tc" opened>
+          Content
+        </Dropdown>,
+      ).find('.dropdownWrapper'),
+    ).toMatchSnapshot()
   })
 
   test('should have an arrow oriented to the top if dropdown is above', () => {
-    expect(shallow(
-      <Dropdown button="B" position="tr" opened>Content</Dropdown>,
-      { disableLifecycleMethods: true },
-    ).find('Arrow')).toMatchSnapshot()
+    expect(
+      shallow(
+        <Dropdown button="B" position="tr" opened>
+          Content
+        </Dropdown>,
+        { disableLifecycleMethods: true },
+      ).find('Arrow'),
+    ).toMatchSnapshot()
   })
 
   test('should be closable by pressing the Escape key', () => {
     const component = mount(<Dropdown button="button">Content</Dropdown>)
-    component.find('div > div').at(0).simulate('click')
+    component
+      .find('div > div')
+      .at(0)
+      .simulate('click')
     simulate.keyup({ keyCode: 27 })
     component.update()
     expect(component.find('.dropdownWrapper').exists()).toBe(false)
@@ -125,7 +171,9 @@ describe('fyndiq-component-dropdown', () => {
     const spy = jest.fn()
     const wrapper = (
       <div onClick={spy}>
-        <Dropdown button="button" noPropagateClickEvent>Content</Dropdown>
+        <Dropdown button="button" noPropagateClickEvent>
+          Content
+        </Dropdown>
       </div>
     )
     const component = mount(wrapper)
