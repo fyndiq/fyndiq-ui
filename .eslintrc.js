@@ -1,6 +1,5 @@
 module.exports = {
-  extends: ['fyndiq', 'plugin:jest/recommended'],
-  plugins: ['jest'],
+  extends: 'fyndiq',
   rules: {
     // This rules causes issues because of nested packages.json, disabling
     'import/no-extraneous-dependencies': 0,
@@ -9,8 +8,5 @@ module.exports = {
         every: ['nesting'],
       },
     }],
-  },
-  env: {
-    jest: true,
   },
 }
