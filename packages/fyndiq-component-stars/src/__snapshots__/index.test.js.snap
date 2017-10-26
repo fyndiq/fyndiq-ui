@@ -6,10 +6,10 @@ exports[`fyndiq-component-stars should be rendered with prop interactive 1`] = `
 >
   <div
     className="
-              stars
-              interactive
-              size-m
-            "
+            stars
+            interactive
+            size-m
+          "
     data-test="STARS"
     onMouseLeave={[Function]}
   >
@@ -53,10 +53,10 @@ exports[`fyndiq-component-stars should be rendered with prop rating 1`] = `
 >
   <div
     className="
-              stars
-              
-              size-m
-            "
+            stars
+            
+            size-m
+          "
     data-test="STARS"
     onMouseLeave={[Function]}
   >
@@ -100,10 +100,10 @@ exports[`fyndiq-component-stars should be rendered with prop reviews 1`] = `
 >
   <div
     className="
-              stars
-              
-              size-m
-            "
+            stars
+            
+            size-m
+          "
     data-test="STARS"
     onMouseLeave={[Function]}
   >
@@ -154,10 +154,10 @@ exports[`fyndiq-component-stars should be rendered with prop size 1`] = `
 >
   <div
     className="
-              stars
-              
-              size-l
-            "
+            stars
+            
+            size-l
+          "
     data-test="STARS"
     onMouseLeave={[Function]}
   >
@@ -201,10 +201,10 @@ exports[`fyndiq-component-stars should be rendered without props 1`] = `
 >
   <div
     className="
-              stars
-              
-              size-m
-            "
+            stars
+            
+            size-m
+          "
     data-test="STARS"
     onMouseLeave={[Function]}
   >
@@ -248,10 +248,10 @@ exports[`fyndiq-component-stars should change its state when hovered and interac
 >
   <div
     className="
-              stars
-              interactive
-              size-m
-            "
+            stars
+            interactive
+            size-m
+          "
     data-test="STARS"
     onMouseLeave={[Function]}
   >
@@ -295,10 +295,10 @@ exports[`fyndiq-component-stars should not change its state when hovered and not
 >
   <div
     className="
-              stars
-              
-              size-m
-            "
+            stars
+            
+            size-m
+          "
     data-test="STARS"
     onMouseLeave={[Function]}
   >
@@ -342,10 +342,10 @@ exports[`fyndiq-component-stars should reset its state when the mouse leaves 1`]
 >
   <div
     className="
-              stars
-              interactive
-              size-m
-            "
+            stars
+            interactive
+            size-m
+          "
     data-test="STARS"
     onMouseLeave={[Function]}
   >

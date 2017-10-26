@@ -10,9 +10,9 @@ exports[`fyndiq-component-alert should be rendered without props 1`] = `
 >
   <div
     className="
-                alert
-                type-info
-              "
+              alert
+              type-info
+            "
   >
     <span
       className="text"
@@ -39,16 +39,16 @@ exports[`fyndiq-component-alert should be self-closable 1`] = `
 >
   <div
     className="
-              alertWrapper
-              hidden
-              
-            "
+            alertWrapper
+            hidden
+            
+          "
   >
     <div
       className="
-                  alert
-                  type-info
-                "
+              alert
+              type-info
+            "
     >
       <span
         className="text"
@@ -74,16 +74,16 @@ exports[`fyndiq-component-alert should be self-closable 2`] = `
 >
   <div
     className="
-              alertWrapper
-              hidden
-              removed
-            "
+            alertWrapper
+            hidden
+            removed
+          "
   >
     <div
       className="
-                  alert
-                  type-info
-                "
+              alert
+              type-info
+            "
     >
       <span
         className="text"
@@ -109,9 +109,9 @@ exports[`fyndiq-component-alert should have a type prop 1`] = `
 >
   <div
     className="
-                alert
-                type-warning
-              "
+              alert
+              type-warning
+            "
   >
     <span
       className="text"
@@ -138,9 +138,9 @@ exports[`fyndiq-component-alert should have a type prop 2`] = `
 >
   <div
     className="
-                alert
-                type-good
-              "
+              alert
+              type-good
+            "
   >
     <span
       className="text"
@@ -167,9 +167,9 @@ exports[`fyndiq-component-alert should have a type prop 3`] = `
 >
   <div
     className="
-                alert
-                type-bad
-              "
+              alert
+              type-bad
+            "
   >
     <span
       className="text"
@@ -196,9 +196,9 @@ exports[`fyndiq-component-alert should have unclosable prop 1`] = `
 >
   <div
     className="
-                alert
-                type-info
-              "
+              alert
+              type-info
+            "
   >
     <span
       className="text"
