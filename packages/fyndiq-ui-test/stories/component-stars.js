@@ -3,9 +3,7 @@ import { storiesOf, action } from '@storybook/react'
 import Stars from 'fyndiq-component-stars'
 
 storiesOf('Stars', module)
-  .addWithInfo('default', () => (
-    <Stars rating={4} />
-  ))
+  .addWithInfo('default', () => <Stars rating={4} />)
   .addWithInfo('half rated', () => (
     <div>
       <Stars rating={4.5} />
@@ -16,10 +14,5 @@ storiesOf('Stars', module)
     <Stars rating={4} reviews={34} />
   ))
   .addWithInfo('interactive', () => (
-    <Stars
-      rating={4}
-      size="l"
-      onChange={action('changeStar')}
-      interactive
-    />
+    <Stars rating={4} size="l" onChange={action('changeStar')} interactive />
   ))

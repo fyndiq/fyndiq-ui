@@ -51,17 +51,11 @@ describe('fyndiq-component-button', () => {
   test('should be renderable as a custom link element', () => {
     // Create Link element that follows react-router API
     // eslint-disable-next-line react/prop-types
-    const Link = ({ to, children }) => (
-      <a href={to}>
-        {children}
-      </a>
-    )
+    const Link = ({ to, children }) => <a href={to}>{children}</a>
 
     const wrapper = (
       // eslint-disable-next-line jsx-a11y/anchor-is-valid
-      <Button link={<Link to="my/path" />}>
-        Hello
-      </Button>
+      <Button link={<Link to="my/path" />}>Hello</Button>
     )
     const component = shallow(wrapper)
     expect(component).toMatchSnapshot()

@@ -9,10 +9,18 @@ describe('fyndiq-component-tooltip', () => {
   })
 
   test('should have the right position', () => {
-    expect(shallow(<Tooltip text="help" position="tr">tooltip</Tooltip>)).toMatchSnapshot()
+    expect(
+      shallow(
+        <Tooltip text="help" position="tr">
+          tooltip
+        </Tooltip>,
+      ),
+    ).toMatchSnapshot()
   })
 
   test('should have a component for the prop text', () => {
-    expect(shallow(<Tooltip text={<div>hello</div>}>tooltip</Tooltip>)).toMatchSnapshot()
+    expect(
+      shallow(<Tooltip text={<div>hello</div>}>tooltip</Tooltip>),
+    ).toMatchSnapshot()
   })
 })

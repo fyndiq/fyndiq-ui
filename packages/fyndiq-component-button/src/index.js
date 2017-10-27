@@ -27,25 +27,19 @@ const Button = ({
   // render the button as an <a> tag
   if (typeof link === 'string') {
     return (
-      <a
-        className={className}
-        onClick={onClick}
-        href={link}
-      >
+      <a className={className} onClick={onClick} href={link}>
         {children}
       </a>
     )
-  // If the link is a React Element
-  // This case is usefull for integrating with react-router API
+    // If the link is a React Element
+    // This case is usefull for integrating with react-router API
   } else if (React.isValidElement(link)) {
-    return (
-      React.cloneElement(link, {
-        // Just pass the children and the className to the
-        // custom link element
-        className,
-        children,
-      })
-    )
+    return React.cloneElement(link, {
+      // Just pass the children and the className to the
+      // custom link element
+      className,
+      children,
+    })
   }
 
   // Default case: render a button.
@@ -70,10 +64,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   pressed: PropTypes.bool,
   htmlType: PropTypes.string,
-  link: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element,
-  ]),
+  link: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 }
 
 Button.defaultProps = {

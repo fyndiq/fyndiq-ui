@@ -7,12 +7,7 @@ import styles from '../styles.css'
 export default class Alert extends React.Component {
   static propTypes = {
     children: PropTypes.node,
-    type: PropTypes.oneOf([
-      'info',
-      'good',
-      'warning',
-      'bad',
-    ]),
+    type: PropTypes.oneOf(['info', 'good', 'warning', 'bad']),
     unclosable: PropTypes.bool,
     stopShowingAfter: PropTypes.number,
     stopShowingAfterKey: PropTypes.string,
@@ -44,15 +39,23 @@ export default class Alert extends React.Component {
     this.nodeWrapper.style.height = `${height}px`
 
     // Wait a tick before starting the animation
-    setTimeout(() => this.setState({
-      displayed: false,
-    }), 10)
+    setTimeout(
+      () =>
+        this.setState({
+          displayed: false,
+        }),
+      10,
+    )
 
     // Once the animation is done, remove the div with display none
     // Keep this 200 in sync with the styles.css file
-    setTimeout(() => this.setState({
-      removed: true,
-    }), 200)
+    setTimeout(
+      () =>
+        this.setState({
+          removed: true,
+        }),
+      200,
+    )
   }
 
   handleCloseClick() {
@@ -63,10 +66,9 @@ export default class Alert extends React.Component {
   }
 
   render() {
-    const {
-      children, type, unclosable, stopShowingAfter,
-    } = this.props
-    const isShown = this.state.count <= stopShowingAfter || stopShowingAfter === undefined
+    const { children, type, unclosable, stopShowingAfter } = this.props
+    const isShown =
+      this.state.count <= stopShowingAfter || stopShowingAfter === undefined
     if (isShown) {
       return (
         <div
@@ -75,7 +77,9 @@ export default class Alert extends React.Component {
             ${!this.state.displayed ? styles.hidden : ''}
             ${this.state.removed ? styles.removed : ''}
           `}
-          ref={e => { this.nodeWrapper = e }}
+          ref={e => {
+            this.nodeWrapper = e
+          }}
         >
           <div
             className={`

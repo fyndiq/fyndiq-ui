@@ -1,5 +1,4 @@
-
-export const loadState = (componentKey) => {
+export const loadState = componentKey => {
   try {
     const serializedState = localStorage.getItem(componentKey)
     if (serializedState === null) {

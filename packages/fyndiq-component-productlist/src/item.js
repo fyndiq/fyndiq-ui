@@ -18,10 +18,12 @@ class ProductListItem extends React.Component {
     shopUrl: PropTypes.string,
     title: PropTypes.string.isRequired,
     uploadDate: PropTypes.instanceOf(Date),
-    additionnalData: PropTypes.arrayOf(PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.node,
-    })),
+    additionnalData: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string,
+        value: PropTypes.node,
+      }),
+    ),
     interactive: PropTypes.bool,
     open: PropTypes.bool,
     showOldPrice: PropTypes.bool,
@@ -80,10 +82,12 @@ class ProductListItem extends React.Component {
       showYours,
     } = this.props
 
-    const interactiveProps = !interactive ? {} : ({
-      role: 'button',
-      tabIndex: '0',
-    })
+    const interactiveProps = !interactive
+      ? {}
+      : {
+          role: 'button',
+          tabIndex: '0',
+        }
 
     return (
       <div
@@ -96,22 +100,18 @@ class ProductListItem extends React.Component {
         onKeyPress={this.onClick}
         role="button"
         tabIndex={0}
-        ref={e => { this.nodeWrapper = e }}
+        ref={e => {
+          this.nodeWrapper = e
+        }}
         {...interactiveProps}
       >
         <div className={styles.firstLine}>
           <div className={styles.imgWrapper}>
-            <img
-              className={styles.img}
-              src={imageUrl}
-              alt={title}
-            />
+            <img className={styles.img} src={imageUrl} alt={title} />
           </div>
           <div className={styles.mainContent}>
             <div>
-              {showYours && (
-                <span className={styles.yours}>Your product</span>
-              )}
+              {showYours && <span className={styles.yours}>Your product</span>}
               <h3 className={styles.title}>{title}</h3>
               {dealType && (
                 <span
@@ -141,9 +141,7 @@ class ProductListItem extends React.Component {
           <div>
             <Price>
               <CurrentPrice>{price}</CurrentPrice>
-              {showOldPrice && oldPrice && (
-                <OldPrice>{oldPrice}</OldPrice>
-              )}
+              {showOldPrice && oldPrice && <OldPrice>{oldPrice}</OldPrice>}
             </Price>
           </div>
         </div>
@@ -151,28 +149,18 @@ class ProductListItem extends React.Component {
           <ul className={styles.labelsWrapper}>
             {category && (
               <li className={styles.labelWrapper}>
-                <span className={styles.label}>
-                  Category
-                </span>
-                <strong className={styles.labelValue}>
-                  {category}
-                </strong>
+                <span className={styles.label}>Category</span>
+                <strong className={styles.labelValue}>{category}</strong>
               </li>
             )}
             {brand && (
               <li className={styles.labelWrapper}>
-                <span className={styles.label}>
-                  Brand
-                </span>
-                <strong className={styles.labelValue}>
-                  {brand}
-                </strong>
+                <span className={styles.label}>Brand</span>
+                <strong className={styles.labelValue}>{brand}</strong>
               </li>
             )}
             <li className={styles.labelWrapper}>
-              <span className={styles.label}>
-                Uploaded
-              </span>
+              <span className={styles.label}>Uploaded</span>
               <strong className={styles.labelValue}>
                 <time
                   dateTime={moment(uploadDate).format('YYYY-MM-DDTHH:mm')}
@@ -182,16 +170,13 @@ class ProductListItem extends React.Component {
                 </time>
               </strong>
             </li>
-            {additionnalData && additionnalData.map(({ label, value }) => (
-              <li key={label} className={styles.labelWrapper}>
-                <span className={styles.label}>
-                  {label}
-                </span>
-                <strong className={styles.labelValue}>
-                  {value}
-                </strong>
-              </li>
-            ))}
+            {additionnalData &&
+              additionnalData.map(({ label, value }) => (
+                <li key={label} className={styles.labelWrapper}>
+                  <span className={styles.label}>{label}</span>
+                  <strong className={styles.labelValue}>{value}</strong>
+                </li>
+              ))}
           </ul>
         </div>
       </div>
