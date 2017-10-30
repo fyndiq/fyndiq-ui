@@ -43,7 +43,6 @@ class ModalButton extends React.Component {
 
   getButton() {
     const { button } = this.props
-    console.log(button.type.displayName, Button.name)
     if (isSameType(button, Button)) {
       return React.cloneElement(button, {
         onClick: this.openModal,
