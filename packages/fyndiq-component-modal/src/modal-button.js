@@ -4,12 +4,16 @@ import Button from 'fyndiq-component-button'
 
 import Modal from './modal'
 
+const isSameType = (element, component) =>
+  React.isValidElement(element) &&
+  (element.type === component || element.type.displayName === component.name)
+
 // Proptype checker: checks that the element is of a specific Component type
 // FIXME: this declaration should be in its own package, like fyndiq-utils
 // or fyndiq-prop-types or something
 export const ElementOfType = type => (props, propName, componentName) => {
   const prop = props[propName]
-  if (React.isValidElement(prop) && prop.type === type) return null
+  if (isSameType(prop, type)) return null
 
   // Otherwise, return Error
   return new Error(
@@ -39,7 +43,8 @@ class ModalButton extends React.Component {
 
   getButton() {
     const { button } = this.props
-    if (React.isValidElement(button) && button.type === Button) {
+    console.log(button.type.displayName, Button.name)
+    if (isSameType(button, Button)) {
       return React.cloneElement(button, {
         onClick: this.openModal,
       })
@@ -55,7 +60,7 @@ class ModalButton extends React.Component {
       open: this.state.open,
       onClose: this.closeModal,
     }
-    if (React.isValidElement(children) && children.type === Modal) {
+    if (isSameType(children, Modal)) {
       return React.cloneElement(this.props.children, modalProps)
     }
 
