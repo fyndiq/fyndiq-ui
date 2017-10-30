@@ -6,7 +6,8 @@ import Modal from './modal'
 
 const isSameType = (element, component) =>
   React.isValidElement(element) &&
-  (element.type === component || element.type.displayName === component.name)
+  (element.type === component ||
+    (element.type && element.type.displayName === component.name))
 
 // Proptype checker: checks that the element is of a specific Component type
 // FIXME: this declaration should be in its own package, like fyndiq-utils
