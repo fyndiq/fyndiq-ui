@@ -6,11 +6,9 @@ import Modal, { ModalButton } from 'fyndiq-component-modal'
 import './component-modal.css'
 
 storiesOf('Modal', module)
-  .addWithInfo('default', () => (
-    <ModalButton button="Open Modal">Content</ModalButton>
-  ))
+  .addWithInfo('default', () => <ModalButton>Content</ModalButton>)
   .addWithInfo('custom modal styles', () => (
-    <ModalButton button="Open Modal">
+    <ModalButton button="Open Custom Modal">
       <Modal
         overlayClassName="test-overlay--red"
         wrapperClassName="test-wrapper--black"
