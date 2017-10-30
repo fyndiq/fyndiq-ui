@@ -1,0 +1,15 @@
+@import "fyndiq-styles-colors/colors.css";
+
+:global {
+  & .test-overlay--red {
+    background-color: color(var(--color-red) a(30%));
+  }
+
+  & .test-wrapper--black {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    max-width: 400px;
+    padding: 50px;
+  }
+}
+

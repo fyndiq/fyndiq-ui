@@ -12,6 +12,7 @@ function loadStories() {
   require('../stories/component-tooltip')
   require('../stories/component-checkbox')
   require('../stories/component-stars')
+  require('../stories/component-modal')
   require('../stories/component-price')
   require('../stories/component-productcard')
   require('../stories/component-productlist')

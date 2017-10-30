@@ -7,17 +7,31 @@ storiesOf('Checkbox', module)
     <Checkbox onToggle={action('toggle')}>Label</Checkbox>
   ))
   .addWithInfo('checked', () => (
-    <Checkbox onToggle={action('toggle')} checked>Label</Checkbox>
+    <Checkbox onToggle={action('toggle')} checked>
+      Label
+    </Checkbox>
   ))
   .addWithInfo('custom color', () => (
-    <Checkbox onToggle={action('toggle')} color="#F00" checked>Red Label</Checkbox>
+    <Checkbox onToggle={action('toggle')} color="#F00" checked>
+      Red Label
+    </Checkbox>
   ))
   .addWithInfo('disabled', () => (
     <span>
-      <div><Checkbox onToggle={action('toggle')} disabled>Disabled label</Checkbox></div>
-      <div><Checkbox checked onToggle={action('toggle')} disabled>Disabled validated label</Checkbox></div>
+      <div>
+        <Checkbox onToggle={action('toggle')} disabled>
+          Disabled label
+        </Checkbox>
+      </div>
+      <div>
+        <Checkbox checked onToggle={action('toggle')} disabled>
+          Disabled validated label
+        </Checkbox>
+      </div>
     </span>
   ))
   .addWithInfo('frame mode', () => (
-    <Checkbox onToggle={action('toggle')} frame>Label</Checkbox>
+    <Checkbox onToggle={action('toggle')} frame>
+      Label
+    </Checkbox>
   ))

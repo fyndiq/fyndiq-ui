@@ -37,7 +37,10 @@ describe('fyndiq-component-stars', () => {
     const component = shallow(<Stars interactive onChange={clickSpy} />)
 
     // Find the 3rd star (at is 0-index based)
-    component.find('Star').at(2).simulate('click')
+    component
+      .find('Star')
+      .at(2)
+      .simulate('click')
 
     expect(clickSpy.mock.calls).toHaveLength(1)
     expect(clickSpy.mock.calls[0][0]).toBe(3)
@@ -45,19 +48,28 @@ describe('fyndiq-component-stars', () => {
 
   it('should change its state when hovered and interactive', () => {
     const component = shallow(<Stars interactive />)
-    component.find('Star').at(2).simulate('hover')
+    component
+      .find('Star')
+      .at(2)
+      .simulate('hover')
     expect(component).toMatchSnapshot()
   })
 
   it('should not change its state when hovered and not interactive', () => {
     const component = shallow(<Stars rating={4} />)
-    component.find('Star').at(2).simulate('hover')
+    component
+      .find('Star')
+      .at(2)
+      .simulate('hover')
     expect(component).toMatchSnapshot()
   })
 
   it('should reset its state when the mouse leaves', () => {
     const component = shallow(<Stars rating={4.3} interactive />)
-    component.find('Star').at(2).simulate('hover')
+    component
+      .find('Star')
+      .at(2)
+      .simulate('hover')
     component.find('.stars').simulate('mouseleave')
     expect(component).toMatchSnapshot()
   })

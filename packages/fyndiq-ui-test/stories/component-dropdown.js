@@ -5,9 +5,7 @@ import Button from 'fyndiq-component-button'
 
 storiesOf('Dropdown', module)
   .addWithInfo('default', () => (
-    <Dropdown button="Click me">
-      Dropdown content
-    </Dropdown>
+    <Dropdown button="Click me">Dropdown content</Dropdown>
   ))
   .addWithInfo('no down arrow', () => (
     <Dropdown button="Click me" noArrow>
@@ -65,14 +63,26 @@ storiesOf('Dropdown', module)
   .addWithInfo('change dropdown position', () => (
     <div>
       <p>
-        <Dropdown button="bottom left (bl)" position="bl">Content</Dropdown>
-        <Dropdown button="bottom center (bc)" position="bc">Content</Dropdown>
-        <Dropdown button="bottom right (br)" position="br">Content</Dropdown>
+        <Dropdown button="bottom left (bl)" position="bl">
+          Content
+        </Dropdown>
+        <Dropdown button="bottom center (bc)" position="bc">
+          Content
+        </Dropdown>
+        <Dropdown button="bottom right (br)" position="br">
+          Content
+        </Dropdown>
       </p>
       <p>
-        <Dropdown button="top left (tl)" position="tl">Content</Dropdown>
-        <Dropdown button="top center (tc)" position="tc">Content</Dropdown>
-        <Dropdown button="top right (tr)" position="tr">Content</Dropdown>
+        <Dropdown button="top left (tl)" position="tl">
+          Content
+        </Dropdown>
+        <Dropdown button="top center (tc)" position="tc">
+          Content
+        </Dropdown>
+        <Dropdown button="top right (tr)" position="tr">
+          Content
+        </Dropdown>
       </p>
     </div>
   ))

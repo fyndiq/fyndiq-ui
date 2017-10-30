@@ -22,13 +22,7 @@ const Loader = ({
     viewBox="0 0 100 100"
   >
     {/* Background color rectangle */}
-    <rect
-      x="0"
-      y="0"
-      width="100"
-      height="100"
-      fill={color1}
-    />
+    <rect x="0" y="0" width="100" height="100" fill={color1} />
     {/* Wave component. See SVG specification to understand how it's done */}
     <path
       className={styles.wave}

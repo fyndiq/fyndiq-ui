@@ -2,9 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import colors from 'fyndiq-styles-colors'
 
-const Checkmark = ({
-  height, width, className, color,
-}) => (
+const Checkmark = ({ height, width, className, color }) => (
   <svg
     viewBox="0 0 50 50"
     height={height}

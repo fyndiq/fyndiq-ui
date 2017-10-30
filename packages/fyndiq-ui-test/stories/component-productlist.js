@@ -13,7 +13,9 @@ const productList = [
     shopUrl="https://fyndiq.se/product/8159035"
     rating={4.5}
     category="LED Lamps"
-    uploadDate={moment().subtract(4, 'days').toDate()}
+    uploadDate={moment()
+      .subtract(4, 'days')
+      .toDate()}
   />,
   <ProductListItem
     key="2"
@@ -25,7 +27,9 @@ const productList = [
     dealType="weekly"
     category="Mattresses"
     brand="Pink Flamingo Corp."
-    uploadDate={moment().subtract(60, 'days').toDate()}
+    uploadDate={moment()
+      .subtract(60, 'days')
+      .toDate()}
   />,
   <ProductListItem
     key="3"
@@ -34,27 +38,21 @@ const productList = [
     imageUrl="https://media.fyndiq.se/product/4c/60/98/af14ef7e16629dedc5f2c1300598a74707/original.png"
     shopUrl="https://fyndiq.se/product/1459969"
     rating={3}
-    uploadDate={moment().subtract(700, 'days').toDate()}
+    uploadDate={moment()
+      .subtract(700, 'days')
+      .toDate()}
     showYours
   />,
 ]
 
 storiesOf('Product List', module)
-  .addWithInfo('default', () => (
-    productList[0]
-  ))
-  .addWithInfo('with open card', () => (
+  .addWithInfo('default', () => productList[0])
+  .addWithInfo('with open card', () =>
     React.cloneElement(productList[1], {
       open: true,
-    })
-  ))
-  .addWithInfo('interactive', () => (
-    <Wrapper>
-      {productList}
-    </Wrapper>
-  ))
+    }),
+  )
+  .addWithInfo('interactive', () => <Wrapper>{productList}</Wrapper>)
   .addWithInfo('interactive with multiple product open', () => (
-    <Wrapper openMultiples>
-      {productList}
-    </Wrapper>
+    <Wrapper openMultiples>{productList}</Wrapper>
   ))

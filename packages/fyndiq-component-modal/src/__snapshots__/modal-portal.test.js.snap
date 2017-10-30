@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalPortal Component should return a Portal 1`] = `"Content"`;

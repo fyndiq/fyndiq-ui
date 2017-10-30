@@ -3,11 +3,8 @@ import { storiesOf } from '@storybook/react'
 import Productcard from 'fyndiq-component-productcard'
 
 storiesOf('Product card', module)
-
-  .addDecorator((story) => (
-    <div style={{ backgroundColor: '#c4e5e9', padding: '1em' }}>
-      {story()}
-    </div>
+  .addDecorator(story => (
+    <div style={{ backgroundColor: '#c4e5e9', padding: '1em' }}>{story()}</div>
   ))
   .addWithInfo('default', () => (
     <Productcard

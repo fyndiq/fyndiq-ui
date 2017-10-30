@@ -4,7 +4,6 @@ import { Checkmark } from 'fyndiq-icons'
 import colors from 'fyndiq-styles-colors'
 import styles from '../styles.css'
 
-
 class Checkbox extends React.Component {
   constructor(props) {
     super(props)
@@ -27,12 +26,7 @@ class Checkbox extends React.Component {
   }
 
   render() {
-    const {
-      children,
-      disabled,
-      className,
-      frame,
-    } = this.props
+    const { children, disabled, className, frame } = this.props
 
     return (
       <label
@@ -54,10 +48,7 @@ class Checkbox extends React.Component {
         />
 
         {!frame && (
-          <Checkmark
-            className={styles.checkmark}
-            color={this.props.color}
-          />
+          <Checkmark className={styles.checkmark} color={this.props.color} />
         )}
 
         {children}

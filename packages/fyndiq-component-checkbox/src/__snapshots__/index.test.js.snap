@@ -10,10 +10,10 @@ exports[`fyndiq-component-checkbox should be invoquable without parameters 1`] =
   <input
     checked={false}
     className="
-              checkbox
-              false
-              
-            "
+            checkbox
+            false
+            
+          "
     disabled={false}
     onChange={[Function]}
     type="checkbox"
@@ -38,17 +38,17 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
 >
   <label
     className="
-            wrapper
-            false
-          "
+          wrapper
+          false
+        "
   >
     <input
       checked={true}
       className="
-                checkbox
-                false
-                
-              "
+            checkbox
+            false
+            
+          "
       disabled={false}
       onChange={[Function]}
       type="checkbox"
@@ -85,10 +85,10 @@ exports[`fyndiq-component-checkbox should have prop checked 1`] = `
   <input
     checked={true}
     className="
-              checkbox
-              false
-              
-            "
+            checkbox
+            false
+            
+          "
     disabled={false}
     onChange={[Function]}
     type="checkbox"
@@ -112,10 +112,10 @@ exports[`fyndiq-component-checkbox should have prop color 1`] = `
   <input
     checked={true}
     className="
-              checkbox
-              false
-              
-            "
+            checkbox
+            false
+            
+          "
     disabled={false}
     onChange={[Function]}
     type="checkbox"
@@ -139,10 +139,10 @@ exports[`fyndiq-component-checkbox should have prop disabled 1`] = `
   <input
     checked={false}
     className="
-              checkbox
-              false
-              
-            "
+            checkbox
+            false
+            
+          "
     disabled={true}
     onChange={[Function]}
     type="checkbox"
@@ -166,10 +166,10 @@ exports[`fyndiq-component-checkbox should have prop onToggle 1`] = `
   <input
     checked={false}
     className="
-              checkbox
-              false
-              
-            "
+            checkbox
+            false
+            
+          "
     disabled={false}
     onChange={[Function]}
     type="checkbox"
@@ -193,10 +193,10 @@ exports[`fyndiq-component-checkbox should update its state when clicked on 1`] =
   <input
     checked={true}
     className="
-              checkbox
-              false
-              
-            "
+            checkbox
+            false
+            
+          "
     disabled={false}
     onChange={[Function]}
     type="checkbox"
@@ -220,10 +220,10 @@ exports[`fyndiq-component-checkbox should update its state when clicked on 2`] =
   <input
     checked={false}
     className="
-              checkbox
-              false
-              
-            "
+            checkbox
+            false
+            
+          "
     disabled={false}
     onChange={[Function]}
     type="checkbox"
