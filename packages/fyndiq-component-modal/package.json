@@ -1,0 +1,24 @@
+{
+  "name": "fyndiq-component-modal",
+  "version": "2.0.0",
+  "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fyndiq/fyndiq-ui.git"
+  },
+  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Modal&selectedStory=default",
+  "dependencies": {
+    "fyndiq-styles-colors": "*",
+    "fyndiq-component-button": "*"
+  },
+  "peerDependencies": {
+    "css-loader": "^0.28.7",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.6",
+    "prop-types": "^15.0.0",
+    "react": "^16.0.0"
+  }
+}

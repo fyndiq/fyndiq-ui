@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalButton Component should display a button by default 1`] = `
+<span>
+  <Button
+    disabled={false}
+    horizontal={false}
+    onClick={[Function]}
+    pressed={false}
+    size="s"
+    type="normal"
+  >
+    Open Modal
+  </Button>
+  <Modal
+    closeClassName=""
+    onClose={[Function]}
+    open={false}
+    overlayClassName=""
+    portalId="fyndiq-modal"
+    wrapperClassName=""
+  >
+    Content
+  </Modal>
+</span>
+`;
+
+exports[`ModalButton Component should handle Modal children as a prop 1`] = `
+<Modal
+  closeClassName=""
+  onClose={[Function]}
+  open={false}
+  overlayClassName="overlayClassName"
+  portalId="fyndiq-modal"
+  wrapperClassName=""
+>
+  Content
+</Modal>
+`;
+
+exports[`ModalButton Component should have a custom button 1`] = `
+<Button
+  disabled={false}
+  horizontal={false}
+  onClick={[Function]}
+  pressed={false}
+  size="s"
+  type="primary"
+>
+  Button
+</Button>
+`;

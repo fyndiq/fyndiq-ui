@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Component should be displayed correctly if opened 1`] = `
+<ModalPortal
+  bodyLock={true}
+  portalId="fyndiq-modal"
+>
+  <div
+    className="overlay "
+    onClick={[Function]}
+  >
+    <div
+      className="wrapper "
+      onClick={[Function]}
+    >
+      <button
+        className="close "
+        onClick={[Function]}
+      >
+        ×
+      </button>
+      Content
+    </div>
+  </div>
+</ModalPortal>
+`;
+
+exports[`Modal Component should have custom classes for different elements 1`] = `
+<ModalPortal
+  bodyLock={true}
+  portalId="fyndiq-modal"
+>
+  <div
+    className="overlay overlayClassName"
+    onClick={[Function]}
+  >
+    <div
+      className="wrapper wrapperClassName"
+      onClick={[Function]}
+    >
+      <button
+        className="close closeClassName"
+        onClick={[Function]}
+      >
+        ×
+      </button>
+      Content
+    </div>
+  </div>
+</ModalPortal>
+`;

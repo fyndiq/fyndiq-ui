@@ -6,19 +6,6 @@ import Dropdown from './'
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
-// Simulate events on <body>
-// Usage : simulate.click('body') for a click event
-//         simulate.keyup({ keyCode: 27 }) for an escape key press.
-const simulate = {}
-document.addEventListener = jest.fn((event, cb) => {
-  simulate[event] = cb
-})
-document.removeEventListener = jest.fn((event, cb) => {
-  if (simulate[event] === cb) {
-    delete simulate[event]
-  }
-})
-
 describe('fyndiq-component-dropdown', () => {
   test('should be displayed with minimum props', () => {
     expect(
@@ -62,7 +49,7 @@ describe('fyndiq-component-dropdown', () => {
       .find('div > div')
       .at(0)
       .simulate('click')
-    simulate.click('body')
+    global.simulate.click('body')
     component.update()
     expect(component.find('.dropdownWrapper').exists()).toBe(false)
   })
@@ -143,7 +130,7 @@ describe('fyndiq-component-dropdown', () => {
       .find('div > div')
       .at(0)
       .simulate('click')
-    simulate.keyup({ keyCode: 27 })
+    global.simulate.keyup({ keyCode: 27 })
     component.update()
     expect(component.find('.dropdownWrapper').exists()).toBe(false)
   })
@@ -151,7 +138,7 @@ describe('fyndiq-component-dropdown', () => {
   test('should remove eventListeners when unmounted', () => {
     const component = mount(<Dropdown button="button">Content</Dropdown>)
     component.unmount()
-    expect(simulate).toMatchSnapshot()
+    expect(global.simulate).toMatchSnapshot()
   })
 
   test('should bubble up click event', () => {

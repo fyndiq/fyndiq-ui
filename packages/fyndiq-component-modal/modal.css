@@ -1,0 +1,40 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.bodyFixed {
+  overflow-y: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: color(black a(50%));
+  padding: 0 10px;
+  overflow: scroll;
+}
+
+.wrapper {
+  position: relative;
+  width: 700px;
+  max-width: 100%;
+  min-height: 100px;
+  margin: 10px auto 50px;
+  border-radius: 2px;
+  background: var(--color-white);
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 300;
+}
