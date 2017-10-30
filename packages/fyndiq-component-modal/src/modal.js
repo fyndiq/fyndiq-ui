@@ -4,6 +4,9 @@ import PropTypes from 'prop-types'
 
 import styles from '../modal.css'
 
+// Keep in sync with modal.css
+const bodyFixedClassName = 'bodyFixed'
+
 class Modal extends React.Component {
   static propTypes = {
     open: PropTypes.bool,
@@ -27,11 +30,10 @@ class Modal extends React.Component {
   // Lock or unlock the body scroll
   // Pass false as argument to unlock
   static lockBody(lock = true) {
-    const bodyClassName = 'bodyFixed'
     if (lock) {
-      document.body.classList.add(bodyClassName)
+      document.body.classList.add(bodyFixedClassName)
     } else {
-      document.body.classList.remove(bodyClassName)
+      document.body.classList.remove(bodyFixedClassName)
     }
   }
 
@@ -63,7 +65,7 @@ class Modal extends React.Component {
   }
 
   componentWillUnmount() {
-    document.body.classList.remove('bodyFixed')
+    document.body.classList.remove(bodyFixedClassName)
     document.removeEventListener('keypress', this.handleKeyPress)
     Modal.lockBody(false)
   }
