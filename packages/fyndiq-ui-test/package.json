@@ -11,6 +11,7 @@
     "fyndiq-component-checkbox": "^2.2.2",
     "fyndiq-component-dropdown": "^2.1.4",
     "fyndiq-component-loader": "^2.1.2",
+    "fyndiq-component-modal": "*",
     "fyndiq-component-price": "^2.3.1",
     "fyndiq-component-productcard": "^2.1.5",
     "fyndiq-component-productlist": "^2.1.5",
