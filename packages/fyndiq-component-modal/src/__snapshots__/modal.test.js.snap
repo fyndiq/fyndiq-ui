@@ -2,7 +2,7 @@
 
 exports[`Modal Component should be displayed correctly if opened 1`] = `
 <ModalPortal
-  open={true}
+  bodyLock={true}
   portalId="fyndiq-modal"
 >
   <div
@@ -27,7 +27,7 @@ exports[`Modal Component should be displayed correctly if opened 1`] = `
 
 exports[`Modal Component should have custom classes for different elements 1`] = `
 <ModalPortal
-  open={true}
+  bodyLock={true}
   portalId="fyndiq-modal"
 >
   <div

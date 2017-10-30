@@ -13,13 +13,13 @@ class ModalPortal extends React.Component {
   static propTypes = {
     portalId: PropTypes.string,
     children: PropTypes.node,
-    open: PropTypes.bool,
+    bodyLock: PropTypes.bool,
   }
 
   static defaultProps = {
     children: null,
     portalId: 'fyndiq-portal',
-    open: false,
+    bodyLock: false,
   }
 
   // Lock or unlock the body scroll
@@ -41,12 +41,12 @@ class ModalPortal extends React.Component {
     }
 
     // Lock the body if needed
-    ModalPortal.lockBody(this.props.open)
+    ModalPortal.lockBody(this.props.bodyLock)
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.open !== this.props.open) {
-      ModalPortal.lockBody(nextProps.open)
+    if (nextProps.bodyLock !== this.props.bodyLock) {
+      ModalPortal.lockBody(nextProps.bodyLock)
     }
   }
 

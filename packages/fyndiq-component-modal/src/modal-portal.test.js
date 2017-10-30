@@ -1,10 +1,13 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import { shallow } from 'enzyme'
 import ModalPortal from './modal-portal'
 
 describe('ModalPortal Component', () => {
   it('should return a Portal', () => {
-    const Component = shallow(<ModalPortal />)
+    // Mock the Portal behavior to return its content
+    ReactDOM.createPortal = jest.fn(children => children)
+    const Component = shallow(<ModalPortal>Content</ModalPortal>)
     expect(Component).toMatchSnapshot()
     // NOTE: right now Enzyme doesn't support Portal rendering
     // so the snapshot is `undefined`
@@ -13,12 +16,12 @@ describe('ModalPortal Component', () => {
   it('should lock the body when opening the modal', () => {
     const Component = shallow(<ModalPortal />)
     expect(document.body.classList.contains('bodyFixed')).toBe(false)
-    Component.setProps({ open: true })
+    Component.setProps({ bodyLock: true })
     expect(document.body.classList.contains('bodyFixed')).toBe(true)
   })
 
   it('should unlock the body when unmounting', () => {
-    const Component = shallow(<ModalPortal open />)
+    const Component = shallow(<ModalPortal bodyLock />)
     Component.unmount()
     expect(document.body.classList.contains('bodyFixed')).toBe(false)
   })

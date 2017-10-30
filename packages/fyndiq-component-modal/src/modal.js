@@ -60,7 +60,7 @@ class Modal extends React.Component {
     /* eslint-disable jsx-a11y/click-events-have-key-events */
 
     return (
-      <ModalPortal portalId={portalId} open={open}>
+      <ModalPortal portalId={portalId} bodyLock={open}>
         <div
           className={`${styles.overlay} ${overlayClassName}`}
           onClick={this.props.onClose}
