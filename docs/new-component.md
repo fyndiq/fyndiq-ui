@@ -3,7 +3,7 @@
 ## New files
 
 Create a directory under `/packages/`, name it `fyndiq-[type]-[name]`
-where **[type]** can be `component`, `icon` or `styles`.
+where **[type]** can be `component` or `styles`.
 
 Under this directory create a `package.json` file, a `[name].css` file,
 a `src/index.js` file and a `README.md` file.
@@ -79,7 +79,7 @@ export default MyComponent
 
 # fyndiq-component-mycomponent [![npm](https://img.shields.io/npm/v/fyndiq-component-mycomponent.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-mycomponent)
 
-[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Button&selectedStory=default)
+[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=MyComponent&selectedStory=default)
 
 A component MyComponent for Fyndiq
 
