@@ -2,6 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Button from 'fyndiq-component-button'
 import Modal, { ModalButton } from './'
+import { ElementOfType } from './modal-button'
 
 describe('ModalButton Component', () => {
   it('should display a button by default', () => {
@@ -42,5 +43,29 @@ describe('ModalButton Component', () => {
     Component.find(Modal).prop('onClose')()
     Component.update()
     expect(Component.find(Modal).prop('open')).toBe(false)
+  })
+})
+
+// FIXME: this shouldn't be here, as stated in the function
+// declaration file.
+describe('ElementOfType helper', () => {
+  it('should validate if the prop is a certain component', () => {
+    expect(
+      ElementOfType(Button)(
+        { button: <Button>Button</Button> },
+        'button',
+        'componentName',
+      ),
+    ).toBe(null)
+  })
+
+  it('should not validate if the prop is not a certain component', () => {
+    expect(
+      ElementOfType(Button)(
+        { button: <button>test</button> },
+        'button',
+        'componentName',
+      ),
+    ).toBeInstanceOf(Error)
   })
 })

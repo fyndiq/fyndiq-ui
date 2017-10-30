@@ -5,7 +5,9 @@ import Button from 'fyndiq-component-button'
 import Modal from './modal'
 
 // Proptype checker: checks that the element is of a specific Component type
-const ElementOfType = type => (props, propName, componentName) => {
+// FIXME: this declaration should be in its own package, like fyndiq-utils
+// or fyndiq-prop-types or something
+export const ElementOfType = type => (props, propName, componentName) => {
   const prop = props[propName]
   if (React.isValidElement(prop) && prop.type === type) return null
 
