@@ -51,7 +51,6 @@ class ModalPortal extends React.Component {
   }
 
   componentWillUnmount() {
-    document.body.classList.remove(styles.bodyFixed)
     ModalPortal.lockBody(false)
   }
 

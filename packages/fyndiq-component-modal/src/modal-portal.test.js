@@ -17,6 +17,12 @@ describe('ModalPortal Component', () => {
     expect(document.body.classList.contains('bodyFixed')).toBe(true)
   })
 
+  it('should unlock the body when unmounting', () => {
+    const Component = shallow(<ModalPortal open />)
+    Component.unmount()
+    expect(document.body.classList.contains('bodyFixed')).toBe(false)
+  })
+
   it('should create a portal div on mount', () => {
     shallow(<ModalPortal portalId="test-id" />)
     expect(document.getElementById('test-id')).not.toBe(null)
