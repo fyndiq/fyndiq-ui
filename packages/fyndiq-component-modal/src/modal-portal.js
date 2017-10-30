@@ -42,9 +42,6 @@ class ModalPortal extends React.Component {
 
     // Lock the body if needed
     ModalPortal.lockBody(this.props.open)
-
-    // Register key events
-    document.addEventListener('keypress', this.handleKeyPress)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -55,7 +52,6 @@ class ModalPortal extends React.Component {
 
   componentWillUnmount() {
     document.body.classList.remove(bodyFixedClassName)
-    document.removeEventListener('keypress', this.handleKeyPress)
     ModalPortal.lockBody(false)
   }
 
