@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
 // Keep in sync with modal.css
-const bodyFixedClassName = 'bodyFixed'
+import styles from '../modal.css'
 
 // This component creates a Portal helper
 // for the Modal Component. It is not intended
@@ -26,9 +26,9 @@ class ModalPortal extends React.Component {
   // Pass false as argument to unlock
   static lockBody(lock = true) {
     if (lock) {
-      document.body.classList.add(bodyFixedClassName)
+      document.body.classList.add(styles.bodyFixed)
     } else {
-      document.body.classList.remove(bodyFixedClassName)
+      document.body.classList.remove(styles.bodyFixed)
     }
   }
 
@@ -51,7 +51,7 @@ class ModalPortal extends React.Component {
   }
 
   componentWillUnmount() {
-    document.body.classList.remove(bodyFixedClassName)
+    document.body.classList.remove(styles.bodyFixed)
     ModalPortal.lockBody(false)
   }
 

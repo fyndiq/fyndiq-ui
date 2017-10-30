@@ -1,9 +1,7 @@
 @import "fyndiq-styles-colors/colors.css";
 
-:global {
-  & .bodyFixed {
-    overflow-y: hidden;
-  }
+.bodyFixed {
+  overflow-y: hidden;
 }
 
 .overlay {
