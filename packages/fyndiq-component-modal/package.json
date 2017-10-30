@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-modal",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
@@ -10,8 +10,8 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Modal&selectedStory=default",
   "dependencies": {
-    "fyndiq-styles-colors": "*",
-    "fyndiq-component-button": "*"
+    "fyndiq-component-button": "^2.1.3",
+    "fyndiq-styles-colors": "*"
   },
   "peerDependencies": {
     "css-loader": "^0.28.7",
