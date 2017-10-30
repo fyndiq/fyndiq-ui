@@ -15,6 +15,7 @@
   position: relative;
   width: 700px;
   max-width: 100%;
+  min-height: 100px;
   margin: 10px auto 50px;
   border-radius: 2px;
   background: var(--color-white);
@@ -29,5 +30,7 @@
   background: transparent;
   font-size: 20px;
   cursor: pointer;
+  color: inherit;
+  font-family: inherit;
   font-weight: 300;
 }
