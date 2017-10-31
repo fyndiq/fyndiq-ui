@@ -59,4 +59,20 @@ describe('Modal Component', () => {
     Component.unmount()
     expect(global.simulate.keypress).toBe(undefined)
   })
+
+  it('should handle function children', () => {
+    const spy = jest.fn()
+    const Component = shallow(
+      <Modal open onClose={spy}>
+        {({ onClose }) => (
+          <button className="custom-close" onClick={onClose}>
+            Button
+          </button>
+        )}
+      </Modal>,
+    )
+
+    Component.find('.custom-close').simulate('click')
+    expect(spy).toHaveBeenCalled()
+  })
 })

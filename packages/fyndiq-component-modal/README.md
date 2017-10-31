@@ -18,19 +18,42 @@ The easiest way to use the `Modal` component is to open it using `ModalButton` c
 
 ``` js
 import React from 'react'
-import Modal, { ModalButton } from 'fyndiq-component-mycomponent'
+import { ModalButton } from 'fyndiq-component-mycomponent'
 
 // Normal usage
 <ModalButton button="Open Modal">
-  <Modal>
-    Modal content
-  </Modal>
+  Modal content
 </ModalButton>
 ```
 
 This setup will take care of opening the modal when pressing on the button, as well as closing the modal when clicking outside or pressing escape.
 
 For advanced use, you can use directly the `Modal` component and control its `open` prop, as well as binding the `onClose` callback prop.
+
+``` js
+import React from 'react'
+import Modal, { ModalButton } from 'fyndiq-component-mycomponent'
+
+// Advanced styling
+<ModalButton>
+  <Modal overlayClassName="overlay" wrapperClassName="wrapper">
+    Content
+  </Modal>
+</ModalButton>
+
+// Access the onClose method from the children by using a function
+<ModalButton>
+  <Modal>
+    {({ onClose }) => (
+      <div>
+        Content
+        <button onClick={onClose}>Close popup</button>
+      </div>
+    )}
+  </Modal>
+</ModalButton>
+
+```
 
 # API
 

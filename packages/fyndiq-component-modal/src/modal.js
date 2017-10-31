@@ -7,7 +7,7 @@ import styles from '../modal.css'
 class Modal extends React.Component {
   static propTypes = {
     open: PropTypes.bool,
-    children: PropTypes.node,
+    children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
     portalId: PropTypes.string,
     overlayClassName: PropTypes.string,
     wrapperClassName: PropTypes.string,
@@ -36,6 +36,15 @@ class Modal extends React.Component {
 
   componentWillUnmount() {
     document.removeEventListener('keypress', this.handleKeyPress)
+  }
+
+  getChildren() {
+    if (typeof this.props.children === 'function') {
+      return this.props.children({
+        onClose: this.props.onClose,
+      })
+    }
+    return this.props.children
   }
 
   handleKeyPress(e) {
@@ -75,7 +84,7 @@ class Modal extends React.Component {
             >
               &times;
             </button>
-            {this.props.children}
+            {this.getChildren()}
           </div>
         </div>
       </ModalPortal>
