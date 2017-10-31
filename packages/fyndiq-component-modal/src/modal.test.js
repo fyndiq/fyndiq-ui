@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import Modal from './modal'
 
 describe('Modal Component', () => {
@@ -58,5 +58,21 @@ describe('Modal Component', () => {
     const Component = shallow(<Modal open />)
     Component.unmount()
     expect(global.simulate.keypress).toBe(undefined)
+  })
+
+  it('should handle function children', () => {
+    const spy = jest.fn()
+    const Component = shallow(
+      <Modal open onClose={spy}>
+        {({ onClose }) => (
+          <button className="custom-close" onClick={onClose}>
+            Button
+          </button>
+        )}
+      </Modal>,
+    )
+
+    Component.find('.custom-close').simulate('click')
+    expect(spy).toHaveBeenCalled()
   })
 })
