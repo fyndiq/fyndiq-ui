@@ -22,3 +22,10 @@ storiesOf('Modal', module)
       Content
     </ModalButton>
   ))
+  .addWithInfo('custom close button', () => (
+    <ModalButton>
+      <Modal>
+        {({ onClose }) => <button onClick={onClose}>Close modal</button>}
+      </Modal>
+    </ModalButton>
+  ))
