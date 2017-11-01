@@ -10,7 +10,7 @@ class Dropdown extends React.Component {
     opened: PropTypes.bool,
     button: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
       .isRequired,
-    children: PropTypes.node.isRequired,
+    children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]).isRequired,
     size: PropTypes.string,
     position: PropTypes.oneOf(['bl', 'bc', 'br', 'tl', 'tc', 'tr']),
     className: PropTypes.string,
@@ -50,6 +50,7 @@ class Dropdown extends React.Component {
     this.onMouseOut = this.onMouseOut.bind(this)
     this.handleDocumentClick = this.handleDocumentClick.bind(this)
     this.handleKeypress = this.handleKeypress.bind(this)
+    this.closeDropdown = this.closeDropdown.bind(this)
   }
 
   componentWillMount() {
@@ -94,6 +95,17 @@ class Dropdown extends React.Component {
       clearTimeout(this.timeout)
       this.timeout = setTimeout(() => this.closeDropdown(), 100)
     }
+  }
+
+  getChildren() {
+    // If children prop is a function, pass the close handler
+    // to it
+    if (typeof this.props.children === 'function') {
+      return this.props.children({
+        onClose: this.closeDropdown,
+      })
+    }
+    return this.props.children
   }
 
   updateDropdownPosition() {
@@ -156,7 +168,6 @@ class Dropdown extends React.Component {
   render() {
     const {
       button,
-      children,
       noArrow,
       size,
       position,
@@ -222,7 +233,7 @@ class Dropdown extends React.Component {
               top: this.state.top,
             }}
           >
-            {children}
+            {this.getChildren()}
           </div>
         )}
       </div>

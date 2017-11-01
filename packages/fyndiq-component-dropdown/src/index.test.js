@@ -196,6 +196,22 @@ describe('fyndiq-component-dropdown', () => {
     expect(spy).not.toHaveBeenCalled()
   })
 
+  it('should handle function children', () => {
+    const Component = shallow(
+      <Dropdown button="button" opened>
+        {({ onClose }) => (
+          <button className="custom-close" onClick={onClose}>
+            Button
+          </button>
+        )}
+      </Dropdown>,
+      { disableLifecycleMethods: true },
+    )
+
+    Component.find('.custom-close').simulate('click')
+    expect(Component.find('.dropdownWrapper').exists()).toBe(false)
+  })
+
   describe('disabled prop', () => {
     it('should open when clicking on the button', () => {
       const component = shallow(
