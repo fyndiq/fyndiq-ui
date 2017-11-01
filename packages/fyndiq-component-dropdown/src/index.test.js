@@ -179,4 +179,32 @@ describe('fyndiq-component-dropdown', () => {
     component.find('.dropdownWrapper').simulate('click')
     expect(spy).not.toHaveBeenCalled()
   })
+
+  test('should have a disabled prop', () => {
+    const component = shallow(
+      <Dropdown button="button" disabled>
+        Content
+      </Dropdown>,
+      {
+        disableLifecycleMethods: true,
+      },
+    )
+    component
+      .find('div > div')
+      .at(0)
+      .simulate('click')
+    component.update()
+    expect(component.find('.dropdownWrapper').exists()).toBe(false)
+
+    // Test the hoverMode
+    const component2 = mount(
+      <Dropdown button="button" disabled hoverMode>
+        Content
+      </Dropdown>,
+    )
+    component2.simulate('mouseover')
+    jest.runTimersToTime(200)
+    component2.update()
+    expect(component2.find('.dropdownWrapper').exists()).toBe(false)
+  })
 })

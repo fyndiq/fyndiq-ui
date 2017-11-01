@@ -86,3 +86,13 @@ storiesOf('Dropdown', module)
       </p>
     </div>
   ))
+  .addWithInfo('disabled dropdown', () => (
+    <div>
+      <Dropdown button="Disabled dropdown" disabled>
+        Content
+      </Dropdown>
+      <Dropdown button="Disabled open dropdown" disabled opened>
+        Content
+      </Dropdown>
+    </div>
+  ))
