@@ -2,7 +2,7 @@
 
 exports[`fyndiq-component-dropdown should be displayed with minimum props 1`] = `
 <div
-  className="wrapper"
+  className="wrapper "
   onClick={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -68,7 +68,7 @@ exports[`fyndiq-component-dropdown should be opened when hovered, if in hoverMod
 
 exports[`fyndiq-component-dropdown should have a custom button 1`] = `
 <div
-  className="wrapper"
+  className="wrapper "
   onClick={[Function]}
   onMouseOut={[Function]}
   onMouseOver={[Function]}

@@ -62,8 +62,10 @@ The component `Dropdown` has the following customizable props:
 | **size** | String | Size of the button if **button** is used in String mode. For values, see [`Button`'s API](../fyndiq-component-button#API) | Button's default |
 | **position** | String | Position of the dropdown, relatively to the button. One of `bl`, `bc`, `br`, `tl`, `tc`, `tr` | `bl` |
 | **margin** | Number | Distance from the dropdown to the button | `5` |
-| **noArrow** | boolean | If **button** is used in String mode, hides the downwards arrow | `false` |
-| **noWrapperStyle** | boolean | Remove cosmetic styles for the wrapper | `false` |
-| **opened** | boolean | Allows to externally control the dropdown | `false` |
-| **hoverMode** | boolean | Opens the dropdown on hover rather than on click | `false` |
-| **noPropagateClickEvent** | boolean | Stop the propagation of the click event | `false` |
+| **className** | String | Class name to give to the wrapper | `` |
+| **disabled** | Boolean | If true, disables the dropdown | `false` |
+| **noArrow** | Boolean | If **button** is used in String mode, hides the downwards arrow | `false` |
+| **noWrapperStyle** | Boolean | Remove cosmetic styles for the wrapper | `false` |
+| **opened** | Boolean | Allows to externally control the dropdown | `false` |
+| **hoverMode** | Boolean | Opens the dropdown on hover rather than on click | `false` |
+| **noPropagateClickEvent** | Boolean | Stop the propagation of the click event | `false` |

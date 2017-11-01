@@ -13,7 +13,9 @@ class Dropdown extends React.Component {
     children: PropTypes.node.isRequired,
     size: PropTypes.string,
     position: PropTypes.oneOf(['bl', 'bc', 'br', 'tl', 'tc', 'tr']),
+    className: PropTypes.string,
     margin: PropTypes.number,
+    disabled: PropTypes.bool,
     hoverMode: PropTypes.bool,
     noPropagateClickEvent: PropTypes.bool,
     noArrow: PropTypes.bool,
@@ -26,6 +28,8 @@ class Dropdown extends React.Component {
     noArrow: false,
     noWrapperStyle: false,
     size: undefined,
+    className: '',
+    disabled: false,
     position: 'bl',
     margin: 5,
     noPropagateClickEvent: false,
@@ -63,6 +67,8 @@ class Dropdown extends React.Component {
   }
 
   onButtonClick() {
+    if (this.props.disabled) return
+
     if (!this.props.hoverMode) {
       this.toggleDropdown()
     } else {
@@ -71,6 +77,8 @@ class Dropdown extends React.Component {
   }
 
   onMouseOver() {
+    if (this.props.disabled) return
+
     if (this.props.hoverMode) {
       clearTimeout(this.timeout)
       this.timeout = setTimeout(() => this.openDropdown(), 200)
@@ -78,6 +86,8 @@ class Dropdown extends React.Component {
   }
 
   onMouseOut() {
+    if (this.props.disabled) return
+
     if (this.props.hoverMode) {
       clearTimeout(this.timeout)
       this.timeout = setTimeout(() => this.closeDropdown(), 100)
@@ -124,12 +134,16 @@ class Dropdown extends React.Component {
   }
 
   handleDocumentClick(event) {
+    if (this.props.disabled) return
+
     if (this.wrapperNode && !this.wrapperNode.contains(event.target)) {
       this.closeDropdown()
     }
   }
 
   handleKeypress(event) {
+    if (this.props.disabled) return
+
     // escape key
     if (event.keyCode === 27) {
       this.closeDropdown()
@@ -143,6 +157,7 @@ class Dropdown extends React.Component {
       noArrow,
       size,
       position,
+      className,
       noWrapperStyle,
       noPropagateClickEvent,
     } = this.props
@@ -154,7 +169,7 @@ class Dropdown extends React.Component {
 
     if (typeof button === 'string') {
       buttonContent = (
-        <Button size={size}>
+        <Button size={size} disabled={this.props.disabled}>
           {button}
           {!noArrow && <Arrow orientation={arrowOrientation} />}
         </Button>
@@ -172,7 +187,7 @@ class Dropdown extends React.Component {
 
     return (
       <div
-        className={styles.wrapper}
+        className={`${styles.wrapper} ${className}`}
         ref={e => {
           this.wrapperNode = e
         }}
