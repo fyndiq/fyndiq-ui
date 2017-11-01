@@ -65,7 +65,7 @@ class Dropdown extends React.Component {
   componentWillUnmount() {
     document.removeEventListener('click', this.handleDocumentClick)
     document.removeEventListener('touchend', this.handleDocumentClick)
-    document.removeEventListener('keypress', this.handleKeypress)
+    document.removeEventListener('keypress', this.handleKeypress, true)
   }
 
   onButtonClick() {
