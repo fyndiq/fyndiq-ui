@@ -1,7 +1,7 @@
 @import "fyndiq-styles-colors/colors.css";
 
 .button {
-  border: 1px solid var(--color-border);
+  border: 1px solid transparent;
   border-radius: 3px;
   background-color: var(--color-palegrey);
   color: var(--color-black);
@@ -23,6 +23,7 @@
 
 .type-normal {
   background-color: var(--color-palegrey);
+  border-color: var(--color-border);
 
   &.interactive:hover,
   &.interactive:focus {
@@ -35,7 +36,6 @@
 .type-green {
   background-color: var(--color-green);
   color: var(--color-white);
-  border-color: color(var(--color-green) shade(20%));
 
   &.interactive:hover,
   &.interactive:focus {
@@ -47,7 +47,6 @@
 .type-blue {
   background-color: var(--color-blue);
   color: var(--color-white);
-  border-color: color(var(--color-blue) shade(20%));
 
   &.interactive:hover,
   &.interactive:focus {
@@ -58,6 +57,7 @@
 .type-third,
 .type-white {
   background-color: var(--color-white);
+  border-color: var(--color-border);
 
   &.interactive:hover,
   &.interactive:focus {
@@ -69,7 +69,6 @@
 .type-red {
   background-color: var(--color-red);
   color: var(--color-white);
-  border-color: color(var(--color-red) shade(20%));
 
   &.interactive:hover,
   &.interactive:focus {
@@ -81,7 +80,6 @@
 .type-black {
   background-color: var(--color-black);
   color: var(--color-white);
-  border-color: color(var(--color-black) shade(20%));
 
   &.interactive:hover,
   &.interactive:focus {
