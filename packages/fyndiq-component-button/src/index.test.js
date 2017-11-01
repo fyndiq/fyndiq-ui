@@ -43,6 +43,11 @@ describe('fyndiq-component-button', () => {
     expect(component).toMatchSnapshot()
   })
 
+  test('should have a className prop', () => {
+    const component = shallow(<Button className="className">Hello</Button>)
+    expect(component.hasClass('className')).toBe(true)
+  })
+
   test('should be renderable as a link', () => {
     const component = shallow(<Button link="#hello">Hello</Button>)
     expect(component).toMatchSnapshot()
