@@ -7,6 +7,8 @@ exports[`fyndiq-component-tooltip should be rendered without props 1`] = `
       tooltip
     </span>
   }
+  className=""
+  disabled={false}
   hoverMode={true}
   margin={5}
   noArrow={false}
@@ -33,6 +35,8 @@ exports[`fyndiq-component-tooltip should have a component for the prop text 1`] 
       tooltip
     </span>
   }
+  className=""
+  disabled={false}
   hoverMode={true}
   margin={5}
   noArrow={false}
@@ -61,6 +65,8 @@ exports[`fyndiq-component-tooltip should have the right position 1`] = `
       tooltip
     </span>
   }
+  className=""
+  disabled={false}
   hoverMode={true}
   margin={5}
   noArrow={false}
