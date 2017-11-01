@@ -55,11 +55,11 @@ describe('fyndiq-component-dropdown', () => {
   })
 
   test('should be closed when clicking outside', () => {
-    const component = mount(<Dropdown button="button">Value</Dropdown>)
-    component
-      .find('div > div')
-      .at(0)
-      .simulate('click')
+    const component = mount(
+      <Dropdown button="button" opened>
+        Value
+      </Dropdown>,
+    )
     global.simulate.click('body')
     component.update()
     expect(component.find('.dropdownWrapper').exists()).toBe(false)
@@ -91,10 +91,12 @@ describe('fyndiq-component-dropdown', () => {
     )
     component.simulate('mouseover')
     jest.runTimersToTime(200)
+    component.update()
     component
       .find('div > div')
       .at(0)
       .simulate('click')
+    component.update()
     expect(component.find('.dropdownWrapper')).toMatchSnapshot()
   })
 
@@ -136,11 +138,11 @@ describe('fyndiq-component-dropdown', () => {
   })
 
   test('should be closable by pressing the Escape key', () => {
-    const component = mount(<Dropdown button="button">Content</Dropdown>)
-    component
-      .find('div > div')
-      .at(0)
-      .simulate('click')
+    const component = mount(
+      <Dropdown button="button" opened>
+        Content
+      </Dropdown>,
+    )
     global.simulate.keyup({ keyCode: 27 })
     component.update()
     expect(component.find('.dropdownWrapper').exists()).toBe(false)
@@ -180,31 +182,73 @@ describe('fyndiq-component-dropdown', () => {
     expect(spy).not.toHaveBeenCalled()
   })
 
-  test('should have a disabled prop', () => {
-    const component = shallow(
-      <Dropdown button="button" disabled>
-        Content
-      </Dropdown>,
-      {
-        disableLifecycleMethods: true,
-      },
-    )
-    component
-      .find('div > div')
-      .at(0)
-      .simulate('click')
-    component.update()
-    expect(component.find('.dropdownWrapper').exists()).toBe(false)
+  describe('disabled prop', () => {
+    it('should open when clicking on the button', () => {
+      const component = shallow(
+        <Dropdown button="button" disabled>
+          Content
+        </Dropdown>,
+        {
+          disableLifecycleMethods: true,
+        },
+      )
+      component
+        .find('div > div')
+        .at(0)
+        .simulate('click')
+      component.update()
+      expect(component.find('.dropdownWrapper').exists()).toBe(false)
+    })
 
-    // Test the hoverMode
-    const component2 = mount(
-      <Dropdown button="button" disabled hoverMode>
-        Content
-      </Dropdown>,
-    )
-    component2.simulate('mouseover')
-    jest.runTimersToTime(200)
-    component2.update()
-    expect(component2.find('.dropdownWrapper').exists()).toBe(false)
+    it('should not be closed when clicking outside', () => {
+      const component = mount(
+        <Dropdown button="button" disabled opened>
+          Value
+        </Dropdown>,
+      )
+      global.simulate.click('body')
+      component.update()
+      expect(component.find('.dropdownWrapper').exists()).toBe(true)
+    })
+
+    it('should not open in overMode', () => {
+      // Test the hoverMode
+      const component = mount(
+        <Dropdown button="button" disabled hoverMode>
+          Content
+        </Dropdown>,
+      )
+      component.simulate('mouseover')
+      jest.runTimersToTime(200)
+      component.update()
+      expect(component.find('.dropdownWrapper').exists()).toBe(false)
+    })
+
+    it('should not be closable in hoverMode', () => {
+      // Test the hoverMode
+      const component = mount(
+        <Dropdown button="button" disabled hoverMode opened>
+          Content
+        </Dropdown>,
+      )
+      component.simulate('mouseout')
+      jest.runTimersToTime(100)
+      component.update()
+      expect(component.find('.dropdownWrapper').exists()).toBe(true)
+    })
+
+    it('should not be closable by pressing the ESC key', () => {
+      const component = shallow(
+        <Dropdown disabled button="button" opened>
+          Content
+        </Dropdown>,
+        {
+          disableLifecycleMethods: true,
+        },
+      )
+      global.simulate.keyup({ keyCode: 27 })
+      component.update()
+      expect(component.find('.dropdownWrapper').exists()).toBe(true)
+    })
   })
 })
