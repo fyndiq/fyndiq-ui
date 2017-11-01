@@ -55,7 +55,7 @@ class Dropdown extends React.Component {
   componentWillMount() {
     document.addEventListener('click', this.handleDocumentClick)
     document.addEventListener('touchend', this.handleDocumentClick)
-    document.addEventListener('keyup', this.handleKeypress)
+    document.addEventListener('keypress', this.handleKeypress, true)
   }
 
   componentDidMount() {
@@ -65,7 +65,7 @@ class Dropdown extends React.Component {
   componentWillUnmount() {
     document.removeEventListener('click', this.handleDocumentClick)
     document.removeEventListener('touchend', this.handleDocumentClick)
-    document.removeEventListener('keyup', this.handleKeypress)
+    document.removeEventListener('keypress', this.handleKeypress)
   }
 
   onButtonClick() {
@@ -146,9 +146,10 @@ class Dropdown extends React.Component {
   handleKeypress(event) {
     if (this.props.disabled) return
 
-    // escape key
-    if (event.keyCode === 27) {
+    // ESC key
+    if (this.state.opened && event.keyCode === 27) {
       this.closeDropdown()
+      event.stopImmediatePropagation()
     }
   }
 

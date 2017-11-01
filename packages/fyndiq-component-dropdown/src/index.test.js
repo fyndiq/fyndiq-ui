@@ -154,7 +154,7 @@ describe('fyndiq-component-dropdown', () => {
         Content
       </Dropdown>,
     )
-    global.simulate.keyup({ keyCode: 27 })
+    global.simulate.keypress({ keyCode: 27, stopImmediatePropagation: () => {} })
     component.update()
     expect(component.find('.dropdownWrapper').exists()).toBe(false)
   })
@@ -257,7 +257,7 @@ describe('fyndiq-component-dropdown', () => {
           disableLifecycleMethods: true,
         },
       )
-      global.simulate.keyup({ keyCode: 27 })
+      global.simulate.keypress({ keyCode: 27 })
       component.update()
       expect(component.find('.dropdownWrapper').exists()).toBe(true)
     })
