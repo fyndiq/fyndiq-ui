@@ -87,6 +87,12 @@
   }
 }
 
+.type-ghost,
+.type-transparent {
+  background-color: transparent;
+  color: inherit;
+}
+
 /* Sizes */
 
 .size-xs {

@@ -14,6 +14,9 @@ storiesOf('Button', module)
       <Button horizontal onClick={action('clicked')} type="white">
         White
       </Button>
+      <Button horizontal onClick={action('clicked')} type="ghost">
+        Ghost
+      </Button>
       <Button horizontal onClick={action('clicked')} type="primary">
         Primary
       </Button>
