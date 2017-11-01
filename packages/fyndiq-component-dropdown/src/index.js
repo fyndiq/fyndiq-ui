@@ -120,21 +120,15 @@ class Dropdown extends React.Component {
   }
 
   openDropdown() {
-    if (this.props.disabled) return
-
     this.updateDropdownPosition()
     this.setState({ opened: true })
   }
 
   closeDropdown() {
-    if (this.props.disabled) return
-
     this.setState({ opened: false })
   }
 
   toggleDropdown() {
-    if (this.props.disabled) return
-
     this.updateDropdownPosition()
     this.setState(state => ({ opened: !state.opened }))
   }
