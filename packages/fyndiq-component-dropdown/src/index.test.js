@@ -43,6 +43,17 @@ describe('fyndiq-component-dropdown', () => {
     expect(component.find('.dropdownWrapper')).toMatchSnapshot()
   })
 
+  test('should have a className prop', () => {
+    const component = shallow(
+      <Dropdown button="b" className="className">
+        Content
+      </Dropdown>,
+      { disableLifecycleMethods: true },
+    )
+
+    expect(component.hasClass('className')).toBe(true)
+  })
+
   test('should be closed when clicking outside', () => {
     const component = mount(<Dropdown button="button">Value</Dropdown>)
     component
