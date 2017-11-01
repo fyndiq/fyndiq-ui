@@ -12,7 +12,7 @@
 
 .dropdownDefault {
   padding: 10px;
-  width: auto;
+  width: 100%;
   min-width: 220px;
   border: 1px solid var(--color-border);
   background-color: #FFF;
