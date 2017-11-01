@@ -45,9 +45,6 @@ storiesOf('Button', module)
       <Button horizontal onClick={action('clicked')} size="l">
         large
       </Button>
-      <Button horizontal onClick={action('clicked')} size="xl">
-        x-large
-      </Button>
     </div>
   ))
   .addWithInfo('pressed button', () => <Button pressed>Pressed button</Button>)
