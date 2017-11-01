@@ -54,6 +54,17 @@ describe('fyndiq-component-dropdown', () => {
     expect(component.hasClass('className')).toBe(true)
   })
 
+  test('should have a wrapperClassName prop', () => {
+    const component = shallow(
+      <Dropdown button="b" wrapperClassName="className" opened>
+        Content
+      </Dropdown>,
+      { disableLifecycleMethods: true },
+    )
+
+    expect(component.find('.dropdownWrapper').hasClass('className')).toBe(true)
+  })
+
   test('should be closed when clicking outside', () => {
     const component = mount(
       <Dropdown button="button" opened>

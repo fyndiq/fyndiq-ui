@@ -14,6 +14,7 @@ class Dropdown extends React.Component {
     size: PropTypes.string,
     position: PropTypes.oneOf(['bl', 'bc', 'br', 'tl', 'tc', 'tr']),
     className: PropTypes.string,
+    wrapperClassName: PropTypes.string,
     margin: PropTypes.number,
     disabled: PropTypes.bool,
     hoverMode: PropTypes.bool,
@@ -29,6 +30,7 @@ class Dropdown extends React.Component {
     noWrapperStyle: false,
     size: undefined,
     className: '',
+    wrapperClassName: '',
     disabled: false,
     position: 'bl',
     margin: 5,
@@ -158,6 +160,7 @@ class Dropdown extends React.Component {
       size,
       position,
       className,
+      wrapperClassName,
       noWrapperStyle,
       noPropagateClickEvent,
     } = this.props
@@ -211,6 +214,7 @@ class Dropdown extends React.Component {
               ${styles.dropdownWrapper}
               ${!noWrapperStyle ? styles.dropdownDefault : ''}
               ${styles[`position-${position}`]}
+              ${wrapperClassName}
             `}
             style={{
               left: this.state.left,

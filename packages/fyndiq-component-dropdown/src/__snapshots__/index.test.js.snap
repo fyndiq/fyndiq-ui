@@ -36,6 +36,7 @@ exports[`fyndiq-component-dropdown should be opened when clicked on the button 1
               dropdownWrapper
               dropdownDefault
               position-bl
+              
             "
   style={
     Object {
@@ -54,6 +55,7 @@ exports[`fyndiq-component-dropdown should be opened when hovered, if in hoverMod
               dropdownWrapper
               dropdownDefault
               position-bl
+              
             "
   style={
     Object {
@@ -91,6 +93,7 @@ exports[`fyndiq-component-dropdown should have a custom wrapper 1`] = `
               dropdownWrapper
               
               position-bl
+              
             "
   style={
     Object {
@@ -116,6 +119,7 @@ exports[`fyndiq-component-dropdown should have different dropdown positions 1`] 
               dropdownWrapper
               dropdownDefault
               position-bc
+              
             "
   style={
     Object {
@@ -134,6 +138,7 @@ exports[`fyndiq-component-dropdown should have different dropdown positions 2`] 
               dropdownWrapper
               dropdownDefault
               position-tr
+              
             "
   style={
     Object {
@@ -152,6 +157,7 @@ exports[`fyndiq-component-dropdown should have different dropdown positions 3`] 
               dropdownWrapper
               dropdownDefault
               position-tc
+              
             "
   style={
     Object {
@@ -170,6 +176,7 @@ exports[`fyndiq-component-dropdown should open the dropdown on button click in h
               dropdownWrapper
               dropdownDefault
               position-bl
+              
             "
   style={
     Object {
