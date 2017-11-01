@@ -13,6 +13,7 @@ class Dropdown extends React.Component {
     children: PropTypes.node.isRequired,
     size: PropTypes.string,
     position: PropTypes.oneOf(['bl', 'bc', 'br', 'tl', 'tc', 'tr']),
+    className: PropTypes.string,
     margin: PropTypes.number,
     hoverMode: PropTypes.bool,
     noPropagateClickEvent: PropTypes.bool,
@@ -26,6 +27,7 @@ class Dropdown extends React.Component {
     noArrow: false,
     noWrapperStyle: false,
     size: undefined,
+    className: '',
     position: 'bl',
     margin: 5,
     noPropagateClickEvent: false,
@@ -143,6 +145,7 @@ class Dropdown extends React.Component {
       noArrow,
       size,
       position,
+      className,
       noWrapperStyle,
       noPropagateClickEvent,
     } = this.props
@@ -172,7 +175,7 @@ class Dropdown extends React.Component {
 
     return (
       <div
-        className={styles.wrapper}
+        className={`${styles.wrapper} ${className}`}
         ref={e => {
           this.wrapperNode = e
         }}
