@@ -154,7 +154,10 @@ describe('fyndiq-component-dropdown', () => {
         Content
       </Dropdown>,
     )
-    global.simulate.keypress({ keyCode: 27, stopImmediatePropagation: () => {} })
+    global.simulate.keypress({
+      keyCode: 27,
+      stopImmediatePropagation: () => {},
+    })
     component.update()
     expect(component.find('.dropdownWrapper').exists()).toBe(false)
   })
