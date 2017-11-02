@@ -22,6 +22,7 @@ exports[`fyndiq-component-tooltip should be rendered without props 1`] = `
     className="
         tooltip
         position-bc
+        
       "
   >
     help
@@ -51,6 +52,7 @@ exports[`fyndiq-component-tooltip should have a component for the prop text 1`] 
     className="
         tooltip
         position-bc
+        
       "
   >
     <div>
@@ -82,6 +84,7 @@ exports[`fyndiq-component-tooltip should have the right position 1`] = `
     className="
         tooltip
         position-tr
+        
       "
   >
     help
