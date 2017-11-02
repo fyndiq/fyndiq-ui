@@ -17,7 +17,7 @@ storiesOf('Modal', module)
       </Modal>
     </ModalButton>
   ))
-  .addWithInfo('custom ModalButton', () => (
+  .addWithInfo('custom button', () => (
     <ModalButton button={<Button type="primary">Open Modal</Button>}>
       Content
     </ModalButton>
@@ -26,6 +26,19 @@ storiesOf('Modal', module)
     <ModalButton>
       <Modal>
         {({ onClose }) => <button onClick={onClose}>Close modal</button>}
+      </Modal>
+    </ModalButton>
+  ))
+  .addWithInfo('forced modal', () => (
+    <ModalButton button="Open forced modal">
+      <Modal forced>
+        {({ onClose }) => (
+          <div style={{ padding: 20 }}>
+            You cannot close me by clicking outside or pressing ESC. The only
+            way to close me is to use a custom close button.<br />
+            <button onClick={onClose}>Close modal</button>
+          </div>
+        )}
       </Modal>
     </ModalButton>
   ))
