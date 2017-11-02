@@ -75,4 +75,4 @@ The component `ModalButton` has the following customizable props
 | Name | Type | Description | Default value | 
 |---|---|---|---|
 | **button** | [Button](../fyndiq-component-button/) or String | Content of the button that will open the modal. If a string is passed, it will be converted to a Button Component | `Open Modal` |
-| **children** | React Element | Content of the modal. If the element is not a `Modal` Component, it will be wrapped into one. Pass a `Modal` component as children to allow customisation of classNames. | `null` |
+| **children** | React Element | Content of the modal. If the element is not a `Modal` Component, it will be wrapped into one. Pass a `Modal` component as children to allow customisation of the Modal. | `null` |
