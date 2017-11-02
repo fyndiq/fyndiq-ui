@@ -92,7 +92,7 @@ Button.defaultProps = {
   horizontal: false,
   disabled: false,
   pressed: false,
-  htmlType: undefined,
+  htmlType: 'button',
   link: undefined,
 }
 

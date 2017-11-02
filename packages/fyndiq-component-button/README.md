@@ -64,7 +64,7 @@ The component `Button` has the following customizable props:
 | Name | Type | Description | Default value |
 |---|---|---|---|
 | **type** | String | One of `primary`, `cancel`, `blue`, `inverted`. Changes the color style of the button | `normal` |
-| **htmlType** | String | Set the original html type for `button`. See: [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type) | `undefined` |
+| **htmlType** | String | Set the original html type for `button`. See: [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type) | `button` |
 | **className** | String | Classname of the wrapping button | `''` |
 | **size** | String | One of `xs`, `s`, `l`, `xl`. Changes the size of the button | `m` |
 | **disabled** | Boolean | If true, will disable the button. | `false` |

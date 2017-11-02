@@ -16,6 +16,7 @@ exports[`fyndiq-component-dropdown should be displayed with minimum props 1`] = 
       className=""
       disabled={false}
       horizontal={false}
+      htmlType="button"
       onClick={[Function]}
       pressed={false}
       size="s"
