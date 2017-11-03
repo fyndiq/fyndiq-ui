@@ -5,12 +5,25 @@ import Tooltip from 'fyndiq-component-tooltip'
 storiesOf('Tooltip', module)
   .addWithInfo('default', () => <Tooltip text="info text">Hello world</Tooltip>)
   .addWithInfo('long text info', () => (
-    <Tooltip
-      text="Long text info, dont mind me, just checking out"
-      position="bl"
-    >
-      Hover me
-    </Tooltip>
+    <div>
+      <div>
+        <Tooltip
+          text="Long text info, dont mind me, just checking out"
+          position="bl"
+        >
+          Hover me
+        </Tooltip>
+      </div>
+      <div>
+        <Tooltip
+          text="I'm also a long text info tooltip but I have a bigger maxWidth prop"
+          position="bl"
+          maxWidth={300}
+        >
+          Hover me
+        </Tooltip>
+      </div>
+    </div>
   ))
   .addWithInfo('change tooltip position', () => (
     <div>
