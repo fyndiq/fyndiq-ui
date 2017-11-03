@@ -56,6 +56,13 @@ import Button from 'fyndiq-component-button'
 >
   Content
 </Dropdown>
+
+// Programatically close the dropdown from inside
+<Dropdown button="button">
+  {({ onClose }) => (
+    <button onClick={onClose}>Click on me to close me</button>
+  )}
+</Dropdown>
 ```
 
 See also : [`fyndiq-component-button`](/fyndiq/labday-fyndiq-ui/tree/master/packages/fyndiq-component-button)
@@ -67,7 +74,7 @@ The component `Dropdown` has the following customizable props:
 | Name | Type | Description | Default value |
 |---|---|---|---|
 | **button** | String or Component | The inside of the dropdown's button. If a String is passed, a `<Button>` will be shown. | (required) |
-| **children** | Component | Content of the dropdown | (required) |
+| **children** | Component or Function | Content of the dropdown. If a function is passed, it will be passed a `onClose` handler. | (required) |
 | **size** | String | Size of the button if **button** is used in String mode. For values, see [`Button`'s API](../fyndiq-component-button#API) | Button's default |
 | **position** | String | Position of the dropdown, relatively to the button. One of `bl`, `bc`, `br`, `tl`, `tc`, `tr` | `bl` |
 | **margin** | Number | Distance from the dropdown to the button | `5` |

@@ -4,7 +4,7 @@ import Dropdown from 'fyndiq-component-dropdown'
 
 import styles from '../styles.css'
 
-const Tooltip = ({ text, children, position }) => (
+const Tooltip = ({ text, children, position, className }) => (
   <Dropdown
     button={<span>{children}</span>}
     hoverMode
@@ -15,6 +15,7 @@ const Tooltip = ({ text, children, position }) => (
       className={`
         ${styles.tooltip}
         ${styles[`position-${position}`]}
+        ${className}
       `}
     >
       {text}
@@ -24,13 +25,15 @@ const Tooltip = ({ text, children, position }) => (
 
 Tooltip.propTypes = {
   text: PropTypes.node,
+  className: PropTypes.string,
   children: PropTypes.node,
   position: Dropdown.propTypes.position, // eslint-disable-line react/no-typos
 }
 
 Tooltip.defaultProps = {
-  text: '',
-  children: '',
+  text: null,
+  children: null,
+  className: '',
   position: 'bc',
 }
 

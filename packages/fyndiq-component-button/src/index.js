@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import styles from '../styles.css'
 
 const Button = ({
+  className,
   children,
   onClick,
   type,
@@ -14,20 +15,21 @@ const Button = ({
   htmlType,
   link,
 }) => {
-  const className = `
+  const finalClassName = `
     ${styles.button}
     ${styles[`type-${type}`]}
     ${styles[`size-${size}`]}
     ${horizontal && styles.horizontal}
     ${pressed && styles.pressed}
     ${disabled ? styles.disabled : styles.interactive}
+    ${className}
   `
 
   // If the button is a link defined as a string,
   // render the button as an <a> tag
   if (typeof link === 'string') {
     return (
-      <a className={className} onClick={onClick} href={link}>
+      <a className={finalClassName} onClick={onClick} href={link}>
         {children}
       </a>
     )
@@ -37,7 +39,7 @@ const Button = ({
     return React.cloneElement(link, {
       // Just pass the children and the className to the
       // custom link element
-      className,
+      className: finalClassName,
       children,
     })
   }
@@ -45,7 +47,7 @@ const Button = ({
   // Default case: render a button.
   return (
     <button
-      className={className}
+      className={finalClassName}
       onClick={onClick}
       disabled={disabled}
       type={htmlType}
@@ -57,6 +59,7 @@ const Button = ({
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   onClick: PropTypes.func,
   type: PropTypes.oneOf([
     'normal',
@@ -82,13 +85,14 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
+  className: '',
   onClick: noop => noop,
   type: 'normal',
   size: 's',
   horizontal: false,
   disabled: false,
   pressed: false,
-  htmlType: undefined,
+  htmlType: 'button',
   link: undefined,
 }
 

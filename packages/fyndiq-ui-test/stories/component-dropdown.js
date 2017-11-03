@@ -96,3 +96,17 @@ storiesOf('Dropdown', module)
       </Dropdown>
     </div>
   ))
+  .addWithInfo('programatically close dropdown', () => (
+    <Dropdown button="Open dropdown">
+      {({ onClose }) => (
+        <div>
+          <p>
+            By default, a dropdown doesn&apos;t get closed if you click inside.
+            By passing a function as the <code>children</code> prop, the child
+            component can programatically close the dropdown.
+          </p>
+          <button onClick={onClose}>Close dropdown</button>
+        </div>
+      )}
+    </Dropdown>
+  ))

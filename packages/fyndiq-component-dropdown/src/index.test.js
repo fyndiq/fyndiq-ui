@@ -154,7 +154,10 @@ describe('fyndiq-component-dropdown', () => {
         Content
       </Dropdown>,
     )
-    global.simulate.keyup({ keyCode: 27 })
+    global.simulate.keypress({
+      keyCode: 27,
+      stopImmediatePropagation: () => {},
+    })
     component.update()
     expect(component.find('.dropdownWrapper').exists()).toBe(false)
   })
@@ -191,6 +194,22 @@ describe('fyndiq-component-dropdown', () => {
     component.find('Button').simulate('click')
     component.find('.dropdownWrapper').simulate('click')
     expect(spy).not.toHaveBeenCalled()
+  })
+
+  it('should handle function children', () => {
+    const Component = shallow(
+      <Dropdown button="button" opened>
+        {({ onClose }) => (
+          <button className="custom-close" onClick={onClose}>
+            Button
+          </button>
+        )}
+      </Dropdown>,
+      { disableLifecycleMethods: true },
+    )
+
+    Component.find('.custom-close').simulate('click')
+    expect(Component.find('.dropdownWrapper').exists()).toBe(false)
   })
 
   describe('disabled prop', () => {
@@ -257,7 +276,7 @@ describe('fyndiq-component-dropdown', () => {
           disableLifecycleMethods: true,
         },
       )
-      global.simulate.keyup({ keyCode: 27 })
+      global.simulate.keypress({ keyCode: 27 })
       component.update()
       expect(component.find('.dropdownWrapper').exists()).toBe(true)
     })

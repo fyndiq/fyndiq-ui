@@ -4,15 +4,37 @@
   overflow-y: hidden;
 }
 
+@keyframes overlayAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: color(black a(50%));
+  background-color: rgba(0, 0, 0, .5);
   padding: 0 10px;
   overflow: scroll;
+  opacity: 0;
+  animation: overlayAppear .2s forwards;
+}
+
+@keyframes wrapperAppear {
+  from {
+    transform: scale(.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 .wrapper {
@@ -23,6 +45,8 @@
   margin: 10px auto 50px;
   border-radius: 2px;
   background: var(--color-white);
+  transform: scale(.9);
+  animation: wrapperAppear .15s cubic-bezier(.23, 1, .32, 1.2) forwards;
 }
 
 .close {

@@ -12,6 +12,7 @@ class Modal extends React.Component {
     overlayClassName: PropTypes.string,
     wrapperClassName: PropTypes.string,
     closeClassName: PropTypes.string,
+    forced: PropTypes.bool,
     onClose: PropTypes.func,
   }
   static defaultProps = {
@@ -21,12 +22,14 @@ class Modal extends React.Component {
     overlayClassName: '',
     wrapperClassName: '',
     closeClassName: '',
+    forced: false,
     onClose: () => {},
   }
 
   constructor(props) {
     super(props)
     this.handleKeyPress = this.handleKeyPress.bind(this)
+    this.softClose = this.softClose.bind(this)
   }
 
   componentWillMount() {
@@ -48,10 +51,19 @@ class Modal extends React.Component {
   }
 
   handleKeyPress(e) {
+    // Don't close the modal if it is forced
+    if (this.props.forced) return
+
     // ESC key
     if (e.keyCode === 27) {
       this.props.onClose()
     }
+  }
+
+  softClose() {
+    if (this.props.forced) return
+
+    this.props.onClose()
   }
 
   render() {
@@ -72,18 +84,20 @@ class Modal extends React.Component {
       <ModalPortal portalId={portalId} bodyLock={open}>
         <div
           className={`${styles.overlay} ${overlayClassName}`}
-          onClick={this.props.onClose}
+          onClick={this.softClose}
         >
           <div
             className={`${styles.wrapper} ${wrapperClassName}`}
             onClick={e => e.stopPropagation()}
           >
-            <button
-              className={`${styles.close} ${closeClassName}`}
-              onClick={this.props.onClose}
-            >
-              &times;
-            </button>
+            {!this.props.forced && (
+              <button
+                className={`${styles.close} ${closeClassName}`}
+                onClick={this.softClose}
+              >
+                &times;
+              </button>
+            )}
             {this.getChildren()}
           </div>
         </div>
