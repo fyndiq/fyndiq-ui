@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-button",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
