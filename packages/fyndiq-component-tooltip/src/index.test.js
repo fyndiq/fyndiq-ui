@@ -23,4 +23,12 @@ describe('fyndiq-component-tooltip', () => {
       shallow(<Tooltip text={<div>hello</div>}>tooltip</Tooltip>),
     ).toMatchSnapshot()
   })
+
+  test('should have a className prop', () => {
+    expect(
+      shallow(<Tooltip className="test-classname" />)
+        .find('.tooltip')
+        .hasClass('test-classname'),
+    ).toBe(true)
+  })
 })

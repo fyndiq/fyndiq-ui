@@ -75,4 +75,25 @@ describe('Modal Component', () => {
     Component.find('.custom-close').simulate('click')
     expect(spy).toHaveBeenCalled()
   })
+
+  describe('forced prop', () => {
+    it('should not show the closing cross', () => {
+      const Component = shallow(<Modal open forced />)
+      expect(Component.find('.close').exists()).toBe(false)
+    })
+
+    it('should not close on click on overlay', () => {
+      const spy = jest.fn()
+      const Component = shallow(<Modal open onClose={spy} forced />)
+      Component.find('.overlay').simulate('click')
+      expect(spy).not.toHaveBeenCalled()
+    })
+
+    it('should not close on ESC press', () => {
+      const spy = jest.fn()
+      shallow(<Modal onClose={spy} open forced />)
+      global.simulate.keypress({ keyCode: 27 })
+      expect(spy).not.toHaveBeenCalled()
+    })
+  })
 })

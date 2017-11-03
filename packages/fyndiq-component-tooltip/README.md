@@ -19,7 +19,7 @@ import React from 'react'
 import Tooltip from 'fyndiq-component-tooltip'
 
 // Normal usage
-<Tooltip text="Help text">Hover me</Tooltip
+<Tooltip text="Help text">Hover me</Tooltip>
 
 // Different position
 <Tooltip text="Top help text" position="tl">
@@ -33,6 +33,8 @@ The component `Stars` has the following customizable props:
 
 | Name | Type | Description | Default value |
 |---|---|---|---|
-| **text** | String | The tooltip text | (required) |
+| **text** | Node | The tooltip text | `null` |
+| **children** | Node | Content over which the tooltip should show up | `null` |
+| **className** | String | Classname of the tooltip wrapper | `''` |
 | **position** | String | The position of the tooltip (see [Dropdown's API](../fyndiq-component-dropdown#api) for possible values) | `bc` |
 

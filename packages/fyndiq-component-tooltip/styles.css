@@ -5,7 +5,8 @@
   color: var(--color-white);
   padding: 3px 5px;
   border-radius: 3px;
-  max-width: 200px;
+  width: 160px;
+  text-align: justify;
 
   &:before {
     position: absolute;

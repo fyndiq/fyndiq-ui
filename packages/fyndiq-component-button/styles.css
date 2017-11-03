@@ -122,7 +122,7 @@
 }
 
 .disabled {
-  opacity: .6;
+  background-color: var(--color-border);
 }
 
 .interactive {
