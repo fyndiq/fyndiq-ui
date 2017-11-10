@@ -37,4 +37,5 @@ The component `Stars` has the following customizable props:
 | **children** | Node | Content over which the tooltip should show up | `null` |
 | **className** | String | Classname of the tooltip wrapper | `''` |
 | **position** | String | The position of the tooltip (see [Dropdown's API](../fyndiq-component-dropdown#api) for possible values) | `bc` |
+| **maxWidth** | Number | Max width of the tooltip | `190` | 
 

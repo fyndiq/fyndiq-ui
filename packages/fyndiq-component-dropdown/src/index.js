@@ -21,6 +21,8 @@ class Dropdown extends React.Component {
     noPropagateClickEvent: PropTypes.bool,
     noArrow: PropTypes.bool,
     noWrapperStyle: PropTypes.bool,
+    onOpen: PropTypes.func,
+    onClose: PropTypes.func,
   }
 
   static defaultProps = {
@@ -35,6 +37,8 @@ class Dropdown extends React.Component {
     position: 'bl',
     margin: 5,
     noPropagateClickEvent: false,
+    onOpen: () => {},
+    onClose: () => {},
   }
 
   constructor(props) {
@@ -61,6 +65,17 @@ class Dropdown extends React.Component {
 
   componentDidMount() {
     this.updateDropdownPosition()
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    // Call handlers onOpen and onClose if open has changed
+    if (prevState.opened !== this.state.opened) {
+      if (this.state.opened) {
+        this.props.onOpen()
+      } else {
+        this.props.onClose()
+      }
+    }
   }
 
   componentWillUnmount() {

@@ -3,7 +3,6 @@
 .tooltip {
   background-color: color(var(--color-black) a(90%));
   color: var(--color-white);
-  padding: 3px 5px;
   border-radius: 3px;
   width: 160px;
   text-align: justify;
@@ -83,4 +82,9 @@
   &:before {
     right: 10px;
   }
+}
+
+.helperWrapper {
+  display: inline-block;
+  padding: 3px 5px;
 }

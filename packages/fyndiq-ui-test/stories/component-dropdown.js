@@ -1,11 +1,17 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
+import { storiesOf, action } from '@storybook/react'
 import Dropdown from 'fyndiq-component-dropdown'
 import Button from 'fyndiq-component-button'
 
 storiesOf('Dropdown', module)
   .addWithInfo('default', () => (
-    <Dropdown button="Click me">Dropdown content</Dropdown>
+    <Dropdown
+      button="Click me"
+      onOpen={action('open')}
+      onClose={action('close')}
+    >
+      Dropdown content
+    </Dropdown>
   ))
   .addWithInfo('no down arrow', () => (
     <Dropdown button="Click me" noArrow>
@@ -29,9 +35,6 @@ storiesOf('Dropdown', module)
         Dropdown content
       </Dropdown>
       <Dropdown button="large" size="l">
-        Dropdown content
-      </Dropdown>
-      <Dropdown button="x-large" size="xl">
         Dropdown content
       </Dropdown>
     </div>

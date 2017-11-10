@@ -14,18 +14,29 @@ exports[`fyndiq-component-tooltip should be rendered without props 1`] = `
   noArrow={false}
   noPropagateClickEvent={false}
   noWrapperStyle={true}
+  onClose={[Function]}
+  onOpen={[Function]}
   opened={false}
   position="bc"
   wrapperClassName=""
 >
   <div
     className="
-        tooltip
-        position-bc
-        
-      "
+            tooltip
+            position-bc
+            
+          "
+    style={
+      Object {
+        "width": 190,
+      }
+    }
   >
-    help
+    <div
+      className="helperWrapper"
+    >
+      help
+    </div>
   </div>
 </Dropdown>
 `;
@@ -44,19 +55,30 @@ exports[`fyndiq-component-tooltip should have a component for the prop text 1`] 
   noArrow={false}
   noPropagateClickEvent={false}
   noWrapperStyle={true}
+  onClose={[Function]}
+  onOpen={[Function]}
   opened={false}
   position="bc"
   wrapperClassName=""
 >
   <div
     className="
-        tooltip
-        position-bc
-        
-      "
+            tooltip
+            position-bc
+            
+          "
+    style={
+      Object {
+        "width": 190,
+      }
+    }
   >
-    <div>
-      hello
+    <div
+      className="helperWrapper"
+    >
+      <div>
+        hello
+      </div>
     </div>
   </div>
 </Dropdown>
@@ -76,18 +98,29 @@ exports[`fyndiq-component-tooltip should have the right position 1`] = `
   noArrow={false}
   noPropagateClickEvent={false}
   noWrapperStyle={true}
+  onClose={[Function]}
+  onOpen={[Function]}
   opened={false}
   position="tr"
   wrapperClassName=""
 >
   <div
     className="
-        tooltip
-        position-tr
-        
-      "
+            tooltip
+            position-tr
+            
+          "
+    style={
+      Object {
+        "width": 190,
+      }
+    }
   >
-    help
+    <div
+      className="helperWrapper"
+    >
+      help
+    </div>
   </div>
 </Dropdown>
 `;
