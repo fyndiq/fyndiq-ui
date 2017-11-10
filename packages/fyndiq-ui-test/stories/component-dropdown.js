@@ -37,9 +37,6 @@ storiesOf('Dropdown', module)
       <Dropdown button="large" size="l">
         Dropdown content
       </Dropdown>
-      <Dropdown button="x-large" size="xl">
-        Dropdown content
-      </Dropdown>
     </div>
   ))
   .addWithInfo('custom button', () => (
