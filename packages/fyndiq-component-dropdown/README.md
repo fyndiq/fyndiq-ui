@@ -63,6 +63,15 @@ import Button from 'fyndiq-component-button'
     <button onClick={onClose}>Click on me to close me</button>
   )}
 </Dropdown>
+
+// Add handlers on dropdown open and close actions
+<Dropdown
+  button="button"
+  onOpen={this.handleDropdownOpen}
+  onClose={this.handleDropdownClose}
+>
+  Content
+</Dropdown>
 ```
 
 See also : [`fyndiq-component-button`](/fyndiq/labday-fyndiq-ui/tree/master/packages/fyndiq-component-button)
@@ -86,3 +95,5 @@ The component `Dropdown` has the following customizable props:
 | **opened** | Boolean | Allows to externally control the dropdown | `false` |
 | **hoverMode** | Boolean | Opens the dropdown on hover rather than on click | `false` |
 | **noPropagateClickEvent** | Boolean | Stop the propagation of the click event | `false` |
+| **onOpen** | Function | Handler method when the dropdown is opened | |
+| **onClose** | Function | Handler method when the dropdown is closed | |

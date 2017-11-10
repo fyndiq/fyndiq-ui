@@ -212,6 +212,30 @@ describe('fyndiq-component-dropdown', () => {
     expect(Component.find('.dropdownWrapper').exists()).toBe(false)
   })
 
+  it('should call onOpen when the dropdown is opened', () => {
+    const spy = jest.fn()
+    const component = mount(
+      <Dropdown button="button" onOpen={spy}>
+        Content
+      </Dropdown>,
+    )
+
+    component.setState({ opened: true })
+    expect(spy).toHaveBeenCalled()
+  })
+
+  it('should call onClose when the dropdown is closed', () => {
+    const spy = jest.fn()
+    const component = mount(
+      <Dropdown button="button" onClose={spy} opened>
+        Content
+      </Dropdown>,
+    )
+
+    component.setState({ opened: false })
+    expect(spy).toHaveBeenCalled()
+  })
+
   describe('disabled prop', () => {
     it('should open when clicking on the button', () => {
       const component = shallow(
