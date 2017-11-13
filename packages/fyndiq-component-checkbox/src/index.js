@@ -55,7 +55,6 @@ class Checkbox extends React.Component {
           checked={this.state.checked}
           onChange={this.toggle}
           disabled={disabled}
-          indeterminate={indeterminate}
           ref={e => {
             this.inputWrapper = e
           }}
