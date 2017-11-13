@@ -51,7 +51,7 @@ class Checkbox extends React.Component {
           <Checkmark className={styles.checkmark} color={this.props.color} />
         )}
 
-        {children}
+        {children && <span className={styles.label}>{children}</span>}
       </label>
     )
   }
@@ -68,7 +68,7 @@ Checkbox.propTypes = {
 }
 
 Checkbox.defaultProps = {
-  children: '',
+  children: null,
   onToggle: noop => noop,
   checked: false,
   disabled: false,

@@ -31,7 +31,14 @@ storiesOf('Checkbox', module)
     </span>
   ))
   .addWithInfo('frame mode', () => (
-    <Checkbox onToggle={action('toggle')} frame>
-      Label
-    </Checkbox>
+    <div>
+      <div>
+        <Checkbox onToggle={action('toggle')} frame>
+          Label
+        </Checkbox>
+      </div>
+      <div>
+        <Checkbox frame />
+      </div>
+    </div>
   ))
