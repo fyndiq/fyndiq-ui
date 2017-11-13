@@ -19,6 +19,7 @@ function loadStories() {
   require('../stories/component-alert')
   require('../stories/component-brand')
   require('../stories/component-loader')
+  require('../stories/component-table')
   require('../stories/illustrations')
 }
 
