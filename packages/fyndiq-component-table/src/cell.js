@@ -20,7 +20,7 @@ Cell.propTypes = {
   className: PropTypes.string,
   flex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   center: PropTypes.bool,
-  children: PropTypes.element,
+  children: PropTypes.node,
 }
 
 Cell.defaultProps = {

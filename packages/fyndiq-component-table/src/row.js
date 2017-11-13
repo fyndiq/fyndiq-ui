@@ -33,7 +33,7 @@ Row.propTypes = {
   className: PropTypes.string,
   noBorder: PropTypes.bool,
   size: PropTypes.oneOf(['s', 'm', 'l']),
-  children: PropTypes.element,
+  children: PropTypes.node,
   verticalCenter: PropTypes.bool,
 }
 

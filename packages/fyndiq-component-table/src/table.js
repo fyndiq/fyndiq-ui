@@ -16,7 +16,7 @@ const Table = ({ children, className }) => (
 
 Table.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.element,
+  children: PropTypes.node,
 }
 
 Table.defaultProps = {
