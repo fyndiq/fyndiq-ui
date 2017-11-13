@@ -42,3 +42,4 @@ The component `Checkbox` has the following customizable props:
 | **color** | String | The color of the checkmark | light grey |
 | **checked** | Boolean | Activates the checkbox. | `false` |
 | **disabled** | Boolean | Disables the checkbox. | `false` |
+| **indeterminate** | Boolean | Activates the indeterminate mode. Usefull when the checkbox has children checkboxes. See [CSS-tricks](https://css-tricks.com/indeterminate-checkboxes/) | `false` |
