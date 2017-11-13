@@ -53,6 +53,10 @@
     border-color: var(--color-lightgrey);
   }
 
+  &:indeterminate {
+    background: linear-gradient(-45deg, var(--color-red), transparent, var(--color-red), transparent, var(--color-red), transparent, var(--color-red), transparent, var(--color-red), transparent, var(--color-red), transparent, var(--color-red), transparent, var(--color-red), transparent);
+  }
+
   &:checked {
     border-color: var(--color-red);
     background: var(--color-red);

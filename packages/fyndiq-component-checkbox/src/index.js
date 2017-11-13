@@ -12,11 +12,21 @@ class Checkbox extends React.Component {
     this.toggle = this.toggle.bind(this)
   }
 
+  componentDidMount() {
+    if (this.props.indeterminate) {
+      this.inputWrapper.indeterminate = true
+    }
+  }
+
   componentWillReceiveProps(nextProps) {
     if (this.props.checked !== nextProps.checked) {
       this.setState({
         checked: nextProps.checked,
       })
+    }
+
+    if (this.props.indeterminate !== nextProps.indeterminate) {
+      this.inputWrapper.indeterminate = nextProps.indeterminate
     }
   }
 
@@ -26,7 +36,7 @@ class Checkbox extends React.Component {
   }
 
   render() {
-    const { children, disabled, className, frame } = this.props
+    const { children, disabled, className, frame, indeterminate } = this.props
 
     return (
       <label
@@ -45,6 +55,10 @@ class Checkbox extends React.Component {
           checked={this.state.checked}
           onChange={this.toggle}
           disabled={disabled}
+          indeterminate={indeterminate}
+          ref={e => {
+            this.inputWrapper = e
+          }}
         />
 
         {!frame && (
@@ -65,6 +79,7 @@ Checkbox.propTypes = {
   color: PropTypes.string,
   className: PropTypes.string,
   frame: PropTypes.bool,
+  indeterminate: PropTypes.bool,
 }
 
 Checkbox.defaultProps = {
@@ -75,6 +90,7 @@ Checkbox.defaultProps = {
   color: colors.lightgrey,
   className: '',
   frame: false,
+  indeterminate: false,
 }
 
 export default Checkbox

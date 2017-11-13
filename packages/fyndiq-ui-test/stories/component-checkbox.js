@@ -42,3 +42,8 @@ storiesOf('Checkbox', module)
       </div>
     </div>
   ))
+  .addWithInfo('indeterminate', () => (
+    <Checkbox indeterminate frame>
+      Indeterminated checkbox
+    </Checkbox>
+  ))
