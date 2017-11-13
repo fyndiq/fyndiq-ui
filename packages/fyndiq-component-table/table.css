@@ -1,0 +1,59 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.table {
+  display: block;
+}
+
+.row {
+  display: flex;
+  padding-left: 22px;
+  padding-right: 22px;
+
+  &:not(.rowNoBorder) {
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+.rowSize-l {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.rowSize-m {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.rowSize-s {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.rowHead {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  color: var(--color-border);
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.rowInteractive {
+  cursor: pointer;
+
+  &:hover {
+    background: var(--color-palegrey);
+  }
+}
+
+.rowVerticalCenter {
+  align-items: center;
+}
+
+.cell {
+  flex: 1;
+  margin: 0 8px;
+}
+
+.cellCenter {
+  text-align: center;
+}
