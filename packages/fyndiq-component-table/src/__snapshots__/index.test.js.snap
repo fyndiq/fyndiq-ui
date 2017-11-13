@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-table Cell component should have the right structure 1`] = `
+<div
+  className="
+      cell
+      false
+      className
+    "
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  Content
+</div>
+`;
+
+exports[`fyndiq-component-table Row component should have the right structure 1`] = `
+<div
+  className="
+      row
+      false
+      false
+      false
+      rowVerticalCenter
+      rowSize-m
+      className
+    "
+>
+  Content
+</div>
+`;
+
+exports[`fyndiq-component-table Table component should have the right structure 1`] = `
+<div
+  className="
+      table
+      className
+    "
+>
+  Content
+</div>
+`;
