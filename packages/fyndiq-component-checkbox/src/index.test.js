@@ -69,4 +69,23 @@ describe('fyndiq-component-checkbox', () => {
     // Shouldn't render the Checkmark icon
     expect(component.find('Checkmark').exists()).toBe(false)
   })
+
+  test('should have an indeterminate prop', () => {
+    const component = mount(<Checkbox indeterminate />)
+    expect(
+      component.getDOMNode().querySelector('.checkbox').indeterminate,
+    ).toBe(true)
+
+    // Dynamically remove it
+    component.setProps({ indeterminate: false })
+    expect(
+      component.getDOMNode().querySelector('.checkbox').indeterminate,
+    ).toBe(false)
+
+    // Dynamically add it
+    component.setProps({ indeterminate: true })
+    expect(
+      component.getDOMNode().querySelector('.checkbox').indeterminate,
+    ).toBe(true)
+  })
 })
