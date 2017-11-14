@@ -40,6 +40,9 @@ storiesOf('Checkbox', module)
       <div>
         <Checkbox frame />
       </div>
+      <div>
+        <Checkbox frame /> Not a label
+      </div>
     </div>
   ))
   .addWithInfo('indeterminate', () => (
