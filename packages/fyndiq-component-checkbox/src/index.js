@@ -36,7 +36,7 @@ class Checkbox extends React.Component {
   }
 
   render() {
-    const { children, disabled, className, frame, indeterminate } = this.props
+    const { children, disabled, className, frame } = this.props
 
     return (
       <label
