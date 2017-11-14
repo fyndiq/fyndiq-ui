@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf, action } from '@storybook/react'
-import Button from 'fyndiq-component-button'
+import Button, { Wrapper } from 'fyndiq-component-button'
 
 storiesOf('Button', module)
   .addWithInfo('default', () => (
@@ -74,3 +74,19 @@ storiesOf('Button', module)
     <Button disabled>Disabled Button</Button>
   ))
   .addWithInfo('<a> tag', () => <Button link="#hello">I am a link</Button>)
+  .addWithInfo('Wrapper - horizontal', () => (
+    <Wrapper>
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </Wrapper>
+  ))
+  .addWithInfo('Wrapper - vertical', () => (
+    <div style={{ width: 200 }}>
+      <Wrapper orientation="vertical">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </Wrapper>
+    </div>
+  ))

@@ -133,3 +133,51 @@
 .pill {
   border-radius: 100px;
 }
+
+/* Wrapper-specific styles */
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper--orientation_horizontal {
+  flex-direction: row;
+
+  /* Remove borders and fix border-radiuses */
+  & :first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+  }
+
+  & :not(:first-child, :last-child) {
+    border-radius: 0;
+    border-right: none;
+  }
+
+  & :last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.wrapper--orientation_vertical {
+  flex-direction: column;
+
+  /* Remove borders and fix border-radiuses */
+  & :first-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+  }
+
+  & :not(:first-child, :last-child) {
+    border-radius: 0;
+    border-bottom: none;
+  }
+
+  & :last-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
