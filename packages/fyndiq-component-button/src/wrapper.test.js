@@ -21,4 +21,10 @@ describe('fyndiq-component-button Wrapper', () => {
       shallow(<Wrapper className="className" />).hasClass('className'),
     ).toBe(true)
   })
+
+  it('should have a noOuterBorder prop', () => {
+    expect(
+      shallow(<Wrapper noOuterBorder />).hasClass('wrapperNoOuterBorder'),
+    ).toBe(true)
+  })
 })

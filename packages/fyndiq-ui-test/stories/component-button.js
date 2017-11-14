@@ -90,3 +90,22 @@ storiesOf('Button', module)
       </Wrapper>
     </div>
   ))
+  .addWithInfo('Wrapper - no outer border', () => (
+    <div>
+      <Wrapper noOuterBorder>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </Wrapper>
+
+      <hr />
+
+      <div style={{ width: 200 }}>
+        <Wrapper noOuterBorder orientation="vertical">
+          <Button>Button 1</Button>
+          <Button>Button 2</Button>
+          <Button>Button 3</Button>
+        </Wrapper>
+      </div>
+    </div>
+  ))
