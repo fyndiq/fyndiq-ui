@@ -34,6 +34,7 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
   color="#7E7E7E"
   disabled={false}
   frame={false}
+  indeterminate={false}
   onToggle={[Function]}
 >
   <label

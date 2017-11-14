@@ -31,7 +31,22 @@ storiesOf('Checkbox', module)
     </span>
   ))
   .addWithInfo('frame mode', () => (
-    <Checkbox onToggle={action('toggle')} frame>
-      Label
+    <div>
+      <div>
+        <Checkbox onToggle={action('toggle')} frame>
+          Label
+        </Checkbox>
+      </div>
+      <div>
+        <Checkbox frame />
+      </div>
+      <div>
+        <Checkbox frame /> Not a label
+      </div>
+    </div>
+  ))
+  .addWithInfo('indeterminate', () => (
+    <Checkbox indeterminate frame>
+      Indeterminated checkbox
     </Checkbox>
   ))
