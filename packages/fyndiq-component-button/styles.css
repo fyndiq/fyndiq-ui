@@ -107,12 +107,12 @@
 }
 
 .size-m {
-  font-size: inherit;
-  padding: 5px 12px;
+  font-size: 14px;
+  padding: 7px 14px;
 }
 
 .size-l {
-  font-size: inherit;
+  font-size: 15px;
   padding: 15px 26px;
 }
 
