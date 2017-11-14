@@ -47,6 +47,28 @@ storiesOf('Button', module)
       </Button>
     </div>
   ))
+  .addWithInfo('pill mode', () => (
+    <div>
+      <Button horizontal pill>
+        Normal
+      </Button>
+      <Button horizontal pill type="white">
+        White
+      </Button>
+      <Button horizontal pill type="primary">
+        Primary
+      </Button>
+      <Button horizontal pill type="secondary">
+        Secondary
+      </Button>
+      <Button horizontal pill type="cancel">
+        Cancel
+      </Button>
+      <Button horizontal pill type="inverted">
+        Black
+      </Button>
+    </div>
+  ))
   .addWithInfo('pressed button', () => <Button pressed>Pressed button</Button>)
   .addWithInfo('disabled button', () => (
     <Button disabled>Disabled Button</Button>

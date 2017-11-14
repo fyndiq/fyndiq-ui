@@ -10,6 +10,7 @@ const Button = ({
   type,
   size,
   horizontal,
+  pill,
   disabled,
   pressed,
   htmlType,
@@ -22,6 +23,7 @@ const Button = ({
     ${horizontal && styles.horizontal}
     ${pressed && styles.pressed}
     ${disabled ? styles.disabled : styles.interactive}
+    ${pill && styles.pill}
     ${className}
   `
 
@@ -82,6 +84,7 @@ Button.propTypes = {
   pressed: PropTypes.bool,
   htmlType: PropTypes.string,
   link: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  pill: PropTypes.bool,
 }
 
 Button.defaultProps = {
@@ -94,6 +97,7 @@ Button.defaultProps = {
   pressed: false,
   htmlType: 'button',
   link: undefined,
+  pill: false,
 }
 
 export default Button

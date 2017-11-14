@@ -128,3 +128,7 @@
 .interactive {
   cursor: pointer;
 }
+
+.pill {
+  border-radius: 100px;
+}

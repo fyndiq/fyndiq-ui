@@ -69,5 +69,6 @@ The component `Button` has the following customizable props:
 | **size** | String | One of `xs`, `s`, `l`, `xl`. Changes the size of the button | `m` |
 | **disabled** | Boolean | If true, will disable the button. | `false` |
 | **pressed** | Boolean | Show the button as pressed | `false` |
+| **pill** | Boolean | Rounds border-radius mode | `false` |
 | **link** | String or Element | Uses an `<a>` tag or a custom element to render the button | `undefined` |
 | **onClick** | Function | Callback when the button is pressed | `noop => noop` |
