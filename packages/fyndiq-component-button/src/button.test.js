@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import Button from './'
+import Button from './button'
 
 describe('fyndiq-component-button', () => {
   test('should have a default onClick handler', () => {
