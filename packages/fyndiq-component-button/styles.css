@@ -45,12 +45,13 @@
 
 .type-secondary,
 .type-blue {
-  background-color: var(--color-blue);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-blue);
+  border-color: var(--color-border);
 
   &.interactive:hover,
   &.interactive:focus {
-    background-color: color(var(--color-blue) tint(15%));
+    background-color: var(--color-palegrey);
   }
 }
 
