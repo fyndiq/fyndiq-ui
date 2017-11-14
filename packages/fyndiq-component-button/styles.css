@@ -180,7 +180,7 @@
     border-radius: 0;
   }
 
-  & :last-child:not(:last-child) {
+  & :last-child:not(:first-child) {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
