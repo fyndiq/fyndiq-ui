@@ -1,14 +1,14 @@
 {
   "name": "fyndiq-ui-test",
   "private": true,
-  "version": "2.1.17",
+  "version": "2.1.18",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "license": "MIT",
   "dependencies": {
     "fyndiq-component-alert": "^2.1.3",
     "fyndiq-component-brand": "^2.2.3",
     "fyndiq-component-button": "^2.3.0",
-    "fyndiq-component-checkbox": "^2.2.4",
+    "fyndiq-component-checkbox": "^2.3.0",
     "fyndiq-component-dropdown": "^2.6.0",
     "fyndiq-component-loader": "^2.1.3",
     "fyndiq-component-modal": "^2.3.0",
