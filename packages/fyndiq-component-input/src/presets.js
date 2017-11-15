@@ -44,7 +44,6 @@ class Presets extends React.Component {
           onChange: this.changeValue,
         })}
         <Dropdown
-          wrapperClassName={styles.presetDropdownWrapper}
           position="br"
           button={
             <Button type="white" className={styles.presetDropdownButton}>
