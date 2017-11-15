@@ -207,7 +207,6 @@ class Dropdown extends React.Component {
           disabled={disabled}
           onClick={this.onButtonClick}
           buttonRef={e => {
-            console.log(e)
             this.buttonNode = e
           }}
         >
