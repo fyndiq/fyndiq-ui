@@ -24,9 +24,7 @@ class InvisibleInput extends React.Component {
 
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
-    this.onInputFocus = this.onInputFocus.bind(this)
-    this.onInputBlur = this.onInputBlur.bind(this)
-    this.onInputKeypress = this.onInputKeypress.bind(this)
+    this.onInputKeydown = this.onInputKeydown.bind(this)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -45,15 +43,7 @@ class InvisibleInput extends React.Component {
     this.inputElement.blur()
   }
 
-  onInputFocus(event) {
-    event.target.addEventListener('keypress', this.onInputKeypress)
-  }
-
-  onInputBlur(event) {
-    event.target.removeEventListener('keypress', this.onInputKeypress)
-  }
-
-  onInputKeypress(event) {
+  onInputKeydown(event) {
     // ESC key
     if (event.keyCode === 27) {
       this.inputElement.blur()
@@ -78,8 +68,7 @@ class InvisibleInput extends React.Component {
         <input
           value={this.state.value}
           onChange={this.onChange}
-          onFocus={this.onInputFocus}
-          onBlur={this.onInputBlur}
+          onKeyDown={this.onInputKeydown}
           className={styles.invisibleInput}
           ref={element => {
             this.inputElement = element
