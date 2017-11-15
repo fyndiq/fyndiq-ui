@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-input Input should have the proper structure 1`] = `
+<input
+  className="
+      input
+      
+    "
+  defaultValue=""
+  onChange={[Function]}
+  placeholder=""
+  required={false}
+  type="text"
+/>
+`;
