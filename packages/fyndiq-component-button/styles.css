@@ -169,11 +169,11 @@
       border-bottom: none;
     }
 
-    & :first-child:not(:last-child) {
+    & :first-child {
       border-left: none;
     }
 
-    & :last-child:not(:first-child) {
+    & :last-child {
       border-right: none;
     }
   }
@@ -208,11 +208,11 @@
       border-left: none;
     }
 
-    & :first-child:not(:last-child) {
+    & :first-child {
       border-top: none;
     }
 
-    & :last-child:not(:first-child) {
+    & :last-child {
       border-bottom: none;
     }
   }
