@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf, action } from '@storybook/react'
-import Input, { Presets } from 'fyndiq-component-input'
+import Input, { Presets, InvisibleInput } from 'fyndiq-component-input'
 
 storiesOf('Input', module)
   .addWithInfo('default', () => <Input onChange={action('onChange')} />)
@@ -9,4 +9,7 @@ storiesOf('Input', module)
       presets={['Stockholm', 'Göteborg', 'Luleå', 'Kiruna']}
       onChange={action('onChange')}
     />
+  ))
+  .addWithInfo('invisible', () => (
+    <InvisibleInput value="initial value" onChange={action('onChange')} />
   ))
