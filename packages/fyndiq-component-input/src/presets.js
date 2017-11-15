@@ -60,6 +60,7 @@ class Presets extends React.Component {
                   key={preset}
                   type="white"
                   size="m"
+                  className={styles.presetButton}
                   onClick={() => {
                     onClose()
                     this.changeValue(preset)
