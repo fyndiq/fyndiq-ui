@@ -5,6 +5,20 @@ import { Arrow } from 'fyndiq-icons'
 
 import styles from '../styles.css'
 
+// Note on disabled rules: The component is accessible.
+// It might not be built in the perfect way (feel free to redo it)
+// but it is accessible. So we can disable the accessibility rules.
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+
+// FIXME: This function has been duplicated from fyndiq-component-modal
+// A better place for this type of function would be in something like fyndiq-utils
+const isSameType = (element, component) =>
+  React.isValidElement(element) &&
+  (element.type === component ||
+    (element.type && element.type.displayName === component.name))
+
 class Dropdown extends React.Component {
   static propTypes = {
     opened: PropTypes.bool,
@@ -180,40 +194,58 @@ class Dropdown extends React.Component {
     }
   }
 
+  renderButton() {
+    const { button, noArrow, size, position, disabled } = this.props
+
+    // Arrow orientation depends on the position of the dropdown
+    const arrowOrientation = position[0] === 't' ? 'up' : 'down'
+
+    if (typeof button === 'string') {
+      return (
+        <Button
+          size={size}
+          disabled={disabled}
+          onClick={this.onButtonClick}
+          buttonRef={e => {
+            console.log(e)
+            this.buttonNode = e
+          }}
+        >
+          {button}
+          {!noArrow && <Arrow orientation={arrowOrientation} />}
+        </Button>
+      )
+    } else if (isSameType(button, Button)) {
+      return React.cloneElement(button, {
+        onClick: this.onButtonClick,
+        disabled,
+        buttonRef: e => {
+          this.buttonNode = e
+        },
+      })
+    }
+
+    return (
+      <div
+        ref={e => {
+          this.buttonNode = e
+        }}
+        onClick={this.onButtonClick}
+        role="button"
+      >
+        {button}
+      </div>
+    )
+  }
+
   render() {
     const {
-      button,
-      noArrow,
-      size,
       position,
       className,
       wrapperClassName,
       noWrapperStyle,
       noPropagateClickEvent,
     } = this.props
-
-    let buttonContent
-
-    // Arrow orientation depends on the position of the dropdown
-    const arrowOrientation = position[0] === 't' ? 'up' : 'down'
-
-    if (typeof button === 'string') {
-      buttonContent = (
-        <Button size={size} disabled={this.props.disabled}>
-          {button}
-          {!noArrow && <Arrow orientation={arrowOrientation} />}
-        </Button>
-      )
-    } else {
-      buttonContent = button
-    }
-
-    // Note on disabled rules: The component is accessible.
-    // It might not be built in the perfect way (feel free to redo it)
-    // but it is accessible. So we can disable the accessibility rules.
-    /* eslint-disable jsx-a11y/interactive-supports-focus */
-    /* eslint-disable jsx-a11y/mouse-events-have-key-events */
-    /* eslint-disable jsx-a11y/click-events-have-key-events */
 
     return (
       <div
@@ -226,15 +258,7 @@ class Dropdown extends React.Component {
         onClick={e => noPropagateClickEvent && e.stopPropagation()}
         role="button"
       >
-        <div
-          ref={e => {
-            this.buttonNode = e
-          }}
-          onClick={this.onButtonClick}
-          role="button"
-        >
-          {buttonContent}
-        </div>
+        {this.renderButton()}
         {this.state.opened && (
           <div
             className={`
