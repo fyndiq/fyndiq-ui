@@ -15,6 +15,7 @@ const Button = ({
   pressed,
   htmlType,
   link,
+  buttonRef,
 }) => {
   const finalClassName = `
     ${styles.button}
@@ -31,7 +32,12 @@ const Button = ({
   // render the button as an <a> tag
   if (typeof link === 'string') {
     return (
-      <a className={finalClassName} onClick={onClick} href={link}>
+      <a
+        className={finalClassName}
+        onClick={onClick}
+        href={link}
+        ref={buttonRef}
+      >
         {children}
       </a>
     )
@@ -53,6 +59,7 @@ const Button = ({
       onClick={onClick}
       disabled={disabled}
       type={htmlType}
+      ref={buttonRef}
     >
       {children}
     </button>
@@ -85,6 +92,7 @@ Button.propTypes = {
   htmlType: PropTypes.string,
   link: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   pill: PropTypes.bool,
+  buttonRef: PropTypes.func,
 }
 
 Button.defaultProps = {
@@ -98,6 +106,7 @@ Button.defaultProps = {
   htmlType: 'button',
   link: undefined,
   pill: false,
+  buttonRef: () => {},
 }
 
 export default Button
