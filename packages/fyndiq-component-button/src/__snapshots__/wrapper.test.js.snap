@@ -5,6 +5,7 @@ exports[`fyndiq-component-button Wrapper should have the proper structure 1`] = 
   className="
       wrapper
       wrapper--orientation_horizontal
+      false
       
     "
 />
