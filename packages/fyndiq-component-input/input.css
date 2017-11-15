@@ -75,10 +75,7 @@
   border: 1px solid transparent;
   border-left: none;
   background: transparent;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-radius: 0 2px 2px 0;
   opacity: 0;
   cursor: pointer;
   transition: opacity .2s;
