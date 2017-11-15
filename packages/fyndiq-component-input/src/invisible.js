@@ -20,7 +20,7 @@ class InvisibleInput extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { value: this.props.value, dirty: false }
+    this.state = { value: this.props.value }
 
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
@@ -37,19 +37,12 @@ class InvisibleInput extends React.Component {
 
   onChange(event) {
     this.setState({ value: event.target.value })
-
-    if (event.target.value !== this.props.value) {
-      this.setState({ dirty: true })
-    } else {
-      this.setState({ dirty: false })
-    }
   }
 
   onSubmit(event) {
     event.preventDefault()
     this.props.onChange(this.state.value)
     this.inputElement.blur()
-    this.setState({ dirty: false })
   }
 
   onInputFocus(event) {
@@ -64,7 +57,7 @@ class InvisibleInput extends React.Component {
     // ESC key
     if (event.keyCode === 27) {
       this.inputElement.blur()
-      this.setState({ value: this.props.value, dirty: false })
+      this.setState({ value: this.props.value })
       event.stopPropagation()
     }
   }
@@ -76,7 +69,8 @@ class InvisibleInput extends React.Component {
       <form
         className={`
           ${styles.invisibleWrapper}
-          ${this.state.dirty && styles.invisibleWrapperDirty}
+          ${this.state.value !== this.props.value &&
+            styles.invisibleWrapperDirty}
           ${className}
         `}
         onSubmit={this.onSubmit}
