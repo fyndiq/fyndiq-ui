@@ -8,28 +8,24 @@ exports[`fyndiq-component-dropdown should be displayed with minimum props 1`] = 
   onMouseOver={[Function]}
   role="button"
 >
-  <div
+  <Button
+    buttonRef={[Function]}
+    className=""
+    disabled={false}
+    horizontal={false}
+    htmlType="button"
     onClick={[Function]}
-    role="button"
+    pill={false}
+    pressed={false}
+    size="s"
+    type="normal"
   >
-    <Button
+    Button
+    <Arrow
       className=""
-      disabled={false}
-      horizontal={false}
-      htmlType="button"
-      onClick={[Function]}
-      pill={false}
-      pressed={false}
-      size="s"
-      type="normal"
-    >
-      Button
-      <Arrow
-        className=""
-        orientation="down"
-      />
-    </Button>
-  </div>
+      orientation="down"
+    />
+  </Button>
 </div>
 `;
 
