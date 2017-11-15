@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/fyndiq/fyndiq-ui.git"
   },
-  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Input&selectedStory=default",
+  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Input%2FInput&selectedStory=default",
   "dependencies": {
     "fyndiq-component-button": "*",
     "fyndiq-component-dropdown": "*",
