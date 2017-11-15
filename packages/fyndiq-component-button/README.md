@@ -24,20 +24,10 @@ import Button from 'fyndiq-component-button'
 </Button>
 
 // Red button
-<Button
-  type="cancel"
-  onClick={() => console.log('canceled')}
->
-  Cancel my task
-</Button>
+<Button type="cancel">Cancel my task</Button>
 
 // Bigger button
-<Button
-  size="l"
-  onClick={() => console.log('clicked')}
->
-  My big button
-</Button>
+<Button size="l">My big button</Button>
 
 // Custom className
 <Button className="additional-styles">Button</Button>
@@ -50,11 +40,26 @@ import Button from 'fyndiq-component-button'
 
 // Use a custom Link element
 import { Link } from 'react-router-dom'
-<Button
-  link={<Link to="my/path" />}
->
+
+<Button link={<Link to="my/path" />}>
   My link
 </Button>
+
+// Manipulate buttons as a group
+import Button, { Wrapper } from 'fyndiq-component-button'
+
+<Wrapper>
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+  <Button>Button 3</Button>
+</Wrapper>
+
+// vertical layout
+<Wrapper orientation="vertical">
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+  <Button>Button 3</Button>
+</Wrapper>
 ```
 
 # API
@@ -69,5 +74,15 @@ The component `Button` has the following customizable props:
 | **size** | String | One of `xs`, `s`, `l`, `xl`. Changes the size of the button | `m` |
 | **disabled** | Boolean | If true, will disable the button. | `false` |
 | **pressed** | Boolean | Show the button as pressed | `false` |
+| **pill** | Boolean | Rounds border-radius mode | `false` |
 | **link** | String or Element | Uses an `<a>` tag or a custom element to render the button | `undefined` |
 | **onClick** | Function | Callback when the button is pressed | `noop => noop` |
+
+The component `Wrapper` has the following customizable props:
+
+| Name | Type | Description | Default value |
+|---|---|---|---|
+| **orientation** | String | One of `horizontal` or `vertical`. Changes the flex-direction of the wrapper | `horizontal` |
+| **children** | Element | Content of the Wrapper | `null` |
+| **className** | String | Additionnal className for the wrapper | `''` |
+| **noOuterBorder** | Boolean | Removes the outer border of the button group | `false` |

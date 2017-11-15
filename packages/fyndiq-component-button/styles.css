@@ -45,12 +45,13 @@
 
 .type-secondary,
 .type-blue {
-  background-color: var(--color-blue);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-blue);
+  border-color: var(--color-border);
 
   &.interactive:hover,
   &.interactive:focus {
-    background-color: color(var(--color-blue) tint(15%));
+    background-color: var(--color-palegrey);
   }
 }
 
@@ -106,12 +107,12 @@
 }
 
 .size-m {
-  font-size: inherit;
-  padding: 5px 12px;
+  font-size: 14px;
+  padding: 7px 14px;
 }
 
 .size-l {
-  font-size: inherit;
+  font-size: 15px;
   padding: 15px 26px;
 }
 
@@ -127,4 +128,92 @@
 
 .interactive {
   cursor: pointer;
+}
+
+.pill {
+  border-radius: 100px;
+}
+
+/* Wrapper-specific styles */
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper--orientation_horizontal {
+  flex-direction: row;
+
+  /* Remove borders and fix border-radiuses */
+  & .button + .button {
+    border-left: none;
+  }
+
+  & :first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & :not(:first-child, :last-child) {
+    border-radius: 0;
+  }
+
+  & :last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  /* No Outer Border */
+  &.wrapperNoOuterBorder {
+    & .button {
+      border-top: none;
+      border-bottom: none;
+    }
+
+    & :first-child {
+      border-left: none;
+    }
+
+    & :last-child {
+      border-right: none;
+    }
+  }
+}
+
+.wrapper--orientation_vertical {
+  flex-direction: column;
+
+  /* Remove borders and fix border-radiuses */
+  & .button + .button {
+    border-top: none;
+  }
+
+  & :first-child:not(:last-child) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & :not(:first-child, :last-child) {
+    border-radius: 0;
+  }
+
+  & :last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  /* No Outer Border */
+  &.wrapperNoOuterBorder {
+    & .button {
+      border-right: none;
+      border-left: none;
+    }
+
+    & :first-child {
+      border-top: none;
+    }
+
+    & :last-child {
+      border-bottom: none;
+    }
+  }
 }

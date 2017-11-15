@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf, action } from '@storybook/react'
-import Button from 'fyndiq-component-button'
+import Button, { Wrapper } from 'fyndiq-component-button'
 
 storiesOf('Button', module)
   .addWithInfo('default', () => (
@@ -47,8 +47,65 @@ storiesOf('Button', module)
       </Button>
     </div>
   ))
+  .addWithInfo('pill mode', () => (
+    <div>
+      <Button horizontal pill>
+        Normal
+      </Button>
+      <Button horizontal pill type="white">
+        White
+      </Button>
+      <Button horizontal pill type="primary">
+        Primary
+      </Button>
+      <Button horizontal pill type="secondary">
+        Secondary
+      </Button>
+      <Button horizontal pill type="cancel">
+        Cancel
+      </Button>
+      <Button horizontal pill type="inverted">
+        Black
+      </Button>
+    </div>
+  ))
   .addWithInfo('pressed button', () => <Button pressed>Pressed button</Button>)
   .addWithInfo('disabled button', () => (
     <Button disabled>Disabled Button</Button>
   ))
   .addWithInfo('<a> tag', () => <Button link="#hello">I am a link</Button>)
+  .addWithInfo('Wrapper - horizontal', () => (
+    <Wrapper>
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </Wrapper>
+  ))
+  .addWithInfo('Wrapper - vertical', () => (
+    <div style={{ width: 200 }}>
+      <Wrapper orientation="vertical">
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </Wrapper>
+    </div>
+  ))
+  .addWithInfo('Wrapper - no outer border', () => (
+    <div>
+      <Wrapper noOuterBorder>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </Wrapper>
+
+      <hr />
+
+      <div style={{ width: 200 }}>
+        <Wrapper noOuterBorder orientation="vertical">
+          <Button>Button 1</Button>
+          <Button>Button 2</Button>
+          <Button>Button 3</Button>
+        </Wrapper>
+      </div>
+    </div>
+  ))
