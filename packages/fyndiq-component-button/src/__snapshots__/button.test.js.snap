@@ -9,6 +9,7 @@ exports[`fyndiq-component-button should be renderable as a custom link element 1
     false
     false
     interactive
+    false
     
   "
   to="my/path"
@@ -26,6 +27,7 @@ exports[`fyndiq-component-button should be renderable as a link 1`] = `
     false
     false
     interactive
+    false
     
   "
   href="#hello"
@@ -44,6 +46,7 @@ exports[`fyndiq-component-button should be rendered without props 1`] = `
     false
     false
     interactive
+    false
     
   "
   disabled={false}
@@ -63,6 +66,7 @@ exports[`fyndiq-component-button should have a disabled prop 1`] = `
     false
     false
     disabled
+    false
     
   "
   disabled={true}
@@ -82,6 +86,7 @@ exports[`fyndiq-component-button should have a horizontal prop 1`] = `
     horizontal
     false
     interactive
+    false
     
   "
   disabled={false}
@@ -101,6 +106,7 @@ exports[`fyndiq-component-button should have a htmlType prop 1`] = `
     false
     false
     interactive
+    false
     
   "
   disabled={false}
@@ -120,6 +126,7 @@ exports[`fyndiq-component-button should have a pressed prop 1`] = `
     false
     pressed
     interactive
+    false
     
   "
   disabled={false}
@@ -139,6 +146,7 @@ exports[`fyndiq-component-button should have a size prop 1`] = `
     false
     false
     interactive
+    false
     
   "
   disabled={false}
@@ -158,6 +166,7 @@ exports[`fyndiq-component-button should have a type prop 1`] = `
     false
     false
     interactive
+    false
     
   "
   disabled={false}

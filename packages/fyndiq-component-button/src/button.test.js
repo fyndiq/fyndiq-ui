@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import Button from './'
+import Button from './button'
 
 describe('fyndiq-component-button', () => {
   test('should have a default onClick handler', () => {
@@ -46,6 +46,11 @@ describe('fyndiq-component-button', () => {
   test('should have a className prop', () => {
     const component = shallow(<Button className="className">Hello</Button>)
     expect(component.hasClass('className')).toBe(true)
+  })
+
+  test('should have a pill prop', () => {
+    const component = shallow(<Button pill>Hello</Button>)
+    expect(component.hasClass('pill')).toBe(true)
   })
 
   test('should be renderable as a link', () => {
