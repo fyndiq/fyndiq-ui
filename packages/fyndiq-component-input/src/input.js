@@ -39,7 +39,7 @@ Input.propTypes = {
 Input.defaultProps = {
   className: '',
   required: false,
-  defaultValue: '',
+  defaultValue: undefined,
   value: undefined,
   onChange: () => {},
   htmlType: 'text',
