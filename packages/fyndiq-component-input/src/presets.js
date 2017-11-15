@@ -11,12 +11,14 @@ import styles from '../input.css'
 class Presets extends React.Component {
   static propTypes = {
     input: PropTypes.element,
+    value: PropTypes.string,
     presets: PropTypes.arrayOf(PropTypes.string),
     onChange: PropTypes.func,
   }
 
   static defaultProps = {
     input: <Input />,
+    value: '',
     presets: [],
     onChange: () => {},
   }
@@ -24,7 +26,7 @@ class Presets extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { value: undefined }
+    this.state = { value: this.props.value }
 
     this.changeValue = this.changeValue.bind(this)
   }
