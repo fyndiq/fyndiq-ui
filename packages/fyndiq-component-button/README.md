@@ -83,5 +83,6 @@ The component `Wrapper` has the following customizable props:
 | Name | Type | Description | Default value |
 |---|---|---|---|
 | **orientation** | String | One of `horizontal` or `vertical`. Changes the flex-direction of the wrapper | `horizontal` |
+| **children** | Element | Content of the Wrapper | `null` |
 | **className** | String | Additionnal className for the wrapper | `''` |
 | **noOuterBorder** | Boolean | Removes the outer border of the button group | `false` |
