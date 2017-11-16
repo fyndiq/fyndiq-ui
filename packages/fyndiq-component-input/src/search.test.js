@@ -47,6 +47,13 @@ describe('fyndiq-component-input SearchInput', () => {
     expect(component.find('Input').prop('value')).toBe('newValue')
   })
 
+  it('should not call onSearch if the field is empty', () => {
+    const spy = jest.fn()
+    const component = shallow(<Search onSearch={spy} />)
+    component.find('form').simulate('submit', { preventDefault: jest.fn() })
+    expect(spy).not.toHaveBeenCalled()
+  })
+
   describe('collapsible prop', () => {
     it('should not be open by default', () => {
       expect(shallow(<Search collapsible />).hasClass('wrapperOpen')).toBe(
