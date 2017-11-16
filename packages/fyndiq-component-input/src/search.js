@@ -52,9 +52,6 @@ class SearchInput extends React.Component {
   onSubmit(e) {
     e.preventDefault()
 
-    // Don't search for empty queries
-    if (this.state.value === '') return
-
     // Call prop handler
     this.props.onSearch(this.state.value)
 
