@@ -49,11 +49,11 @@
     stroke: var(--color-black);
   }
 
-  & .input {
+  &.wrapper--size-m .input {
     width: 590px;
   }
 
-  &.wrapperSmall .input {
+  &.wrapper--size-s .input {
     width: 300px;
   }
 }

@@ -10,7 +10,7 @@ import styles from '../search.css'
 class SearchInput extends React.Component {
   static propTypes = {
     collapsible: PropTypes.bool,
-    small: PropTypes.bool,
+    size: PropTypes.oneOf(['s', 'm']),
     emptyAfterSearch: PropTypes.bool,
     input: PropTypes.element,
     className: PropTypes.string,
@@ -19,7 +19,7 @@ class SearchInput extends React.Component {
 
   static defaultProps = {
     collapsible: false,
-    small: false,
+    size: 'm',
     emptyAfterSearch: false,
     input: <Input placeholder="Search" htmlType="search" />,
     className: '',
@@ -74,7 +74,7 @@ class SearchInput extends React.Component {
   }
 
   render() {
-    const { small, input, className } = this.props
+    const { size, input, className } = this.props
 
     return (
       <form
@@ -82,7 +82,7 @@ class SearchInput extends React.Component {
         className={`
           ${styles.wrapper}
           ${this.state.open && styles.wrapperOpen}
-          ${small && styles.wrapperSmall}
+          ${styles[`wrapper--size-${size}`]}
           ${className}
         `}
       >
