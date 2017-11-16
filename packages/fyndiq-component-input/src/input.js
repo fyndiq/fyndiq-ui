@@ -3,47 +3,31 @@ import PropTypes from 'prop-types'
 
 import styles from '../input.css'
 
-const Input = ({
-  className,
-  required,
-  defaultValue,
-  value,
-  onChange,
-  htmlType,
-  placeholder,
-}) => (
+const Input = ({ className, onChange, htmlType, inputRef, ...props }) => (
   <input
     type={htmlType}
-    required={required}
-    value={value}
-    defaultValue={defaultValue}
-    placeholder={placeholder}
+    ref={inputRef}
     onChange={e => onChange(e.target.value)}
     className={`
       ${styles.input}
       ${className}
     `}
+    {...props}
   />
 )
 
 Input.propTypes = {
   className: PropTypes.string,
-  required: PropTypes.bool,
-  defaultValue: PropTypes.string,
-  value: PropTypes.string,
   onChange: PropTypes.func,
   htmlType: PropTypes.string,
-  placeholder: PropTypes.string,
+  inputRef: PropTypes.func,
 }
 
 Input.defaultProps = {
   className: '',
-  required: false,
-  defaultValue: undefined,
-  value: undefined,
   onChange: () => {},
   htmlType: 'text',
-  placeholder: '',
+  inputRef: null,
 }
 
 export default Input

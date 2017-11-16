@@ -7,9 +7,8 @@ exports[`fyndiq-component-input Presets should have the proper structure 1`] = `
   <Input
     className=""
     htmlType="text"
+    inputRef={null}
     onChange={[Function]}
-    placeholder=""
-    required={false}
     value=""
   />
   <Dropdown

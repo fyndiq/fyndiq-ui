@@ -7,8 +7,6 @@ exports[`fyndiq-component-input Input should have the proper structure 1`] = `
       
     "
   onChange={[Function]}
-  placeholder=""
-  required={false}
   type="text"
 />
 `;
