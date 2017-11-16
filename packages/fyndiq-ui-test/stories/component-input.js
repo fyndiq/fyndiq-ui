@@ -6,9 +6,11 @@ import Input, {
   SearchInput,
 } from 'fyndiq-component-input'
 
-storiesOf('Input/Input', module).addWithInfo('default', () => (
-  <Input onChange={action('onChange')} />
-))
+storiesOf('Input/Input', module)
+  .addWithInfo('default', () => <Input onChange={action('onChange')} />)
+  .addWithInfo('debounced', () => (
+    <Input debouncedOnChange={action('debouncedOnChange')} />
+  ))
 
 storiesOf('Input/Presets', module).addWithInfo('with presets', () => (
   <Presets

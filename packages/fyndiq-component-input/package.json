@@ -13,7 +13,8 @@
     "fyndiq-component-button": "*",
     "fyndiq-component-dropdown": "*",
     "fyndiq-icons": "*",
-    "fyndiq-styles-colors": "*"
+    "fyndiq-styles-colors": "*",
+    "lodash.debounce": "4.0.8"
   },
   "peerDependencies": {
     "css-loader": "^0.28.7",
