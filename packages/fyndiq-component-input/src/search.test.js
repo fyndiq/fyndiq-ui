@@ -25,7 +25,9 @@ describe('fyndiq-component-input SearchInput', () => {
 
   it('should empty the search field if emptyAfterSearch is true', () => {
     const component = mount(<Search emptyAfterSearch />)
-    component.find('Input').simulate('change', 'newValue')
+    component.find('Input').prop('onChange')('newValue')
+    component.update()
+    expect(component.find('Input').prop('value')).toBe('newValue')
     component.find('form').simulate('submit', { preventDefault: jest.fn() })
 
     expect(component.find('Input').prop('value')).toBe('')
