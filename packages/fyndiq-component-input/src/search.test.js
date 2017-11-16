@@ -39,6 +39,12 @@ describe('fyndiq-component-input SearchInput', () => {
     expect(spy).toHaveBeenCalled()
   })
 
+  it('should update its value if the props change', () => {
+    const component = shallow(<Search value="test" />)
+    component.setProps({ value: 'newValue' })
+    expect(component.find('Input').prop('value')).toBe('newValue')
+  })
+
   describe('collapsible prop', () => {
     it('should not be open by default', () => {
       expect(shallow(<Search collapsible />).hasClass('wrapperOpen')).toBe(
