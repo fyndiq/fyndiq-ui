@@ -13,6 +13,7 @@ class SearchInput extends React.Component {
     size: PropTypes.oneOf(['s', 'm']),
     emptyAfterSearch: PropTypes.bool,
     input: PropTypes.element,
+    value: PropTypes.string,
     className: PropTypes.string,
     onSearch: PropTypes.func,
   }
@@ -22,6 +23,7 @@ class SearchInput extends React.Component {
     size: 'm',
     emptyAfterSearch: false,
     input: <Input placeholder="Search" htmlType="search" />,
+    value: '',
     className: '',
     onSearch: () => {},
   }
@@ -30,6 +32,7 @@ class SearchInput extends React.Component {
 
     this.state = {
       open: !this.props.collapsible,
+      value: this.props.value,
       id: Math.random(), // The htmlId of the input
     }
 
@@ -37,28 +40,34 @@ class SearchInput extends React.Component {
     this.onFocus = this.onFocus.bind(this)
     this.onBlur = this.onBlur.bind(this)
     this.onKeyUp = this.onKeyUp.bind(this)
+    this.onInputChange = this.onInputChange.bind(this)
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (this.props.value !== newProps.value) {
+      this.setState({ value: newProps.value })
+    }
   }
 
   onSubmit(e) {
     e.preventDefault()
 
     // Don't search for empty queries
-    if (this.inputElement.value === '') return
+    if (this.state.value === '') return
 
     // Call prop handler
-    this.props.onSearch(this.inputElement.value)
+    this.props.onSearch(this.state.value)
 
     // Empty the input if specified
     if (this.props.emptyAfterSearch) {
-      this.inputElement.value = ''
+      this.setState({ value: '' })
       this.inputElement.blur()
     }
   }
 
   onKeyUp(e) {
     // escape key
-    if (this.props.collapsible && e.keyCode === 27) {
-      this.setState({ open: false })
+    if (e.keyCode === 27) {
       this.inputElement.blur()
     }
   }
@@ -71,6 +80,10 @@ class SearchInput extends React.Component {
     if (this.props.collapsible) {
       this.setState({ open: false })
     }
+  }
+
+  onInputChange(value) {
+    this.setState({ value })
   }
 
   render() {
@@ -93,6 +106,8 @@ class SearchInput extends React.Component {
           id: this.state.id,
           className: styles.input,
           autoComplete: 'off',
+          value: this.state.value,
+          onChange: this.onInputChange,
           onKeyUp: this.onKeyUp,
           onFocus: this.onFocus,
           onBlur: this.onBlur,
