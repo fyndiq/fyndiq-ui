@@ -1,5 +1,11 @@
+// Debounce is mocked here, because of a timer bug
+// https://github.com/facebook/jest/issues/3465
+/* eslint-disable import/first */
+jest.mock('lodash.debounce', () => jest.fn(fn => fn))
+
 import React from 'react'
 import { shallow } from 'enzyme'
+import debounce from 'lodash.debounce'
 
 import Input from './input'
 
@@ -62,5 +68,29 @@ describe('fyndiq-component-input Input', () => {
       .simulate('change', { target: { value: 'new value' } })
 
     expect(spy).toHaveBeenCalledWith('new value')
+  })
+
+  describe('debounce feature', () => {
+    it('should call debounce', () => {
+      const spy = jest.fn()
+      const component = shallow(<Input debouncedOnChange={spy} />)
+      // Simulate quick typing
+      component.find('input').simulate('change', { target: { value: 'n' } })
+      component.find('input').simulate('change', { target: { value: 'ne' } })
+      component.find('input').simulate('change', { target: { value: 'new' } })
+
+      expect(debounce).toHaveBeenCalled()
+    })
+
+    it('should call debouncedOnChange prop', () => {
+      const spy = jest.fn()
+      const component = shallow(<Input debouncedOnChange={spy} />)
+      // Simulate quick typing
+      component.find('input').simulate('change', { target: { value: 'n' } })
+      component.find('input').simulate('change', { target: { value: 'ne' } })
+      component.find('input').simulate('change', { target: { value: 'new' } })
+
+      expect(spy).toHaveBeenCalled()
+    })
   })
 })
