@@ -17,7 +17,7 @@ class Input extends React.Component {
   static defaultProps = {
     className: '',
     onChange: () => {},
-    debouncedOnChange: () => {},
+    debouncedOnChange: null,
     htmlType: 'text',
     inputRef: null,
     debounceTime: 500,
@@ -46,7 +46,9 @@ class Input extends React.Component {
         onChange={e => {
           // Call both the onChange and debouncedOnChange handler
           onChange(e.target.value)
-          this.debouncedOnChange(e.target.value)
+          if (debouncedOnChange) {
+            this.debouncedOnChange(e.target.value)
+          }
         }}
         className={`
           ${styles.input}
