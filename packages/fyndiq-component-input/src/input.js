@@ -11,7 +11,7 @@ class Input extends React.Component {
     debouncedOnChange: PropTypes.func,
     htmlType: PropTypes.string,
     inputRef: PropTypes.func,
-    debounceTime: PropTypes.number,
+    debounceWait: PropTypes.number,
   }
 
   static defaultProps = {
@@ -20,13 +20,19 @@ class Input extends React.Component {
     debouncedOnChange: null,
     htmlType: 'text',
     inputRef: null,
-    debounceTime: 500,
+    debounceWait: 500,
   }
 
-  debouncedOnChange = debounce(
-    value => this.props.debouncedOnChange(value),
-    this.props.debounceTime,
-  )
+  constructor(props) {
+    super(props)
+
+    if (this.props.debouncedOnChange) {
+      this.debouncedOnChange = debounce(
+        value => this.props.debouncedOnChange(value),
+        this.props.debounceWait,
+      )
+    }
+  }
 
   render() {
     const {
@@ -34,7 +40,7 @@ class Input extends React.Component {
       onChange,
       htmlType,
       inputRef,
-      debounceTime,
+      debounceWait,
       debouncedOnChange,
       ...props
     } = this.props

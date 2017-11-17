@@ -82,6 +82,14 @@ describe('fyndiq-component-input Input', () => {
       expect(debounce).toHaveBeenCalled()
     })
 
+    it('should not call debounce if debouncedOnChange is undefined', () => {
+      debounce.mockClear()
+      const component = shallow(<Input />)
+      component.find('input').simulate('change', { target: { value: 'n' } })
+      component.find('input').simulate('change', { target: { value: 'ne' } })
+      expect(debounce).not.toHaveBeenCalled()
+    })
+
     it('should call debouncedOnChange prop', () => {
       const spy = jest.fn()
       const component = shallow(<Input debouncedOnChange={spy} />)
@@ -91,6 +99,13 @@ describe('fyndiq-component-input Input', () => {
       component.find('input').simulate('change', { target: { value: 'new' } })
 
       expect(spy).toHaveBeenCalled()
+    })
+
+    it('should specify a debounceWait', () => {
+      debounce.mockClear()
+      const spy = jest.fn()
+      shallow(<Input debouncedOnChange={spy} debounceWait={5432} />)
+      expect(debounce.mock.calls[0][1]).toBe(5432)
     })
   })
 })
