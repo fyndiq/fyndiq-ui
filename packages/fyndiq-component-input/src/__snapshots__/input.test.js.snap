@@ -3,9 +3,9 @@
 exports[`fyndiq-component-input Input should have the proper structure 1`] = `
 <input
   className="
-      input
-      
-    "
+          input
+          
+        "
   onChange={[Function]}
   type="text"
 />

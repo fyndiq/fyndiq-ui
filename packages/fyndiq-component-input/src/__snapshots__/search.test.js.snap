@@ -22,6 +22,8 @@ exports[`fyndiq-component-input SearchInput should have the proper structure 1`]
   <Input
     autoComplete="off"
     className="input"
+    debounceTime={500}
+    debouncedOnChange={null}
     htmlType="search"
     id="RANDOM-ID"
     inputRef={[Function]}
