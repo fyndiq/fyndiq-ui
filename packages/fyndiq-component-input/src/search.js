@@ -23,12 +23,13 @@ class SearchInput extends React.Component {
     collapsible: false,
     size: 'm',
     emptyAfterSearch: false,
-    input: <Input placeholder="Search" htmlType="search" />,
+    input: <Input placeholder="Search" type="search" />,
     value: '',
     className: '',
     onSearch: () => {},
     debouncedOnChange: null,
   }
+
   constructor(props) {
     super(props)
 

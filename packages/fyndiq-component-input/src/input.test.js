@@ -44,9 +44,9 @@ describe('fyndiq-component-input Input', () => {
     ).toBe('valueTest')
   })
 
-  it('should have a htmlType prop', () => {
+  it('should have a type prop', () => {
     expect(
-      shallow(<Input htmlType="number" />)
+      shallow(<Input type="number" />)
         .find('input')
         .prop('type'),
     ).toBe('number')

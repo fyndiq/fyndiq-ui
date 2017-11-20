@@ -9,18 +9,18 @@ class Input extends React.Component {
     className: PropTypes.string,
     onChange: PropTypes.func,
     debouncedOnChange: PropTypes.func,
-    htmlType: PropTypes.string,
     inputRef: PropTypes.func,
     debounceWait: PropTypes.number,
+    type: PropTypes.string,
   }
 
   static defaultProps = {
     className: '',
     onChange: () => {},
     debouncedOnChange: null,
-    htmlType: 'text',
     inputRef: null,
     debounceWait: 500,
+    type: 'text',
   }
 
   constructor(props) {
@@ -37,8 +37,8 @@ class Input extends React.Component {
   render() {
     const {
       className,
+      type,
       onChange,
-      htmlType,
       inputRef,
       debounceWait,
       debouncedOnChange,
@@ -47,8 +47,8 @@ class Input extends React.Component {
 
     return (
       <input
-        type={htmlType}
         ref={inputRef}
+        type={type}
         onChange={e => {
           // Call both the onChange and debouncedOnChange handler
           onChange(e.target.value)
