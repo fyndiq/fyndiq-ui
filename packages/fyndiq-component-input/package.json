@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-input",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "Thibaut Remy <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
@@ -10,9 +10,9 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Input%2FInput&selectedStory=default",
   "dependencies": {
-    "fyndiq-component-button": "*",
-    "fyndiq-component-dropdown": "*",
-    "fyndiq-icons": "*",
+    "fyndiq-component-button": "^2.5.0",
+    "fyndiq-component-dropdown": "^2.7.0",
+    "fyndiq-icons": "^2.4.0",
     "fyndiq-styles-colors": "*",
     "lodash.debounce": "4.0.8"
   },
