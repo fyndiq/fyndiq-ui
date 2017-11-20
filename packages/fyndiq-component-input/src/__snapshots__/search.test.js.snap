@@ -24,7 +24,6 @@ exports[`fyndiq-component-input SearchInput should have the proper structure 1`]
     className="input"
     debounceWait={500}
     debouncedOnChange={null}
-    htmlType="search"
     id="RANDOM-ID"
     inputRef={[Function]}
     onBlur={[Function]}
@@ -32,6 +31,7 @@ exports[`fyndiq-component-input SearchInput should have the proper structure 1`]
     onFocus={[Function]}
     onKeyUp={[Function]}
     placeholder="Search"
+    type="search"
     value=""
   />
 </form>
