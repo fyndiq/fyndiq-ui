@@ -10,6 +10,7 @@
     "fyndiq-component-button": "^2.4.0",
     "fyndiq-component-checkbox": "^2.3.0",
     "fyndiq-component-dropdown": "^2.6.1",
+    "fyndiq-component-input": "*",
     "fyndiq-component-loader": "^2.1.3",
     "fyndiq-component-modal": "^2.3.1",
     "fyndiq-component-price": "^2.3.2",

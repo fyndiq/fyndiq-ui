@@ -10,38 +10,38 @@ storiesOf('Dropdown', module)
       onOpen={action('open')}
       onClose={action('close')}
     >
-      Dropdown content
+      <div style={{ padding: 20 }}>Dropdown content</div>
     </Dropdown>
   ))
   .addWithInfo('no down arrow', () => (
     <Dropdown button="Click me" noArrow>
-      Dropdown content
+      <div style={{ padding: 20 }}>Dropdown content</div>
     </Dropdown>
   ))
   .addWithInfo('opened', () => (
     <Dropdown button="Click me" opened>
-      Dropdown content
+      <div style={{ padding: 20 }}>Dropdown content</div>
     </Dropdown>
   ))
   .addWithInfo('custom sizes', () => (
     <div>
       <Dropdown button="x-small" size="xs">
-        Dropdown content
+        <div style={{ padding: 20 }}>Dropdown content</div>
       </Dropdown>
       <Dropdown button="small" size="s">
-        Dropdown content
+        <div style={{ padding: 20 }}>Dropdown content</div>
       </Dropdown>
       <Dropdown button="medium" size="m">
-        Dropdown content
+        <div style={{ padding: 20 }}>Dropdown content</div>
       </Dropdown>
       <Dropdown button="large" size="l">
-        Dropdown content
+        <div style={{ padding: 20 }}>Dropdown content</div>
       </Dropdown>
     </div>
   ))
   .addWithInfo('custom button', () => (
     <Dropdown button={<Button type="primary">Open me</Button>}>
-      Dropdown content
+      <div style={{ padding: 20 }}>Dropdown content</div>
     </Dropdown>
   ))
   .addWithInfo('custom wrapper style', () => (
@@ -60,31 +60,31 @@ storiesOf('Dropdown', module)
   ))
   .addWithInfo('open on hover', () => (
     <Dropdown button="Hover me!" hoverMode>
-      It works!
+      <div style={{ padding: 20 }}>Dropdown content</div>
     </Dropdown>
   ))
   .addWithInfo('change dropdown position', () => (
     <div>
       <p>
         <Dropdown button="bottom left (bl)" position="bl">
-          Content
+          <div style={{ padding: 20 }}>Dropdown content</div>
         </Dropdown>
         <Dropdown button="bottom center (bc)" position="bc">
-          Content
+          <div style={{ padding: 20 }}>Dropdown content</div>
         </Dropdown>
         <Dropdown button="bottom right (br)" position="br">
-          Content
+          <div style={{ padding: 20 }}>Dropdown content</div>
         </Dropdown>
       </p>
       <p>
         <Dropdown button="top left (tl)" position="tl">
-          Content
+          <div style={{ padding: 20 }}>Dropdown content</div>
         </Dropdown>
         <Dropdown button="top center (tc)" position="tc">
-          Content
+          <div style={{ padding: 20 }}>Dropdown content</div>
         </Dropdown>
         <Dropdown button="top right (tr)" position="tr">
-          Content
+          <div style={{ padding: 20 }}>Dropdown content</div>
         </Dropdown>
       </p>
     </div>
@@ -92,17 +92,17 @@ storiesOf('Dropdown', module)
   .addWithInfo('disabled dropdown', () => (
     <div>
       <Dropdown button="Disabled dropdown" disabled>
-        Content
+        <div style={{ padding: 20 }}>Dropdown content</div>
       </Dropdown>
       <Dropdown button="Disabled open dropdown" disabled opened>
-        Content
+        <div style={{ padding: 20 }}>Dropdown content</div>
       </Dropdown>
     </div>
   ))
   .addWithInfo('programatically close dropdown', () => (
     <Dropdown button="Open dropdown">
       {({ onClose }) => (
-        <div>
+        <div style={{ padding: 20 }}>
           <p>
             By default, a dropdown doesn&apos;t get closed if you click inside.
             By passing a function as the <code>children</code> prop, the child

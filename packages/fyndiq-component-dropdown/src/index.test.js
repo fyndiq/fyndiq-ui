@@ -36,10 +36,7 @@ describe('fyndiq-component-dropdown', () => {
 
   test('should be opened when clicked on the button', () => {
     const component = mount(<Dropdown button="button">Value</Dropdown>)
-    component
-      .find('div > div')
-      .at(0)
-      .simulate('click')
+    component.find('Button').simulate('click')
     expect(component.find('.dropdownWrapper')).toMatchSnapshot()
   })
 
@@ -103,10 +100,7 @@ describe('fyndiq-component-dropdown', () => {
     component.simulate('mouseover')
     jest.runTimersToTime(200)
     component.update()
-    component
-      .find('div > div')
-      .at(0)
-      .simulate('click')
+    component.find('Button').simulate('click')
     component.update()
     expect(component.find('.dropdownWrapper')).toMatchSnapshot()
   })
@@ -246,10 +240,7 @@ describe('fyndiq-component-dropdown', () => {
           disableLifecycleMethods: true,
         },
       )
-      component
-        .find('div > div')
-        .at(0)
-        .simulate('click')
+      component.find('Button').simulate('click')
       component.update()
       expect(component.find('.dropdownWrapper').exists()).toBe(false)
     })

@@ -11,13 +11,12 @@
 }
 
 .dropdownDefault {
-  padding: 10px;
   width: 100%;
   min-width: 220px;
   border: 1px solid var(--color-border);
   background-color: var(--color-white);
   border-radius: 2px;
-  box-shadow: 0 2px 3px var(--color-border);
+  box-shadow: 0 0 10px color(var(--color-black) a(10%));
 }
 
 .position {
