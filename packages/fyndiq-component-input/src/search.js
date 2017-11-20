@@ -16,6 +16,7 @@ class SearchInput extends React.Component {
     value: PropTypes.string,
     className: PropTypes.string,
     onSearch: PropTypes.func,
+    debouncedOnChange: PropTypes.func,
   }
 
   static defaultProps = {
@@ -26,6 +27,7 @@ class SearchInput extends React.Component {
     value: '',
     className: '',
     onSearch: () => {},
+    debouncedOnChange: null,
   }
   constructor(props) {
     super(props)
@@ -84,7 +86,7 @@ class SearchInput extends React.Component {
   }
 
   render() {
-    const { size, input, className } = this.props
+    const { size, input, className, debouncedOnChange } = this.props
 
     return (
       <form
@@ -105,6 +107,7 @@ class SearchInput extends React.Component {
           autoComplete: 'off',
           value: this.state.value,
           onChange: this.onInputChange,
+          debouncedOnChange,
           onKeyUp: this.onKeyUp,
           onFocus: this.onFocus,
           onBlur: this.onBlur,

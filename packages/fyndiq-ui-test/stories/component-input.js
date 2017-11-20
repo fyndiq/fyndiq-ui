@@ -28,3 +28,6 @@ storiesOf('Input/Search', module)
   .addWithInfo('collapsible', () => (
     <SearchInput collapsible emptyAfterSearch />
   ))
+  .addWithInfo('debounced', () => (
+    <SearchInput debouncedOnChange={action('debouncedOnSearch')} />
+  ))
