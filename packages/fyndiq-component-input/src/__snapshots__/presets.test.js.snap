@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-input Presets should have the proper structure 1`] = `
+<span
+  className="presetWrapper"
+>
+  <Input
+    className=""
+    debounceWait={500}
+    debouncedOnChange={null}
+    inputRef={null}
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <Dropdown
+    button={
+      <Button
+        buttonRef={[Function]}
+        className="presetDropdownButton"
+        disabled={false}
+        horizontal={false}
+        htmlType="button"
+        link={undefined}
+        onClick={[Function]}
+        pill={false}
+        pressed={false}
+        size="s"
+        type="white"
+      >
+        <Arrow
+          className=""
+          orientation="down"
+        />
+      </Button>
+    }
+    className=""
+    disabled={false}
+    hoverMode={false}
+    margin={5}
+    noArrow={false}
+    noPropagateClickEvent={false}
+    noWrapperStyle={false}
+    onClose={[Function]}
+    onOpen={[Function]}
+    opened={false}
+    position="br"
+    wrapperClassName=""
+  />
+</span>
+`;
+
+exports[`fyndiq-component-input Presets should show a list of presets after clicking on the button 1`] = `
+<ButtonWrapper
+  className=""
+  noOuterBorder={true}
+  orientation="vertical"
+>
+  <div
+    className="
+      wrapper
+      wrapper--orientation_vertical
+      wrapperNoOuterBorder
+      
+    "
+  >
+    <Button
+      buttonRef={[Function]}
+      className="presetButton"
+      disabled={false}
+      horizontal={false}
+      htmlType="button"
+      key="test1"
+      link={undefined}
+      onClick={[Function]}
+      pill={false}
+      pressed={false}
+      size="m"
+      type="white"
+    >
+      <button
+        className="
+    button
+    type-white
+    size-m
+    false
+    false
+    interactive
+    false
+    presetButton
+  "
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        test1
+      </button>
+    </Button>
+    <Button
+      buttonRef={[Function]}
+      className="presetButton"
+      disabled={false}
+      horizontal={false}
+      htmlType="button"
+      key="test2"
+      link={undefined}
+      onClick={[Function]}
+      pill={false}
+      pressed={false}
+      size="m"
+      type="white"
+    >
+      <button
+        className="
+    button
+    type-white
+    size-m
+    false
+    false
+    interactive
+    false
+    presetButton
+  "
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        test2
+      </button>
+    </Button>
+  </div>
+</ButtonWrapper>
+`;

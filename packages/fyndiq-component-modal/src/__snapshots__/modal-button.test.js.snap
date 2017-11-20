@@ -3,6 +3,7 @@
 exports[`ModalButton Component should display a button by default 1`] = `
 <span>
   <Button
+    buttonRef={[Function]}
     className=""
     disabled={false}
     horizontal={false}
@@ -45,6 +46,7 @@ exports[`ModalButton Component should handle Modal children as a prop 1`] = `
 
 exports[`ModalButton Component should have a custom button 1`] = `
 <Button
+  buttonRef={[Function]}
   className=""
   disabled={false}
   horizontal={false}

@@ -1,0 +1,65 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.wrapper {
+  display: inline-flex;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  transition: background-color .15s ease-out;
+  height: 56px;
+
+  &:hover {
+    background-color: var(--color-border);
+
+    & .label {
+      stroke: var(--color-black);
+    }
+  }
+}
+
+.label {
+  display: inline-block;
+  padding: 18px;
+  color: white;
+  cursor: pointer;
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 1px;
+  transition: stroke .15s;
+}
+
+.input {
+  border: none;
+  padding: 0;
+  width: 0;
+  transition: .15s ease-out;
+  background: transparent;
+}
+
+.wrapperOpen {
+  background-color: var(--color-white);
+  border-color: var(--color-border);
+  box-shadow: 0 0 5px 0 color(var(--color-black) a(10%));
+
+  &:hover {
+    background-color: var(--color-white);
+  }
+
+  & .label {
+    stroke: var(--color-black);
+  }
+
+  &.wrapper--size-m .input {
+    width: 590px;
+  }
+
+  &.wrapper--size-s .input {
+    width: 300px;
+  }
+}
+
+.checkboxWrapper {
+  display: inline-block;
+  padding: 8px 10px;
+  font-weight: 300;
+}

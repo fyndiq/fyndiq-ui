@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-input Invisible should have the proper structure 1`] = `
+<form
+  className="
+          invisibleWrapper
+          false
+          
+        "
+  onSubmit={[Function]}
+>
+  <input
+    className="invisibleInput"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+  />
+  <button
+    className="invisibleSubmit"
+    type="submit"
+  >
+    <Pencil
+      className="invisiblePencil"
+    />
+  </button>
+</form>
+`;
