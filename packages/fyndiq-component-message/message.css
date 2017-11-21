@@ -1,0 +1,36 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.message {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 20px;
+  background: var(--color-white);
+  box-shadow: 0 0 5px 0 color(var(--color-black) a(30%));
+  border-radius: 2px;
+  margin-bottom: 8px;
+
+  & svg {
+    display: inline-block;
+    position: relative;
+    left: -5px;
+    width: 16px;
+    max-height: 16px;
+    margin-right: 8px;
+  }
+}
+
+.message--type_info {
+  border: 1px solid var(--color-blue);
+}
+
+.message--type_confirm {
+  border: 1px solid var(--color-green);
+}
+
+.message--type_warn {
+  border: 1px solid var(--color-orange);
+}
+
+.message--type_error {
+  border: 1px solid var(--color-red);
+}
