@@ -4,6 +4,7 @@ import infoAddon from '@storybook/addon-info'
 // Bootstrap standard fonts
 
 import 'fyndiq-styles-fonts/bootstrap.css'
+import './fyndiq-reset.css'
 
 function loadStories() {
   /* eslint-disable global-require */
