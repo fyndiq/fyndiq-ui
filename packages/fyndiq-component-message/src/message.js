@@ -41,14 +41,14 @@ class Message extends React.Component {
 
   pause() {
     clearTimeout(this.timeout)
-    this.remaining -= new Date() - this.start
+    this.remaining -= Date.now() - this.start
 
     // Timer should be at least 1s
     this.remaining = Math.max(this.remaining, 1000)
   }
 
   resume() {
-    this.start = new Date()
+    this.start = Date.now()
     clearTimeout(this.timeout)
     this.timeout = setTimeout(this.props.onClose, this.remaining)
   }
