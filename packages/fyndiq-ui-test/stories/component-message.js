@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Message } from 'fyndiq-component-message'
+import Button from 'fyndiq-component-button'
+import { Message, Wrapper, addMessage } from 'fyndiq-component-message'
 import { Error, Truck, Warning } from 'fyndiq-icons'
 
 storiesOf('Message', module)
@@ -25,5 +26,20 @@ storiesOf('Message', module)
           Type error
         </Message>
       </div>
+    </div>
+  ))
+  .addWithInfo('action', () => (
+    <div>
+      <Wrapper />
+      <Button
+        onClick={() =>
+          addMessage(
+            <Message icon={<Truck />} type="confirm">
+              Type confirm {Math.random()}
+            </Message>,
+          )}
+      >
+        Show message
+      </Button>
     </div>
   ))
