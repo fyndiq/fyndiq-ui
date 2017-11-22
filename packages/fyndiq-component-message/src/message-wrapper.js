@@ -37,7 +37,10 @@ class MessageWrapper extends React.Component {
 
   addMessage(message) {
     this.setState(state => ({
-      messages: [...state.messages, message],
+      messages: [
+        ...state.messages,
+        React.cloneElement(message, { id: Math.random() }),
+      ],
     }))
   }
 
@@ -59,8 +62,8 @@ class MessageWrapper extends React.Component {
     return (
       <MessagePortal>
         <div className={styles.wrapper}>
-          {this.state.messages.map((message, id) => (
-            <div key={id}>
+          {this.state.messages.map(message => (
+            <div key={message.props.id}>
               {React.cloneElement(message, {
                 onClose: () => this.removeMessage(message),
               })}
