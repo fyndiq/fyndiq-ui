@@ -1,5 +1,17 @@
 @import "fyndiq-styles-colors/colors.css";
 
+.wrapper {
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+
+  & .message {
+    pointer-events: all;
+  }
+}
+
 .message {
   display: inline-flex;
   align-items: center;
