@@ -1,18 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import MessagePortal from './message-portal'
 import styles from '../message.css'
 
 class MessageWrapper extends React.Component {
-  static propTypes = {
-    messages: PropTypes.arrayOf(PropTypes.element),
-  }
-
-  static defaultProps = {
-    messages: [],
-  }
-
   // Keep only one instance of MessageWrapper
   static instance = null
 
@@ -27,7 +18,7 @@ class MessageWrapper extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { messages: this.props.messages }
+    this.state = { messages: [] }
 
     this.addMessage = this.addMessage.bind(this)
   }
