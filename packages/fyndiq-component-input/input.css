@@ -3,10 +3,13 @@
 .input {
   padding: 0 20px;
   background: var(--color-white);
+  margin: 0;
   border: 1px solid var(--color-border);
   border-radius: 2px;
   font-size: 15px;
   line-height: 48px;
+  outline: 0;
+  appearance: none;
 
   &:invalid {
     box-shadow: none;
@@ -30,7 +33,6 @@
     border-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    height: 100%;
   }
 }
 
@@ -64,6 +66,7 @@
 .invisibleInput {
   font-weight: inherit;
   font-size: inherit;
+  margin: 0;
   color: inherit;
   border: 1px solid transparent;
   border-top-left-radius: 2px;
@@ -77,6 +80,7 @@
   display: flex;
   align-items: center;
   padding: 2px 4px;
+  margin: 0;
   border: 1px solid transparent;
   border-left: none;
   background: transparent;

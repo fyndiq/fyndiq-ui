@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-message Message should have the proper structure 1`] = `
+<div
+  className="
+          message
+          message--type_info
+        "
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <svg
+    color="#4A90E2"
+  >
+    Icon
+  </svg>
+  Message
+</div>
+`;

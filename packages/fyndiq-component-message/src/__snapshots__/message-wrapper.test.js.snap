@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-message MessageWrapper static addMessage should have the proper structure 1`] = `
+<MessagePortal
+  portalId="fyndiq-message-portal"
+>
+  <div
+    className="wrapper"
+  >
+    <div
+      key="RANDOM-ID"
+    >
+      <Message
+        icon={null}
+        id="RANDOM-ID"
+        onClose={[Function]}
+        timeout={5000}
+        type="info"
+      >
+        New message 1
+      </Message>
+    </div>
+    <div
+      key="RANDOM-ID"
+    >
+      <Message
+        icon={null}
+        id="RANDOM-ID"
+        onClose={[Function]}
+        timeout={5000}
+        type="info"
+      >
+        New message 2
+      </Message>
+    </div>
+  </div>
+</MessagePortal>
+`;
