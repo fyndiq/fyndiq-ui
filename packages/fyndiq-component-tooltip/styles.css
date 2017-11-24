@@ -1,10 +1,11 @@
 @import "fyndiq-styles-colors/colors.css";
 
 .tooltip {
-  background-color: color(var(--color-black) a(90%));
+  background-color: color(black a(70%));
   color: var(--color-white);
-  border-radius: 3px;
+  border-radius: 2px;
   width: 160px;
+  font-size: 12px;
   text-align: justify;
 
   &:before {
