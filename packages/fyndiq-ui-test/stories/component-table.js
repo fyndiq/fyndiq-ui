@@ -49,11 +49,6 @@ storiesOf('Table', module)
   .addWithInfo('cell customization', () => (
     <Table>
       <Row>
-        <Cell flex={2}>I have a flex of 2</Cell>
-        <Cell flex={0.5}>I have a flex of 0.5</Cell>
-        <Cell>I have a flex of 1</Cell>
-      </Row>
-      <Row>
         <Cell center>I am centered</Cell>
       </Row>
     </Table>

@@ -70,7 +70,6 @@ The component `Cell` has the following customizable props:
 | Name | Type | Description | Default value |
 |---|---|---|---|
 | **className** | String | Additional classname | `''` |
-| **flex** | Number or String | Flex caracteristics of the cell | `1` |
 | **center** | Bool | Controls the text-align of the cell | `''` |
 | **children** | Node | Content of the cell | `''` |
 
