@@ -37,7 +37,8 @@ storiesOf('Message', module)
             <Message icon={<Truck />} type="confirm">
               Type confirm {Math.random()}
             </Message>,
-          )}
+          )
+        }
       >
         Show message
       </Button>
