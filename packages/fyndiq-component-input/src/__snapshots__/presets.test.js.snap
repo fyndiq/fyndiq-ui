@@ -71,7 +71,6 @@ exports[`fyndiq-component-input Presets should show a list of presets after clic
       horizontal={false}
       htmlType="button"
       key="test1"
-      link={undefined}
       onClick={[Function]}
       pill={false}
       pressed={false}
@@ -103,7 +102,6 @@ exports[`fyndiq-component-input Presets should show a list of presets after clic
       horizontal={false}
       htmlType="button"
       key="test2"
-      link={undefined}
       onClick={[Function]}
       pill={false}
       pressed={false}

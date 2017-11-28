@@ -7,11 +7,6 @@ exports[`fyndiq-component-table Cell component should have the right structure 1
       false
       className
     "
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
 >
   Content
 </div>
