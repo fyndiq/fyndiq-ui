@@ -24,6 +24,7 @@ exports[`fyndiq-component-tooltip should be rendered without props 1`] = `
     className="
             tooltip
             position-bc
+            type-black
             
           "
     style={
