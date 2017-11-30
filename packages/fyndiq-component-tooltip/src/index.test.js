@@ -14,13 +14,17 @@ describe('fyndiq-component-tooltip', () => {
         <Tooltip text="help" position="tr">
           tooltip
         </Tooltip>,
-      ),
-    ).toMatchSnapshot()
+      )
+        .find('.tooltip')
+        .hasClass('position-tr'),
+    ).toBe(true)
   })
 
   test('should have a component for the prop text', () => {
     expect(
-      shallow(<Tooltip text={<div>hello</div>}>tooltip</Tooltip>),
+      shallow(<Tooltip text={<div>hello</div>}>tooltip</Tooltip>).find(
+        '.tooltip',
+      ),
     ).toMatchSnapshot()
   })
 
@@ -29,6 +33,14 @@ describe('fyndiq-component-tooltip', () => {
       shallow(<Tooltip className="test-classname" />)
         .find('.tooltip')
         .hasClass('test-classname'),
+    ).toBe(true)
+  })
+
+  test('should have a type prop', () => {
+    expect(
+      shallow(<Tooltip type="white" />)
+        .find('.tooltip')
+        .hasClass('type-white'),
     ).toBe(true)
   })
 

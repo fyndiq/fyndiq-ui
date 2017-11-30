@@ -1,8 +1,6 @@
 @import "fyndiq-styles-colors/colors.css";
 
 .tooltip {
-  background-color: color(black a(70%));
-  color: var(--color-white);
   border-radius: 2px;
   width: 160px;
   font-size: 12px;
@@ -15,7 +13,6 @@
     height: 0;
     border-style: solid;
     border-width: 0 4px 4px;
-    border-color: transparent transparent var(--color-black) transparent;
   }
 
   &:empty {
@@ -88,4 +85,40 @@
 .helperWrapper {
   display: inline-block;
   padding: 8px 10px;
+}
+
+/* Color schemes */
+
+.type-black {
+  background-color: color(black a(70%));
+  color: var(--color-white);
+
+  &:before {
+    border-color: transparent transparent var(--color-black) transparent;
+  }
+
+  &.position-b:before {
+    border-color: transparent transparent var(--color-black) transparent;
+  }
+
+  &.position-t:before {
+    border-color: var(--color-black) transparent transparent;
+  }
+}
+
+.type-white {
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px color(var(--color-black) a(30%));
+
+  &:before {
+    border-color: transparent transparent var(--color-white) transparent;
+  }
+
+  &.position-b:before {
+    border-color: transparent transparent var(--color-white) transparent;
+  }
+
+  &.position-t:before {
+    border-color: var(--color-white) transparent transparent;
+  }
 }
