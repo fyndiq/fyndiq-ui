@@ -48,3 +48,13 @@ storiesOf('Tooltip', module)
       </Tooltip>
     </div>
   ))
+  .addWithInfo('change color theme', () => (
+    <div>
+      <Tooltip text="tooltip content">Black tooltip</Tooltip>
+      <br />
+      <br />
+      <Tooltip text="tooltip content" type="white">
+        White tooltip
+      </Tooltip>
+    </div>
+  ))

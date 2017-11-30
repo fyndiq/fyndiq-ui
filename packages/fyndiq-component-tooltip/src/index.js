@@ -6,6 +6,7 @@ import styles from '../styles.css'
 
 class Tooltip extends React.Component {
   static propTypes = {
+    type: PropTypes.oneOf(['black', 'white']),
     text: PropTypes.node,
     className: PropTypes.string,
     children: PropTypes.node,
@@ -14,6 +15,7 @@ class Tooltip extends React.Component {
   }
 
   static defaultProps = {
+    type: 'black',
     text: null,
     children: null,
     className: '',
@@ -50,7 +52,7 @@ class Tooltip extends React.Component {
   }
 
   render() {
-    const { text, children, position, className } = this.props
+    const { type, text, children, position, className } = this.props
 
     return (
       <Dropdown
@@ -64,6 +66,7 @@ class Tooltip extends React.Component {
           className={`
             ${styles.tooltip}
             ${styles[`position-${position}`]}
+            ${styles[`type-${type}`]}
             ${className}
           `}
           style={{ width: this.state.width }}

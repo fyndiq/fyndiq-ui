@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-tooltip",
-  "version": "2.4.1",
+  "version": "2.5.0",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
