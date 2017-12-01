@@ -23,6 +23,7 @@ function loadStories() {
   require('../stories/component-brand')
   require('../stories/component-loader')
   require('../stories/component-table')
+  require('../stories/component-timeline')
   require('../stories/illustrations')
 }
 
