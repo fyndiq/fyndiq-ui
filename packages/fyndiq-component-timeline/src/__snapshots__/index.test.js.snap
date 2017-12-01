@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-timeline Event Component should have the proper structure 1`] = `
+<div
+  className="event"
+>
+  <div
+    className="icon"
+  >
+    <Icon
+      color={null}
+    />
+  </div>
+  <span>
+    Hello
+  </span>
+</div>
+`;
+
+exports[`fyndiq-component-timeline Timeline Component should have the proper structure 1`] = `
+<div
+  className="
+      timeline
+      timeline_type_white
+    "
+>
+  <div>
+    Hello
+  </div>
+</div>
+`;
