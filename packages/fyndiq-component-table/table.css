@@ -50,6 +50,7 @@
 }
 
 .cell {
+  vertical-align: top;
   padding: 0 8px;
 }
 
