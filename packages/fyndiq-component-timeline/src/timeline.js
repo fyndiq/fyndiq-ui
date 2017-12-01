@@ -15,7 +15,10 @@ const Timeline = ({ children, type }) => (
 )
 
 Timeline.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element),
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
   type: PropTypes.oneOf(['white', 'black']),
 }
 
