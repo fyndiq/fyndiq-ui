@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-message",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": "Thibaut Remy <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",

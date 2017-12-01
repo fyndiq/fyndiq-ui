@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`fyndiq-component-table Cell component should have the right structure 1`] = `
-<div
+<td
   className="
       cell
       false
@@ -9,11 +9,11 @@ exports[`fyndiq-component-table Cell component should have the right structure 1
     "
 >
   Content
-</div>
+</td>
 `;
 
 exports[`fyndiq-component-table Row component should have the right structure 1`] = `
-<div
+<tr
   className="
       row
       false
@@ -25,16 +25,16 @@ exports[`fyndiq-component-table Row component should have the right structure 1`
     "
 >
   Content
-</div>
+</tr>
 `;
 
 exports[`fyndiq-component-table Table component should have the right structure 1`] = `
-<div
+<table
   className="
       table
       className
     "
 >
   Content
-</div>
+</table>
 `;
