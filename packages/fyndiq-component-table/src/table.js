@@ -3,15 +3,16 @@ import PropTypes from 'prop-types'
 
 import styles from '../table.css'
 
-const Table = ({ children, className }) => (
-  <div
+const Table = ({ children, className, ...props }) => (
+  <table
     className={`
       ${styles.table}
       ${className}
     `}
+    {...props}
   >
     {children}
-  </div>
+  </table>
 )
 
 Table.propTypes = {

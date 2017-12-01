@@ -3,16 +3,17 @@ import PropTypes from 'prop-types'
 
 import styles from '../table.css'
 
-const Cell = ({ children, className, center }) => (
-  <div
+const Cell = ({ children, className, center, ...props }) => (
+  <td
     className={`
       ${styles.cell}
       ${center && styles.cellCenter}
       ${className}
     `}
+    {...props}
   >
     {children}
-  </div>
+  </td>
 )
 
 Cell.propTypes = {
