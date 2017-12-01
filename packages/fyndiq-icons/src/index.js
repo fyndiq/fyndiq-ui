@@ -4,6 +4,7 @@ import Checkmark from './checkmark'
 import Error from './error'
 import Magnifier from './magnifier'
 import Pencil from './pencil'
+import Regret from './regret'
 import Shop from './shop'
 import Star from './star'
 import Truck from './truck'
@@ -16,6 +17,7 @@ export {
   Error,
   Magnifier,
   Pencil,
+  Regret,
   Shop,
   Star,
   Truck,
