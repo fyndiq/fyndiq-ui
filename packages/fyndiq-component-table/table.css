@@ -1,14 +1,11 @@
 @import "fyndiq-styles-colors/colors.css";
 
 .table {
-  display: table;
   border-collapse: collapse;
   width: 100%;
 }
 
 .row {
-  display: table-row;
-
   &:not(.rowNoBorder) {
     border-bottom: 1px solid var(--color-border);
   }
@@ -53,7 +50,6 @@
 }
 
 .cell {
-  display: table-cell;
   padding: 0 8px;
 }
 

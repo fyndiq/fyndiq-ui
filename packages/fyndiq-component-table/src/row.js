@@ -11,8 +11,9 @@ const Row = ({
   noBorder,
   size,
   verticalCenter,
+  ...props
 }) => (
-  <div
+  <tr
     className={`
       ${styles.row}
       ${head && styles.rowHead}
@@ -22,9 +23,10 @@ const Row = ({
       ${styles[`rowSize-${size}`]}
       ${className}
     `}
+    {...props}
   >
     {children}
-  </div>
+  </tr>
 )
 
 Row.propTypes = {
