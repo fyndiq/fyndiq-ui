@@ -3,6 +3,7 @@ import Bag from './bag'
 import Checkmark from './checkmark'
 import Error from './error'
 import Magnifier from './magnifier'
+import Notebook from './notebook'
 import Pencil from './pencil'
 import Regret from './regret'
 import Shop from './shop'
@@ -16,6 +17,7 @@ export {
   Checkmark,
   Error,
   Magnifier,
+  Notebook,
   Pencil,
   Regret,
   Shop,
