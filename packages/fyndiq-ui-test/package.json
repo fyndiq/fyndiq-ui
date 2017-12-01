@@ -19,6 +19,7 @@
     "fyndiq-component-productlist": "^2.1.9",
     "fyndiq-component-stars": "^2.1.7",
     "fyndiq-component-table": "^3.0.0-beta.1",
+    "fyndiq-component-timeline": "*",
     "fyndiq-component-tooltip": "^2.4.1",
     "fyndiq-icons": "^2.5.0",
     "fyndiq-illustrations": "^2.0.4",

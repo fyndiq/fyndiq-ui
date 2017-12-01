@@ -7,20 +7,20 @@ const Truck = ({ className, color }) => (
     <path
       stroke={color}
       fill="none"
-      d="M.5 11.5h10V.5H.5z"
+      d="m 6,11.5 h 4.5 v -11 h -10 v 11 H 2"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       stroke={color}
       fill="none"
-      d="M11 2.5h3.8c.2 0 .4.12.5.3l2.05 3.66c.1.18.15.4.15.6v3.85c0 .34-.26.6-.6.6H5.5"
+      d="m 11,2.5 h 3.8 c 0.2,0 0.4,0.12 0.5,0.3 l 2.05,3.66 c 0.1,0.18 0.15,0.4 0.15,0.6 v 3.85 c 0,0.34 -0.26,0.6 -0.6,0.6 h -0.900025 m -3.99995,0 L 10.5,11.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <path fill={color} d="M12.5 4.03V7h3.25l-1.47-2.97z" />
+    <path fill={color} stroke="none" d="M12.5 4.03V7h3.25l-1.47-2.97z" />
     <path
-      fill="#FFF"
+      fill="none"
       stroke={color}
       d="M16 11.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-10 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"
       strokeLinecap="round"
