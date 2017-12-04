@@ -1,5 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`fyndiq-component-loader ProgressBar should have an indeterminate mode 1`] = `
+<div
+  className="
+        progress
+        
+        progressIndeterminate
+      "
+  style={
+    Object {
+      "backgroundColor": null,
+      "width": undefined,
+    }
+  }
+/>
+`;
+
+exports[`fyndiq-component-loader ProgressBar should have the proper structure 1`] = `
+<div
+  className="
+      progressbar
+      
+    "
+  style={
+    Object {
+      "backgroundColor": null,
+    }
+  }
+>
+  <div
+    className="
+        progress
+        
+        false
+      "
+    style={
+      Object {
+        "backgroundColor": null,
+        "width": "40%",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`fyndiq-component-loader it should be rendered with no props 1`] = `
 <svg
   className="
