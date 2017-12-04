@@ -1,14 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import colors from 'fyndiq-styles-colors'
-
 import styles from '../progressbar.css'
 
-const ProgressBar = ({ progress, color, backgroundColor }) => (
-  <div className={styles.progressbar} style={{ backgroundColor }}>
+const ProgressBar = ({
+  progress,
+  color,
+  backgroundColor,
+  className,
+  progressClassName,
+}) => (
+  <div
+    className={`
+      ${styles.progressbar}
+      ${className}
+    `}
+    style={{ backgroundColor }}
+  >
     <div
-      className={styles.progress}
+      className={`
+        ${styles.progress}
+        ${progressClassName}
+      `}
       style={{ backgroundColor: color, width: `${progress}%` }}
     />
   </div>
@@ -18,12 +31,16 @@ ProgressBar.propTypes = {
   progress: PropTypes.number,
   color: PropTypes.string,
   backgroundColor: PropTypes.string,
+  className: PropTypes.string,
+  progressClassName: PropTypes.string,
 }
 
 ProgressBar.defaultProps = {
   progress: 0,
-  color: colors.black,
-  backgroundColor: colors.border,
+  color: null,
+  backgroundColor: null,
+  className: '',
+  progressClassName: '',
 }
 
 export default ProgressBar
