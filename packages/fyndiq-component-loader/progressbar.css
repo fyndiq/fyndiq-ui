@@ -15,3 +15,20 @@
   transition: width .05s ease-out;
   will-change: width;
 }
+
+@keyframes indeterminate {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(300%);
+  }
+}
+
+.progressIndeterminate {
+  width: 25%;
+  transition: none;
+  will-change: none;
+  animation: indeterminate .5s cubic-bezier(.785, .135, .15, .86) infinite alternate;
+}

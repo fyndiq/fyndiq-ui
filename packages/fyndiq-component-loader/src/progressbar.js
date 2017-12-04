@@ -21,8 +21,12 @@ const ProgressBar = ({
       className={`
         ${styles.progress}
         ${progressClassName}
+        ${progress == null && styles.progressIndeterminate}
       `}
-      style={{ backgroundColor: color, width: `${progress}%` }}
+      style={{
+        backgroundColor: color,
+        width: progress != null ? `${progress}%` : undefined,
+      }}
     />
   </div>
 )
