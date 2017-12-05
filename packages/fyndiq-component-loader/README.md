@@ -1,6 +1,6 @@
 # fyndiq-component-loader [![npm](https://img.shields.io/npm/v/fyndiq-component-loader.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-loader)
 
-[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Loader&selectedStory=default)
+[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Loader%2Fdefault&selectedStory=default)
 
 A Loader icon for Fyndiq
 
