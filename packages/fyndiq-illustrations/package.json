@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-illustrations",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "author": "Thibaut Remy <thibaut.remy@fyndiq.com",
   "main": "lib/index.js",
   "license": "MIT",

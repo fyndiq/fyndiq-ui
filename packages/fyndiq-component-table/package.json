@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-table",
-  "version": "3.0.0-beta.2",
+  "version": "3.0.0-beta.3",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
