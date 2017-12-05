@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Loader, { ProgressBar } from 'fyndiq-component-loader'
+import colors from 'fyndiq-styles-colors'
 
 storiesOf('Loader/default', module)
   .addWithInfo('default', () => <Loader />)
@@ -21,4 +22,7 @@ storiesOf('Loader/ProgressBar', module)
     </div>
   ))
   .addWithInfo('default', () => <ProgressBar progress={40} />)
+  .addWithInfo('change color', () => (
+    <ProgressBar color={colors.orange} progress={55} />
+  ))
   .addWithInfo('indeterminate', () => <ProgressBar progress={null} />)
