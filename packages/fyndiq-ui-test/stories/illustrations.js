@@ -1,9 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import {
+  FileUploadIllustration,
+  LoginIllustration,
   SearchIllustration,
   SearchNoResultIllustration,
-  LoginIllustration,
 } from 'fyndiq-illustrations'
 
 const h2 = {
@@ -28,5 +29,11 @@ storiesOf('Illustrations', module)
     <div>
       <h2 style={h2}>&lt;LoginIllustration /&gt;</h2>
       <LoginIllustration />
+    </div>
+  ))
+  .addWithInfo('file', () => (
+    <div>
+      <h2 style={h2}>&lt;FileUploadIllustration /&gt;</h2>
+      <FileUploadIllustration />
     </div>
   ))
