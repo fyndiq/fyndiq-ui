@@ -35,6 +35,8 @@ exports[`fyndiq-component-table Table component should have the right structure 
       className
     "
 >
-  Content
+  <tbody>
+    Content
+  </tbody>
 </table>
 `;
