@@ -54,6 +54,8 @@ class Tooltip extends React.Component {
   render() {
     const { type, text, children, position, className } = this.props
 
+    if (!text) return children
+
     return (
       <Dropdown
         button={<span>{children}</span>}

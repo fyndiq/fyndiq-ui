@@ -30,7 +30,7 @@ describe('fyndiq-component-tooltip', () => {
 
   test('should have a className prop', () => {
     expect(
-      shallow(<Tooltip className="test-classname" />)
+      shallow(<Tooltip text="text" className="test-classname" />)
         .find('.tooltip')
         .hasClass('test-classname'),
     ).toBe(true)
@@ -38,7 +38,7 @@ describe('fyndiq-component-tooltip', () => {
 
   test('should have a type prop', () => {
     expect(
-      shallow(<Tooltip type="white" />)
+      shallow(<Tooltip text="text" type="white" />)
         .find('.tooltip')
         .hasClass('type-white'),
     ).toBe(true)
@@ -57,5 +57,10 @@ describe('fyndiq-component-tooltip', () => {
     // Because of jsdom limitation, `getBoundingClientRect` will
     // always return a size of 0.
     expect(component.find('.tooltip').prop('style').width).toBe(0)
+  })
+
+  test('should not have a tooltip if the text is null or undefined', () => {
+    const component = mount(<Tooltip>tooltip</Tooltip>)
+    expect(component).toMatchSnapshot()
   })
 })
