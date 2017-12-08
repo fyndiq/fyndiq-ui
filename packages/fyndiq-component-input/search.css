@@ -1,5 +1,16 @@
 @import "fyndiq-styles-colors/colors.css";
 
+.label {
+  display: inline-block;
+  padding: 18px;
+  color: white;
+  cursor: pointer;
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 1px;
+  transition: stroke .15s;
+}
+
 .wrapper {
   display: inline-flex;
   border: 1px solid transparent;
@@ -15,17 +26,6 @@
       stroke: var(--color-black);
     }
   }
-}
-
-.label {
-  display: inline-block;
-  padding: 18px;
-  color: white;
-  cursor: pointer;
-  fill: none;
-  stroke: var(--color-border);
-  stroke-width: 1px;
-  transition: stroke .15s;
 }
 
 .input {
@@ -46,6 +46,7 @@
     background-color: var(--color-white);
   }
 
+  /* stylelint-disable-next-line no-descending-specificity */
   & .label {
     stroke: var(--color-black);
   }

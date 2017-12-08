@@ -20,16 +20,6 @@
   align-self: center;
 }
 
-/* Hide the custom checkmark when the checkbox is not checked */
-.checkbox:not(:checked) + .checkmark {
-  opacity: 0;
-}
-
-/* Hide the checkbox when not in frame mode */
-.checkbox:not(.checkboxFrame) {
-  display: none;
-}
-
 .checkbox {
   appearance: none;
   outline: none;
@@ -57,6 +47,16 @@
 
   &:indeterminate {
     background: linear-gradient(-45deg, var(--color-red), transparent, var(--color-red), transparent, var(--color-red), transparent, var(--color-red), transparent, var(--color-red), transparent, var(--color-red), transparent, var(--color-red), transparent, var(--color-red), transparent);
+  }
+
+  /* Hide the checkbox when not in frame mode */
+  &:not(.checkboxFrame) {
+    display: none;
+  }
+
+  /* Hide the custom checkmark when the checkbox is not checked */
+  &:not(:checked) + .checkmark {
+    opacity: 0;
   }
 
   &:checked {

@@ -8,6 +8,12 @@
   display: block;
 }
 
+.tagline {
+  fill: var(--color-red);
+  text-anchor: middle;
+  font-weight: bold;
+}
+
 .type-normal {
   & .outer {
     fill: var(--color-brand);
@@ -74,8 +80,3 @@
   }
 }
 
-.tagline {
-  fill: var(--color-red);
-  text-anchor: middle;
-  font-weight: bold;
-}

@@ -46,23 +46,6 @@
   display: inline-flex;
 }
 
-/* Uncomment the line below to show the input on hover */
-
-/* .form:hover .input, */
-.invisibleWrapper .invisibleInput:focus,
-.invisibleWrapperDirty .invisibleInput {
-  border-color: var(--color-border);
-
-  & + .invisibleSubmit {
-    opacity: 1;
-    border-color: var(--color-border);
-  }
-}
-
-.invisibleWrapper:hover .invisibleInput:not(:focus) {
-  background-color: var(--color-palegrey);
-}
-
 .invisibleInput {
   font-weight: inherit;
   font-size: inherit;
@@ -92,6 +75,23 @@
   &:hover {
     background-color: var(--color-palegrey);
   }
+}
+
+/* Uncomment the line below to show the input on hover */
+
+/* .form:hover .input, */
+.invisibleWrapperDirty .invisibleInput,
+.invisibleWrapper .invisibleInput:focus {
+  border-color: var(--color-border);
+
+  & + .invisibleSubmit {
+    opacity: 1;
+    border-color: var(--color-border);
+  }
+}
+
+.invisibleWrapper:hover .invisibleInput:not(:focus) {
+  background-color: var(--color-palegrey);
 }
 
 .invisiblePencil {
