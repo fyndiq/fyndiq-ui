@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Button, { Wrapper as ButtonWrapper } from 'fyndiq-component-button'
 import { Message, Wrapper, addMessage } from 'fyndiq-component-message'
-import { Star, Error, Truck, Warning, Checkmark } from 'fyndiq-icons'
+import { Error, Truck, Warning, Checkmark } from 'fyndiq-icons'
 
 storiesOf('Message', module)
   .addWithInfo('default', () => <Message>Content</Message>)
