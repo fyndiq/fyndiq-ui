@@ -25,6 +25,15 @@
   display: none;
 }
 
+.imgWrapper {
+  align-self: flex-start;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  margin-right: 10px;
+  transition: .1s;
+}
+
 .wrapperOpen {
   background: var(--color-palegrey);
   border-color: var(--color-border);
@@ -45,15 +54,6 @@
   display: flex;
   padding: var(--margin);
   text-align: left;
-}
-
-.imgWrapper {
-  align-self: flex-start;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  margin-right: 10px;
-  transition: .1s;
 }
 
 .mainContent {

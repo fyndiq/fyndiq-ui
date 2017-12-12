@@ -11,7 +11,7 @@ const Table = ({ children, className, ...props }) => (
     `}
     {...props}
   >
-    {children}
+    <tbody>{children}</tbody>
   </table>
 )
 

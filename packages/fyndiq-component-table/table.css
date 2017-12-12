@@ -11,6 +11,11 @@
   }
 }
 
+.cell {
+  vertical-align: top;
+  padding: 0 8px;
+}
+
 .rowSize-l .cell {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -47,11 +52,6 @@
 
 .rowVerticalCenter .cell {
   vertical-align: middle;
-}
-
-.cell {
-  vertical-align: top;
-  padding: 0 8px;
 }
 
 .cellCenter {

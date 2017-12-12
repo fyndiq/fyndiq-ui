@@ -65,3 +65,15 @@ exports[`fyndiq-component-tooltip should have a component for the prop text 1`] 
   </div>
 </div>
 `;
+
+exports[`fyndiq-component-tooltip should not have a tooltip if the text is null or undefined 1`] = `
+<Tooltip
+  className=""
+  maxWidth={190}
+  position="bc"
+  text={null}
+  type="black"
+>
+  tooltip
+</Tooltip>
+`;
