@@ -15,6 +15,7 @@
     "fyndiq-component-message": "^2.2.0",
     "fyndiq-component-modal": "^2.4.0",
     "fyndiq-component-price": "^2.3.2",
+    "fyndiq-component-product": "*",
     "fyndiq-component-productcard": "^2.1.9",
     "fyndiq-component-productlist": "^2.1.9",
     "fyndiq-component-stars": "^2.1.7",

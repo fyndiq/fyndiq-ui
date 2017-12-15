@@ -17,6 +17,7 @@ function loadStories() {
   require('../stories/component-message')
   require('../stories/component-modal')
   require('../stories/component-price')
+  require('../stories/component-product')
   require('../stories/component-productcard')
   require('../stories/component-productlist')
   require('../stories/component-alert')

@@ -1,0 +1,63 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.images {
+  flex: 1;
+}
+
+.topContainer {
+  display: flex;
+}
+
+.buttonArrow {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0 16px;
+  outline: 0;
+
+  & svg {
+    max-width: 1.5em;
+    max-height: 1.5em;
+  }
+}
+
+.imgBigWrapper {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+}
+
+.imgBig {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.buttonImg {
+  display: inline-flex;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  padding: 0;
+  background: transparent;
+  border-radius: 2px;
+  margin-right: 10px;
+  cursor: pointer;
+  outline: 0;
+}
+
+.buttonImgActive {
+  border-color: var(--color-red);
+}
+
+.imgSmall {
+  height: 60px;
+  max-width: 60px;
+  object-fit: cover;
+}
+
+.smallImgWrapper {
+  padding: 8px 50px;
+}
