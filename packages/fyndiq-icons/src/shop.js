@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import colors from 'fyndiq-styles-colors'
+
+import SvgWrapper from './svg-wrapper'
 
 const Shop = ({ className, color }) => (
-  <svg className={className} viewBox="0 0 20 18">
+  <SvgWrapper className={className} viewBox="0 0 20 18">
     <path
       stroke={color}
       fill="none"
@@ -25,7 +26,7 @@ const Shop = ({ className, color }) => (
       fill="none"
       d="M15.2 2.5V7c0 .83.8 1.5 1.8 1.5.98 0 1.8-.67 1.8-1.5V2.5H.8V7c0 .83.8 1.5 1.8 1.5.98 0 1.8-.67 1.8-1.5m14.4-4.5v-2H.8v2"
     />
-  </svg>
+  </SvgWrapper>
 )
 
 Shop.propTypes = {
@@ -35,7 +36,7 @@ Shop.propTypes = {
 
 Shop.defaultProps = {
   className: '',
-  color: colors.black,
+  color: undefined,
 }
 
 export default Shop

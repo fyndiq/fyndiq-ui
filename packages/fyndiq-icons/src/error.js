@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import colors from 'fyndiq-styles-colors'
+
+import SvgWrapper from './svg-wrapper'
 
 const Error = ({ className, color }) => (
-  <svg className={className} viewBox="0 0 20 20">
+  <SvgWrapper className={className} viewBox="0 0 20 20">
     <path
       stroke={color}
       fill="none"
@@ -16,7 +17,7 @@ const Error = ({ className, color }) => (
       fill="none"
       d="M19.07 10A9.07 9.07 0 1 1 .93 10a9.07 9.07 0 0 1 18.14 0z"
     />
-  </svg>
+  </SvgWrapper>
 )
 
 Error.propTypes = {
@@ -26,7 +27,7 @@ Error.propTypes = {
 
 Error.defaultProps = {
   className: '',
-  color: colors.black,
+  color: undefined,
 }
 
 export default Error

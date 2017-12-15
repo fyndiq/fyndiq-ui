@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import colors from 'fyndiq-styles-colors'
+
+import SvgWrapper from './svg-wrapper'
 
 const Warning = ({ className, color }) => (
-  <svg className={className} viewBox="0 0 19 16">
+  <SvgWrapper className={className} viewBox="0 0 19 16">
     <path
       fill="none"
       stroke={color}
@@ -16,7 +17,7 @@ const Warning = ({ className, color }) => (
       d="M9.5 9.5A.5.5 0 0 1 9 9V5c0-.26.23-.5.5-.5s.5.24.5.5v4c0 .3-.23.5-.5.5z"
     />
     <path fill={color} d="M10.5 12.22a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-  </svg>
+  </SvgWrapper>
 )
 
 Warning.propTypes = {
@@ -26,7 +27,7 @@ Warning.propTypes = {
 
 Warning.defaultProps = {
   className: '',
-  color: colors.black,
+  color: undefined,
 }
 
 export default Warning

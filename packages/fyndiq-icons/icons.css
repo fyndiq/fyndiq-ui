@@ -1,0 +1,8 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.svgWrapper {
+  fill: var(--color-black);
+  stroke: var(--color-black);
+  width: 26px;
+  height: 26px;
+}
