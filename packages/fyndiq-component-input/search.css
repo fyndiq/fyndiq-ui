@@ -31,10 +31,13 @@
 .input {
   border: none;
   padding: 0;
-  width: 0;
   transition: .15s ease-out;
   background: transparent;
   outline: 0;
+
+  /* Hidden styles: 1px is because Safari cannot focus an input with a width of 0 */
+  width: 1px;
+  opacity: 0;
 }
 
 .wrapperOpen {
@@ -49,6 +52,10 @@
   /* stylelint-disable-next-line no-descending-specificity */
   & .label {
     stroke: var(--color-black);
+  }
+
+  & .input {
+    opacity: 1;
   }
 
   &.wrapper--size-m .input {
