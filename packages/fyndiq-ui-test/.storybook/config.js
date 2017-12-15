@@ -25,6 +25,7 @@ function loadStories() {
   require('../stories/component-table')
   require('../stories/component-timeline')
   require('../stories/illustrations')
+  require('../stories/icons')
 }
 
 setAddon(infoAddon)
