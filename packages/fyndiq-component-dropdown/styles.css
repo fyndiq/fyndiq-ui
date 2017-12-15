@@ -33,6 +33,12 @@
   animation-name: bl;
 }
 
+.arrow {
+  max-height: 1em;
+  max-width: 1em;
+  margin: 0 1em;
+}
+
 @keyframes bl {
   from {
     opacity: 0;
