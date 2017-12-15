@@ -31,7 +31,7 @@ exports[`fyndiq-component-input SearchInput should have the proper structure 1`]
     onFocus={[Function]}
     onKeyUp={[Function]}
     placeholder="Search"
-    type="search"
+    type="text"
     value=""
   />
 </form>
