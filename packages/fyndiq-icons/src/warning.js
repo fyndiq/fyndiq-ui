@@ -16,7 +16,11 @@ const Warning = ({ className, color }) => (
       stroke={color}
       d="M9.5 9.5A.5.5 0 0 1 9 9V5c0-.26.23-.5.5-.5s.5.24.5.5v4c0 .3-.23.5-.5.5z"
     />
-    <path fill={color} d="M10.5 12.22a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+    <path
+      fill={color}
+      stroke="none"
+      d="M10.5 12.22a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+    />
   </SvgWrapper>
 )
 

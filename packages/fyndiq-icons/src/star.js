@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from '../star.css'
 
-const Star = ({ full, onClick, onHover }) => {
+import SvgWrapper from './svg-wrapper'
+
+const Star = ({ className, color, colorEmpty, full, onClick, onHover }) => {
   const starId = `${Math.random()}`
   return (
-    <svg
-      className={styles.star}
+    <SvgWrapper
+      className={className}
       onClick={onClick}
       onMouseOver={onHover}
       onFocus={onHover}
@@ -18,25 +19,33 @@ const Star = ({ full, onClick, onHover }) => {
         </clipPath>
       </defs>
       <path
-        className={styles.greystar}
+        fill={colorEmpty}
+        stroke="none"
         d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
       />
       <path
-        className={styles.yellowstar}
+        fill={color}
+        stroke="none"
         clipPath={`url(#${starId})`}
         d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
       />
-    </svg>
+    </SvgWrapper>
   )
 }
 
 Star.propTypes = {
+  className: PropTypes.string,
+  color: PropTypes.string,
+  colorEmpty: PropTypes.string,
   full: PropTypes.number,
   onClick: PropTypes.func,
   onHover: PropTypes.func,
 }
 
 Star.defaultProps = {
+  className: '',
+  color: undefined,
+  colorEmpty: undefined,
   full: 1,
   onClick: noop => noop,
   onHover: noop => noop,
