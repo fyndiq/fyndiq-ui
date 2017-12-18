@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import colors from 'fyndiq-styles-colors'
 
 import SvgWrapper from './svg-wrapper'
 
