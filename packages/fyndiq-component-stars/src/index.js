@@ -16,7 +16,7 @@ class Stars extends React.Component {
   }
 
   static defaultProps = {
-    rating: undefined,
+    rating: 1,
     reviews: undefined,
     size: 'm',
     interactive: false,
@@ -69,8 +69,8 @@ class Stars extends React.Component {
       starNodes.push(
         <span
           key={id}
-          {...interactiveProps}
           className={styles.starInteractiveWrapper}
+          {...interactiveProps}
         >
           <Star
             colorEmpty={colors.border}
