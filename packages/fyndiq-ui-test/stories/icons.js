@@ -1,16 +1,19 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import * as icons from 'fyndiq-icons'
+import colors from 'fyndiq-styles-colors'
+
+import styles from './icons.css'
 
 const iconsKeys = Object.keys(icons)
 
 storiesOf('Icons', module)
   .addWithInfo('default', () => (
-    <div className="icon-container">
+    <div className={styles.iconContainer}>
       {iconsKeys.map(key => (
-        <div className="icon-item-wrapper">
-          {React.createElement(icons[key], { key, className: 'icon-item' })}
-          <span className="icon-item-name">{key}</span>
+        <div className={styles.iconItemWrapper}>
+          {React.createElement(icons[key], { key, className: styles.iconItem })}
+          <span className={styles.iconItemName}>{key}</span>
         </div>
       ))}
     </div>
@@ -22,6 +25,17 @@ storiesOf('Icons', module)
   )
   .addWithInfo('change color with CSS', () =>
     iconsKeys.map(key =>
-      React.createElement(icons[key], { key, className: 'icon-color' }),
+      React.createElement(icons[key], { key, className: styles.iconColor }),
     ),
+  )
+  .addWithInfo('Specials/Star', () => (
+    <React.Fragment>
+      <icons.Star />
+      <icons.Star full={0.5} color="gold" colorEmpty={colors.border} />
+    </React.Fragment>
+  ))
+  .addWithInfo('Specials/Arrow', () =>
+    ['up', 'down', 'right', 'left'].map(orientation => (
+      <icons.Arrow orientation={orientation} />
+    )),
   )

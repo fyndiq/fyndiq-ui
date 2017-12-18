@@ -3,34 +3,3 @@
 html {
   color: var(--color-black);
 }
-
-:global .icon-color {
-  stroke: var(--color-blue);
-  fill: var(--color-blue);
-}
-
-:global .icon-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-:global .icon-item-wrapper {
-  padding: 16px 20px;
-  text-align: center;
-  min-width: 150px;
-
-  & .icon-item {
-    display: block;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto 10px;
-  }
-
-  & .icon-item-name {
-    color: var(--color-border);
-    font-weight: 300;
-    font-family: monospace;
-  }
-}
-
