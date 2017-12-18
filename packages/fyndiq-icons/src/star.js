@@ -37,7 +37,7 @@ Star.propTypes = {
 Star.defaultProps = {
   className: '',
   color: undefined,
-  colorEmpty: undefined,
+  colorEmpty: 'none',
   full: 1,
 }
 
