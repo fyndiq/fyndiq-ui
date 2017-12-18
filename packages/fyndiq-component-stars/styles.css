@@ -3,6 +3,11 @@
 .stars {
   display: inline-block;
   vertical-align: middle;
+
+  & svg {
+    height: 1em;
+    width: 1em;
+  }
 }
 
 .interactive {
@@ -21,5 +26,5 @@
   display: inline-block;
   vertical-align: middle;
   color: var(--color-lightgrey);
-  font-size: .9 em;
+  font-size: .9em;
 }
