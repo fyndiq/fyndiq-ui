@@ -51,12 +51,26 @@ class Stars extends React.Component {
     const liveRating = this.state.hoverRating || rating
 
     for (let id = 1; id <= 5; id++) {
+      const interactiveProps = interactive
+        ? {
+            onClick: () => onChange(id),
+            onMouseOver: () => this.changeHoverRating(id),
+            onFocus: () => this.changeHoverRating(id),
+            onKeyUp: e => {
+              if (e.keyCode === 13) {
+                onChange(id)
+              }
+            },
+            role: 'button',
+            tabIndex: 0,
+          }
+        : {}
+
       starNodes.push(
         <span
           key={id}
-          onClick={() => onChange(id)}
-          onMouseOver={() => this.changeHoverRating(id)}
-          onFocus={() => this.changeHoverRating(id)}
+          {...interactiveProps}
+          className={styles.starInteractiveWrapper}
         >
           <Star
             colorEmpty={colors.border}

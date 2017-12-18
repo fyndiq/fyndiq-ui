@@ -14,6 +14,12 @@
   cursor: pointer;
 }
 
+.starInteractiveWrapper {
+  &:focus {
+    outline: 0 !important;
+  }
+}
+
 .size-m {
   font-size: 1em;
 }
