@@ -9,9 +9,7 @@ exports[`fyndiq-component-message Message should have the proper structure 1`] =
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  <svg
-    color="#4A90E2"
-  >
+  <svg>
     Icon
   </svg>
   Message
