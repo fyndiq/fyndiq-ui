@@ -47,7 +47,7 @@ import { Magnifier } from 'fyndiq-icons'
 
 # API
 
-All icons have the following API:
+All icons have the following props:
 
 | Name | Type | Description | Default value |
 |---|---|---|---|
@@ -69,3 +69,40 @@ Additionnaly, some icons provide special props:
 | **full** | Number | Describes how "full" the star is. Usefull to show half-stars. 1 is full, 0 is empty.  | `1` (full) |
 | **color** | String | In the case of the star, this attribute corresponds to the color of the full part of the star.  | `` |
 | **colorEmpty** | String | Color of the empty part of the star  | `` |
+
+# Developpment info
+
+## Add a new icon
+
+To add a new icon to fyndiq-icons, you need to first clean it up, using Inkscape/Illustrator and optimize it using [SVGOMG](https://jakearchibald.github.io/svgomg/).
+
+Then, use the following template for your new file
+
+``` js
+import React from 'react'
+import PropTypes from 'prop-types'
+
+import SvgWrapper from './svg-wrapper'
+
+const NewIcon = ({ className, color }) => (
+  <SvgWrapper className={className} viewBox="*** YOUR ICON'S VIEWBOX HERE ***">
+    {/* Content of the SVG*/}
+  </SvgWrapper>
+)
+
+NewIcon.propTypes = {
+  className: PropTypes.string,
+  color: PropTypes.string,
+}
+
+NewIcon.defaultProps = {
+  className: '',
+  color: undefined,
+}
+
+export default NewIcon
+```
+
+The part `{/* Content of the SVG*/}` should represent the different `<path>`s of your SVG. Each of them should have
+a prop `fill` or `stroke` set to `{color}`, and **the other one set to `none`**. This is very important and enables
+both CSS and JS coloring.
