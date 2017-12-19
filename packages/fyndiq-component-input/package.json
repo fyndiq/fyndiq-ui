@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-input",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "author": "Thibaut Remy <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
