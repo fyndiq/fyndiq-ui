@@ -30,7 +30,6 @@ exports[`fyndiq-component-input Presets should have the proper structure 1`] = `
       >
         <Arrow
           className="presetArrow"
-          color={undefined}
           orientation="down"
         />
       </Button>
