@@ -28,15 +28,13 @@ const Star = ({ className, color, colorEmpty, full }) => {
 }
 
 Star.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
+  ...SvgWrapper.propTypes,
   colorEmpty: PropTypes.string,
   full: PropTypes.number,
 }
 
 Star.defaultProps = {
-  className: '',
-  color: undefined,
+  ...SvgWrapper.defaultProps,
   colorEmpty: 'none',
   full: 1,
 }

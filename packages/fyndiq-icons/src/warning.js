@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import SvgWrapper from './svg-wrapper'
 
 const Warning = ({ className, color }) => (
@@ -24,14 +22,7 @@ const Warning = ({ className, color }) => (
   </SvgWrapper>
 )
 
-Warning.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Warning.defaultProps = {
-  className: '',
-  color: undefined,
-}
+Warning.propTypes = SvgWrapper.propTypes
+Warning.defaultProps = SvgWrapper.defaultProps
 
 export default Warning

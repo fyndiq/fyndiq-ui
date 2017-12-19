@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import SvgWrapper from './svg-wrapper'
 
 const Error = ({ className, color }) => (
@@ -20,14 +18,7 @@ const Error = ({ className, color }) => (
   </SvgWrapper>
 )
 
-Error.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Error.defaultProps = {
-  className: '',
-  color: undefined,
-}
+Error.propTypes = SvgWrapper.propTypes
+Error.defaultProps = SvgWrapper.defaultProps
 
 export default Error

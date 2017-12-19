@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import SvgWrapper from './svg-wrapper'
 
 const Bag = ({ className, color }) => (
@@ -14,14 +12,7 @@ const Bag = ({ className, color }) => (
   </SvgWrapper>
 )
 
-Bag.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Bag.defaultProps = {
-  className: '',
-  color: undefined,
-}
+Bag.propTypes = SvgWrapper.propTypes
+Bag.defaultProps = SvgWrapper.defaultProps
 
 export default Bag

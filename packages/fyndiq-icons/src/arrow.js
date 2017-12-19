@@ -33,15 +33,13 @@ const Arrow = ({ orientation, className, color }) => {
 }
 
 Arrow.propTypes = {
+  ...SvgWrapper.propTypes,
   orientation: PropTypes.oneOf(['up', 'down', 'right', 'left']),
-  className: PropTypes.string,
-  color: PropTypes.string,
 }
 
 Arrow.defaultProps = {
+  ...SvgWrapper.defaultProps,
   orientation: 'left',
-  className: '',
-  color: undefined,
 }
 
 export default Arrow

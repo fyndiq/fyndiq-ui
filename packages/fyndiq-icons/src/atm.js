@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import SvgWrapper from './svg-wrapper'
 
 const Atm = ({ className, color }) => (
@@ -15,14 +13,7 @@ const Atm = ({ className, color }) => (
   </SvgWrapper>
 )
 
-Atm.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Atm.defaultProps = {
-  className: '',
-  color: undefined,
-}
+Atm.propTypes = SvgWrapper.propTypes
+Atm.defaultProps = SvgWrapper.defaultProps
 
 export default Atm

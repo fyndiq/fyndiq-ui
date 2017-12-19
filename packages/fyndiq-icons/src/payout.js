@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import SvgWrapper from './svg-wrapper'
 
 const Payout = ({ className, color }) => (
@@ -21,14 +19,7 @@ const Payout = ({ className, color }) => (
   </SvgWrapper>
 )
 
-Payout.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Payout.defaultProps = {
-  className: '',
-  color: undefined,
-}
+Payout.propTypes = SvgWrapper.propTypes
+Payout.defaultProps = SvgWrapper.defaultProps
 
 export default Payout

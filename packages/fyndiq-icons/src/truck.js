@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import SvgWrapper from './svg-wrapper'
 
 const Truck = ({ className, color }) => (
@@ -30,14 +28,7 @@ const Truck = ({ className, color }) => (
   </SvgWrapper>
 )
 
-Truck.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Truck.defaultProps = {
-  className: '',
-  color: undefined,
-}
+Truck.propTypes = SvgWrapper.propTypes
+Truck.defaultProps = SvgWrapper.defaultProps
 
 export default Truck

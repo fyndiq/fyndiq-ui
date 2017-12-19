@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import SvgWrapper from './svg-wrapper'
 
 const Magnifier = ({ className, color }) => (
@@ -13,14 +11,7 @@ const Magnifier = ({ className, color }) => (
   </SvgWrapper>
 )
 
-Magnifier.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Magnifier.defaultProps = {
-  className: '',
-  color: undefined,
-}
+Magnifier.propTypes = SvgWrapper.propTypes
+Magnifier.defaultProps = SvgWrapper.defaultProps
 
 export default Magnifier

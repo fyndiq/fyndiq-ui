@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import SvgWrapper from './svg-wrapper'
 
 const Pencil = ({ className, color }) => (
@@ -18,14 +16,7 @@ const Pencil = ({ className, color }) => (
   </SvgWrapper>
 )
 
-Pencil.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Pencil.defaultProps = {
-  className: '',
-  color: undefined,
-}
+Pencil.propTypes = SvgWrapper.propTypes
+Pencil.defaultProps = SvgWrapper.defaultProps
 
 export default Pencil

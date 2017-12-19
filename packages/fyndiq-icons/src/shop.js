@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import SvgWrapper from './svg-wrapper'
 
 const Shop = ({ className, color }) => (
@@ -29,14 +27,7 @@ const Shop = ({ className, color }) => (
   </SvgWrapper>
 )
 
-Shop.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Shop.defaultProps = {
-  className: '',
-  color: undefined,
-}
+Shop.propTypes = SvgWrapper.propTypes
+Shop.defaultProps = SvgWrapper.defaultProps
 
 export default Shop

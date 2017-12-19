@@ -84,21 +84,15 @@ import PropTypes from 'prop-types'
 
 import SvgWrapper from './svg-wrapper'
 
+/* Rename NewIcon to something more specific */
 const NewIcon = ({ className, color }) => (
   <SvgWrapper className={className} viewBox="*** YOUR ICON'S VIEWBOX HERE ***">
     {/* Content of the SVG*/}
   </SvgWrapper>
 )
 
-NewIcon.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-NewIcon.defaultProps = {
-  className: '',
-  color: undefined,
-}
+NewIcon.propTypes = SvgWrapper.propTypes
+NewIcon.defaultProps = SvgWrapper.defaultProps
 
 export default NewIcon
 ```

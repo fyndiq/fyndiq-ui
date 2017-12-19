@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import SvgWrapper from './svg-wrapper'
 
 const Checkmark = ({ className, color }) => (
@@ -13,14 +11,7 @@ const Checkmark = ({ className, color }) => (
   </SvgWrapper>
 )
 
-Checkmark.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Checkmark.defaultProps = {
-  className: '',
-  color: undefined,
-}
+Checkmark.propTypes = SvgWrapper.propTypes
+Checkmark.defaultProps = SvgWrapper.defaultProps
 
 export default Checkmark

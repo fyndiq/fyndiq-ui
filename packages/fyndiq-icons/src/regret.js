@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import SvgWrapper from './svg-wrapper'
 
 const Regret = ({ className, color }) => (
@@ -23,14 +21,7 @@ const Regret = ({ className, color }) => (
   </SvgWrapper>
 )
 
-Regret.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Regret.defaultProps = {
-  className: '',
-  color: undefined,
-}
+Regret.propTypes = SvgWrapper.propTypes
+Regret.defaultProps = SvgWrapper.defaultProps
 
 export default Regret
