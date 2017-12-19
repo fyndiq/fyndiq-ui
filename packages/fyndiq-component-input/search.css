@@ -6,14 +6,13 @@
   color: white;
   cursor: pointer;
   fill: none;
-  stroke: var(--color-border);
-  stroke-width: 1px;
-  transition: stroke .15s;
 }
 
 .magnifier {
   height: 19px;
   width: 19px;
+  stroke: var(--color-border);
+  transition: stroke .15s;
 }
 
 .wrapper {
@@ -27,7 +26,7 @@
   &:hover {
     background-color: var(--color-border);
 
-    & .label {
+    & .magnifier {
       stroke: var(--color-black);
     }
   }
@@ -55,7 +54,7 @@
   }
 
   /* stylelint-disable-next-line no-descending-specificity */
-  & .label {
+  & .magnifier {
     stroke: var(--color-black);
   }
 
