@@ -34,9 +34,10 @@
 }
 
 .arrow {
-  max-height: 1em;
-  max-width: 1em;
-  margin: 0 1em;
+  height: 1em;
+  width: 1em;
+  margin: 0 0 0 .5em;
+  vertical-align: middle;
 }
 
 @keyframes bl {
