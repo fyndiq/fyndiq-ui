@@ -40,6 +40,11 @@
   text-align: left;
 }
 
+.presetArrow {
+  height: 14px;
+  vertical-align: middle;
+}
+
 /* Invisible input */
 
 .invisibleWrapper {

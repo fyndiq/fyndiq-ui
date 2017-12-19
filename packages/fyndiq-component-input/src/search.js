@@ -100,7 +100,7 @@ class SearchInput extends React.Component {
         `}
       >
         <label className={styles.label} htmlFor={this.state.id}>
-          <Magnifier size={19} />
+          <Magnifier className={styles.magnifier} />
         </label>
         {React.cloneElement(input, {
           id: this.state.id,

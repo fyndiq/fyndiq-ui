@@ -1,8 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import SvgWrapper from './svg-wrapper'
 
 const Notebook = ({ className, color }) => (
-  <svg className={className} viewBox="0 0 18 23">
+  <SvgWrapper className={className} viewBox="0 0 18 23">
     <path
       fill="none"
       stroke={color}
@@ -10,17 +10,10 @@ const Notebook = ({ className, color }) => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-  </svg>
+  </SvgWrapper>
 )
 
-Notebook.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Notebook.defaultProps = {
-  className: '',
-  color: undefined,
-}
+Notebook.propTypes = SvgWrapper.propTypes
+Notebook.defaultProps = SvgWrapper.defaultProps
 
 export default Notebook

@@ -1,15 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import fyndiqColors from 'fyndiq-styles-colors'
 
 import styles from '../message.css'
-
-const colors = {
-  info: fyndiqColors.blue,
-  confirm: fyndiqColors.green,
-  warn: fyndiqColors.orange,
-  error: fyndiqColors.red,
-}
 
 class Message extends React.Component {
   constructor(props) {
@@ -65,7 +57,7 @@ class Message extends React.Component {
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
       >
-        {icon && React.cloneElement(icon, { color: colors[type] })}
+        {icon}
         {children}
       </div>
     )

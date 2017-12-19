@@ -38,39 +38,93 @@ describe('fyndiq-component-stars', () => {
 
     // Find the 3rd star (at is 0-index based)
     component
-      .find('Star')
+      .find('.starInteractiveWrapper')
       .at(2)
       .simulate('click')
 
-    expect(clickSpy.mock.calls).toHaveLength(1)
+    expect(clickSpy).toHaveBeenCalled()
     expect(clickSpy.mock.calls[0][0]).toBe(3)
+  })
+
+  it('should send an event if interactive and press Enter', () => {
+    const clickSpy = jest.fn()
+    const component = shallow(<Stars interactive onChange={clickSpy} />)
+
+    component
+      .find('.starInteractiveWrapper')
+      .at(2)
+      .simulate('keyup', { keyCode: 13 })
+    expect(clickSpy).toHaveBeenCalled()
   })
 
   it('should change its state when hovered and interactive', () => {
     const component = shallow(<Stars interactive />)
     component
-      .find('Star')
+      .find('.starInteractiveWrapper')
       .at(2)
-      .simulate('hover')
-    expect(component).toMatchSnapshot()
+      .simulate('mouseover')
+
+    expect(
+      component
+        .find('Star')
+        .at(2)
+        .prop('full'),
+    ).toBe(1)
+    expect(
+      component
+        .find('Star')
+        .at(3)
+        .prop('full'),
+    ).toBe(0)
+  })
+
+  it('should change its state when focused and interactive', () => {
+    const component = shallow(<Stars interactive />)
+    component
+      .find('.starInteractiveWrapper')
+      .at(2)
+      .simulate('focus')
+
+    expect(
+      component
+        .find('Star')
+        .at(2)
+        .prop('full'),
+    ).toBe(1)
+    expect(
+      component
+        .find('Star')
+        .at(3)
+        .prop('full'),
+    ).toBe(0)
   })
 
   it('should not change its state when hovered and not interactive', () => {
     const component = shallow(<Stars rating={4} />)
     component
-      .find('Star')
+      .find('.starInteractiveWrapper')
       .at(2)
-      .simulate('hover')
-    expect(component).toMatchSnapshot()
+      .simulate('mouseover')
+    expect(
+      component
+        .find('Star')
+        .at(3)
+        .prop('full'),
+    ).toBe(1)
   })
 
   it('should reset its state when the mouse leaves', () => {
-    const component = shallow(<Stars rating={4.3} interactive />)
+    const component = shallow(<Stars rating={4.5} interactive />)
     component
-      .find('Star')
+      .find('.starInteractiveWrapper')
       .at(2)
-      .simulate('hover')
+      .simulate('mouseover')
     component.find('.stars').simulate('mouseleave')
-    expect(component).toMatchSnapshot()
+    expect(
+      component
+        .find('Star')
+        .at(4)
+        .prop('full'),
+    ).toBe(0.5)
   })
 })

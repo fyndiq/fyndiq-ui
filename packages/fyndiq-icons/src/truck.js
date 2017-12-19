@@ -1,9 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import colors from 'fyndiq-styles-colors'
+import SvgWrapper from './svg-wrapper'
 
 const Truck = ({ className, color }) => (
-  <svg className={className} viewBox="0 0 19 14">
+  <SvgWrapper className={className} viewBox="0 0 19 14">
     <path
       stroke={color}
       fill="none"
@@ -26,17 +25,10 @@ const Truck = ({ className, color }) => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-  </svg>
+  </SvgWrapper>
 )
 
-Truck.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-}
-
-Truck.defaultProps = {
-  className: '',
-  color: colors.black,
-}
+Truck.propTypes = SvgWrapper.propTypes
+Truck.defaultProps = SvgWrapper.defaultProps
 
 export default Truck

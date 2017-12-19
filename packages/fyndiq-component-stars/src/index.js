@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import { Star } from 'fyndiq-icons'
+import colors from 'fyndiq-styles-colors'
+
 import styles from '../styles.css'
 
 class Stars extends React.Component {
@@ -13,7 +16,7 @@ class Stars extends React.Component {
   }
 
   static defaultProps = {
-    rating: undefined,
+    rating: 1,
     reviews: undefined,
     size: 'm',
     interactive: false,
@@ -48,13 +51,33 @@ class Stars extends React.Component {
     const liveRating = this.state.hoverRating || rating
 
     for (let id = 1; id <= 5; id++) {
+      const interactiveProps = interactive
+        ? {
+            onClick: () => onChange(id),
+            onMouseOver: () => this.changeHoverRating(id),
+            onFocus: () => this.changeHoverRating(id),
+            onKeyUp: e => {
+              if (e.keyCode === 13) {
+                onChange(id)
+              }
+            },
+            role: 'button',
+            tabIndex: 0,
+          }
+        : {}
+
       starNodes.push(
-        <Star
+        <span
           key={id}
-          full={Math.min(1, Math.max(0, 1 + liveRating - id))}
-          onClick={() => onChange(id)}
-          onHover={() => this.changeHoverRating(id)}
-        />,
+          className={styles.starInteractiveWrapper}
+          {...interactiveProps}
+        >
+          <Star
+            colorEmpty={colors.border}
+            color={colors.yellow}
+            full={Math.min(1, Math.max(0, 1 + liveRating - id))}
+          />
+        </span>,
       )
     }
 

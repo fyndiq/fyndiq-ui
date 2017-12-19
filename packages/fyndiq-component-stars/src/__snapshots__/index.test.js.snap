@@ -13,36 +13,91 @@ exports[`fyndiq-component-stars should be rendered with prop interactive 1`] = `
     data-test="STARS"
     onMouseLeave={[Function]}
   >
-    <Star
-      full={NaN}
+    <span
+      className="starInteractiveWrapper"
       key="1"
       onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+      onFocus={[Function]}
+      onKeyUp={[Function]}
+      onMouseOver={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={1}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="2"
       onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+      onFocus={[Function]}
+      onKeyUp={[Function]}
+      onMouseOver={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="3"
       onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+      onFocus={[Function]}
+      onKeyUp={[Function]}
+      onMouseOver={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="4"
       onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+      onFocus={[Function]}
+      onKeyUp={[Function]}
+      onMouseOver={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="5"
       onClick={[Function]}
-      onHover={[Function]}
-    />
+      onFocus={[Function]}
+      onKeyUp={[Function]}
+      onMouseOver={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
   </div>
 </div>
 `;
@@ -60,36 +115,61 @@ exports[`fyndiq-component-stars should be rendered with prop rating 1`] = `
     data-test="STARS"
     onMouseLeave={[Function]}
   >
-    <Star
-      full={1}
+    <span
+      className="starInteractiveWrapper"
       key="1"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={1}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={1}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="2"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={1}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={1}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="3"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={1}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={1}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="4"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={0.5}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={1}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="5"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0.5}
+      />
+    </span>
   </div>
 </div>
 `;
@@ -107,36 +187,61 @@ exports[`fyndiq-component-stars should be rendered with prop reviews 1`] = `
     data-test="STARS"
     onMouseLeave={[Function]}
   >
-    <Star
-      full={NaN}
+    <span
+      className="starInteractiveWrapper"
       key="1"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={1}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="2"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="3"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="4"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="5"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
   </div>
   <span
     className="reviews"
@@ -161,36 +266,61 @@ exports[`fyndiq-component-stars should be rendered with prop size 1`] = `
     data-test="STARS"
     onMouseLeave={[Function]}
   >
-    <Star
-      full={NaN}
+    <span
+      className="starInteractiveWrapper"
       key="1"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={1}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="2"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="3"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="4"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="5"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
   </div>
 </div>
 `;
@@ -208,177 +338,61 @@ exports[`fyndiq-component-stars should be rendered without props 1`] = `
     data-test="STARS"
     onMouseLeave={[Function]}
   >
-    <Star
-      full={NaN}
+    <span
+      className="starInteractiveWrapper"
       key="1"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={1}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="2"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="3"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="4"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={NaN}
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
+    <span
+      className="starInteractiveWrapper"
       key="5"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`fyndiq-component-stars should change its state when hovered and interactive 1`] = `
-<div
-  className="wrapper"
->
-  <div
-    className="
-            stars
-            interactive
-            size-m
-          "
-    data-test="STARS"
-    onMouseLeave={[Function]}
-  >
-    <Star
-      full={1}
-      key="1"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={1}
-      key="2"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={1}
-      key="3"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={0}
-      key="4"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={0}
-      key="5"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`fyndiq-component-stars should not change its state when hovered and not interactive 1`] = `
-<div
-  className="wrapper"
->
-  <div
-    className="
-            stars
-            
-            size-m
-          "
-    data-test="STARS"
-    onMouseLeave={[Function]}
-  >
-    <Star
-      full={1}
-      key="1"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={1}
-      key="2"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={1}
-      key="3"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={1}
-      key="4"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={0}
-      key="5"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-  </div>
-</div>
-`;
-
-exports[`fyndiq-component-stars should reset its state when the mouse leaves 1`] = `
-<div
-  className="wrapper"
->
-  <div
-    className="
-            stars
-            interactive
-            size-m
-          "
-    data-test="STARS"
-    onMouseLeave={[Function]}
-  >
-    <Star
-      full={1}
-      key="1"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={1}
-      key="2"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={1}
-      key="3"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={1}
-      key="4"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
-    <Star
-      full={0.2999999999999998}
-      key="5"
-      onClick={[Function]}
-      onHover={[Function]}
-    />
+    >
+      <Star
+        className=""
+        color="#FFD600"
+        colorEmpty="#CCD1DD"
+        full={0}
+      />
+    </span>
   </div>
 </div>
 `;

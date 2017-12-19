@@ -11,6 +11,11 @@
   transition: stroke .15s;
 }
 
+.magnifier {
+  height: 19px;
+  width: 19px;
+}
+
 .wrapper {
   display: inline-flex;
   border: 1px solid transparent;
