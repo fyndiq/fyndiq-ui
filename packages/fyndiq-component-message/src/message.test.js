@@ -21,7 +21,6 @@ describe('fyndiq-component-message Message', () => {
     )
 
     expect(component.hasClass('message--type_confirm')).toBe(true)
-    expect(component.find(Icon).prop('color')).not.toBe(undefined)
   })
 
   it('should call onClose after <timeout>ms', () => {
