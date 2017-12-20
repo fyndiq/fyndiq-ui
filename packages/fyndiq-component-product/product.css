@@ -1,5 +1,10 @@
 @import "fyndiq-styles-colors/colors.css";
 
+.description {
+  margin: 0;
+  font-weight: 300;
+}
+
 .tagsWrapper {
   margin-bottom: 10px;
 }

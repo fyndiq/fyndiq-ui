@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Price, CurrentPrice, OldPrice } from 'fyndiq-component-price'
 
+import Description from './description'
 import Images from './images'
 import Tags from './tags'
 
@@ -34,7 +35,7 @@ const ProductDetails = ({
 
       {Array.isArray(tags) ? <Tags tags={tags} /> : { tags }}
 
-      <p className={styles.description}>{description}</p>
+      <Description>{description}</Description>
     </div>
   </div>
 )
@@ -45,7 +46,7 @@ ProductDetails.propTypes = {
   price: PropTypes.string,
   oldPrice: PropTypes.string,
   title: PropTypes.string,
-  description: PropTypes.string,
+  description: Description.propTypes.children, // eslint-disable-line react/no-typos
   tags: PropTypes.oneOfType(Tags.propTypes.tags, PropTypes.element),
 }
 
