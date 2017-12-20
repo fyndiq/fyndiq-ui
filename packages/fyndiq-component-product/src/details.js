@@ -8,6 +8,7 @@ import Images from './images'
 import styles from '../product-details.css'
 
 const ProductDetails = ({
+  className,
   title,
   images,
   description,
@@ -15,7 +16,7 @@ const ProductDetails = ({
   oldPrice,
   tags,
 }) => (
-  <div className={styles.wrapper}>
+  <div className={`${styles.wrapper} ${className}`}>
     {Array.isArray(images) ? (
       <Images images={images} title={title} />
     ) : (
@@ -42,6 +43,7 @@ const ProductDetails = ({
 )
 
 ProductDetails.propTypes = {
+  className: PropTypes.string,
   images: PropTypes.oneOfType(
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.element,
@@ -54,6 +56,7 @@ ProductDetails.propTypes = {
 }
 
 ProductDetails.defaultProps = {
+  className: '',
   images: null,
   title: '',
   description: '',
