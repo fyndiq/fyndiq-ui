@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Images should have a default structure 1`] = `
+<div
+  className="images"
+>
+  <div
+    className="topContainer"
+  >
+    <button
+      className="buttonArrow"
+      onClick={[Function]}
+    >
+      <Arrow
+        className=""
+        orientation="left"
+      />
+    </button>
+    <div
+      className="imgBigWrapper"
+    >
+      <img
+        alt="title"
+        className="imgBig"
+        src="imgSrc1"
+      />
+    </div>
+    <button
+      className="buttonArrow"
+      onClick={[Function]}
+    >
+      <Arrow
+        className=""
+        orientation="right"
+      />
+    </button>
+  </div>
+  <div
+    className="smallImgWrapper"
+  >
+    <button
+      className="
+                buttonImg
+                buttonImgActive
+              "
+      key="imgSrc1"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      <img
+        alt="title"
+        className="imgSmall"
+        src="imgSrc1"
+      />
+    </button>
+    <button
+      className="
+                buttonImg
+                false
+              "
+      key="imgSrc2"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      <img
+        alt="title"
+        className="imgSmall"
+        src="imgSrc2"
+      />
+    </button>
+  </div>
+</div>
+`;
