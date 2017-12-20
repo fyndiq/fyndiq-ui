@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import ProductDetails, { Images } from 'fyndiq-component-product'
+import ProductDetails, { Images, Tags } from 'fyndiq-component-product'
 
 storiesOf('Product/Details', module).addWithInfo('default', () => (
   <ProductDetails
@@ -26,4 +26,8 @@ storiesOf('Product/Images', module).addWithInfo('default', () => (
       'https://i.imgur.com/h8ot4Qa.jpg',
     ]}
   />
+))
+
+storiesOf('Product/Tags', module).addWithInfo('default', () => (
+  <Tags tags={['My awesome product', 'This tag is pretty good']} />
 ))

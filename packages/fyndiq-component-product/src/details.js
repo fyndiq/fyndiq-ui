@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { Price, CurrentPrice, OldPrice } from 'fyndiq-component-price'
 
 import Images from './images'
+import Tags from './tags'
 
 import styles from '../product-details.css'
 
@@ -31,11 +32,7 @@ const ProductDetails = ({
 
       <h3 className={styles.title}>{title}</h3>
 
-      {tags && (
-        <div className={styles.tagsWrapper}>
-          {tags.map(tag => <span className={styles.tag}>{tag}</span>)}
-        </div>
-      )}
+      {Array.isArray(tags) ? <Tags tags={tags} /> : { tags }}
 
       <p className={styles.description}>{description}</p>
     </div>
@@ -44,15 +41,12 @@ const ProductDetails = ({
 
 ProductDetails.propTypes = {
   className: PropTypes.string,
-  images: PropTypes.oneOfType(
-    PropTypes.arrayOf(PropTypes.string),
-    PropTypes.element,
-  ),
+  images: PropTypes.oneOfType(Images.propTypes.images, PropTypes.element),
   price: PropTypes.string,
   oldPrice: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string),
+  tags: PropTypes.oneOfType(Tags.propTypes.tags, PropTypes.element),
 }
 
 ProductDetails.defaultProps = {
@@ -62,7 +56,7 @@ ProductDetails.defaultProps = {
   description: '',
   price: null,
   oldPrice: null,
-  tags: [],
+  tags: null,
 }
 
 export default ProductDetails
