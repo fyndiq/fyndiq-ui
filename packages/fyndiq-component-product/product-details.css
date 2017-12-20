@@ -1,0 +1,42 @@
+@import "fyndiq-styles-colors/colors.css";
+@import "fyndiq-styles-medias/medias.css";
+
+.wrapper {
+  display: flex;
+  padding: 30px 0;
+
+  @media (--desktop) {
+    flex-direction: column;
+  }
+}
+
+.info {
+  flex: 1;
+  min-width: 400px;
+  align-self: center;
+  padding: 0 35px;
+}
+
+.title {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.description {
+  margin: 0;
+  font-weight: 300;
+}
+
+.tagsWrapper {
+  margin-bottom: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  margin-right: 5px;
+  font-size: 11px;
+  border-radius: 100px;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
