@@ -59,8 +59,6 @@
   & .icon {
     background-color: var(--color-white);
     border: 1px solid var(--color-border);
-    fill: var(--color-black);
-    stroke: var(--color-black);
   }
 }
 
@@ -71,7 +69,10 @@
 
   & .icon {
     background-color: var(--color-black);
-    fill: var(--color-white);
-    stroke: var(--color-white);
+
+    & svg {
+      fill: var(--color-white);
+      stroke: var(--color-white);
+    }
   }
 }

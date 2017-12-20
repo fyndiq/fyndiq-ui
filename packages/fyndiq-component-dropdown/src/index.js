@@ -211,7 +211,9 @@ class Dropdown extends React.Component {
           }}
         >
           {button}
-          {!noArrow && <Arrow orientation={arrowOrientation} />}
+          {!noArrow && (
+            <Arrow orientation={arrowOrientation} className={styles.arrow} />
+          )}
         </Button>
       )
     } else if (isSameType(button, Button)) {

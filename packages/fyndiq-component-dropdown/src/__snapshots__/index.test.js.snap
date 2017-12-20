@@ -22,7 +22,7 @@ exports[`fyndiq-component-dropdown should be displayed with minimum props 1`] = 
   >
     Button
     <Arrow
-      className=""
+      className="arrow"
       orientation="down"
     />
   </Button>
@@ -107,7 +107,7 @@ exports[`fyndiq-component-dropdown should have a custom wrapper 1`] = `
 
 exports[`fyndiq-component-dropdown should have an arrow oriented to the top if dropdown is above 1`] = `
 <Arrow
-  className=""
+  className="arrow"
   orientation="up"
 />
 `;

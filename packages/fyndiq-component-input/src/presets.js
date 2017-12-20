@@ -49,7 +49,7 @@ class Presets extends React.Component {
           position="br"
           button={
             <Button type="white" className={styles.presetDropdownButton}>
-              <Arrow orientation="down" />
+              <Arrow orientation="down" className={styles.presetArrow} />
             </Button>
           }
         >
