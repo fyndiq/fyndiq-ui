@@ -1,8 +1,21 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import { Arrow } from 'fyndiq-icons'
+
 import styles from '../product-images.css'
 
 class ProductImages extends React.Component {
+  static propTypes = {
+    images: PropTypes.arrayOf(PropTypes.string),
+    title: PropTypes.string,
+  }
+
+  static defaultProps = {
+    images: [],
+    title: '',
+  }
+
   constructor(props) {
     super(props)
 
@@ -36,14 +49,16 @@ class ProductImages extends React.Component {
   }
 
   previousImage() {
+    const { images } = this.props
     this.setState(state => ({
-      imgId: state.imgId === 0 ? this.props.images.length - 1 : state.imgId - 1,
+      imgId: state.imgId === 0 ? images.length - 1 : state.imgId - 1,
     }))
   }
 
   nextImage() {
+    const { images } = this.props
     this.setState(state => ({
-      imgId: state.imgId === this.props.images.length - 1 ? 0 : state.imgId + 1,
+      imgId: state.imgId === images.length - 1 ? 0 : state.imgId + 1,
     }))
   }
 
