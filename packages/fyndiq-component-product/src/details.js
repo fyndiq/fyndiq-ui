@@ -18,7 +18,7 @@ const ProductDetails = ({
 }) => (
   <div className={`${styles.wrapper} ${className}`}>
     {React.isValidElement(images) ? (
-      images
+      React.cloneElement(images, { alt: title })
     ) : (
       <Images images={images} alt={title} />
     )}
