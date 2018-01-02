@@ -8,12 +8,12 @@ import styles from '../product-images.css'
 class ProductImages extends React.Component {
   static propTypes = {
     images: PropTypes.arrayOf(PropTypes.string),
-    title: PropTypes.string,
+    alt: PropTypes.string,
   }
 
   static defaultProps = {
     images: [],
-    title: '',
+    alt: '',
   }
 
   constructor(props) {
@@ -63,7 +63,7 @@ class ProductImages extends React.Component {
   }
 
   render() {
-    const { images, title } = this.props
+    const { images, alt } = this.props
 
     return (
       <div className={styles.images}>
@@ -74,7 +74,7 @@ class ProductImages extends React.Component {
           <div className={styles.imgBigWrapper}>
             <img
               src={images[this.state.imgId]}
-              alt={title}
+              alt={alt}
               className={styles.imgBig}
             />
           </div>
@@ -94,7 +94,7 @@ class ProductImages extends React.Component {
               `}
               onMouseEnter={() => this.changeImageId(id)}
             >
-              <img src={images[id]} alt={title} className={styles.imgSmall} />
+              <img src={images[id]} alt={alt} className={styles.imgSmall} />
             </button>
           ))}
         </div>

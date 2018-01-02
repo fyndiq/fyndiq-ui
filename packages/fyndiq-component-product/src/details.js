@@ -20,7 +20,7 @@ const ProductDetails = ({
 }) => (
   <div className={`${styles.wrapper} ${className}`}>
     {Array.isArray(images) ? (
-      <Images images={images} title={title} />
+      <Images images={images} alt={title} />
     ) : (
       { images }
     )}
