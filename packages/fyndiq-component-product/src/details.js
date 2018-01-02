@@ -42,12 +42,21 @@ const ProductDetails = ({
 
 ProductDetails.propTypes = {
   className: PropTypes.string,
-  images: PropTypes.oneOfType(Images.propTypes.images, PropTypes.element),
+  images: PropTypes.oneOfType([
+    Images.propTypes.images, // eslint-disable-line react/no-typos
+    PropTypes.element,
+  ]),
   price: PropTypes.string,
   oldPrice: PropTypes.string,
   title: PropTypes.string,
-  description: Description.propTypes.children, // eslint-disable-line react/no-typos
-  tags: PropTypes.oneOfType(Tags.propTypes.tags, PropTypes.element),
+  description: PropTypes.oneOfType([
+    Description.propTypes.children, // eslint-disable-line react/no-typos
+    PropTypes.element,
+  ]),
+  tags: PropTypes.oneOfType([
+    Tags.propTypes.tags, // eslint-disable-line react/no-typos
+    PropTypes.element,
+  ]),
 }
 
 ProductDetails.defaultProps = {
