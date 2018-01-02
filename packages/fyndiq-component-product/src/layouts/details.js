@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Description from './description'
-import Images from './images'
-import Price from './price'
-import Tags from './tags'
+import Description from '../description'
+import Images from '../images'
+import Price from '../price'
+import Tags from '../tags'
 
-import styles from '../product-details.css'
+import styles from '../../product-layout-details.css'
 
-const ProductDetails = ({
+const ProductLayoutDetails = ({
   className,
   title,
   images,
@@ -18,6 +18,7 @@ const ProductDetails = ({
 }) => (
   <div className={`${styles.wrapper} ${className}`}>
     {React.isValidElement(images) ? (
+      // Inject alt prop to the Images component
       React.cloneElement(images, { alt: title })
     ) : (
       <Images images={images} alt={title} />
@@ -35,7 +36,7 @@ const ProductDetails = ({
   </div>
 )
 
-ProductDetails.propTypes = {
+ProductLayoutDetails.propTypes = {
   className: PropTypes.string,
   images: PropTypes.oneOfType([
     Images.propTypes.images, // eslint-disable-line react/no-typos
@@ -56,13 +57,13 @@ ProductDetails.propTypes = {
   ]),
 }
 
-ProductDetails.defaultProps = {
+ProductLayoutDetails.defaultProps = {
   className: '',
   images: null,
   title: '',
-  description: '',
+  description: null,
   price: null,
   tags: null,
 }
 
-export default ProductDetails
+export default ProductLayoutDetails

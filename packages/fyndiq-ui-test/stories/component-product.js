@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import ProductDetails, { Images, Tags, Price } from 'fyndiq-component-product'
+import { Images, Tags, Price, LayoutDetails } from 'fyndiq-component-product'
 
-storiesOf('Product/Details', module).addWithInfo('default', () => (
-  <ProductDetails
+storiesOf('Product/Layouts/Details', module).addWithInfo('default', () => (
+  <LayoutDetails
     title="My Product Title"
     description="The description of my product. It is pretty rad so make sure to check it out"
     images={[
