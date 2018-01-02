@@ -6,7 +6,11 @@ import styles from '../product.css'
 const ProductTags = ({ tags }) =>
   tags.length && (
     <div className={styles.tagsWrapper}>
-      {tags.map(tag => <span className={styles.tag}>{tag}</span>)}
+      {tags.map(tag => (
+        <span key={tag} className={styles.tag}>
+          {tag}
+        </span>
+      ))}
     </div>
   )
 

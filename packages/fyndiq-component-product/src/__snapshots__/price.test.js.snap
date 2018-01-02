@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Price should have a default structure 1`] = `
+<span
+  className="
+        price
+        emphasize
+      "
+>
+  <span
+    className="currentPrice"
+  >
+    123kr
+  </span>
+  <span
+    className="oldPrice"
+  />
+</span>
+`;
