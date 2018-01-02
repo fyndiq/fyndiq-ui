@@ -10,7 +10,6 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Product&selectedStory=default",
   "dependencies": {
-    "fyndiq-component-price": "*",
     "fyndiq-icons": "*",
     "fyndiq-styles-colors": "*",
     "fyndiq-styles-medias": "*"

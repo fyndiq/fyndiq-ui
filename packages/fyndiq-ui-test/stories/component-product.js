@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import ProductDetails, { Images, Tags } from 'fyndiq-component-product'
+import ProductDetails, { Images, Tags, Price } from 'fyndiq-component-product'
 
 storiesOf('Product/Details', module).addWithInfo('default', () => (
   <ProductDetails
@@ -11,7 +11,6 @@ storiesOf('Product/Details', module).addWithInfo('default', () => (
       'https://cdn.fyndiq.se/product/e8/74/3c/a1a451ba9af03f19e6bdd54890bd05b6ec/original.png',
     ]}
     price="$150"
-    oldPrice="$220"
     tags={['Awesomeness', 'Pretty good product']}
   />
 ))
@@ -27,6 +26,15 @@ storiesOf('Product/Images', module).addWithInfo('default', () => (
     ]}
   />
 ))
+
+storiesOf('Product/Price', module)
+  .addWithInfo('default', () => <Price>125kr</Price>)
+  .addWithInfo('with old price', () => <Price oldPrice="155kr">125kr</Price>)
+  .addWithInfo('no emphasize', () => (
+    <Price oldPrice="155kr" emphasize={false}>
+      125kr
+    </Price>
+  ))
 
 storiesOf('Product/Tags', module).addWithInfo('default', () => (
   <Tags tags={['My awesome product', 'This tag is pretty good']} />

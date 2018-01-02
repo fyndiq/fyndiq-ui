@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Price, CurrentPrice, OldPrice } from 'fyndiq-component-price'
-
 import Description from './description'
 import Images from './images'
+import Price from './price'
 import Tags from './tags'
 
 import styles from '../product-details.css'
@@ -15,25 +14,21 @@ const ProductDetails = ({
   images,
   description,
   price,
-  oldPrice,
   tags,
 }) => (
   <div className={`${styles.wrapper} ${className}`}>
-    {Array.isArray(images) ? (
-      <Images images={images} alt={title} />
+    {React.isValidElement(images) ? (
+      images
     ) : (
-      { images }
+      <Images images={images} alt={title} />
     )}
 
     <div className={styles.info}>
-      <Price>
-        <CurrentPrice>{price}</CurrentPrice>
-        <OldPrice>{oldPrice}</OldPrice>
-      </Price>
+      {React.isValidElement(price) ? price : <Price>{price}</Price>}
 
       <h3 className={styles.title}>{title}</h3>
 
-      {Array.isArray(tags) ? <Tags tags={tags} /> : { tags }}
+      {React.isValidElement(tags) ? tags : <Tags tags={tags} />}
 
       <Description>{description}</Description>
     </div>
@@ -46,8 +41,10 @@ ProductDetails.propTypes = {
     Images.propTypes.images, // eslint-disable-line react/no-typos
     PropTypes.element,
   ]),
-  price: PropTypes.string,
-  oldPrice: PropTypes.string,
+  price: PropTypes.oneOfType([
+    Price.propTypes.children, // eslint-disable-line react/no-typos
+    PropTypes.element,
+  ]),
   title: PropTypes.string,
   description: PropTypes.oneOfType([
     Description.propTypes.children, // eslint-disable-line react/no-typos
@@ -65,7 +62,6 @@ ProductDetails.defaultProps = {
   title: '',
   description: '',
   price: null,
-  oldPrice: null,
   tags: null,
 }
 
