@@ -6,14 +6,14 @@ import Images from './images'
 describe('Product Images', () => {
   it('should have a default structure', () => {
     const component = shallow(
-      <Images images={['imgSrc1', 'imgSrc2']} title="title" />,
+      <Images images={['imgSrc1', 'imgSrc2']} alt="title" />,
     )
     expect(component).toMatchSnapshot()
   })
 
   it('should change the big image when clicking on a small image', () => {
     const component = shallow(
-      <Images images={['imgSrc1', 'imgSrc2']} title="title" />,
+      <Images images={['imgSrc1', 'imgSrc2']} alt="title" />,
     )
     component
       .find('.buttonImg')
@@ -24,7 +24,7 @@ describe('Product Images', () => {
 
   it('should change the big image when hovering on a small image', () => {
     const component = shallow(
-      <Images images={['imgSrc1', 'imgSrc2']} title="title" />,
+      <Images images={['imgSrc1', 'imgSrc2']} alt="title" />,
     )
     component
       .find('.buttonImg')
@@ -35,7 +35,7 @@ describe('Product Images', () => {
 
   it('should change the current image when clicking on the arrows', () => {
     const component = shallow(
-      <Images images={['imgSrc1', 'imgSrc2']} title="title" />,
+      <Images images={['imgSrc1', 'imgSrc2']} alt="title" />,
     )
 
     // Click on the "next" arrow
@@ -55,7 +55,7 @@ describe('Product Images', () => {
 
   it('should go around the list when on an edge and clicking an arrow button', () => {
     const component = shallow(
-      <Images images={['imgSrc1', 'imgSrc2', 'imgSrc3']} title="title" />,
+      <Images images={['imgSrc1', 'imgSrc2', 'imgSrc3']} alt="title" />,
     )
 
     // Click on the "previous" button
@@ -75,7 +75,7 @@ describe('Product Images', () => {
 
   it('should react to arrow key presses', () => {
     const component = shallow(
-      <Images images={['imgSrc1', 'imgSrc2', 'imgSrc3']} title="title" />,
+      <Images images={['imgSrc1', 'imgSrc2', 'imgSrc3']} alt="title" />,
     )
     // Left arrow
     global.simulate.keyup({ keyCode: 37 })
@@ -90,7 +90,7 @@ describe('Product Images', () => {
 
   it('should unregister keyup events on unmount', () => {
     const component = shallow(
-      <Images images={['imgSrc1', 'imgSrc2', 'imgSrc3']} title="title" />,
+      <Images images={['imgSrc1', 'imgSrc2', 'imgSrc3']} alt="title" />,
     )
 
     component.unmount()
