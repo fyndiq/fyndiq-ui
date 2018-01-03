@@ -19,6 +19,6 @@ describe('fyndiq-component-message MessagePortal', () => {
   it('should not create another portal with the same ID', () => {
     shallow(<MessagePortal portalId="test-id" />)
     shallow(<MessagePortal portalId="test-id" />)
-    expect(document.querySelectorAll('#test-id').length).toBe(1)
+    expect(document.querySelectorAll('#test-id')).toHaveLength(1)
   })
 })
