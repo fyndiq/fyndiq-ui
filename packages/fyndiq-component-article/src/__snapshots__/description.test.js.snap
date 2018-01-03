@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Product Description should accept nodes 1`] = `
+exports[`Article Description should accept nodes 1`] = `
 <div
   className="description"
 >
@@ -13,7 +13,7 @@ exports[`Product Description should accept nodes 1`] = `
 </div>
 `;
 
-exports[`Product Description should have a default structure 1`] = `
+exports[`Article Description should have a default structure 1`] = `
 <div
   className="description"
 >

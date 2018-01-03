@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Product Images should have a default structure 1`] = `
+exports[`Article Images should have a default structure 1`] = `
 <div
   className="images"
 >

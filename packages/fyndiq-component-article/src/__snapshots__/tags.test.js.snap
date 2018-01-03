@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Product Tags should have a default structure 1`] = `
+exports[`Article Tags should have a default structure 1`] = `
 <div
   className="tagsWrapper"
 >

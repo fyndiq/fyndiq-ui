@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Product Price should have a default structure 1`] = `
+exports[`Article Price should have a default structure 1`] = `
 <span
   className="
         price
