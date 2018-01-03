@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/fyndiq/fyndiq-ui.git"
   },
-  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Article&selectedStory=default",
+  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Article%2FLayouts%2FDetails&selectedStory=default",
   "dependencies": {
     "fyndiq-icons": "*",
     "fyndiq-styles-colors": "*",
