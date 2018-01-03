@@ -17,11 +17,11 @@ npm i -S fyndiq-component-article
 The package `fyndiq-component-article` exposes several components:
 
 - Layouts
-    - `LayoutDetails`
-- `Description`
-- `Images`
-- `Price`
-- `Tags`
+    - [`LayoutDetails`](#layoutdetails)
+- [`Description`](#description)
+- [`Images`](#images)
+- [`Price`](#price)
+- [`Tags`](#tags)
 
 Layout components are high-level components that are responsible for arranging the details in a certain way.
 
@@ -73,12 +73,12 @@ import {
 
 | Name | Type | Description | Default value |
 |---|---|---|---|
-| **className** | String | Additionnal class for the root element | `` |
-| **title** | String | Title of the article | `` |
-| **description** | String or `Description` element | Description of the article | `null` |
-| **images** | Array of string or `Images` element | Images of the article | `null` |
-| **tags** | Array of string or `Tags` element | Tags of the article | `null` |
-| **price** | String or `Price` element | Price of the article | `null` |
+| **className** | String | Additionnal class for the root element | `` |
+| **title** | String | Title of the article | `` |
+| **description** | String or `Description` element | Description of the article | `null` |
+| **images** | Array of string or `Images` element | Images of the article | `null` |
+| **tags** | Array of string or `Tags` element | Tags of the article | `null` |
+| **price** | String or `Price` element | Price of the article | `null` |
 
 
 
@@ -109,7 +109,7 @@ import { Description } from 'fyndiq-component-article'
 
 | Name | Type | Description | Default value |
 |---|---|---|---|
-| **children** | Node | Content of the description | `` |
+| **children** | Node | Content of the description | `` |
 
 
 
@@ -138,8 +138,8 @@ import { Images } from 'fyndiq-component-article'
 
 | Name | Type | Description | Default value |
 |---|---|---|---|
-| **images** | Array of strings | URL of the images | `[]` |
-| **alt** | Alt text for the `<img>` tags | `''` |
+| **images** | Array of strings | URL of the images | `[]` |
+| **alt** | String | Alt text for the `<img>` tags | `''` |
 
 
 
@@ -166,9 +166,9 @@ import { Price } from 'fyndiq-component-article'
 
 | Name | Type | Description | Default value |
 |---|---|---|---|
-| **children** | String | Price of the article | `` |
-| **oldPrice** | String | Old price of the article | `''` |
-| **emphasize** | Boolean | Show a difference in font-sizes for oldPrice and price | `true` |
+| **children** | String | Price of the article | `null` |
+| **oldPrice** | String | Old price of the article | `''` |
+| **emphasize** | Boolean | Show a difference in font-sizes for oldPrice and price | `true` |
 
 
 
@@ -192,4 +192,4 @@ import { Tags } from 'fyndiq-component-article'
 
 | Name | Type | Description | Default value |
 |---|---|---|---|
-| **tags** | Array of strings | Tags of the article | `[]` |
+| **tags** | Array of strings | Tags of the article | `[]` |
