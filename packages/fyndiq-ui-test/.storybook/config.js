@@ -8,24 +8,24 @@ import './fyndiq-reset.css'
 
 function loadStories() {
   /* eslint-disable global-require */
+  require('../stories/component-alert')
+  require('../stories/component-article')
+  require('../stories/component-brand')
   require('../stories/component-button')
-  require('../stories/component-dropdown')
-  require('../stories/component-tooltip')
   require('../stories/component-checkbox')
+  require('../stories/component-dropdown')
   require('../stories/component-input')
-  require('../stories/component-stars')
+  require('../stories/component-loader')
   require('../stories/component-message')
   require('../stories/component-modal')
-  require('../stories/component-article')
   require('../stories/component-productcard')
   require('../stories/component-productlist')
-  require('../stories/component-alert')
-  require('../stories/component-brand')
-  require('../stories/component-loader')
+  require('../stories/component-stars')
   require('../stories/component-table')
   require('../stories/component-timeline')
-  require('../stories/illustrations')
+  require('../stories/component-tooltip')
   require('../stories/icons')
+  require('../stories/illustrations')
 }
 
 setAddon(infoAddon)
