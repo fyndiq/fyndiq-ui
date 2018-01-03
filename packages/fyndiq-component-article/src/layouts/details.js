@@ -6,9 +6,9 @@ import Images from '../images'
 import Price from '../price'
 import Tags from '../tags'
 
-import styles from '../../product-layout-details.css'
+import styles from '../../article-layout-details.css'
 
-const ProductLayoutDetails = ({
+const ArticleLayoutDetails = ({
   className,
   title,
   images,
@@ -36,7 +36,7 @@ const ProductLayoutDetails = ({
   </div>
 )
 
-ProductLayoutDetails.propTypes = {
+ArticleLayoutDetails.propTypes = {
   className: PropTypes.string,
   images: PropTypes.oneOfType([
     Images.propTypes.images, // eslint-disable-line react/no-typos
@@ -57,7 +57,7 @@ ProductLayoutDetails.propTypes = {
   ]),
 }
 
-ProductLayoutDetails.defaultProps = {
+ArticleLayoutDetails.defaultProps = {
   className: '',
   images: null,
   title: '',
@@ -66,4 +66,4 @@ ProductLayoutDetails.defaultProps = {
   tags: null,
 }
 
-export default ProductLayoutDetails
+export default ArticleLayoutDetails

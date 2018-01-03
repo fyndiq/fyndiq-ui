@@ -1,20 +1,20 @@
-# fyndiq-component-product [![npm](https://img.shields.io/npm/v/fyndiq-component-product.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-product)
+# fyndiq-component-article [![npm](https://img.shields.io/npm/v/fyndiq-component-article.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-article)
 
-[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Product%2FLayouts%2FDetails&selectedStory=default)
+[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Article%2FLayouts%2FDetails&selectedStory=default)
 
-A Product component for Fyndiq
+An Article component for Fyndiq
 
 # Installation
 
 The component can be installed through NPM:
 
 ``` bash
-npm i -S fyndiq-component-product
+npm i -S fyndiq-component-article
 ```
 
 # Components
 
-The package `fyndiq-component-product` exposes several components:
+The package `fyndiq-component-article` exposes several components:
 
 - Layouts
     - `LayoutDetails`
@@ -27,7 +27,7 @@ Layout components are high-level components that are responsible for arranging t
 
 ## LayoutDetails
 
-This layout component arranges the product in a "product details" view, which is mobile and tablet friendly. Best used for a customer-facing interface.
+This layout component arranges the article in a _details_ view, which is mobile and tablet friendly. Best used for a customer-facing interface.
 
 ### Usage
 
@@ -39,18 +39,18 @@ import {
   Price,
   Tags,
   LayoutDetails,
-} from 'fyndiq-component-product'
+} from 'fyndiq-component-article'
 
 // Normal usage
 <LayoutDetails
-  title="My Product Title"
-  description="My Product Description"
+  title="My article title"
+  description="My article description"
   images={[
     'http://image-url-1',
     'http://image-url-1',
   ]}
   price="$150"
-  tags={['Awesomeness', 'Pretty good product']}
+  tags={['Awesomeness', 'Pretty good article']}
 />
 
 // Advanced usage
@@ -60,12 +60,12 @@ import {
       images={['src1', 'src2']}
     />
   }
-  title="Product Title"
+  title="Article Title"
   description={<span dangerouslySetInnerHtml={{ __html: '<strong>hello</strong>' }} />}
   price={
     <Price oldPrice="$250" noEmphasize>$124</Price>
   }
-  tags={<Tags tags={['Awesomeness', 'Pretty good product']} />}
+  tags={<Tags tags={['Awesomeness', 'Pretty good article']} />}
 />
 ```
 
@@ -74,28 +74,28 @@ import {
 | Name | Type | Description | Default value |
 |---|---|---|---|
 | **className** | String | Additionnal class for the root element | `` |
-| **title** | String | Title of the product | `` |
-| **description** | String or `Description` element | Description of the product | `null` |
-| **images** | Array of string or `Images` element | Images of the product | `null` |
-| **tags** | Array of string or `Tags` element | Tags of the product | `null` |
-| **price** | String or `Price` element | Price of the product | `null` |
+| **title** | String | Title of the article | `` |
+| **description** | String or `Description` element | Description of the article | `null` |
+| **images** | Array of string or `Images` element | Images of the article | `null` |
+| **tags** | Array of string or `Tags` element | Tags of the article | `null` |
+| **price** | String or `Price` element | Price of the article | `null` |
 
 
 
 ## Description
 
-Description of the Product
+Description of the Article
 
 ### Usage
 
 ``` js
 import React from 'react'
-import { Description } from 'fyndiq-component-product'
+import { Description } from 'fyndiq-component-article'
 
 // Normal usage
-<Description>My Product Description</Description>
+<Description>My Article Description</Description>
 
-// Pass raw HTML (usefull when working with Markdown)
+// Pass raw HTML (useful when working with Markdown)
 <Description>
   <span
     dangerouslySetInnerHtml={
@@ -116,13 +116,13 @@ import { Description } from 'fyndiq-component-product'
 
 ## Images
 
-Images of the Product. Includes a carrousel-like interaction
+Images of the Article. Includes a carrousel-like interaction
 
 ### Usage
 
 ``` js
 import React from 'react'
-import { Images } from 'fyndiq-component-product'
+import { Images } from 'fyndiq-component-article'
 
 // Normal usage
 <Images
@@ -147,13 +147,13 @@ import { Images } from 'fyndiq-component-product'
 
 ## Price
 
-Price of the Product.
+Price of the Article.
 
 ### Usage
 
 ``` js
 import React from 'react'
-import { Price } from 'fyndiq-component-product'
+import { Price } from 'fyndiq-component-article'
 
 // Normal usage
 <Price>$100</Price>
@@ -166,8 +166,8 @@ import { Price } from 'fyndiq-component-product'
 
 | Name | Type | Description | Default value |
 |---|---|---|---|
-| **children** | String | Price of the product | `` |
-| **oldPrice** | String | Old price of the product | `''` |
+| **children** | String | Price of the article | `` |
+| **oldPrice** | String | Old price of the article | `''` |
 | **emphasize** | Boolean | Show a difference in font-sizes for oldPrice and price | `true` |
 
 
@@ -176,13 +176,13 @@ import { Price } from 'fyndiq-component-product'
 
 ## Tags
 
-Tags of the Product.
+Tags of the Article.
 
 ### Usage
 
 ``` js
 import React from 'react'
-import { Tags } from 'fyndiq-component-product'
+import { Tags } from 'fyndiq-component-article'
 
 // Normal usage
 <Tags tags={['tag1', 'tag2']} />
@@ -192,4 +192,4 @@ import { Tags } from 'fyndiq-component-product'
 
 | Name | Type | Description | Default value |
 |---|---|---|---|
-| **tags** | Array of strings | Tags of the product | `[]` |
+| **tags** | Array of strings | Tags of the article | `[]` |

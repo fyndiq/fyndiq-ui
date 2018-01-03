@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from '../product.css'
+import styles from '../article.css'
 
-const ProductTags = ({ tags }) =>
+const ArticleTags = ({ tags }) =>
   tags.length && (
     <div className={styles.tagsWrapper}>
       {tags.map(tag => (
@@ -14,12 +14,12 @@ const ProductTags = ({ tags }) =>
     </div>
   )
 
-ProductTags.propTypes = {
+ArticleTags.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
 }
 
-ProductTags.defaultProps = {
+ArticleTags.defaultProps = {
   tags: [],
 }
 
-export default ProductTags
+export default ArticleTags

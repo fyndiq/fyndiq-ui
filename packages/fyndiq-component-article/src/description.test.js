@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import Description from './description'
 
-describe('Product Description', () => {
+describe('Article Description', () => {
   it('should have a default structure', () => {
     expect(
       shallow(<Description>description content</Description>),

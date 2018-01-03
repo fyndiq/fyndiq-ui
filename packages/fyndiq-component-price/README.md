@@ -1,6 +1,6 @@
 # OUTDATED
 
-Please use the `Price` element included in [`fyndiq-component-product`](https://github.com/fyndiq/fyndiq-ui/tree/master/packages/fyndiq-component-product)
+Please use the `Price` element included in [`fyndiq-component-article`](https://github.com/fyndiq/fyndiq-ui/tree/master/packages/fyndiq-component-article)
 
 ## Migration Guide for the new element
 
@@ -24,7 +24,7 @@ import {
   </td>
   <td>
     <pre lang="js">
-import { Price } from 'fyndiq-component-product'
+import { Price } from 'fyndiq-component-article'
     </pre>
   </td>
 </tr>
@@ -49,7 +49,7 @@ import { Price } from 'fyndiq-component-product'
 
 ---
 
---- 
+---
 
 # fyndiq-component-price [![npm](https://img.shields.io/npm/v/fyndiq-component-price.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-price)
 

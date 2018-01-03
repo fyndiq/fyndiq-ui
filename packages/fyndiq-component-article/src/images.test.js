@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import Images from './images'
 
-describe('Product Images', () => {
+describe('Article Images', () => {
   it('should have a default structure', () => {
     const component = shallow(
       <Images images={['imgSrc1', 'imgSrc2']} alt="title" />,

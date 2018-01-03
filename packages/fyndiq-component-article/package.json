@@ -1,5 +1,5 @@
 {
-  "name": "fyndiq-component-product",
+  "name": "fyndiq-component-article",
   "version": "2.0.0",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/fyndiq/fyndiq-ui.git"
   },
-  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Product&selectedStory=default",
+  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Article&selectedStory=default",
   "dependencies": {
     "fyndiq-icons": "*",
     "fyndiq-styles-colors": "*",

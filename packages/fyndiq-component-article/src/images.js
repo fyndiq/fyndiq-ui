@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 import { Arrow } from 'fyndiq-icons'
 
-import styles from '../product-images.css'
+import styles from '../article-images.css'
 
-class ProductImages extends React.Component {
+class ArticleImages extends React.Component {
   static propTypes = {
     images: PropTypes.arrayOf(PropTypes.string),
     alt: PropTypes.string,
@@ -103,4 +103,4 @@ class ProductImages extends React.Component {
   }
 }
 
-export default ProductImages
+export default ArticleImages

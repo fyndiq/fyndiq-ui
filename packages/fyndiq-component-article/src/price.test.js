@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import Price from './price'
 
-describe('Product Price', () => {
+describe('Article Price', () => {
   it('should have a default structure', () => {
     expect(shallow(<Price>123kr</Price>)).toMatchSnapshot()
   })

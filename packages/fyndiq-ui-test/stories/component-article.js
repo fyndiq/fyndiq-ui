@@ -1,11 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Images, Tags, Price, LayoutDetails } from 'fyndiq-component-product'
+import { Images, Tags, Price, LayoutDetails } from 'fyndiq-component-article'
 
-storiesOf('Product/Layouts/Details', module).addWithInfo('default', () => (
+storiesOf('Article/Layouts/Details', module).addWithInfo('default', () => (
   <LayoutDetails
-    title="My Product Title"
-    description="The description of my product. It is pretty rad so make sure to check it out"
+    title="My Article Title"
+    description="The description of my article. It is pretty rad so make sure to check it out"
     images={[
       'https://cdn.fyndiq.se/product/d1/de/26/2a08917d54bf6726e70441b86d86400d9e/original.png',
       'https://cdn.fyndiq.se/product/e8/74/3c/a1a451ba9af03f19e6bdd54890bd05b6ec/original.png',
@@ -15,7 +15,7 @@ storiesOf('Product/Layouts/Details', module).addWithInfo('default', () => (
   />
 ))
 
-storiesOf('Product/Images', module).addWithInfo('default', () => (
+storiesOf('Article/Images', module).addWithInfo('default', () => (
   <Images
     title="Image titles"
     images={[
@@ -27,7 +27,7 @@ storiesOf('Product/Images', module).addWithInfo('default', () => (
   />
 ))
 
-storiesOf('Product/Price', module)
+storiesOf('Article/Price', module)
   .addWithInfo('default', () => <Price>125kr</Price>)
   .addWithInfo('with old price', () => <Price oldPrice="155kr">125kr</Price>)
   .addWithInfo('no emphasize', () => (
@@ -36,6 +36,6 @@ storiesOf('Product/Price', module)
     </Price>
   ))
 
-storiesOf('Product/Tags', module).addWithInfo('default', () => (
-  <Tags tags={['My awesome product', 'This tag is pretty good']} />
+storiesOf('Article/Tags', module).addWithInfo('default', () => (
+  <Tags tags={['My awesome article', 'This tag is pretty good']} />
 ))

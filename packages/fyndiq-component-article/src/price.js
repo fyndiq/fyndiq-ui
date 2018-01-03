@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from '../product-price.css'
+import styles from '../article-price.css'
 
 const Price = ({ children, oldPrice, emphasize }) =>
   children && (
