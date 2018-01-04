@@ -1,6 +1,6 @@
 {
-  "name": "fyndiq-component-table",
-  "version": "3.0.0-beta.6",
+  "name": "fyndiq-component-article",
+  "version": "2.0.0-beta.0",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
@@ -8,9 +8,11 @@
     "type": "git",
     "url": "git+https://github.com/fyndiq/fyndiq-ui.git"
   },
-  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Table&selectedStory=default",
+  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Article%2FLayouts%2FDetails&selectedStory=default",
   "dependencies": {
-    "fyndiq-styles-colors": "*"
+    "fyndiq-icons": "*",
+    "fyndiq-styles-colors": "*",
+    "fyndiq-styles-medias": "*"
   },
   "peerDependencies": {
     "css-loader": "^0.28.7",

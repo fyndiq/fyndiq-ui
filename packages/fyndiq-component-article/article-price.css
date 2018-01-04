@@ -1,0 +1,29 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.price {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.currentPrice {
+  color: var(--color-red);
+  display: block;
+  font-weight: bold;
+}
+
+.oldPrice {
+  display: block;
+  color: var(--color-lightgrey);
+  text-decoration: line-through;
+  font-weight: 300;
+}
+
+.emphasize {
+  & .currentPrice {
+    font-size: 18px;
+  }
+
+  & .oldPrice {
+    font-size: 11px;
+  }
+}
