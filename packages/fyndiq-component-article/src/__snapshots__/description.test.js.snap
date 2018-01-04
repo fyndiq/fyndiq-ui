@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Description should accept nodes 1`] = `
+<div
+  className="description"
+>
+  <strong>
+    description
+  </strong>
+  <em>
+    test
+  </em>
+</div>
+`;
+
+exports[`Article Description should have a default structure 1`] = `
+<div
+  className="description"
+>
+  description content
+</div>
+`;

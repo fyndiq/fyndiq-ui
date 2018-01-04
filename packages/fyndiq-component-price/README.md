@@ -1,6 +1,57 @@
-# fyndiq-component-price [![npm](https://img.shields.io/npm/v/fyndiq-component-price.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-price)
+# OUTDATED
 
-[Preview](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Price&selectedStory=default)
+Please use the `Price` element included in [`fyndiq-component-article`](https://github.com/fyndiq/fyndiq-ui/tree/master/packages/fyndiq-component-article)
+
+## Migration Guide for the new element
+
+<table>
+<thead>
+<tr>
+<th>Old Version</th>
+<th>New Version</th>
+</tr>
+</thead>
+
+<tr>
+  <td>
+    <pre lang="js">
+import {
+  Price,
+  CurrentPrice,
+  OldPrice,
+} from 'fyndiq-component-price'
+    </pre>
+  </td>
+  <td>
+    <pre lang="js">
+import { Price } from 'fyndiq-component-article'
+    </pre>
+  </td>
+</tr>
+
+<tr>
+<td>
+<pre lang="js">
+&lt;Price&gt;
+  &lt;CurrentPrice&gt;129 kr&lt;/CurrentPrice&gt;
+  &lt;OldPrice&gt;200 kr&lt;/OldPrice&gt;
+&lt;/Price&gt;
+</pre>
+</td>
+<td>
+<pre lang="js">
+&lt;Price oldPrice="200 kr"&gt;129 kr&lt;/Price&gt;
+</pre>
+</td>
+</tr>
+
+</table>
+
+---
+
+---
+
+# fyndiq-component-price [![npm](https://img.shields.io/npm/v/fyndiq-component-price.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-price)
 
 A Price Component for Fyndiq
 

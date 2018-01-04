@@ -1,0 +1,20 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.description {
+  margin: 0;
+  font-weight: 300;
+}
+
+.tagsWrapper {
+  margin-bottom: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  margin-right: 5px;
+  font-size: 11px;
+  border-radius: 100px;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}

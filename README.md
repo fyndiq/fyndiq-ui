@@ -66,6 +66,7 @@ This git repository is a monorepo built using [Lerna](//lernajs.io). It contains
 | Package | Version | Description |
 |------|----|----|
 | [`fyndiq-component-alert`](/packages/fyndiq-component-alert) | [![npm](https://img.shields.io/npm/v/fyndiq-component-alert.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-alert) | Alert component |
+| [`fyndiq-component-article`](/packages/fyndiq-component-article) | [![npm](https://img.shields.io/npm/v/fyndiq-component-article.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-article) | Article component |
 | [`fyndiq-component-brand`](/packages/fyndiq-component-brand)  | [![npm](https://img.shields.io/npm/v/fyndiq-component-brand.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-brand) | Brand component |
 | [`fyndiq-component-button`](/packages/fyndiq-component-button) | [![npm](https://img.shields.io/npm/v/fyndiq-component-button.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-button) | Button component |
 | [`fyndiq-component-checkbox`](/packages/fyndiq-component-checkbox) | [![npm](https://img.shields.io/npm/v/fyndiq-component-checkbox.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-checkbox) | Checkbox component |
@@ -74,7 +75,6 @@ This git repository is a monorepo built using [Lerna](//lernajs.io). It contains
 | [`fyndiq-component-loader`](/packages/fyndiq-component-loader) | [![npm](https://img.shields.io/npm/v/fyndiq-component-loader.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-loader) | Loader component |
 | [`fyndiq-component-message`](/packages/fyndiq-component-message) | [![npm](https://img.shields.io/npm/v/fyndiq-component-message.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-message) | Message component |
 | [`fyndiq-component-modal`](/packages/fyndiq-component-modal) | [![npm](https://img.shields.io/npm/v/fyndiq-component-modal.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-modal) | Modal component |
-| [`fyndiq-component-price`](/packages/fyndiq-component-price) | [![npm](https://img.shields.io/npm/v/fyndiq-component-price.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-price) | Price tag component |
 | [`fyndiq-component-productcard`](/packages/fyndiq-component-productcard) | [![npm](https://img.shields.io/npm/v/fyndiq-component-productcard.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-productcard) | Product card component |
 | [`fyndiq-component-productlist`](/packages/fyndiq-component-productlist) | [![npm](https://img.shields.io/npm/v/fyndiq-component-productlist.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-productlist) | Product list component |
 | [`fyndiq-component-stars`](/packages/fyndiq-component-stars) | [![npm](https://img.shields.io/npm/v/fyndiq-component-stars.svg?maxAge=3600)](https://www.npmjs.com/package/fyndiq-component-stars) | Stars component |

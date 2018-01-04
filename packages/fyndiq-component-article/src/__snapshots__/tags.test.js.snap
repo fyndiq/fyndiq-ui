@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Tags should have a default structure 1`] = `
+<div
+  className="tagsWrapper"
+>
+  <span
+    className="tag"
+    key="tag 1"
+  >
+    tag 1
+  </span>
+  <span
+    className="tag"
+    key="tag 2"
+  >
+    tag 2
+  </span>
+  <span
+    className="tag"
+    key="tag 3"
+  >
+    tag 3
+  </span>
+</div>
+`;

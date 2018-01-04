@@ -1,0 +1,23 @@
+@import "fyndiq-styles-colors/colors.css";
+@import "fyndiq-styles-medias/medias.css";
+
+.wrapper {
+  display: flex;
+
+  @media (--desktop) {
+    flex-direction: column;
+  }
+}
+
+.info {
+  flex: 1;
+  min-width: 400px;
+  align-self: center;
+  padding: 0 35px;
+}
+
+.title {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
