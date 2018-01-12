@@ -135,6 +135,8 @@ storiesOf('MyComponent', module)
   ))
 ~~~
 
+Add this new file in `packages/fyndiq-ui-test/.storybook/config.js` as a `require()` dependency.
+
 You can then run `npm run bootstrap` to fix the internal dependencies,
 then run `npm run dev` and go to `localhost:6006` to see your new 
 component in action
