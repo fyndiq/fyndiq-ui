@@ -12,6 +12,7 @@
     "fyndiq-component-checkbox": "^2.3.3",
     "fyndiq-component-dropdown": "^2.8.1",
     "fyndiq-component-input": "^2.2.3",
+    "fyndiq-component-layout": "^2.0.0",
     "fyndiq-component-loader": "^2.2.0",
     "fyndiq-component-message": "^2.2.2",
     "fyndiq-component-modal": "^2.4.0",

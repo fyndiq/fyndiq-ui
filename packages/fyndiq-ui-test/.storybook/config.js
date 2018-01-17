@@ -15,6 +15,7 @@ function loadStories() {
   require('../stories/component-checkbox')
   require('../stories/component-dropdown')
   require('../stories/component-input')
+  require('../stories/component-layout')
   require('../stories/component-loader')
   require('../stories/component-message')
   require('../stories/component-modal')
