@@ -1,3 +1,5 @@
 import Sidebar from './sidebar'
+import Layout from './layout'
 
-export { Sidebar }
+export { Sidebar, Layout }
+export default Layout
