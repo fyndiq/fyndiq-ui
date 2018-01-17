@@ -5,15 +5,53 @@
   width: 100%;
 }
 
-.row {
-  &:not(.rowNoBorder) {
-    border-bottom: 1px solid var(--color-border);
-  }
-}
-
 .cell {
   vertical-align: top;
   padding: 0 8px;
+}
+
+.row {
+  box-shadow: 0 0 5px 0 color(var(--color-black) a(10%));
+
+  & > .cell {
+    background: var(--color-white);
+  }
+
+  & > :first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+
+  & > :last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+}
+
+.rowStart {
+  & > :first-child {
+    border-bottom-left-radius: 0;
+  }
+
+  & > :last-child {
+    border-bottom-right-radius: 0;
+  }
+}
+
+.rowEnd {
+  box-shadow: 5px 5px 5px -5px color(var(--color-black) a(10%)), -5px 5px 5px -5px color(var(--color-black) a(10%));
+
+  & > :first-child {
+    border-top-left-radius: 0;
+  }
+
+  & > :last-child {
+    border-top-right-radius: 0;
+  }
+}
+
+.rowStart.rowEnd {
+  box-shadow: 5px 0 5px -5px color(var(--color-black) a(10%)), -5px 0 5px -5px color(var(--color-black) a(10%));
 }
 
 .rowSize-l .cell {
@@ -32,26 +70,37 @@
 }
 
 .rowHead {
-  font-weight: 900;
+  white-space: nowrap;
   font-size: 13px;
-  color: var(--color-border);
+  color: var(--color-lightgrey);
+  font-weight: 300;
+  box-shadow: none;
 
   & .cell {
     padding-top: 18px;
     padding-bottom: 18px;
-  }
-}
-
-.rowInteractive {
-  cursor: pointer;
-
-  &:hover {
-    background: var(--color-palegrey);
+    background-color: transparent;
   }
 }
 
 .rowVerticalCenter .cell {
   vertical-align: middle;
+}
+
+.rowInteractive {
+  cursor: pointer;
+
+  &:hover .cell {
+    background: var(--color-palegrey);
+  }
+}
+
+.rowSpacer {
+  height: 2px;
+}
+
+.cellSpacer {
+  width: 20px;
 }
 
 .cellCenter {
