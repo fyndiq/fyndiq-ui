@@ -23,7 +23,7 @@ const Row = ({
         ${verticalCenter && styles.rowVerticalCenter}
         ${styles[`rowSize-${size}`]}
         ${id < length - 1 && length !== 1 && styles.rowStart}
-        ${id !== 0 && id <= length && styles.rowEnd}
+        ${id !== 0 && styles.rowEnd}
         ${className}
       `}
       {...props}
@@ -32,7 +32,7 @@ const Row = ({
       {children}
       <td className={`${styles.cellSpacer} ${styles.cell}`} />
     </tr>
-    {id === length && <tr className={styles.rowSpacer} />}
+    {id === length - 1 && <tr className={styles.rowSpacer} />}
   </React.Fragment>
 )
 
@@ -54,7 +54,7 @@ Row.defaultProps = {
   interactive: false,
   size: 'm',
   verticalCenter: false,
-  id: 1,
+  id: 0,
   length: 1,
 }
 
