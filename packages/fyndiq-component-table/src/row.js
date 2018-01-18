@@ -32,7 +32,7 @@ const Row = ({
       {children}
       <td className={`${styles.cellSpacer} ${styles.cell}`} />
     </tr>
-    <tr className={styles.rowSpacer} />
+    {id === length && <tr className={styles.rowSpacer} />}
   </React.Fragment>
 )
 
@@ -43,6 +43,8 @@ Row.propTypes = {
   size: PropTypes.oneOf(['s', 'm', 'l']),
   children: PropTypes.node,
   verticalCenter: PropTypes.bool,
+  id: PropTypes.number,
+  length: PropTypes.number,
 }
 
 Row.defaultProps = {
@@ -52,6 +54,8 @@ Row.defaultProps = {
   interactive: false,
   size: 'm',
   verticalCenter: false,
+  id: 1,
+  length: 1,
 }
 
 export default Row
