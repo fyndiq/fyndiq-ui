@@ -2,6 +2,8 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Table, Row, Cell } from 'fyndiq-component-table'
 
+/* eslint-disable react/no-unescaped-entities */
+
 storiesOf('Table', module)
   .addDecorator(story => (
     <div
@@ -42,16 +44,16 @@ storiesOf('Table', module)
   .addWithInfo('row customization', () => (
     <Table>
       <Row size="l">
-        <Cell>I&apos;m a large row</Cell>
+        <Cell>I'm a large row</Cell>
       </Row>
       <Row size="m">
-        <Cell>I&apos;m a default size row</Cell>
+        <Cell>I'm a default size row</Cell>
       </Row>
       <Row size="s">
-        <Cell>I&apos;m a small row</Cell>
+        <Cell>I'm a small row</Cell>
       </Row>
       <Row interactive>
-        <Cell>I&apos;m a row that reacts on mouse hover</Cell>
+        <Cell>I'm a row that reacts on mouse hover</Cell>
       </Row>
     </Table>
   ))
