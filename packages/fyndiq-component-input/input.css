@@ -110,7 +110,7 @@
   background-color: var(--color-palegrey);
 }
 
-.invisiblePencil {
+.invisibleWrapper .invisiblePencil {
   height: 1em;
   width: 1em;
 }
