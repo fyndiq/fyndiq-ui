@@ -57,6 +57,7 @@
   margin: 0;
   color: inherit;
   border: 1px solid transparent;
+  background: transparent;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
   padding: 2px 7px;
@@ -88,6 +89,7 @@
 .invisibleWrapperDirty .invisibleInput,
 .invisibleWrapper .invisibleInput:focus {
   border-color: var(--color-border);
+  background: var(--color-white);
 
   & + .invisibleSubmit {
     opacity: 1;
