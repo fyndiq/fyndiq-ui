@@ -60,7 +60,7 @@
   background: transparent;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
-  padding: 2px 7px;
+  padding: 0 7px;
   transition: border-color .2s, background-color .2s;
   outline: 0;
 
@@ -111,6 +111,6 @@
 }
 
 .invisiblePencil {
-  height: 16px;
-  width: 16px;
+  height: 1em;
+  width: 1em;
 }
