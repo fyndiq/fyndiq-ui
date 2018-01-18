@@ -28,10 +28,16 @@ class Tooltip extends React.Component {
 
     this.state = { width: this.props.maxWidth }
 
-    this.onDropdownOpen = this.onDropdownOpen.bind(this)
+    this.recalculateWidth = this.recalculateWidth.bind(this)
   }
 
-  onDropdownOpen() {
+  componentDidUpdate(prevProps) {
+    if (prevProps.text !== this.props.text) {
+      this.recalculateWidth()
+    }
+  }
+
+  recalculateWidth() {
     // Clone the wrapper node and hide it
     // The reason we're doing that is because of the animation
     // on the underlying Dropdown wrapper : calculating the width
@@ -39,6 +45,7 @@ class Tooltip extends React.Component {
     // in a wrong width
     const cloneNode = this.wrapperElement.cloneNode(true)
     cloneNode.style.opacity = '0'
+    cloneNode.style.width = 'initial'
 
     document.body.appendChild(cloneNode)
 
@@ -62,7 +69,7 @@ class Tooltip extends React.Component {
         hoverMode
         noWrapperStyle
         position={position}
-        onOpen={this.onDropdownOpen}
+        onOpen={this.recalculateWidth}
       >
         <div
           className={`
