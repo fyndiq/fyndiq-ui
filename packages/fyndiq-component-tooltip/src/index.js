@@ -9,6 +9,7 @@ class Tooltip extends React.Component {
     type: PropTypes.oneOf(['black', 'white']),
     text: PropTypes.node,
     className: PropTypes.string,
+    wrapperClassName: PropTypes.string,
     children: PropTypes.node,
     maxWidth: PropTypes.number,
     position: Dropdown.propTypes.position, // eslint-disable-line react/no-typos
@@ -19,6 +20,7 @@ class Tooltip extends React.Component {
     text: null,
     children: null,
     className: '',
+    wrapperClassName: '',
     position: 'bc',
     maxWidth: 190,
   }
@@ -59,7 +61,14 @@ class Tooltip extends React.Component {
   }
 
   render() {
-    const { type, text, children, position, className } = this.props
+    const {
+      type,
+      text,
+      children,
+      position,
+      className,
+      wrapperClassName,
+    } = this.props
 
     if (!text) return children
 
@@ -70,6 +79,7 @@ class Tooltip extends React.Component {
         noWrapperStyle
         position={position}
         onOpen={this.recalculateWidth}
+        wrapperClassName={wrapperClassName}
       >
         <div
           className={`
