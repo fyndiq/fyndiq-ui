@@ -68,6 +68,10 @@
     color: inherit;
     opacity: 1;
   }
+
+  &:focus::placeholder {
+    color: var(--color-border);
+  }
 }
 
 .invisibleInputEmpty {
