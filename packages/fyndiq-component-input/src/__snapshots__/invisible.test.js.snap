@@ -10,7 +10,10 @@ exports[`fyndiq-component-input Invisible should have the proper structure 1`] =
   onSubmit={[Function]}
 >
   <input
-    className="invisibleInput"
+    className="
+            invisibleInput
+            invisibleInputEmpty
+          "
     onChange={[Function]}
     onKeyDown={[Function]}
   />

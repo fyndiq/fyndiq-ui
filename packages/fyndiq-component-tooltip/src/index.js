@@ -9,6 +9,7 @@ class Tooltip extends React.Component {
     type: PropTypes.oneOf(['black', 'white']),
     text: PropTypes.node,
     className: PropTypes.string,
+    wrapperClassName: PropTypes.string,
     children: PropTypes.node,
     maxWidth: PropTypes.number,
     position: Dropdown.propTypes.position, // eslint-disable-line react/no-typos
@@ -19,6 +20,7 @@ class Tooltip extends React.Component {
     text: null,
     children: null,
     className: '',
+    wrapperClassName: '',
     position: 'bc',
     maxWidth: 190,
   }
@@ -28,10 +30,16 @@ class Tooltip extends React.Component {
 
     this.state = { width: this.props.maxWidth }
 
-    this.onDropdownOpen = this.onDropdownOpen.bind(this)
+    this.recalculateWidth = this.recalculateWidth.bind(this)
   }
 
-  onDropdownOpen() {
+  componentDidUpdate(prevProps) {
+    if (prevProps.text !== this.props.text) {
+      this.recalculateWidth()
+    }
+  }
+
+  recalculateWidth() {
     // Clone the wrapper node and hide it
     // The reason we're doing that is because of the animation
     // on the underlying Dropdown wrapper : calculating the width
@@ -39,6 +47,7 @@ class Tooltip extends React.Component {
     // in a wrong width
     const cloneNode = this.wrapperElement.cloneNode(true)
     cloneNode.style.opacity = '0'
+    cloneNode.style.width = 'initial'
 
     document.body.appendChild(cloneNode)
 
@@ -52,7 +61,14 @@ class Tooltip extends React.Component {
   }
 
   render() {
-    const { type, text, children, position, className } = this.props
+    const {
+      type,
+      text,
+      children,
+      position,
+      className,
+      wrapperClassName,
+    } = this.props
 
     if (!text) return children
 
@@ -62,7 +78,8 @@ class Tooltip extends React.Component {
         hoverMode
         noWrapperStyle
         position={position}
-        onOpen={this.onDropdownOpen}
+        onOpen={this.recalculateWidth}
+        wrapperClassName={wrapperClassName}
       >
         <div
           className={`

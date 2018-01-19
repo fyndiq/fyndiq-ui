@@ -12,7 +12,7 @@ npm i -S fyndiq-icons
 
 # Usage
 
-To see the name of the icons in the set, please visit the [demo](//http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Icons&selectedStory=default)
+To see the name of the icons in the set, please visit the [demo](http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Icons&selectedStory=default)
 
 ``` js
 import React from 'react'

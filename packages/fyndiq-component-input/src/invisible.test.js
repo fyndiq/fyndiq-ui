@@ -37,6 +37,12 @@ describe('fyndiq-component-input Invisible', () => {
     expect(component.find('input').prop('value')).toBe('newValue')
   })
 
+  it('should not have a empty class when not empty', () => {
+    const component = shallow(<Invisible value="test" />)
+
+    expect(component.find('.invisibleInputEmpty').exists()).toBe(false)
+  })
+
   it('should call onChange', () => {
     const spy = jest.fn()
     const component = mount(<Invisible value="test" onChange={spy} />)

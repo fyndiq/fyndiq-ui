@@ -53,7 +53,7 @@ class InvisibleInput extends React.Component {
   }
 
   render() {
-    const { className } = this.props
+    const { className, onChange, value, ...props } = this.props
 
     return (
       <form
@@ -69,10 +69,14 @@ class InvisibleInput extends React.Component {
           value={this.state.value}
           onChange={this.onChange}
           onKeyDown={this.onInputKeydown}
-          className={styles.invisibleInput}
+          className={`
+            ${styles.invisibleInput}
+            ${!this.state.value && styles.invisibleInputEmpty}
+          `}
           ref={element => {
             this.inputElement = element
           }}
+          {...props}
         />
         <button type="submit" className={styles.invisibleSubmit}>
           <Pencil className={styles.invisiblePencil} />
