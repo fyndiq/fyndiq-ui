@@ -1,0 +1,9 @@
+.layoutWrapper {
+  display: flex;
+  min-height: calc(100vh - 56px); /* Remove header height */
+}
+
+.layoutPageWrapper {
+  flex: 1;
+  background: #E9EAF0;
+}

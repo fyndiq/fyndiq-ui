@@ -73,6 +73,7 @@ exports[`fyndiq-component-tooltip should not have a tooltip if the text is null 
   position="bc"
   text={null}
   type="black"
+  wrapperClassName=""
 >
   tooltip
 </Tooltip>

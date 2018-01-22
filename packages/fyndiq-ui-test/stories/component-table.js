@@ -2,7 +2,21 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Table, Row, Cell } from 'fyndiq-component-table'
 
+/* eslint-disable react/no-unescaped-entities */
+
 storiesOf('Table', module)
+  .addDecorator(story => (
+    <div
+      style={{
+        margin: -8,
+        backgroundColor: '#E9EAF0',
+        minHeight: '100vh',
+        padding: 20,
+      }}
+    >
+      {story()}
+    </div>
+  ))
   .addWithInfo('default', () => (
     <Table>
       <Row head>
@@ -30,19 +44,40 @@ storiesOf('Table', module)
   .addWithInfo('row customization', () => (
     <Table>
       <Row size="l">
-        <Cell>I&apos;m a large row</Cell>
+        <Cell>I'm a large row</Cell>
       </Row>
       <Row size="m">
-        <Cell>I&apos;m a default size row</Cell>
+        <Cell>I'm a default size row</Cell>
       </Row>
       <Row size="s">
-        <Cell>I&apos;m a small row</Cell>
+        <Cell>I'm a small row</Cell>
       </Row>
       <Row interactive>
-        <Cell>I&apos;m a row that reacts on mouse hover</Cell>
+        <Cell>I'm a row that reacts on mouse hover</Cell>
       </Row>
-      <Row noBorder>
-        <Cell>I&apos;m a row that doesn&apos;t have a bottom border</Cell>
+    </Table>
+  ))
+  .addWithInfo('linked rows', () => (
+    <Table>
+      <Row id={0} length={3}>
+        <Cell>I'm a row that has some linked rows below</Cell>
+      </Row>
+      <Row id={1} length={3}>
+        <Cell>
+          The <code>id</code> prop specifies where in the list I am. Note that
+          it is 0-based.
+        </Cell>
+      </Row>
+      <Row id={2} length={3}>
+        <Cell>
+          And the <code>length</code> prop specifies how long the linked rows is
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          After that you can either reset the <code>id</code> or{' '}
+          <code>length</code> props to add normal rows or other linked rows
+        </Cell>
       </Row>
     </Table>
   ))

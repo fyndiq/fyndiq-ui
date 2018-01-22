@@ -59,11 +59,11 @@ ArticleLayoutDetails.propTypes = {
 
 ArticleLayoutDetails.defaultProps = {
   className: '',
-  images: null,
   title: '',
-  description: null,
-  price: null,
-  tags: null,
+  images: Images.defaultProps.images,
+  description: Description.defaultProps.children,
+  price: Price.defaultProps.price,
+  tags: Tags.defaultProps.tags,
 }
 
 export default ArticleLayoutDetails

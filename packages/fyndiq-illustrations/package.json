@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-illustrations",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": "Thibaut Remy <thibaut.remy@fyndiq.com",
   "main": "lib/index.js",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Illustrations&selectedStory=search",
   "dependencies": {
-    "fyndiq-styles-colors": "^2.2.0"
+    "fyndiq-styles-colors": "^2.3.0"
   },
   "peerDependencies": {
     "css-loader": "^0.28.7",

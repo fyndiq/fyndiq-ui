@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from '../article.css'
 
 const ArticleTags = ({ tags }) =>
-  tags.length && (
+  tags.length > 0 && (
     <div className={styles.tagsWrapper}>
       {tags.map(tag => (
         <span key={tag} className={styles.tag}>

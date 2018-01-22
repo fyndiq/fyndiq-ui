@@ -1,6 +1,6 @@
 {
-  "name": "fyndiq-component-message",
-  "version": "2.2.3",
+  "name": "fyndiq-component-layout",
+  "version": "2.1.0",
   "author": "Thibaut Remy <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/fyndiq/fyndiq-ui.git"
   },
-  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Message&selectedStory=default",
+  "homepage": "http://developers.fyndiq.com/fyndiq-ui/?selectedKind=Layout&selectedStory=default",
   "dependencies": {
     "fyndiq-styles-colors": "^2.3.0"
   },
@@ -18,7 +18,7 @@
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.6",
     "prop-types": "^15.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^15.0.0 || ^16.0.0",
+    "react-router-dom": "^4.2.2"
   }
 }

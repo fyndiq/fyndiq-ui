@@ -36,6 +36,14 @@ describe('fyndiq-component-tooltip', () => {
     ).toBe(true)
   })
 
+  test('should have a wrapperClassName prop', () => {
+    expect(
+      shallow(<Tooltip text="text" wrapperClassName="test-classname" />)
+        .find('Dropdown')
+        .prop('wrapperClassName'),
+    ).toBe('test-classname')
+  })
+
   test('should have a type prop', () => {
     expect(
       shallow(<Tooltip text="text" type="white" />)

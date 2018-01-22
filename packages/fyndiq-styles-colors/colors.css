@@ -19,8 +19,9 @@
   /* Contextual colors */
   --color-return: #2699F7;
   --color-reclamation: #BC26F7;
-  --color-missing: #F7A626;
+  --color-missing: var(--color-orange);
   --color-yellow-deal: #FE0;
+  --color-tags: var(--color-orange);
 
   /* Component colors */
   --color-border: #CCD1DD;
