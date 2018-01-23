@@ -40,6 +40,11 @@ class Tooltip extends React.Component {
   }
 
   recalculateWidth() {
+    // Don't run the calculation if wrapperElement is undefined
+    // This can happen if the text changes in the props but the
+    // wrapper was never open previously
+    if (!this.wrapperElement) return
+
     // Clone the wrapper node and hide it
     // The reason we're doing that is because of the animation
     // on the underlying Dropdown wrapper : calculating the width
