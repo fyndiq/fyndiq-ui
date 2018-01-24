@@ -91,17 +91,27 @@ The easiest way to create a confirm flow is to use the `confirm` creation utilit
 
 ``` js
 import React from 'react'
-import { Confirm, confirm } from 'fyndiq-component-modal'
+import { Confirm, ConfirmWrapper, confirm } from 'fyndiq-component-modal'
 
- // Here just for the demo
+// First you need to render the <ConfirmWrapper /> somewhere on your app.
+// It is recommended that you put it somewhere in the root of your app:
+const MyApp = () => (
+  <React.Fragment>
+    <ConfirmWrapper />
+    <Layout /> {/* Rest of your app*/}
+  </React.Fragment>
+)
+
+// This example shows how to display a warning confirm dialog,
+// that pops up when the user clicks on a Delete button.
 import { Warning } from 'fyndiq-icons'
 import Button from 'fyndiq-component-button'
 
 <Button onClick={confirmDelete}>
-  Delete something
+  ⚠️ Delete something
 </Button>
 
-// This example uses async/await
+// Here is where the magic happens ✨
 async confirmDelete() => {
   const isValidated = await confirm(
     <Confirm
