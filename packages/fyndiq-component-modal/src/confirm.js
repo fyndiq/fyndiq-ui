@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Button from 'fyndiq-component-button'
 
@@ -33,44 +34,52 @@ const Confirm = ({
     <div>{message}</div>
 
     <div className={styles.footer}>
-      {React.isValidElement(cancelButton) ? (
-        React.cloneElement(cancelButton, {
-          onClick: onCancel,
-        })
-      ) : (
-        <Button type="ghost" size="m" onClick={onCancel}>
-          {cancelButton}
-        </Button>
-      )}
-      {React.isValidElement(validateButton) ? (
-        React.cloneElement(validateButton, {
-          onClick: onValidate,
-        })
-      ) : (
-        <Button type="secondary" size="m" pill onClick={onValidate}>
-          {validateButton}
-        </Button>
-      )}
+      {cancelButton &&
+        (React.isValidElement(cancelButton) ? (
+          React.cloneElement(cancelButton, {
+            onClick: onCancel,
+          })
+        ) : (
+          <Button type="ghost" size="m" onClick={onCancel}>
+            {cancelButton}
+          </Button>
+        ))}
+      {validateButton &&
+        (React.isValidElement(validateButton) ? (
+          React.cloneElement(validateButton, {
+            onClick: onValidate,
+          })
+        ) : (
+          <Button type="secondary" size="m" pill onClick={onValidate}>
+            {validateButton}
+          </Button>
+        ))}
     </div>
   </Modal>
 )
 
+Confirm.propTypes = {
+  open: PropTypes.bool,
+  type: PropTypes.oneOf(['warning', 'info', 'success']),
+  title: PropTypes.node,
+  message: PropTypes.node,
+  icon: PropTypes.element,
+  validateButton: PropTypes.node,
+  cancelButton: PropTypes.node,
+  onValidate: PropTypes.func,
+  onCancel: PropTypes.func,
+}
+
 Confirm.defaultProps = {
+  open: true,
   type: 'info',
   title: 'Are you sure?',
+  message: '',
+  icon: null,
   validateButton: 'OK',
   cancelButton: 'Cancel',
-  open: true,
+  onValidate: () => {},
+  onCancel: () => {},
 }
 
 export default Confirm
-
-// // Usage in API
-
-// import { confirm, Confirm } from 'fyndiq-component-modal'
-
-// const a = async confirmButton() {
-//   const validated = await confirm(
-//     <Confirm type="warning" icon={<Warning />} title="Are you sure?" />
-//   )
-// }
