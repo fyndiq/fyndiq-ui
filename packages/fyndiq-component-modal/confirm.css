@@ -4,13 +4,14 @@
   width: 475px;
   margin-top: 20vh;
   padding: 24px 35px;
-}
 
-.icon {
-  display: block;
-  width: 38px;
-  height: 38px;
-  margin: 0 auto 25px;
+  /* Specificity is increased artificially */
+  & .icon {
+    display: block;
+    width: 38px;
+    height: 38px;
+    margin: 0 auto 25px;
+  }
 }
 
 .wrapper--info {
