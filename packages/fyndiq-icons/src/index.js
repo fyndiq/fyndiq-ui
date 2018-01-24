@@ -10,6 +10,7 @@ import Payout from './payout'
 import Pencil from './pencil'
 import Regret from './regret'
 import Shop from './shop'
+import ShopAlt from './shop-alt'
 import Star from './star'
 import Truck from './truck'
 import Warning from './warning'
@@ -27,6 +28,7 @@ export {
   Pencil,
   Regret,
   Shop,
+  ShopAlt,
   Star,
   Truck,
   Warning,
