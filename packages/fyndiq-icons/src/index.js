@@ -1,6 +1,7 @@
 import Arrow from './arrow'
 import Atm from './atm'
 import Bag from './bag'
+import Bubbles from './bubbles'
 import Checkmark from './checkmark'
 import Error from './error'
 import Magnifier from './magnifier'
@@ -17,6 +18,7 @@ export {
   Arrow,
   Atm,
   Bag,
+  Bubbles,
   Checkmark,
   Error,
   Magnifier,
