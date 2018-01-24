@@ -1,7 +1,13 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
+import { storiesOf, action } from '@storybook/react'
 import Button from 'fyndiq-component-button'
-import Modal, { ModalButton } from 'fyndiq-component-modal'
+import Modal, {
+  ModalButton,
+  confirm,
+  Confirm,
+  ConfirmWrapper,
+} from 'fyndiq-component-modal'
+import { Warning } from 'fyndiq-icons'
 
 import './component-modal.css'
 
@@ -41,4 +47,29 @@ storiesOf('Modal', module)
         )}
       </Modal>
     </ModalButton>
+  ))
+  .addWithInfo('confirm dialog', () => (
+    <React.Fragment>
+      <ConfirmWrapper />
+      <Button
+        onClick={async () => {
+          const validate = await confirm(
+            <Confirm
+              type="warning"
+              icon={<Warning />}
+              title="Do you really want to delete that thing?"
+              message="If you delete it, there is no way back"
+              validateButton="Delete"
+            />,
+          )
+          if (validate) {
+            action('validated')()
+          } else {
+            action('not validated')()
+          }
+        }}
+      >
+        Delete something
+      </Button>
+    </React.Fragment>
   ))

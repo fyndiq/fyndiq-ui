@@ -1,0 +1,46 @@
+@import "fyndiq-styles-colors/colors.css";
+
+.wrapper {
+  width: 475px;
+  margin-top: 20vh;
+  padding: 24px 35px;
+}
+
+.icon {
+  display: block;
+  width: 40px;
+  margin: 0 auto 25px;
+}
+
+.wrapper--info {
+  & .icon {
+    fill: var(--color-blue);
+    stroke: var(--color-blue);
+  }
+}
+
+.wrapper--success {
+  & .icon {
+    fill: var(--color-green);
+    stroke: var(--color-green);
+  }
+}
+
+.wrapper--warning {
+  & .icon {
+    fill: var(--color-orange);
+    stroke: var(--color-orange);
+  }
+}
+
+.title {
+  display: block;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 25px 0 0;
+}
