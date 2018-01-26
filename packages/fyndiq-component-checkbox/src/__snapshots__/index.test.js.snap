@@ -20,7 +20,7 @@ exports[`fyndiq-component-checkbox should be invoquable without parameters 1`] =
   />
   <Checkmark
     className="checkmark"
-    color="#7E7E7E"
+    color="#9B9B9B"
   />
 </label>
 `;
@@ -29,7 +29,7 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
 <Checkbox
   checked={true}
   className=""
-  color="#7E7E7E"
+  color="#9B9B9B"
   disabled={false}
   frame={false}
   indeterminate={false}
@@ -54,7 +54,7 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
     />
     <Checkmark
       className="checkmark"
-      color="#7E7E7E"
+      color="#9B9B9B"
     >
       <SvgWrapper
         className="checkmark"
@@ -69,7 +69,7 @@ exports[`fyndiq-component-checkbox should be programatically checkable 1`] = `
         >
           <path
             d="M16.8 42c-.4 0-1-.2-1.2-.5l-14-14.2c-.8-.7-.8-1.8 0-2.5.6-.7 1.7-.7 2.4 0l12.8 13 29-29c.7-.7 1.8-.7 2.5 0s.7 1.8 0 2.5L18 41.5c-.2.3-.7.5-1.2.5z"
-            fill="#7E7E7E"
+            fill="#9B9B9B"
             stroke="none"
           />
         </svg>
@@ -99,7 +99,7 @@ exports[`fyndiq-component-checkbox should have prop checked 1`] = `
   />
   <Checkmark
     className="checkmark"
-    color="#7E7E7E"
+    color="#9B9B9B"
   />
 </label>
 `;
@@ -149,7 +149,7 @@ exports[`fyndiq-component-checkbox should have prop disabled 1`] = `
   />
   <Checkmark
     className="checkmark"
-    color="#7E7E7E"
+    color="#9B9B9B"
   />
 </label>
 `;
@@ -174,7 +174,7 @@ exports[`fyndiq-component-checkbox should have prop onToggle 1`] = `
   />
   <Checkmark
     className="checkmark"
-    color="#7E7E7E"
+    color="#9B9B9B"
   />
 </label>
 `;
@@ -199,7 +199,7 @@ exports[`fyndiq-component-checkbox should update its state when clicked on 1`] =
   />
   <Checkmark
     className="checkmark"
-    color="#7E7E7E"
+    color="#9B9B9B"
   />
 </label>
 `;
@@ -224,7 +224,7 @@ exports[`fyndiq-component-checkbox should update its state when clicked on 2`] =
   />
   <Checkmark
     className="checkmark"
-    color="#7E7E7E"
+    color="#9B9B9B"
   />
 </label>
 `;
