@@ -5,7 +5,7 @@ export default {
   /* Grey levels */
   black: '#3B4257',
   darkgrey: '#666',
-  lightgrey: '#7E7E7E',
+  lightgrey: '#9B9B9B',
   palegrey: '#FAFAFC',
   white: '#FFF',
 
