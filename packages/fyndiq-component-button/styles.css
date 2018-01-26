@@ -48,7 +48,7 @@
 .type-blue {
   background-color: var(--color-white);
   color: var(--color-blue);
-  border-color: var(--color-border);
+  border-color: var(--color-blue);
 
   &.interactive:hover,
   &.interactive:focus {
