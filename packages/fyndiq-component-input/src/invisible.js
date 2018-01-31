@@ -13,7 +13,7 @@ class InvisibleInput extends React.Component {
 
   static defaultProps = {
     onChange: () => {},
-    value: undefined,
+    value: '',
     className: '',
   }
 
