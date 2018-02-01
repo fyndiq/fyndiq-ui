@@ -11,6 +11,7 @@ const InvisibleNoFormInput = ({ onChange, value, ...props }) => (
       ${!value && styles.invisibleInputEmpty}
     `}
     onChange={e => onChange(e.target.value)}
+    extraWidth={40}
     value={value}
     {...props}
   />
