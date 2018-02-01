@@ -35,6 +35,7 @@
 .input {
   border: none;
   padding: 0;
+  box-shadow: none;
   transition: .15s ease-out;
   background: transparent;
   outline: 0;
