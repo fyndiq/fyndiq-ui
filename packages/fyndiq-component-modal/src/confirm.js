@@ -25,9 +25,10 @@ const Confirm = ({
     `}
     onClose={onCancel}
   >
-    {React.cloneElement(icon, {
-      className: styles.icon,
-    })}
+    {icon &&
+      React.cloneElement(icon, {
+        className: styles.icon,
+      })}
 
     <strong className={styles.title}>{title}</strong>
 

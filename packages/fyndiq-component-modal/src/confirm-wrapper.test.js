@@ -2,6 +2,8 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Wrapper from './confirm-wrapper'
 
+/* eslint-disable no-console */
+
 describe('ConfirmWrapper component', () => {
   describe('global instance', () => {
     it('should not have an instance running by default', () => {
@@ -14,11 +16,9 @@ describe('ConfirmWrapper component', () => {
     })
 
     it('should warn when mounting another instance', () => {
-      /* eslint-disable no-console */
       console.warn = jest.fn()
       shallow(<Wrapper />)
       expect(console.warn).toHaveBeenCalled()
-      /* eslint-enable no-console */
     })
 
     it('should remove the instance when unmounted', () => {
@@ -54,12 +54,10 @@ describe('ConfirmWrapper component', () => {
     })
 
     it('should warn if attempting to show 2 confirm messages', () => {
-      /* eslint-disable no-console */
       console.warn = jest.fn()
       Wrapper.setConfirm(<TestConfirm />, testCallback)
       Wrapper.setConfirm(<TestConfirm />, testCallback)
       expect(console.warn).toHaveBeenCalled()
-      /* eslint-enable no-console */
     })
 
     it('should handle onCancel Confirm prop', () => {
@@ -83,7 +81,6 @@ describe('ConfirmWrapper component', () => {
     })
 
     it('should not warn about multiple confirm if an action was taken', () => {
-      /* eslint-disable no-console */
       console.warn = jest.fn()
 
       Wrapper.setConfirm(<TestConfirm />, testCallback)

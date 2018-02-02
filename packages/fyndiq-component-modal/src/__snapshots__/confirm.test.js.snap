@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Confirm component should have a default structure 1`] = `
+<Modal
+  closeClassName=""
+  forced={false}
+  onClose={[Function]}
+  open={true}
+  overlayClassName=""
+  portalId="fyndiq-modal"
+  wrapperClassName="
+      wrapper
+      wrapper--info
+    "
+>
+  <strong
+    className="title"
+  >
+    Are you sure?
+  </strong>
+  <div />
+  <div
+    className="footer"
+  >
+    <Button
+      buttonRef={[Function]}
+      className=""
+      disabled={false}
+      horizontal={false}
+      htmlType="button"
+      onClick={[Function]}
+      pill={false}
+      pressed={false}
+      size="m"
+      type="ghost"
+    >
+      Cancel
+    </Button>
+    <Button
+      buttonRef={[Function]}
+      className=""
+      disabled={false}
+      horizontal={false}
+      htmlType="button"
+      onClick={[Function]}
+      pill={true}
+      pressed={false}
+      size="m"
+      type="secondary"
+    >
+      OK
+    </Button>
+  </div>
+</Modal>
+`;
