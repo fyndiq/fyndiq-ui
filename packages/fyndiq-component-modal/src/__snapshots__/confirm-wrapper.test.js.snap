@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmWrapper component setConfirm should show a confirm message 1`] = `
+<ModalPortal
+  bodyLock={false}
+  portalId="fyndiq-portal"
+>
+  <TestConfirm
+    onCancel={[Function]}
+    onValidate={[Function]}
+  />
+</ModalPortal>
+`;
