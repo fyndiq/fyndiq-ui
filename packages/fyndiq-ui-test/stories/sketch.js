@@ -201,7 +201,6 @@ const Default = () => (
         size="l"
         type="secondary"
         pill
-        download
         download={`document-${version}.asketch.json`}
         style={{ textAlign: 'center' }}
       >
