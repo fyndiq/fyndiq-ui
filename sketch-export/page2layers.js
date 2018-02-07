@@ -50,9 +50,6 @@ Array.from(document.querySelectorAll('svg')).forEach(svg => {
   const width = parseInt(style.width) * scale
   const height = parseInt(style.height) * scale
 
-  svg.style.width = `${width}px`
-  svg.style.height = `${height}px`
-
   // Parse SVG to canvas
   const canvas = document.createElement('canvas')
 
