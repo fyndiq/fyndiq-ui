@@ -16,8 +16,9 @@
     "lint:js": "eslint --cache --ignore-pattern coverage --ignore-pattern node_modules --ignore-pattern lib .",
     "lint:css": "stylelint \"packages/**/*.css\"",
     "jest": "jest",
-    "presketch-export": "webpack --config sketch-export/webpack.config.js",
-    "sketch-export": "node ./sketch-export/inject.js",
+    "sketch-prebuild": "webpack --config sketch-export/webpack.config.js",
+    "sketch-inject": "npm run sketch-prebuild && node ./sketch-export/inject.js",
+    "sketch-export": "npm run sketch-prebuild && node ./sketch-export/index.js",
     "test": "jest --coverage && codecov && npm run lint"
   },
   "devDependencies": {
@@ -30,13 +31,14 @@
     "babel-preset-stage-0": "^6.22.0",
     "canvg-fixed": "^1.0.0",
     "codecov": "^3.0.0",
+    "connect": "^3.6.5",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.0",
     "eslint": "^4.14.0",
     "eslint-config-fyndiq": "^0.4.2",
     "file-loader": "^1.1.6",
-    "html-sketchapp": "brainly/html-sketchapp",
+    "html-sketchapp": "brainly/html-sketchapp#74f56a720ae4d6629aa303b6b1cdb9b8e5daa5d1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.0.4",
     "lerna": "^2.2.0",
@@ -47,7 +49,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-test-renderer": "^16.2.0",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "serve-static": "^1.13.1"
   },
   "dependencies": {
     "@storybook/addon-info": "^3.3.3",

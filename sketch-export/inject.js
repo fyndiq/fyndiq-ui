@@ -7,7 +7,7 @@ const url =
 const outputPageFile = './page.asketch.json'
 const outputDocumentFile = './document.asketch.json'
 
-puppeteer.launch().then(async browser => {
+module.exports = puppeteer.launch().then(async browser => {
   const page = await browser.newPage()
 
   await page.setViewport({ width: 1200, height: 600 })
