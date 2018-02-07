@@ -4,3 +4,7 @@ node_modules
 lib
 .eslintcache
 coverage
+
+# Shetch exports
+sketch-export/build/
+*.asketch.json
