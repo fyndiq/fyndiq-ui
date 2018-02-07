@@ -11,6 +11,8 @@ import Dropdown from 'fyndiq-component-dropdown'
 import Loader from 'fyndiq-component-loader'
 import colors from 'fyndiq-styles-colors'
 
+import { version } from '../package.json'
+
 const allIcons = Object.keys(Icons)
   .map(name => ({
     [`Icons/${name}`]: React.createElement(Icons[name]),
@@ -172,24 +174,45 @@ const Default = () => (
       </a>{' '}
       is needed in order to open the provided files
     </p>
+    <p>Keep in mind that it&apos;s still very buggy and experimental</p>
+    <p>
+      Current version: <strong>{version}</strong>
+    </p>
     <Wrapper>
+      <Button
+        link="/sketch-export/page.asketch.json"
+        size="l"
+        type="secondary"
+        pill
+        download={`page-${version}.asketch.json`}
+        style={{ textAlign: 'center' }}
+      >
+        <strong>Symbols File</strong>{' '}
+        <em>
+          <small>
+            <code>500 kB</code>
+          </small>
+        </em>
+        <br />
+        <small>Contains all the symbols</small>
+      </Button>
       <Button
         link="/sketch-export/document.asketch.json"
         size="l"
         type="secondary"
         pill
         download
+        download={`document-${version}.asketch.json`}
+        style={{ textAlign: 'center' }}
       >
-        Document File
-      </Button>
-      <Button
-        link="/sketch-export/page.asketch.json"
-        size="l"
-        type="secondary"
-        pill
-        download
-      >
-        Symbols File
+        <strong>Document File</strong>{' '}
+        <em>
+          <small>
+            <code>20 kB</code>
+          </small>
+        </em>
+        <br />
+        <small>Contains color informations</small>
       </Button>
     </Wrapper>
   </React.Fragment>
