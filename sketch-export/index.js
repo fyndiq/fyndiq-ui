@@ -2,9 +2,8 @@ const connect = require('connect')
 const serverStatic = require('serve-static')
 
 connect()
-  .use(serverStatic('../'))
+  .use(serverStatic('./'))
   .listen(6006, () => {
-    console.log('Listening on port 6006')
     // eslint-disable-next-line global-require
     require('./inject')
       .then(() => {

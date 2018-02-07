@@ -35,7 +35,7 @@ module.exports = puppeteer.launch().then(async browser => {
   const asketchPageJSONString = await page.evaluate(`
     page2layers
       .run()
-      .then(result => JSON.stringify(result, undefined, 2 ))
+      .then(result => JSON.stringify(result))
   `)
   const asketchDocumentJSONString = await page.evaluate(`
     page2layers
