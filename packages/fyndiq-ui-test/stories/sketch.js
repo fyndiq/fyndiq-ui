@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import Button from 'fyndiq-component-button'
+import Button, { Wrapper } from 'fyndiq-component-button'
 import Checkbox from 'fyndiq-component-checkbox'
 import { Message } from 'fyndiq-component-message'
 import * as Icons from 'fyndiq-icons'
@@ -161,8 +161,42 @@ const symbols = {
   ...allIcons,
 }
 
+const Default = () => (
+  <React.Fragment>
+    <h1>Sketch exports</h1>
+    <p>
+      You can download here the most recent version of the Sketch exports.
+      Sketch Plugin{' '}
+      <a href="https://github.com/brainly/html-sketchapp/">
+        <code>html-sketchapp</code>
+      </a>{' '}
+      is needed in order to open the provided files
+    </p>
+    <Wrapper>
+      <Button
+        link="/sketch-export/document.asketch.json"
+        size="l"
+        type="secondary"
+        pill
+        download
+      >
+        Document File
+      </Button>
+      <Button
+        link="/sketch-export/page.asketch.json"
+        size="l"
+        type="secondary"
+        pill
+        download
+      >
+        Symbols File
+      </Button>
+    </Wrapper>
+  </React.Fragment>
+)
+
 storiesOf('Sketch', module)
-  .addWithInfo('default', () => <div>This section is for Sketch exports</div>)
+  .addWithInfo('default', () => <Default />)
   .addWithInfo('components', () => (
     <React.Fragment>
       {Object.keys(symbols).map(key => (
