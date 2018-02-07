@@ -10,6 +10,13 @@ npm run publish
 
 This custom NPM script is a wrapper around `lerna publish`. Follow the command line instructions to publish your changes.
 
+If you need to be more specific about what you want to publish, (for instance if you added one icon to `fyndiq-icons` but you don't want to bump every single dependant packages' versions), you can run:
+
+``` bash
+npm run publish -- --scope fyndiq-icons --scope fyndiq-ui-test
+```
+
+
 ## Build the storybook
 
 Once the components are published, you can release a new version of the storybook that includes your changes (note: this step is only necessary if your release changed the storybook)
@@ -27,9 +34,12 @@ git pull origin master
 # build the storybook
 npm run build-storybook
 
+# build the sketch exports
+npm run sketch-export
+
 # Add and commit the files
 git add .
-git commit -m "Build storybook"
+git commit -m ":factory: Build storybook"
 
 git push origin gh-pages
 ```

@@ -7,4 +7,3 @@ coverage
 
 # Shetch exports
 sketch-export/build/
-*.asketch.json
