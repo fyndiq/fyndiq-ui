@@ -180,7 +180,7 @@ const Default = () => (
     </p>
     <Wrapper>
       <Button
-        link="/sketch-export/page.asketch.json"
+        link="./sketch-export/page.asketch.json"
         size="l"
         type="secondary"
         pill
@@ -197,7 +197,7 @@ const Default = () => (
         <small>Contains all the symbols</small>
       </Button>
       <Button
-        link="/sketch-export/document.asketch.json"
+        link="./sketch-export/document.asketch.json"
         size="l"
         type="secondary"
         pill
@@ -217,7 +217,7 @@ const Default = () => (
   </React.Fragment>
 )
 
-storiesOf('Sketch', module)
+storiesOf('💎 Sketch', module)
   .addWithInfo('default', () => <Default />)
   .addWithInfo('components', () => (
     <React.Fragment>
