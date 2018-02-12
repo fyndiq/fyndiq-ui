@@ -27,6 +27,7 @@ function loadStories() {
   require('../stories/component-tooltip')
   require('../stories/icons')
   require('../stories/illustrations')
+  require('../stories/sketch')
 }
 
 setAddon(infoAddon)

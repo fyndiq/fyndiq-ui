@@ -5,15 +5,19 @@ exports[`Article Price should have a default structure 1`] = `
   className="
         price
         emphasize
+        false
       "
 >
-  <span
+  <div
     className="currentPrice"
   >
     123kr
-  </span>
-  <span
+     
+  </div>
+  <div
     className="oldPrice"
-  />
+  >
+     
+  </div>
 </span>
 `;

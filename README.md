@@ -4,7 +4,7 @@
 
 # fyndiq-ui
 
-[![Build Status](https://travis-ci.org/fyndiq/fyndiq-ui.svg?branch=master)](https://travis-ci.org/fyndiq/fyndiq-ui) [![Codecov](https://img.shields.io/codecov/c/github/fyndiq/fyndiq-ui.svg)](https://codecov.io/gh/fyndiq/fyndiq-ui) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Build Status](https://travis-ci.org/fyndiq/fyndiq-ui.svg?branch=master)](https://travis-ci.org/fyndiq/fyndiq-ui) [![Sketch exports](https://img.shields.io/badge/%F0%9F%92%8E%20sketch-exports-eaa119.svg)](https://fyndiq.github.io/fyndiq-ui/?selectedKind=Sketch&selectedStory=default) [![Codecov](https://img.shields.io/codecov/c/github/fyndiq/fyndiq-ui.svg)](https://codecov.io/gh/fyndiq/fyndiq-ui) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 Library of reusable components for Fyndiq
 
