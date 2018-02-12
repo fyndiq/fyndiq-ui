@@ -77,4 +77,20 @@ describe('fyndiq-component-button', () => {
     component.simulate('click')
     expect(clickSpy.mock.calls).toHaveLength(1)
   })
+
+  test('should pass additionnal props to the button component', () => {
+    expect(
+      shallow(<Button data-test="test" />)
+        .find('button')
+        .prop('data-test'),
+    ).toBe('test')
+  })
+
+  test('should pass additionnal props to the link component', () => {
+    expect(
+      shallow(<Button link="#test" data-test="test" />)
+        .find('a')
+        .prop('data-test'),
+    ).toBe('test')
+  })
 })

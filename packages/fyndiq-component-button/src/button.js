@@ -16,6 +16,7 @@ const Button = ({
   htmlType,
   link,
   buttonRef,
+  ...props
 }) => {
   const finalClassName = `
     ${styles.button}
@@ -37,6 +38,7 @@ const Button = ({
         onClick={onClick}
         href={link}
         ref={buttonRef}
+        {...props}
       >
         {children}
       </a>
@@ -60,6 +62,7 @@ const Button = ({
       disabled={disabled}
       type={htmlType}
       ref={buttonRef}
+      {...props}
     >
       {children}
     </button>
@@ -67,7 +70,7 @@ const Button = ({
 }
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   className: PropTypes.string,
   onClick: PropTypes.func,
   type: PropTypes.oneOf([
@@ -96,6 +99,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
+  children: '',
   className: '',
   onClick: noop => noop,
   type: 'normal',
