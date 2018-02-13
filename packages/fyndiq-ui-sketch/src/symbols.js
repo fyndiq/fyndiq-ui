@@ -11,6 +11,8 @@ import Dropdown from 'fyndiq-component-dropdown'
 import Loader from 'fyndiq-component-loader'
 
 /* eslint-disable react/prop-types */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-a11y/accessible-emoji */
 
 const allIcons = Object.keys(Icons)
   .map(name => ({
@@ -57,20 +59,22 @@ export default {
   ),
   'Message/confirm': (
     <Message type="confirm" icon={<Icons.Checkmark />}>
-      This is fantastic!
+      Content of the message. Don't forget to add emojis ✨
     </Message>
   ),
   'Message/info': (
-    <Message icon={<Icons.Truck />}>This is an info message</Message>
+    <Message icon={<Icons.Truck />}>
+      Content of the message. Don't forget to add emojis ✨
+    </Message>
   ),
   'Message/warn': (
     <Message type="warn" icon={<Icons.Warning />}>
-      This is a warning message
+      Content of the message. Don't forget to add emojis ✨
     </Message>
   ),
   'Message/error': (
     <Message type="error" icon={<Icons.Error />}>
-      This is an error message
+      Content of the message. Don't forget to add emojis ✨
     </Message>
   ),
   'Article/Layouts/Details': (
