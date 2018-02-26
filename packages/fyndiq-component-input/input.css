@@ -8,6 +8,7 @@
   border-radius: 2px;
   font-size: 15px;
   line-height: 48px;
+  box-shadow: 0 0 5px 0 color(var(--color-black) a(10%));
   outline: 0;
   appearance: none;
 

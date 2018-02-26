@@ -14,7 +14,8 @@
     "fyndiq-component-dropdown": "^2.8.2",
     "fyndiq-icons": "^2.8.0",
     "fyndiq-styles-colors": "^2.3.0",
-    "lodash.debounce": "4.0.8"
+    "lodash.debounce": "4.0.8",
+    "react-input-autosize": "^2.2.1"
   },
   "peerDependencies": {
     "css-loader": "^0.28.7",
