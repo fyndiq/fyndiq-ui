@@ -17,7 +17,8 @@ import styles from '../styles.css'
 const isSameType = (element, component) =>
   React.isValidElement(element) &&
   (element.type === component ||
-    (element.type && element.type.displayName === component.name))
+    (element.type && element.type.displayName === component.name) ||
+    (element.type && element.type.name === component.name))
 
 class Dropdown extends React.Component {
   static propTypes = {
