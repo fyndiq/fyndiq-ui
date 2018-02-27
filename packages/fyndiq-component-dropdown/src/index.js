@@ -84,9 +84,18 @@ class Dropdown extends React.Component {
     this.updateDropdownPosition()
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.opened !== this.props.opened) {
+      this.setState({ opened: nextProps.opened })
+    }
+  }
+
   componentDidUpdate(prevProps, prevState) {
     // Call handlers onOpen and onClose if open has changed
-    if (prevState.opened !== this.state.opened) {
+    if (
+      prevState.opened !== this.state.opened &&
+      this.props.opened === prevProps.opened
+    ) {
       if (this.state.opened) {
         this.props.onOpen()
       } else {
@@ -143,6 +152,10 @@ class Dropdown extends React.Component {
   }
 
   updateDropdownPosition() {
+    if (!this.buttonNode || !this.buttonNode.getBoundingClientRect) {
+      return
+    }
+
     const buttonSize = this.buttonNode.getBoundingClientRect()
     const { position, margin } = this.props
     let left = this.buttonNode.offsetLeft

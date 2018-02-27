@@ -230,6 +230,33 @@ describe('fyndiq-component-dropdown', () => {
     expect(spy).toHaveBeenCalled()
   })
 
+  it('should be controllable', () => {
+    const component = shallow(<Dropdown button="button">Content</Dropdown>, {
+      disableLifecycleMethods: true,
+    })
+    component.setProps({ opened: true })
+    expect(component.find('.dropdownWrapper').exists()).toBe(true)
+    component.setProps({ opened: false })
+    expect(component.find('.dropdownWrapper').exists()).toBe(false)
+  })
+
+  it('should not call handlers when control toggled', () => {
+    const spy = jest.fn()
+    const component = shallow(
+      <Dropdown button="button" onOpen={spy} onClose={spy}>
+        Content
+      </Dropdown>,
+      {
+        disableLifecycleMethods: false,
+      },
+    )
+    component.setProps({ opened: true })
+    component.update()
+    component.setProps({ opened: false })
+    component.update()
+    expect(spy).not.toHaveBeenCalled()
+  })
+
   describe('disabled prop', () => {
     it('should open when clicking on the button', () => {
       const component = shallow(
