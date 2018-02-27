@@ -72,9 +72,12 @@ class Dropdown extends React.Component {
   }
 
   componentWillMount() {
-    document.addEventListener('click', this.handleDocumentClick)
-    document.addEventListener('touchend', this.handleDocumentClick)
-    document.addEventListener('keypress', this.handleKeypress, true)
+    // The guard is here in order to handle server-side rendering
+    if (global.document && document.addEventListener) {
+      document.addEventListener('click', this.handleDocumentClick)
+      document.addEventListener('touchend', this.handleDocumentClick)
+      document.addEventListener('keypress', this.handleKeypress, true)
+    }
   }
 
   componentDidMount() {
@@ -93,9 +96,11 @@ class Dropdown extends React.Component {
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.handleDocumentClick)
-    document.removeEventListener('touchend', this.handleDocumentClick)
-    document.removeEventListener('keypress', this.handleKeypress, true)
+    if (global.document && document.addEventListener) {
+      document.removeEventListener('click', this.handleDocumentClick)
+      document.removeEventListener('touchend', this.handleDocumentClick)
+      document.removeEventListener('keypress', this.handleKeypress, true)
+    }
   }
 
   onButtonClick() {
