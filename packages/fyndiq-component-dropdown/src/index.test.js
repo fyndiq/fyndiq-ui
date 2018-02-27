@@ -251,9 +251,7 @@ describe('fyndiq-component-dropdown', () => {
       },
     )
     component.setProps({ opened: true })
-    component.update()
     component.setProps({ opened: false })
-    component.update()
     expect(spy).not.toHaveBeenCalled()
   })
 
