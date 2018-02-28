@@ -18,7 +18,7 @@ class ModalPortal extends React.Component {
 
   static defaultProps = {
     children: null,
-    portalId: 'fyndiq-portal',
+    portalId: 'fyndiq-modal-portal',
     bodyLock: false,
   }
 

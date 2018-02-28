@@ -18,7 +18,7 @@ class Modal extends React.Component {
   static defaultProps = {
     open: false,
     children: null,
-    portalId: 'fyndiq-modal',
+    portalId: 'fyndiq-modal-portal',
     overlayClassName: '',
     wrapperClassName: '',
     closeClassName: '',
@@ -33,12 +33,16 @@ class Modal extends React.Component {
   }
 
   componentWillMount() {
-    // Register key events
-    document.addEventListener('keypress', this.handleKeyPress)
+    if (global.document && document.addEventListener) {
+      // Register key events
+      document.addEventListener('keypress', this.handleKeyPress)
+    }
   }
 
   componentWillUnmount() {
-    document.removeEventListener('keypress', this.handleKeyPress)
+    if (global.document && document.addEventListener) {
+      document.removeEventListener('keypress', this.handleKeyPress)
+    }
   }
 
   getChildren() {
