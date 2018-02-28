@@ -17,8 +17,6 @@ class MessagePortal extends React.Component {
   }
 
   componentWillMount() {
-    if (!global.document) return
-
     // Create portal element if it doesn't exist
     if (!document.getElementById(this.props.portalId)) {
       const portalDiv = document.createElement('div')
@@ -28,10 +26,6 @@ class MessagePortal extends React.Component {
   }
 
   render() {
-    if (!global.document) {
-      return this.props.children
-    }
-
     return ReactDOM.createPortal(
       this.props.children,
       document.getElementById(this.props.portalId),

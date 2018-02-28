@@ -59,6 +59,8 @@ class MessageWrapper extends React.Component {
   }
 
   render() {
+    if (this.state.messages.length === 0) return null
+
     return (
       <MessagePortal>
         <div className={styles.wrapper}>
