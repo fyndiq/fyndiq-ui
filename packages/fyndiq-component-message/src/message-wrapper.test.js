@@ -30,6 +30,10 @@ describe('fyndiq-component-message MessageWrapper', () => {
     expect(component.find(Message).exists()).toBe(false)
   })
 
+  it('should not render anything if there is no message', () => {
+    expect(shallow(<Wrapper />).isEmptyRender()).toBe(true)
+  })
+
   describe('static addMessage', () => {
     it('should have a static addMessage function', () => {
       const component = shallow(<Wrapper />)
