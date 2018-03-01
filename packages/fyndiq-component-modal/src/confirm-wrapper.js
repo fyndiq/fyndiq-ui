@@ -23,6 +23,11 @@ class ConfirmWrapper extends React.Component {
   }
 
   componentWillMount() {
+    // Server-side rendering is not supported
+    if (!global.document) {
+      return
+    }
+
     if (ConfirmWrapper.instance != null) {
       console.warn('ConfirmWrapper already had an instance running')
     }

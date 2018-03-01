@@ -24,6 +24,11 @@ class MessageWrapper extends React.Component {
   }
 
   componentWillMount() {
+    // Server-side rendering is not supported
+    if (!global.document) {
+      return
+    }
+
     if (MessageWrapper.instance != null) {
       console.warn('MessageWrapper already had an instance')
     }
