@@ -21,6 +21,20 @@ describe('fyndiq-component-message MessageWrapper', () => {
     expect(console.warn).toHaveBeenCalled()
   })
 
+  it('should forget about the running instance if it is unmounted', () => {
+    const component = shallow(<Wrapper />)
+    component.unmount()
+    expect(Wrapper.instance).toBe(null)
+  })
+
+  it('should not erase the running instance if another one gets removed', () => {
+    const instance1 = shallow(<Wrapper />)
+    // Mount another instance that will be tracked by Wrapper.
+    shallow(<Wrapper />)
+    instance1.unmount()
+    expect(Wrapper.instance).not.toBe(null)
+  })
+
   it('should remove messages internally', () => {
     const component = shallow(<Wrapper />)
     Wrapper.addMessage(<Message>New message</Message>)
