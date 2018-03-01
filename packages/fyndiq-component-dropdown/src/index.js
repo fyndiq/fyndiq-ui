@@ -17,7 +17,8 @@ import styles from '../styles.css'
 const isSameType = (element, component) =>
   React.isValidElement(element) &&
   (element.type === component ||
-    (element.type && element.type.displayName === component.name))
+    (element.type && element.type.displayName === component.name) ||
+    (element.type && element.type.name === component.name))
 
 class Dropdown extends React.Component {
   static propTypes = {
@@ -72,18 +73,30 @@ class Dropdown extends React.Component {
   }
 
   componentWillMount() {
-    document.addEventListener('click', this.handleDocumentClick)
-    document.addEventListener('touchend', this.handleDocumentClick)
-    document.addEventListener('keypress', this.handleKeypress, true)
+    // The guard is here in order to handle server-side rendering
+    if (global.document && document.addEventListener) {
+      document.addEventListener('click', this.handleDocumentClick)
+      document.addEventListener('touchend', this.handleDocumentClick)
+      document.addEventListener('keypress', this.handleKeypress, true)
+    }
   }
 
   componentDidMount() {
     this.updateDropdownPosition()
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.opened !== this.props.opened) {
+      this.setState({ opened: nextProps.opened })
+    }
+  }
+
   componentDidUpdate(prevProps, prevState) {
     // Call handlers onOpen and onClose if open has changed
-    if (prevState.opened !== this.state.opened) {
+    if (
+      prevState.opened !== this.state.opened &&
+      this.props.opened === prevProps.opened
+    ) {
       if (this.state.opened) {
         this.props.onOpen()
       } else {
@@ -93,9 +106,11 @@ class Dropdown extends React.Component {
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.handleDocumentClick)
-    document.removeEventListener('touchend', this.handleDocumentClick)
-    document.removeEventListener('keypress', this.handleKeypress, true)
+    if (global.document && document.addEventListener) {
+      document.removeEventListener('click', this.handleDocumentClick)
+      document.removeEventListener('touchend', this.handleDocumentClick)
+      document.removeEventListener('keypress', this.handleKeypress, true)
+    }
   }
 
   onButtonClick() {
@@ -138,6 +153,10 @@ class Dropdown extends React.Component {
   }
 
   updateDropdownPosition() {
+    if (!this.buttonNode || !this.buttonNode.getBoundingClientRect) {
+      return
+    }
+
     const buttonSize = this.buttonNode.getBoundingClientRect()
     const { position, margin } = this.props
     let left = this.buttonNode.offsetLeft

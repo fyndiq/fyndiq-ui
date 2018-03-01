@@ -30,6 +30,12 @@ class ArticleImages extends React.Component {
     document.addEventListener('keyup', this.handleKeyPress)
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.images !== this.props.images) {
+      this.setState({ imgId: 0 })
+    }
+  }
+
   componentWillUnmount() {
     document.removeEventListener('keyup', this.handleKeyPress)
   }

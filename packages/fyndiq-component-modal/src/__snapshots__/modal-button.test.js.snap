@@ -22,7 +22,7 @@ exports[`ModalButton Component should display a button by default 1`] = `
     onClose={[Function]}
     open={false}
     overlayClassName=""
-    portalId="fyndiq-modal"
+    portalId="fyndiq-modal-portal"
     wrapperClassName=""
   >
     Content
@@ -37,7 +37,7 @@ exports[`ModalButton Component should handle Modal children as a prop 1`] = `
   onClose={[Function]}
   open={false}
   overlayClassName="overlayClassName"
-  portalId="fyndiq-modal"
+  portalId="fyndiq-modal-portal"
   wrapperClassName=""
 >
   Content

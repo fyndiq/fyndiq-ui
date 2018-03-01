@@ -43,7 +43,7 @@
 @keyframes bl {
   from {
     opacity: 0;
-    transform: translate(0, -var(--translateFactor)) scale(var(--scaleFactor));
+    transform: translate(0, calc(0 - var(--translateFactor))) scale(var(--scaleFactor));
   }
 
   to {
@@ -60,7 +60,7 @@
 @keyframes bc {
   from {
     opacity: 0;
-    transform: translate(-50%, -var(--translateFactor)) scale(var(--scaleFactor));
+    transform: translate(-50%, calc(0 - var(--translateFactor))) scale(var(--scaleFactor));
   }
 
   to {
@@ -77,7 +77,7 @@
 @keyframes br {
   from {
     opacity: 0;
-    transform: translate(-100%, -var(--translateFactor)) scale(var(--scaleFactor));
+    transform: translate(-100%, calc(0 - var(--translateFactor))) scale(var(--scaleFactor));
   }
 
   to {
