@@ -37,7 +37,9 @@ class MessageWrapper extends React.Component {
   }
 
   componentWillUnmount() {
-    MessageWrapper.instance = null
+    if (MessageWrapper.instance === this) {
+      MessageWrapper.instance = null
+    }
   }
 
   addMessage(message) {

@@ -36,7 +36,9 @@ class ConfirmWrapper extends React.Component {
   }
 
   componentWillUnmount() {
-    ConfirmWrapper.instance = null
+    if (ConfirmWrapper.instance === this) {
+      ConfirmWrapper.instance = null
+    }
   }
 
   onCancel() {
