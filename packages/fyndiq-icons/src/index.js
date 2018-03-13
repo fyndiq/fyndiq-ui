@@ -3,9 +3,11 @@ import Atm from './atm'
 import Attributes from './attributes'
 import Bag from './bag'
 import Bubbles from './bubbles'
+import Cart from './cart'
 import Checkmark from './checkmark'
 import Error from './error'
 import Magnifier from './magnifier'
+import MagnifierAlt from './magnifier-alt'
 import Notebook from './notebook'
 import Payout from './payout'
 import Pencil from './pencil'
@@ -24,9 +26,11 @@ export {
   Attributes,
   Bag,
   Bubbles,
+  Cart,
   Checkmark,
   Error,
   Magnifier,
+  MagnifierAlt,
   Notebook,
   Payout,
   Pencil,
