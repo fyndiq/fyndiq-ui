@@ -45,6 +45,27 @@ import { Link } from 'react-router-dom'
   My link
 </Button>
 
+// Render anything as a button
+<Button type="primary" size="l">
+  {({ className }) => (
+    <header className={className}>
+      My header
+    </header>
+  )}
+</Button>
+
+// Next.JS Link rendered as a button
+import Link from 'next/link'
+<Button type="primary" size="l" pill>
+  {({ className }) => (
+    <Link href="/link/">
+      <a className={className}>
+        My link
+      </a>
+    </Link>
+  )}
+</Button>
+
 // Manipulate buttons as a group
 import Button, { Wrapper } from 'fyndiq-component-button'
 
