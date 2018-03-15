@@ -52,6 +52,16 @@ const Button = ({
       className: finalClassName,
       children,
     })
+    // If the children is used as a function
+  } else if (typeof children === 'function') {
+    return children({
+      className: finalClassName,
+      ref: buttonRef,
+      type: htmlType,
+      disabled,
+      onClick,
+      ...props,
+    })
   }
 
   // Default case: render a button.
@@ -70,7 +80,7 @@ const Button = ({
 }
 
 Button.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   className: PropTypes.string,
   onClick: PropTypes.func,
   type: PropTypes.oneOf([
