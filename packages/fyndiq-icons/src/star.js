@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import SvgWrapper from './svg-wrapper'
 
 const Star = ({ className, color, colorEmpty, full }) => {
-  const starId = `${Math.random()}`
+  const starId = `star-${full}`
   return (
     <SvgWrapper className={className} viewBox="-5 -5 60 60">
       <defs>

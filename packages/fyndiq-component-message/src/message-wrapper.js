@@ -24,6 +24,11 @@ class MessageWrapper extends React.Component {
   }
 
   componentWillMount() {
+    // Server-side rendering is not supported
+    if (!global.document) {
+      return
+    }
+
     if (MessageWrapper.instance != null) {
       console.warn('MessageWrapper already had an instance')
     }
@@ -32,7 +37,9 @@ class MessageWrapper extends React.Component {
   }
 
   componentWillUnmount() {
-    MessageWrapper.instance = null
+    if (MessageWrapper.instance === this) {
+      MessageWrapper.instance = null
+    }
   }
 
   addMessage(message) {
@@ -59,6 +66,8 @@ class MessageWrapper extends React.Component {
   }
 
   render() {
+    if (this.state.messages.length === 0) return null
+
     return (
       <MessagePortal>
         <div className={styles.wrapper}>

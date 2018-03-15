@@ -45,7 +45,7 @@ class MyComponent extends React.Component {
 }
 
 // Customize the message
-import { Error, Warning } from 'fyndiq-icons
+import { Error, Warning } from 'fyndiq-icons'
 addMessage(
   <Message
     type="error"

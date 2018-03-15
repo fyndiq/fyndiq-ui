@@ -71,6 +71,14 @@ describe('fyndiq-component-button', () => {
     expect(component).toMatchSnapshot()
   })
 
+  test('should be renderable as a children function', () => {
+    expect(
+      shallow(
+        <Button>{({ className }) => <div className={className} />}</Button>,
+      ),
+    ).toMatchSnapshot()
+  })
+
   test('should call the onClick handler when clicked on', () => {
     const clickSpy = jest.fn()
     const component = shallow(<Button onClick={clickSpy}>Hello</Button>)

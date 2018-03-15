@@ -3,7 +3,7 @@
 exports[`Modal Component should be displayed correctly if opened 1`] = `
 <ModalPortal
   bodyLock={true}
-  portalId="fyndiq-modal"
+  portalId="fyndiq-modal-portal"
 >
   <div
     className="overlay "
@@ -28,7 +28,7 @@ exports[`Modal Component should be displayed correctly if opened 1`] = `
 exports[`Modal Component should have custom classes for different elements 1`] = `
 <ModalPortal
   bodyLock={true}
-  portalId="fyndiq-modal"
+  portalId="fyndiq-modal-portal"
 >
   <div
     className="overlay overlayClassName"

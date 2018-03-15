@@ -11,7 +11,7 @@ import Dropdown from 'fyndiq-component-dropdown'
 import Loader from 'fyndiq-component-loader'
 import colors from 'fyndiq-styles-colors'
 
-import { version } from '../package.json'
+import { version } from '../package'
 
 const allIcons = Object.keys(Icons)
   .map(name => ({

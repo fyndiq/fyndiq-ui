@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`fyndiq-component-button should be renderable as a children function 1`] = `
+<div
+  className="
+    button
+    type-normal
+    size-s
+    false
+    false
+    interactive
+    false
+    
+  "
+/>
+`;
+
 exports[`fyndiq-component-button should be renderable as a custom link element 1`] = `
 <Link
   className="
