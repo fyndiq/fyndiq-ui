@@ -55,7 +55,7 @@ exports[`fyndiq-component-loader it should be rendered with no props 1`] = `
   width={50}
 >
   <rect
-    fill="#E74A51"
+    fill="#FD5167"
     height="100"
     width="100"
     x="0"
@@ -95,7 +95,7 @@ exports[`fyndiq-component-loader it should have a size prop 1`] = `
   width={40}
 >
   <rect
-    fill="#E74A51"
+    fill="#FD5167"
     height="100"
     width="100"
     x="0"
