@@ -1,16 +1,16 @@
 :root {
   /* Brand color */
-  --color-brand: #EC514A;
+  --color-brand: #FD5167;
 
   /* Grey levels */
-  --color-black: #3B4257;
+  --color-black: #394259;
   --color-darkgrey: #666;
   --color-lightgrey: #9B9B9B;
-  --color-palegrey: #FAFAFC;
+  --color-palegrey: #F1F1F1;
   --color-white: #FFF;
 
   /* Main colors */
-  --color-red: #E74A51;
+  --color-red: var(--color-brand);
   --color-blue: #4A90E2;
   --color-green: #37B578;
   --color-yellow: #FFD600;
