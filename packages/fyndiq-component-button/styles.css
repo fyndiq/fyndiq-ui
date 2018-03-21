@@ -1,6 +1,7 @@
 @import "fyndiq-styles-colors/colors.css";
 
 .button {
+  display: inline-block;
   border: 1px solid transparent;
   border-radius: 3px;
   background-color: var(--color-palegrey);
