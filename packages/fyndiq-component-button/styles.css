@@ -25,7 +25,6 @@
 
 .type-normal {
   background-color: var(--color-palegrey);
-  border-color: var(--color-border);
 
   &.interactive:hover,
   &.interactive:focus {
