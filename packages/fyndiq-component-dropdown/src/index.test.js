@@ -214,7 +214,7 @@ describe('fyndiq-component-dropdown', () => {
       </Dropdown>,
     )
 
-    component.setState({ opened: true })
+    component.find('Button').simulate('click')
     expect(spy).toHaveBeenCalled()
   })
 
@@ -226,14 +226,19 @@ describe('fyndiq-component-dropdown', () => {
       </Dropdown>,
     )
 
-    component.setState({ opened: false })
+    component.find('Button').simulate('click')
     expect(spy).toHaveBeenCalled()
   })
 
   it('should be controllable', () => {
-    const component = shallow(<Dropdown button="button">Content</Dropdown>, {
-      disableLifecycleMethods: true,
-    })
+    const component = shallow(
+      <Dropdown opened={false} button="button">
+        Content
+      </Dropdown>,
+      {
+        disableLifecycleMethods: true,
+      },
+    )
     component.setProps({ opened: true })
     expect(component.find('.dropdownWrapper').exists()).toBe(true)
     component.setProps({ opened: false })
