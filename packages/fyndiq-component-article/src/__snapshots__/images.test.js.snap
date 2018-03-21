@@ -2,10 +2,13 @@
 
 exports[`Article Images should have a default structure 1`] = `
 <div
-  className="images"
+  className="
+          wrapper
+          false
+        "
 >
   <div
-    className="topContainer"
+    className="imgBigContainer"
   >
     <button
       className="buttonArrow"
@@ -19,6 +22,9 @@ exports[`Article Images should have a default structure 1`] = `
     <div
       className="imgBigWrapper"
     >
+      <div
+        className="imgBigDummy"
+      />
       <img
         alt="title"
         className="imgBig"
