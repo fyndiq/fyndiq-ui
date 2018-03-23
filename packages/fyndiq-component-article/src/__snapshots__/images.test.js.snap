@@ -25,10 +25,11 @@ exports[`Article Images should have a default structure 1`] = `
       <div
         className="imgBigDummy"
       />
-      <img
+      <Img
         alt="title"
         className="imgBig"
         src="imgSrc1"
+        style={Object {}}
       />
     </div>
     <button
