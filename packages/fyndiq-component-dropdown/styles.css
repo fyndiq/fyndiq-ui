@@ -15,8 +15,8 @@
   min-width: 220px;
   border: 1px solid var(--color-border);
   background-color: var(--color-white);
-  border-radius: 2px;
-  box-shadow: 0 0 10px color(var(--color-black) a(10%));
+  border-radius: 4px;
+  box-shadow: 0 0 15px color(var(--color-black) a(10%));
 }
 
 .position {
