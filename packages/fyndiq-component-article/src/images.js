@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Arrow } from 'fyndiq-icons'
 
+import Img from './image'
 import styles from '../article-images.css'
 
 class ArticleImages extends React.Component {
@@ -91,7 +92,7 @@ class ArticleImages extends React.Component {
 
           <div className={styles.imgBigWrapper}>
             <div className={styles.imgBigDummy} />
-            <img
+            <Img
               src={images[this.state.imgId]}
               alt={alt}
               className={styles.imgBig}
