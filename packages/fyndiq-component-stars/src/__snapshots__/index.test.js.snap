@@ -26,7 +26,7 @@ exports[`fyndiq-component-stars should be rendered with prop interactive 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={1}
       />
     </span>
@@ -43,7 +43,7 @@ exports[`fyndiq-component-stars should be rendered with prop interactive 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -60,7 +60,7 @@ exports[`fyndiq-component-stars should be rendered with prop interactive 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -77,7 +77,7 @@ exports[`fyndiq-component-stars should be rendered with prop interactive 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -94,7 +94,7 @@ exports[`fyndiq-component-stars should be rendered with prop interactive 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -122,7 +122,7 @@ exports[`fyndiq-component-stars should be rendered with prop rating 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={1}
       />
     </span>
@@ -133,7 +133,7 @@ exports[`fyndiq-component-stars should be rendered with prop rating 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={1}
       />
     </span>
@@ -144,7 +144,7 @@ exports[`fyndiq-component-stars should be rendered with prop rating 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={1}
       />
     </span>
@@ -155,7 +155,7 @@ exports[`fyndiq-component-stars should be rendered with prop rating 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={1}
       />
     </span>
@@ -166,7 +166,7 @@ exports[`fyndiq-component-stars should be rendered with prop rating 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0.5}
       />
     </span>
@@ -194,7 +194,7 @@ exports[`fyndiq-component-stars should be rendered with prop reviews 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={1}
       />
     </span>
@@ -205,7 +205,7 @@ exports[`fyndiq-component-stars should be rendered with prop reviews 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -216,7 +216,7 @@ exports[`fyndiq-component-stars should be rendered with prop reviews 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -227,7 +227,7 @@ exports[`fyndiq-component-stars should be rendered with prop reviews 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -238,7 +238,7 @@ exports[`fyndiq-component-stars should be rendered with prop reviews 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -273,7 +273,7 @@ exports[`fyndiq-component-stars should be rendered with prop size 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={1}
       />
     </span>
@@ -284,7 +284,7 @@ exports[`fyndiq-component-stars should be rendered with prop size 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -295,7 +295,7 @@ exports[`fyndiq-component-stars should be rendered with prop size 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -306,7 +306,7 @@ exports[`fyndiq-component-stars should be rendered with prop size 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -317,7 +317,7 @@ exports[`fyndiq-component-stars should be rendered with prop size 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -345,7 +345,7 @@ exports[`fyndiq-component-stars should be rendered without props 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={1}
       />
     </span>
@@ -356,7 +356,7 @@ exports[`fyndiq-component-stars should be rendered without props 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -367,7 +367,7 @@ exports[`fyndiq-component-stars should be rendered without props 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -378,7 +378,7 @@ exports[`fyndiq-component-stars should be rendered without props 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
@@ -389,7 +389,7 @@ exports[`fyndiq-component-stars should be rendered without props 1`] = `
       <Star
         className=""
         color="#F7A626"
-        colorEmpty="#CCD1DD"
+        colorEmpty="#FAFAFC"
         full={0}
       />
     </span>
