@@ -73,7 +73,7 @@ class Stars extends React.Component {
           {...interactiveProps}
         >
           <Star
-            colorEmpty={colors.border}
+            colorEmpty={colors.palegrey}
             color={colors.orange}
             full={Math.min(1, Math.max(0, 1 + liveRating - id))}
           />
