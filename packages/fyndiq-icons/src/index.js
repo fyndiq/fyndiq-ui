@@ -6,6 +6,7 @@ import Bubbles from './bubbles'
 import Cart from './cart'
 import Checkmark from './checkmark'
 import Error from './error'
+import Headset from './headset'
 import Magnifier from './magnifier'
 import MagnifierAlt from './magnifier-alt'
 import Notebook from './notebook'
@@ -29,6 +30,7 @@ export {
   Cart,
   Checkmark,
   Error,
+  Headset,
   Magnifier,
   MagnifierAlt,
   Notebook,

@@ -35,6 +35,7 @@ exports[`fyndiq-component-input Presets should have the proper structure 1`] = `
       </Button>
     }
     className=""
+    defaultOpened={false}
     disabled={false}
     hoverMode={false}
     margin={5}
@@ -43,7 +44,6 @@ exports[`fyndiq-component-input Presets should have the proper structure 1`] = `
     noWrapperStyle={false}
     onClose={[Function]}
     onOpen={[Function]}
-    opened={false}
     position="br"
     wrapperClassName=""
   />

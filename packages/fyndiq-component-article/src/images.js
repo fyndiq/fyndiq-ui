@@ -3,17 +3,22 @@ import PropTypes from 'prop-types'
 
 import { Arrow } from 'fyndiq-icons'
 
+import Img from './image'
 import styles from '../article-images.css'
 
 class ArticleImages extends React.Component {
   static propTypes = {
     images: PropTypes.arrayOf(PropTypes.string),
+    orientation: PropTypes.oneOf(['horizontal', 'vertical']),
     alt: PropTypes.string,
+    noArrows: PropTypes.bool,
   }
 
   static defaultProps = {
+    orientation: 'horizontal',
     images: [],
     alt: '',
+    noArrows: false,
   }
 
   constructor(props) {
@@ -69,28 +74,39 @@ class ArticleImages extends React.Component {
   }
 
   render() {
-    const { images, alt } = this.props
+    const { images, alt, orientation, noArrows } = this.props
 
     return (
-      <div className={styles.images}>
-        <div className={styles.topContainer}>
-          <button className={styles.buttonArrow} onClick={this.previousImage}>
-            <Arrow orientation="left" />
-          </button>
+      <div
+        className={`
+          ${styles.wrapper}
+          ${orientation === 'vertical' && styles.wrapperVertical}
+        `}
+      >
+        <div className={styles.imgBigContainer}>
+          {!noArrows && (
+            <button className={styles.buttonArrow} onClick={this.previousImage}>
+              <Arrow orientation="left" />
+            </button>
+          )}
+
           <div className={styles.imgBigWrapper}>
-            <img
+            <div className={styles.imgBigDummy} />
+            <Img
               src={images[this.state.imgId]}
               alt={alt}
               className={styles.imgBig}
             />
           </div>
-          <button className={styles.buttonArrow} onClick={this.nextImage}>
-            <Arrow orientation="right" />
-          </button>
+          {!noArrows && (
+            <button className={styles.buttonArrow} onClick={this.nextImage}>
+              <Arrow orientation="right" />
+            </button>
+          )}
         </div>
 
         <div className={styles.smallImgWrapper}>
-          {images.map((image, id) => (
+          {images.slice(0, 4).map((image, id) => (
             <button
               key={image}
               onClick={() => this.changeImageId(id)}
@@ -100,6 +116,12 @@ class ArticleImages extends React.Component {
               `}
               onMouseEnter={() => this.changeImageId(id)}
             >
+              {id === 3 &&
+                images.length > 4 && (
+                  <div className={styles.additionnalImages}>
+                    +{images.length - 4}
+                  </div>
+                )}
               <img src={images[id]} alt={alt} className={styles.imgSmall} />
             </button>
           ))}

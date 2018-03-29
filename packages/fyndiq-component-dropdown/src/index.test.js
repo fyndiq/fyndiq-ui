@@ -26,7 +26,7 @@ describe('fyndiq-component-dropdown', () => {
   test('should have a custom wrapper', () => {
     expect(
       shallow(
-        <Dropdown button="B" noWrapperStyle opened>
+        <Dropdown button="B" noWrapperStyle defaultOpened>
           Content
         </Dropdown>,
         { disableLifecycleMethods: true },
@@ -53,7 +53,7 @@ describe('fyndiq-component-dropdown', () => {
 
   test('should have a wrapperClassName prop', () => {
     const component = shallow(
-      <Dropdown button="b" wrapperClassName="className" opened>
+      <Dropdown button="b" wrapperClassName="className" defaultOpened>
         Content
       </Dropdown>,
       { disableLifecycleMethods: true },
@@ -64,7 +64,7 @@ describe('fyndiq-component-dropdown', () => {
 
   test('should be closed when clicking outside', () => {
     const component = mount(
-      <Dropdown button="button" opened>
+      <Dropdown button="button" defaultOpened>
         Value
       </Dropdown>,
     )
@@ -108,7 +108,7 @@ describe('fyndiq-component-dropdown', () => {
   test('should have different dropdown positions', () => {
     expect(
       mount(
-        <Dropdown button="B" position="bc" opened>
+        <Dropdown button="B" position="bc" defaultOpened>
           Content
         </Dropdown>,
       ).find('.dropdownWrapper'),
@@ -116,7 +116,7 @@ describe('fyndiq-component-dropdown', () => {
 
     expect(
       mount(
-        <Dropdown button="B" position="tr" opened>
+        <Dropdown button="B" position="tr" defaultOpened>
           Content
         </Dropdown>,
       ).find('.dropdownWrapper'),
@@ -124,7 +124,7 @@ describe('fyndiq-component-dropdown', () => {
 
     expect(
       mount(
-        <Dropdown button="B" position="tc" opened>
+        <Dropdown button="B" position="tc" defaultOpened>
           Content
         </Dropdown>,
       ).find('.dropdownWrapper'),
@@ -134,7 +134,7 @@ describe('fyndiq-component-dropdown', () => {
   test('should have an arrow oriented to the top if dropdown is above', () => {
     expect(
       shallow(
-        <Dropdown button="B" position="tr" opened>
+        <Dropdown button="B" position="tr" defaultOpened>
           Content
         </Dropdown>,
         { disableLifecycleMethods: true },
@@ -144,7 +144,7 @@ describe('fyndiq-component-dropdown', () => {
 
   test('should be closable by pressing the Escape key', () => {
     const component = mount(
-      <Dropdown button="button" opened>
+      <Dropdown button="button" defaultOpened>
         Content
       </Dropdown>,
     )
@@ -192,7 +192,7 @@ describe('fyndiq-component-dropdown', () => {
 
   it('should handle function children', () => {
     const Component = shallow(
-      <Dropdown button="button" opened>
+      <Dropdown button="button" defaultOpened>
         {({ onClose }) => (
           <button className="custom-close" onClick={onClose}>
             Button
@@ -214,26 +214,31 @@ describe('fyndiq-component-dropdown', () => {
       </Dropdown>,
     )
 
-    component.setState({ opened: true })
+    component.find('Button').simulate('click')
     expect(spy).toHaveBeenCalled()
   })
 
   it('should call onClose when the dropdown is closed', () => {
     const spy = jest.fn()
     const component = mount(
-      <Dropdown button="button" onClose={spy} opened>
+      <Dropdown button="button" onClose={spy} defaultOpened>
         Content
       </Dropdown>,
     )
 
-    component.setState({ opened: false })
+    component.find('Button').simulate('click')
     expect(spy).toHaveBeenCalled()
   })
 
   it('should be controllable', () => {
-    const component = shallow(<Dropdown button="button">Content</Dropdown>, {
-      disableLifecycleMethods: true,
-    })
+    const component = shallow(
+      <Dropdown opened={false} button="button">
+        Content
+      </Dropdown>,
+      {
+        disableLifecycleMethods: true,
+      },
+    )
     component.setProps({ opened: true })
     expect(component.find('.dropdownWrapper').exists()).toBe(true)
     component.setProps({ opened: false })

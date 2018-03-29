@@ -20,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: color(var(--color-black) a(40%));
   padding: 0 10px;
   overflow: scroll;
   opacity: 0;
@@ -43,8 +43,9 @@
   max-width: 100%;
   min-height: 100px;
   margin: 10px auto 50px;
-  border-radius: 2px;
+  border-radius: 4px;
   background: var(--color-white);
+  box-shadow: 0 0 15px 0 color(var(--color-black) a(15%));
   transform: scale(.9);
   animation: wrapperAppear .15s cubic-bezier(.23, 1, .32, 1.2) forwards;
 }
