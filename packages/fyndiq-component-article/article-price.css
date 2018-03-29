@@ -19,11 +19,11 @@
 
 .emphasize {
   & .currentPrice {
-    font-size: 18px;
+    font-size: 1.3em;
   }
 
   & .oldPrice {
-    font-size: 11px;
+    font-size: .8em;
   }
 }
 

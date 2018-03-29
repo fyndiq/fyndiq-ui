@@ -8,6 +8,7 @@ exports[`fyndiq-component-tooltip should be rendered without props 1`] = `
     </span>
   }
   className=""
+  defaultOpened={false}
   disabled={false}
   hoverMode={true}
   margin={5}
@@ -16,7 +17,6 @@ exports[`fyndiq-component-tooltip should be rendered without props 1`] = `
   noWrapperStyle={true}
   onClose={[Function]}
   onOpen={[Function]}
-  opened={false}
   position="bc"
   wrapperClassName=""
 >

@@ -23,6 +23,7 @@ const isSameType = (element, component) =>
 class Dropdown extends React.Component {
   static propTypes = {
     opened: PropTypes.bool,
+    defaultOpened: PropTypes.bool,
     button: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
       .isRequired,
     children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]).isRequired,
@@ -41,7 +42,8 @@ class Dropdown extends React.Component {
   }
 
   static defaultProps = {
-    opened: false,
+    opened: undefined,
+    defaultOpened: false,
     hoverMode: false,
     noArrow: false,
     noWrapperStyle: false,
@@ -58,10 +60,19 @@ class Dropdown extends React.Component {
 
   constructor(props) {
     super(props)
+
     this.state = {
-      opened: props.opened,
       left: 0,
       top: 0,
+    }
+    if (props.opened === undefined) {
+      this.isControlled = false
+      this.state = {
+        ...this.state,
+        opened: this.props.defaultOpened,
+      }
+    } else {
+      this.isControlled = true
     }
 
     this.onButtonClick = this.onButtonClick.bind(this)
@@ -72,43 +83,18 @@ class Dropdown extends React.Component {
     this.closeDropdown = this.closeDropdown.bind(this)
   }
 
-  componentWillMount() {
-    // The guard is here in order to handle server-side rendering
-    if (global.document && document.addEventListener) {
-      document.addEventListener('click', this.handleDocumentClick)
-      document.addEventListener('touchend', this.handleDocumentClick)
-      document.addEventListener('keypress', this.handleKeypress, true)
-    }
-  }
-
   componentDidMount() {
     this.updateDropdownPosition()
-  }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.opened !== this.props.opened) {
-      this.setState({ opened: nextProps.opened })
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    // Call handlers onOpen and onClose if open has changed
-    if (
-      prevState.opened !== this.state.opened &&
-      this.props.opened === prevProps.opened
-    ) {
-      if (this.state.opened) {
-        this.props.onOpen()
-      } else {
-        this.props.onClose()
-      }
-    }
+    document.addEventListener('click', this.handleDocumentClick, true)
+    document.addEventListener('touchend', this.handleDocumentClick, true)
+    document.addEventListener('keypress', this.handleKeypress, true)
   }
 
   componentWillUnmount() {
     if (global.document && document.addEventListener) {
-      document.removeEventListener('click', this.handleDocumentClick)
-      document.removeEventListener('touchend', this.handleDocumentClick)
+      document.removeEventListener('click', this.handleDocumentClick, true)
+      document.removeEventListener('touchend', this.handleDocumentClick, true)
       document.removeEventListener('keypress', this.handleKeypress, true)
     }
   }
@@ -183,16 +169,50 @@ class Dropdown extends React.Component {
 
   openDropdown() {
     this.updateDropdownPosition()
-    this.setState({ opened: true })
+
+    if (!this.isOpen()) {
+      this.props.onOpen()
+    }
+
+    if (!this.isControlled) {
+      this.setState({ opened: true })
+    }
   }
 
   closeDropdown() {
-    this.setState({ opened: false })
+    if (this.isOpen()) {
+      this.props.onClose()
+    }
+    if (!this.isControlled) {
+      this.setState({ opened: false })
+    }
+  }
+
+  isOpen() {
+    if (this.isControlled) {
+      return this.props.opened
+    }
+    return this.state.opened
   }
 
   toggleDropdown() {
     this.updateDropdownPosition()
-    this.setState(state => ({ opened: !state.opened }))
+    if (this.isControlled) {
+      if (this.props.opened) {
+        this.props.onClose()
+      } else {
+        this.props.onOpen()
+      }
+    } else {
+      this.setState(state => {
+        if (state.opened) {
+          this.props.onClose()
+        } else {
+          this.props.onOpen()
+        }
+        return { opened: !state.opened }
+      })
+    }
   }
 
   handleDocumentClick(event) {
@@ -207,7 +227,7 @@ class Dropdown extends React.Component {
     if (this.props.disabled) return
 
     // ESC key
-    if (this.state.opened && event.keyCode === 27) {
+    if (this.isOpen() && event.keyCode === 27) {
       this.closeDropdown()
       event.stopImmediatePropagation()
     }
@@ -279,7 +299,7 @@ class Dropdown extends React.Component {
         role="button"
       >
         {this.renderButton()}
-        {this.state.opened && (
+        {this.isOpen() && (
           <div
             className={`
               ${styles.dropdownWrapper}
