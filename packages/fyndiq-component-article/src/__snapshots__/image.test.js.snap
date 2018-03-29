@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fyndiq-component-article Image should be visible by default 1`] = `
+<img
+  src="test.jpg"
+  style={
+    Object {
+      "opacity": 1,
+      "transitionDuration": "0.3s",
+      "transitionProperty": "opacity",
+    }
+  }
+/>
+`;
