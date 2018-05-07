@@ -9,6 +9,7 @@ class Input extends React.Component {
     className: PropTypes.string,
     onChange: PropTypes.func,
     debouncedOnChange: PropTypes.func,
+    disabled: PropTypes.bool,
     inputRef: PropTypes.func,
     debounceWait: PropTypes.number,
     type: PropTypes.string,
@@ -18,6 +19,7 @@ class Input extends React.Component {
     className: '',
     onChange: () => {},
     debouncedOnChange: null,
+    disabled: false,
     inputRef: null,
     debounceWait: 500,
     type: 'text',
@@ -40,6 +42,7 @@ class Input extends React.Component {
       type,
       onChange,
       inputRef,
+      disabled,
       debounceWait,
       debouncedOnChange,
       ...props
@@ -49,6 +52,7 @@ class Input extends React.Component {
       <input
         ref={inputRef}
         type={type}
+        disabled={disabled}
         onChange={e => {
           // Call both the onChange and debouncedOnChange handler
           onChange(e.target.value)
@@ -58,6 +62,7 @@ class Input extends React.Component {
         }}
         className={`
           ${styles.input}
+          ${disabled && styles.disabled}
           ${className}
         `}
         {...props}
