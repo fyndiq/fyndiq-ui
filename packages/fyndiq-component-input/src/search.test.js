@@ -6,10 +6,6 @@ import Search from './search'
 Math.random = jest.fn(() => 'RANDOM-ID')
 
 describe('fyndiq-component-input SearchInput', () => {
-  it('should have the proper structure', () => {
-    expect(shallow(<Search />)).toMatchSnapshot()
-  })
-
   it('should have a size prop', () => {
     expect(shallow(<Search size="s" />).hasClass('wrapper--size-s')).toBe(true)
   })
