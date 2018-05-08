@@ -12,6 +12,7 @@ storiesOf('Input/Input', module)
     <Input debouncedOnChange={action('debouncedOnChange')} />
   ))
   .addWithInfo('disabled', () => <Input disabled value="I'm disabled" />)
+  .addWithInfo('textarea', () => <Input component={<textarea />} />)
 
 storiesOf('Input/Presets', module).addWithInfo('with presets', () => (
   <Presets
