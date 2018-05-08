@@ -17,6 +17,10 @@
     box-shadow: none;
   }
 
+  &:focus {
+    border-color: var(--color-blue);
+  }
+
   &::placeholder {
     color: var(--color-border);
     opacity: 1;
