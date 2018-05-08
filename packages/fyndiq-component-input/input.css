@@ -11,6 +11,7 @@
   box-shadow: 0 0 5px 0 color(var(--color-black) a(10%));
   outline: 0;
   appearance: none;
+  resize: vertical;
 
   &:invalid {
     box-shadow: none;
