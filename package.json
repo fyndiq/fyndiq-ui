@@ -19,7 +19,7 @@
     "sketch-prebuild": "webpack --config sketch-export/webpack.config.js",
     "sketch-inject": "npm run sketch-prebuild && node ./sketch-export/inject.js",
     "sketch-export": "npm run sketch-prebuild && node ./sketch-export/index.js",
-    "test": "jest --coverage && codecov && npm run lint"
+    "test": "jest  --runInBand --coverage && codecov && npm run lint"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
