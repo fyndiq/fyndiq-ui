@@ -1,13 +1,12 @@
 @import "fyndiq-styles-colors/colors.css";
 
 .input {
-  padding: 0 20px;
+  padding: 12px 20px;
   background: var(--color-white);
   margin: 0;
   border: 1px solid var(--color-border);
   border-radius: 2px;
   font-size: 15px;
-  line-height: 48px;
   box-shadow: 0 0 5px 0 color(var(--color-black) a(10%));
   outline: 0;
   appearance: none;
