@@ -35,6 +35,9 @@ import Input from 'fyndiq-component-input'
 // Use the built-in debouncer
 // 500ms of debounce, by default
 <Input debouncedOnChange={value => console.log(value)} />
+
+// Show a textarea
+<Input component={<textarea />} />
 ```
 
 ## API
@@ -45,6 +48,8 @@ The component `Input` has the following customizable props:
 |---|---|---|---|
 | **className** | String | classname to pass to the root element | `''` |
 | **onChange** | Function | Callback called everytime the input changes | `() => {}` |
+| **component** | React element | Component to render | `<input />` |
+| **disabled** | Boolean | Disables the input | `false` |
 | **debouncedOnChange** | Function | Debounced onChange handler | `null` |
 | **debounceWait** | Number | Timeout until which the debounced handler is called, in ms | `500` |
 | **inputRef** | Function | Accesses the `ref` of the input element. Allows to do advanced things like calling `.blur()` or `.focus()` | `null` |
