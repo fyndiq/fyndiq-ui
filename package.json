@@ -20,11 +20,13 @@
     "sketch-prebuild": "webpack --config sketch-export/webpack.config.js",
     "sketch-inject": "npm run sketch-prebuild && node ./sketch-export/inject.js",
     "sketch-export": "npm run sketch-prebuild && node ./sketch-export/index.js",
-    "test": "jest --coverage && codecov && npm run lint"
+    "test": "jest --runInBand --coverage && codecov && npm run lint",
+    "ci-test": "jest --runInBand --coverage",
+    "ci-codecov": "codecov"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.3",
     "babel-preset-es2015": "^6.24.0",
