@@ -9,18 +9,22 @@ class Input extends React.Component {
     className: PropTypes.string,
     onChange: PropTypes.func,
     debouncedOnChange: PropTypes.func,
+    disabled: PropTypes.bool,
     inputRef: PropTypes.func,
     debounceWait: PropTypes.number,
     type: PropTypes.string,
+    component: PropTypes.element,
   }
 
   static defaultProps = {
     className: '',
     onChange: () => {},
     debouncedOnChange: null,
+    disabled: false,
     inputRef: null,
     debounceWait: 500,
     type: 'text',
+    component: <input />,
   }
 
   constructor(props) {
@@ -40,29 +44,31 @@ class Input extends React.Component {
       type,
       onChange,
       inputRef,
+      disabled,
+      component,
       debounceWait,
       debouncedOnChange,
       ...props
     } = this.props
 
-    return (
-      <input
-        ref={inputRef}
-        type={type}
-        onChange={e => {
-          // Call both the onChange and debouncedOnChange handler
-          onChange(e.target.value)
-          if (debouncedOnChange) {
-            this.debouncedOnChange(e.target.value)
-          }
-        }}
-        className={`
+    return React.cloneElement(component, {
+      ref: inputRef,
+      type,
+      disabled,
+      onChange: e => {
+        // Call both the onChange and debouncedOnChange handler
+        onChange(e.target.value)
+        if (debouncedOnChange) {
+          this.debouncedOnChange(e.target.value)
+        }
+      },
+      className: `
           ${styles.input}
+          ${disabled && styles.disabled}
           ${className}
-        `}
-        {...props}
-      />
-    )
+        `,
+      ...props,
+    })
   }
 }
 

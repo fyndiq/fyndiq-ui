@@ -1,25 +1,35 @@
 @import "fyndiq-styles-colors/colors.css";
 
 .input {
-  padding: 0 20px;
+  padding: 12px 20px;
   background: var(--color-white);
   margin: 0;
   border: 1px solid var(--color-border);
   border-radius: 2px;
   font-size: 15px;
-  line-height: 48px;
   box-shadow: 0 0 5px 0 color(var(--color-black) a(10%));
   outline: 0;
   appearance: none;
+  resize: vertical;
 
   &:invalid {
     box-shadow: none;
+  }
+
+  &:focus {
+    border-color: var(--color-blue);
   }
 
   &::placeholder {
     color: var(--color-border);
     opacity: 1;
   }
+}
+
+.disabled {
+  color: var(--color-border);
+  background: color(var(--color-border) a(8%));
+  border-color: color(var(--color-border) a(25%));
 }
 
 .presetWrapper {
