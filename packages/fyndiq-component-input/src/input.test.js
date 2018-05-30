@@ -70,6 +70,17 @@ describe('fyndiq-component-input Input', () => {
     expect(spy).toHaveBeenCalledWith('new value')
   })
 
+  it('should be disabled', () => {
+    const input = shallow(<Input disabled />).find('input')
+    expect(input.prop('disabled')).toBe(true)
+    expect(input.hasClass('disabled')).toBe(true)
+  })
+
+  it('should render a different component', () => {
+    const component = shallow(<Input component={<textarea />} />)
+    expect(component.find('textarea').exists()).toBe(true)
+  })
+
   describe('debounce feature', () => {
     it('should call debounce', () => {
       const spy = jest.fn()

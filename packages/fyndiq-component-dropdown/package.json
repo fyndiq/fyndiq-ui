@@ -1,6 +1,6 @@
 {
   "name": "fyndiq-component-dropdown",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "main": "lib/index.js",
   "license": "MIT",
@@ -12,7 +12,7 @@
   "dependencies": {
     "fyndiq-component-button": "^2.9.0",
     "fyndiq-icons": "^2.11.0",
-    "fyndiq-styles-colors": "^2.3.0"
+    "fyndiq-styles-colors": "^2.3.2"
   },
   "peerDependencies": {
     "css-loader": "^0.28.7",

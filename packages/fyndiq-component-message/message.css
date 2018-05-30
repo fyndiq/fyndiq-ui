@@ -25,6 +25,7 @@
   width: 100%;
   text-align: center;
   pointer-events: none;
+  z-index: 10;
 
   & .message {
     pointer-events: all;
