@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 const url =
-  'http://localhost:6006/iframe.html?selectedKind=Sketch&selectedStory=components'
+  'http://localhost:6006/iframe.html?selectedKind=💎%20Sketch&selectedStory=components'
 const outputPageFile = './page.asketch.json'
 const outputDocumentFile = './document.asketch.json'
 

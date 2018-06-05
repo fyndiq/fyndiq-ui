@@ -1,9 +1,10 @@
 {
-  "name": "fyndiq-ui-test",
+  "name": "fyndiq-ui-sketch",
   "private": true,
-  "version": "2.1.30",
+  "version": "2.0.0",
   "author": "Thibaut REMY <thibaut.remy@fyndiq.com>",
   "license": "MIT",
+  "main": "lib/index.js",
   "dependencies": {
     "fyndiq-component-alert": "^2.1.5",
     "fyndiq-component-article": "^2.0.0",
@@ -22,14 +23,9 @@
     "fyndiq-component-table": "^3.0.0",
     "fyndiq-component-timeline": "^2.0.3",
     "fyndiq-component-tooltip": "^2.6.0",
-    "fyndiq-icons": "^2.12.0",
+    "fyndiq-icons": "^2.8.0",
     "fyndiq-illustrations": "^2.1.1",
     "fyndiq-styles-colors": "^2.3.0",
-    "fyndiq-styles-fonts": "^2.1.0",
-    "fyndiq-ui-sketch": "*"
-  },
-  "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "fyndiq-styles-fonts": "^2.1.0"
   }
 }
