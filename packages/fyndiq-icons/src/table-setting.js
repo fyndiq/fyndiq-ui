@@ -1,7 +1,7 @@
 import React from 'react'
 import SvgWrapper from './svg-wrapper'
 
-const Setting = ({ className, color }) => (
+const TableSetting = ({ className, color }) => (
   <SvgWrapper className={className} viewBox="0 0 25 25">
     <path
       fill={color}
@@ -18,7 +18,7 @@ const Setting = ({ className, color }) => (
   </SvgWrapper>
 )
 
-Setting.propTypes = SvgWrapper.propTypes
-Setting.defaultProps = SvgWrapper.defaultProps
+TableSetting.propTypes = SvgWrapper.propTypes
+TableSetting.defaultProps = SvgWrapper.defaultProps
 
-export default Setting
+export default TableSetting

@@ -14,7 +14,7 @@ import Payout from './payout'
 import ProductBox from './product-box'
 import Pencil from './pencil'
 import Regret from './regret'
-import Setting from './setting'
+import TableSetting from './table-setting'
 import Shop from './shop'
 import ShopAlt from './shop-alt'
 import Star from './star'
@@ -41,7 +41,7 @@ export {
   ProductBox,
   Pencil,
   Regret,
-  Setting,
+  TableSetting,
   Shop,
   ShopAlt,
   Star,
