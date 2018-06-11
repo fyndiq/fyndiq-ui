@@ -18,6 +18,7 @@ import Shop from './shop'
 import ShopAlt from './shop-alt'
 import Star from './star'
 import Stock from './stock'
+import TableSetting from './table-setting'
 import Tags from './tags'
 import Truck from './truck'
 import Warning from './warning'
@@ -44,6 +45,7 @@ export {
   ShopAlt,
   Star,
   Stock,
+  TableSetting,
   Tags,
   Truck,
   Warning,
