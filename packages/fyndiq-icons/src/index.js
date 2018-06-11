@@ -45,9 +45,9 @@ export {
   ShopAlt,
   Star,
   Stock,
+  TableSetting,
   Tags,
   Truck,
-  TableSetting,
   Warning,
   X,
 }
