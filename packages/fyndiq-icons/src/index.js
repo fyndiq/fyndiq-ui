@@ -14,13 +14,13 @@ import Payout from './payout'
 import ProductBox from './product-box'
 import Pencil from './pencil'
 import Regret from './regret'
-import TableSetting from './table-setting'
 import Shop from './shop'
 import ShopAlt from './shop-alt'
 import Star from './star'
 import Stock from './stock'
 import Tags from './tags'
 import Truck from './truck'
+import TableSetting from './table-setting'
 import Warning from './warning'
 import X from './x'
 
@@ -41,13 +41,13 @@ export {
   ProductBox,
   Pencil,
   Regret,
-  TableSetting,
   Shop,
   ShopAlt,
   Star,
   Stock,
   Tags,
   Truck,
+  TableSetting,
   Warning,
   X,
 }
