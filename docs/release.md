@@ -13,9 +13,10 @@ This custom NPM script is a wrapper around `lerna publish`. Follow the command l
 If you need to be more specific about what you want to publish, (for instance if you added one icon to `fyndiq-icons` but you don't want to bump every single dependant packages' versions), you can run:
 
 ``` bash
-npm run publish -- --scope fyndiq-icons --scope fyndiq-ui-test
+npm run publish -- --scope fyndiq-icons --scope fyndiq-component-something
 ```
 
+Note that there seems to be a bug if you're using zsh, you need to press CMD+C if the previous command hangs up. That will trigger lerna to publish the NPM packages.
 
 ## Build the storybook
 
@@ -35,6 +36,8 @@ git pull origin master
 npm run build-storybook
 
 # build the sketch exports
+# This step is optional, you don't need to export the sketch assets since
+# it is not used at the moment.
 npm run sketch-export
 
 # Add and commit the files
