@@ -1,16 +1,16 @@
 export default {
   /* Brand color */
-  brand: '#EC514A',
+  brand: '#FD5167',
 
   /* Grey levels */
-  black: '#3B4257',
+  black: '#394259',
   darkgrey: '#666',
   lightgrey: '#9B9B9B',
-  palegrey: '#FAFAFC',
+  palegrey: '#F1F1F1',
   white: '#FFF',
 
   /* Theme colors */
-  red: '#E74A51',
+  red: '#FD5167',
   blue: '#4A90E2',
   green: '#37B578',
   yellow: '#FFD600',
